@@ -693,9 +693,9 @@
                   </span>
                 </p>
               {%- endif -%}
-              {%- when 'aciditymeta'-%}
+              {%- when 'social' -%}
               <div>
-                <p>acidity</p>
+                <p>Social</p>
               </div>
           {%- endcase -%}
         {%- endfor -%}
@@ -1122,17 +1122,6 @@
       "limit": 1
     },
     {
-      "type": "aciditymeta",
-      "name": "aciditymeta",
-      "limit": 1,
-      "settings": [
-          {
-          "type": "paragraph",
-          "content": "social"
-          }
-      ]
-    },
-    {
       "type": "price",
       "name": "t:sections.main-product.blocks.price.name",
       "limit": 1
@@ -1450,6 +1439,17 @@
           "type": "paragraph",
           "content": "t:sections.main-product.blocks.rating.settings.paragraph.content"
         }
+      ]
+    },
+    {
+      "type": "social",
+      "name": "Spcial",
+      "limit": 1,
+      "settings": [ 
+          {
+          "type": "paragraph",
+          "content": "social"
+          }
       ]
     }
   ],
