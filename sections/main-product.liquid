@@ -693,6 +693,7 @@
                   </span>
                 </p>
               {%- endif -%}
+              {%- when 'aciditymeta'-%}
           {%- endcase -%}
         {%- endfor -%}
         <a href="{{ product.url }}" class="link product__view-details animate-arrow">
@@ -1116,6 +1117,17 @@
       "type": "title",
       "name": "t:sections.main-product.blocks.title.name",
       "limit": 1
+    },
+    {
+      "type": "aciditymeta",
+      "name": "aciditymeta",
+      "limit": 1,
+      "settings": [
+          {
+          "type": "paragraph",
+          "content": "social"
+          }
+      ]
     },
     {
       "type": "price",
