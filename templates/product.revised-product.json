@@ -101,12 +101,12 @@
         "share"
       ],
       "settings": {
-        "featured_image_loop": true,
-        "featured_image_arrows": true,
-        "featured_image_arrows_mobile": true,
-        "featured_image_animation": true,
+        "featured_image_loop": false,
+        "featured_image_arrows": false,
+        "featured_image_arrows_mobile": false,
+        "featured_image_animation": false,
         "featured_image_show_arrows_on_hover": false,
-        "featured_image_lazyload": true,
+        "featured_image_lazyload": false,
         "free_scroll": false,
         "featured_image_use_max_height": false,
         "featured_image_max_height": "520",
