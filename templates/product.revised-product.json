@@ -116,7 +116,7 @@
         "thumbnails_arrows_desktop": true,
         "thumbnails_arrows_mobile": true,
         "thumbnails_highlighted_position": "left",
-        "thumbnails_vertical_alignment": "top",
+        "thumbnails_vertical_alignment": "center",
         "thumbnails": "3",
         "thumbnails_mobile": "3",
         "arrow_style": "circle",
