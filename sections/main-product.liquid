@@ -1075,3819 +1075,6 @@
   </script>
 </section>
 
-
- 
-  {% comment %}
-
-  ===================================
-  [START] BOTTOM [START]
-  
-  {% endcomment %}
-  
-  
-  {% assign featured_image = product.selected_or_first_available_variant.featured_image | default: product.featured_image %}
-
-{% assign total_media = product.media | size %}
-{% assign total_images =  product.images | size %}
-{% assign images_id = "" | split: "," %}
-
-{% for image in product.images %}
-{% assign _id = image.id | split: ',' %}
-{% assign images_id = images_id | concat: _id  %}
-{% endfor %}
-
-{% assign featured_image_lazyload = section.settings.featured_image_lazyload %}
-{% assign featured_image_lazyload_placeholder = true %}
-{% assign featured_image_loop = section.settings.featured_image_loop %}
-{% assign featured_image_arrows = section.settings.featured_image_arrows %}
-{% assign featured_image_arrows_mobile = section.settings.featured_image_arrows_mobile %}
-{% assign button_size = section.settings.button_size %}
-{% assign arrow_size = section.settings.arrow_size %}
-
-
-{% assign featured_image_animation = section.settings.featured_image_animation %}
-{% assign featured_image_use_max_height = section.settings.featured_image_use_max_height %}
-{% assign featured_image_max_height = section.settings.featured_image_max_height %}
-{% assign featured_image_max_height_mobile = section.settings.featured_image_max_height_mobile %}
-{% assign featured_image_background_color = section.settings.featured_image_background_color %}
-{% assign featured_image_show_arrows_on_hover = section.settings.featured_image_show_arrows_on_hover %}
-{% assign free_scroll = section.settings.free_scroll %}
-
-
-{% assign enable_slider_for_thumbnails_desktop = section.settings.enable_slider_for_thumbnails_desktop %}
-{% assign thumbnails_vertical_alignment = section.settings.thumbnails_vertical_alignment %}
-{% assign thumbnails = section.settings.thumbnails %}
-{% assign thumbnails_mobile = section.settings.thumbnails_mobile %}
-{% assign thumbnails_highlighted_position = section.settings.thumbnails_highlighted_position %}
-{% assign thumbnails_loop = section.settings.thumbnails_loop %}
-{% assign show_thumbnails = section.settings.show_thumbnails %}
-{% assign thumbnails_arrows_desktop = section.settings.thumbnails_arrows_desktop %}
-{% assign thumbnails_arrows_mobile = section.settings.thumbnails_arrows_mobile %}
-{% assign thumbnails_slider_gap = '10' %}
-{% assign button_size_mobile = section.settings.button_size_mobile %}
-{% assign arrow_size_mobile = section.settings.arrow_size_mobile %}
-  
-  
-{% assign gallery_layout = section.settings.gallery_layout %}
-{% assign gallery_layout_mobile = section.settings.mobile_thumbnails %}  
-
-{% assign show_counter = section.settings.show_counter %}
-{% assign update_swatch_on_image_change = section.settings.update_swatch_on_image_change %}
-{% assign update_image_on_swatch_change = section.settings.update_image_on_swatch_change %}
-{% assign arrow_style = section.settings.arrow_style %}
-{% assign arrow_opacity = section.settings.arrow_opacity %}
-{% assign arrow_hover_opacity = section.settings.arrow_hover_opacity %}
-{% assign compability_16_below = section.settings.compability_16_below %}
-  
-{% assign dots_size = section.settings.dots_size %}
-{% assign dots_size_mobile = section.settings.dots_size_mobile %}
-{% assign dots_color = section.settings.dots_color %}
-{% assign dots_selected_color = section.settings.dots_selected_color %}
-{% assign dots_top_padding = section.settings.dots_top_padding %}
-{% assign dots_bottom_padding = section.settings.dots_bottom_padding %}
-{% assign dots_top_padding_mobile = section.settings.dots_top_padding_mobile %}
-{% assign dots_bottom_padding_mobile = section.settings.dots_bottom_padding_mobile %}
-    
-  {% if load_dawn_slider %}
-
-{% if total_images <= 3 %}
-{% assign enable_slider_for_thumbnails_desktop = false %}
-{% endif %}
-  
-  
-    
-   {% assign thumbnail_loading_height = 100 %}
-  {% assign basic_transition = 'all .5s ease' %}
-  {% assign hover_transition = 'all .3s ease' %}
-  {% assign featured_image_arrow_size_mobile = 28 %} 
-  {% assign thumbnails_arrow_size = 28 %} 
-  {% assign thumbnails_arrow_size_mobile = 28 %} 
-  
-  <div style="display:none;height:0;width:0;"
-     data_featured_image_animation="{{ featured_image_animation }}"
-     data_thumbnails_quantity="{{ thumbnails }}"
-     data_thumbnails_quantity_mobile="{{ thumbnails_mobile }}"
-     data_total_images="{{ total_media }}" 
-     data_featured_image_loop="{{featured_image_loop}}"
-     data_enable_slider_for_thumbnails_desktop="{{enable_slider_for_thumbnails_desktop}}"
-     data_thumbnails_highlighted_position="{{thumbnails_highlighted_position}}"
-     data_featured_image_lazyload="{{featured_image_lazyload}}"
-     data_thumbnails_loop="{{thumbnails_loop}}"
-     data_update_swatch_on_image_change="{{ update_swatch_on_image_change }}"
-     data_update_image_on_swatch_change="{{ update_image_on_swatch_change }}"
-     data_load_dawn_slider="{{ load_dawn_slider }}"
-     data_gallery_layout="{{ section.settings.gallery_layout }}"
-     data_gallery_layout_mobile="{{ gallery_layout_mobile }}"
-     data_show_counter="{{ show_counter }}"
-     data_navigation="{{ navigation }}"
-     data_navigation_mobile="{{ navigation_mobile }}"
-     data_free_scroll="{{ free_scroll }}"
-     ></div>
-  
-  <script>var _0x496a=['\x32\x30\x38\x35\x33\x7a\x66\x73\x58\x47','\x5f\x5f\x70\x72\x6f\x74\x6f\x5f\x5f','\x32\x30\x33\x31\x31\x32\x56\x47\x4f\x7a\x52\x4e','\x31\x37\x34\x30\x35\x36\x43\x5a\x71\x75','\x33\x50\x76\x6c\x59\x42\x5a','\x33\x34\x36\x31\x30\x30\x42\x65\x77\x4d','\x63\x6f\x6e\x73\x6f\x6c\x65','\x34\x36\x35\x38\x50\x75\x49\x67\x6d\x59','\x32\x59\x6c\x49\x41\x79\x7a','\x63\x74\x6f\x72\x28\x22\x72\x65\x74\x75','\x74\x6f\x53\x74\x72\x69\x6e\x67','\x32\x39\x38\x4e\x56\x53\x67\x70\x47','\x31\x35\x4c\x43\x56\x50\x68\x69','\x31\x4a\x41\x63\x69\x4c\x59','\x33\x33\x35\x32\x36\x35\x46\x4c\x42\x54\x67\x72','\x7b\x7d\x2e\x63\x6f\x6e\x73\x74\x72\x75','\x36\x34\x38\x34\x33\x69\x78\x72\x76\x78','\x77\x61\x72\x6e','\x33\x30\x31\x34\x32\x42\x6c\x68\x4c\x6e','\x65\x7a\x66\x79\x5f\x69\x6d\x61\x67\x65','\x31\x34\x31\x39\x36\x36\x4c\x42\x74\x54','\x34\x37\x30\x33\x44\x6c\x73\x6c\x64\x71','\x31\x37\x33\x38\x36\x48\x47\x6e\x54\x4c','\x31\x31\x35\x47\x65\x74\x56\x56\x45','\x33\x38\x37\x37\x39\x6e\x53\x46\x48\x61','\x63\x6f\x6e\x73\x74\x72\x75\x63\x74\x6f','\x61\x70\x70\x6c\x79','\x31\x30\x61\x73\x52\x62\x66\x74','\x35\x35\x31\x34\x30\x39\x69\x74\x65\x76\x48\x44','\x31\x30\x36\x48\x63\x54\x63\x44\x43','\x32\x35\x36\x39\x33\x35\x48\x4c\x4d\x46','\x74\x61\x62\x6c\x65','\x34\x38\x32\x36\x54\x66\x79\x4b\x61\x69','\x39\x37\x37\x34\x36\x36\x42\x6f\x53\x64','\x78\x57\x4a','\x31\x41\x42\x6b\x47\x4d\x51','\x34\x34\x32\x36\x39\x79\x68\x68\x6f\x44','\x74\x72\x61\x63\x65','\x31\x30\x33\x6d\x6e\x43\x50\x68\x6f','\x31\x35\x30\x34\x30\x31\x39\x6a\x41\x6d','\x72\x6e\x20\x74\x68\x69\x73\x22\x29\x28','\x69\x6e\x66\x6f','\x32\x30\x32\x32\x67\x67\x57\x77\x48\x77','\x70\x72\x6f\x74\x6f\x74\x79\x70\x65','\x38\x31\x39\x73\x62\x6f\x71\x4c\x6a','\x72\x65\x74\x75\x72\x6e\x20\x28\x66\x75','\x70\x75\x73\x68','\x5f\x70\x6f\x73\x69\x74\x69\x6f\x6e\x73','\x37\x34\x31\x37\x79\x51\x68\x5a\x62\x66','\x62\x69\x6e\x64','\x33\x36\x37\x35\x31\x36\x65\x6f\x45\x57','\x33\x36\x32\x34\x33\x39\x6a\x50\x76\x79\x50\x49','\x37\x41\x53\x4e\x6a\x4b\x68','\x6c\x65\x6e\x67\x74\x68','\x32\x36\x37\x39\x30\x33\x4e\x4c\x6d\x47','\x31\x38\x34\x39\x36\x37\x57\x47\x55\x75\x46\x43','\x33\x33\x33\x32\x30\x30\x48\x46\x54\x6b','\x65\x78\x63\x65\x70\x74\x69\x6f\x6e','\x73\x68\x69\x66\x74','\x6c\x6f\x67','\x33\x38\x30\x30\x36\x37\x72\x75\x6a\x4b\x59\x49'];var _0x23be=function(_0x2ed612,_0x15da4e){_0x2ed612=_0x2ed612-0x1d2;var _0x13a85e=_0x496a[_0x2ed612];return _0x13a85e;};var _0x3199d9=_0x23be;(function(_0x39b7de,_0x455ea8){var _0x54fe28=_0x23be;while(!![]){try{var _0x102deb=parseInt(_0x54fe28(0x1de))+-parseInt(_0x54fe28(0x209))*parseInt(_0x54fe28(0x1eb))+-parseInt(_0x54fe28(0x1d9))+parseInt(_0x54fe28(0x1e1))+-parseInt(_0x54fe28(0x1d5))+-parseInt(_0x54fe28(0x1ed))+parseInt(_0x54fe28(0x1fb))*parseInt(_0x54fe28(0x1ec));if(_0x102deb===_0x455ea8)break;else _0x39b7de['push'](_0x39b7de['shift']());}catch(_0xf4466c){_0x39b7de['push'](_0x39b7de['shift']());}}}(_0x496a,0x36193));var _0x5d80=[_0x3199d9(0x1e2),_0x3199d9(0x20b),_0x3199d9(0x1db),_0x3199d9(0x1f3)+'\x56\x75','\x6e\x63\x74\x69\x6f\x6e\x28\x29\x20','\x33\x31\x36\x32\x37\x31\x34\x4e\x44\x59',_0x3199d9(0x201),_0x3199d9(0x207),_0x3199d9(0x206),_0x3199d9(0x1ef),_0x3199d9(0x1f7)+'\x67',_0x3199d9(0x1e8),_0x3199d9(0x1f4),_0x3199d9(0x1e3),'\x74\x61\x62\x6c\x65',_0x3199d9(0x1f9),_0x3199d9(0x203),'\x69\x6e\x66\x6f',_0x3199d9(0x1d8),_0x3199d9(0x1dd),_0x3199d9(0x1e0),_0x3199d9(0x1f0),_0x3199d9(0x1e4)+'\x4d\x6a','\x74\x56\x70',_0x3199d9(0x1d4)+'\x57\x51',_0x3199d9(0x200),_0x3199d9(0x1e9),_0x3199d9(0x1d2),_0x3199d9(0x1dc),_0x3199d9(0x1df)+'\x78','\x72\x65\x74\x75\x72\x6e\x20\x28\x66\x75',_0x3199d9(0x1d3),_0x3199d9(0x1fc),_0x3199d9(0x1ee),_0x3199d9(0x1ff),_0x3199d9(0x202),'\x63\x6f\x6e\x73\x74\x72\x75\x63\x74\x6f',_0x3199d9(0x1e6),'\x33\x37\x33\x4f\x70\x4a\x66\x49\x76',_0x3199d9(0x205),_0x3199d9(0x1d6),_0x3199d9(0x20d),_0x3199d9(0x1f1),_0x3199d9(0x1e5),_0x3199d9(0x204),_0x3199d9(0x1f5)+'\x7a','\x70\x72\x6f\x74\x6f\x74\x79\x70\x65',_0x3199d9(0x20e),'\x65\x72\x72\x6f\x72',_0x3199d9(0x1fa),'\x31\x4c\x61\x70\x4b\x7a\x6f',_0x3199d9(0x1d7),_0x3199d9(0x1e7)],_0x47a1=function(_0x89c800,_0x557561){_0x89c800=_0x89c800-0x1a3;var _0x529ca8=_0x5d80[_0x89c800];return _0x529ca8;},_0xc2ca9c=_0x47a1;(function(_0x4851cc,_0x5dde0f){var _0x28dff0=_0x3199d9,_0x33e8d6=function(){var _0x3c4b04=!![];return function(_0x8482,_0x28b9bf){var _0x4bc433=_0x3c4b04?function(){if(_0x28b9bf){var _0x1129f9=_0x28b9bf['\x61\x70\x70\x6c\x79'](_0x8482,arguments);return _0x28b9bf=null,_0x1129f9;}}:function(){};return _0x3c4b04=![],_0x4bc433;};}(),_0x3e0f06=_0x33e8d6(this,function(){var _0x3d2034=_0x23be,_0x7c302d;try{var _0x60d358=Function(_0x3d2034(0x20c)+'\x6e\x63\x74\x69\x6f\x6e\x28\x29\x20'+(_0x3d2034(0x1ee)+_0x3d2034(0x1e8)+_0x3d2034(0x207)+'\x20\x29')+'\x29\x3b');_0x7c302d=_0x60d358();}catch(_0x901da){_0x7c302d=window;}var _0x5ac0b5=_0x7c302d[_0x3d2034(0x1e5)]=_0x7c302d[_0x3d2034(0x1e5)]||{},_0x3e210b=[_0x3d2034(0x1dd),_0x3d2034(0x1f0),_0x3d2034(0x208),'\x65\x72\x72\x6f\x72',_0x3d2034(0x1db),_0x3d2034(0x1fe),'\x74\x72\x61\x63\x65'];for(var _0x70154b=0x0;_0x70154b<_0x3e210b['\x6c\x65\x6e\x67\x74\x68'];_0x70154b++){var _0x2836e3=_0x33e8d6[_0x3d2034(0x1f8)+'\x72']['\x70\x72\x6f\x74\x6f\x74\x79\x70\x65'][_0x3d2034(0x1d3)](_0x33e8d6),_0x21d95b=_0x3e210b[_0x70154b],_0x3b9eac=_0x5ac0b5[_0x21d95b]||_0x2836e3;_0x2836e3[_0x3d2034(0x1e0)]=_0x33e8d6['\x62\x69\x6e\x64'](_0x33e8d6),_0x2836e3[_0x3d2034(0x1e9)]=_0x3b9eac[_0x3d2034(0x1e9)][_0x3d2034(0x1d3)](_0x3b9eac),_0x5ac0b5[_0x21d95b]=_0x2836e3;}});_0x3e0f06();var _0x514020=_0x47a1;while(!![]){try{var _0x6b6d46=-parseInt(_0x514020(0x1b3))*-parseInt(_0x514020(0x1b7))+-parseInt(_0x514020(0x1d1))+-parseInt(_0x514020(0x1a3))*-parseInt(_0x514020(0x1b8))+-parseInt(_0x514020(0x1c5))*parseInt(_0x514020(0x1ba))+-parseInt(_0x514020(0x1a6))*parseInt(_0x514020(0x1bc))+parseInt(_0x514020(0x1be))+parseInt(_0x514020(0x1d3));if(_0x6b6d46===_0x5dde0f)break;else _0x4851cc[_0x28dff0(0x20d)](_0x4851cc[_0x28dff0(0x1dc)]());}catch(_0x583715){_0x4851cc['\x70\x75\x73\x68'](_0x4851cc['\x73\x68\x69\x66\x74']());}}}(_0x5d80,0x2f4bb));var _0x3a78=[_0xc2ca9c(0x1a8),'\x6c\x6f\x67',_0x3199d9(0x1fd)+'\x45\x55',_0xc2ca9c(0x1bb)+'\x45\x4d',_0xc2ca9c(0x1c9),_0xc2ca9c(0x1ae),_0xc2ca9c(0x1cf),_0xc2ca9c(0x1af),_0xc2ca9c(0x1d7),_0xc2ca9c(0x1ab),_0xc2ca9c(0x1d5),_0xc2ca9c(0x1ad),_0x3199d9(0x1ea),_0xc2ca9c(0x1cb)+'\x66',_0x3199d9(0x1d3),_0xc2ca9c(0x1c3),_0xc2ca9c(0x1c4)+'\x46',_0xc2ca9c(0x1d4),_0xc2ca9c(0x1d0),_0xc2ca9c(0x1bd),_0xc2ca9c(0x1b0)+'\x6a',_0xc2ca9c(0x1b1),_0xc2ca9c(0x1c0),_0xc2ca9c(0x1c8),_0xc2ca9c(0x1cd)+'\x4b\x71',_0xc2ca9c(0x1ac),'\x31\x66\x70\x45\x79\x67\x6a',_0xc2ca9c(0x1b6),_0xc2ca9c(0x1a9),_0xc2ca9c(0x1c7),_0xc2ca9c(0x1b5),_0xc2ca9c(0x1c2),_0xc2ca9c(0x1d2),'\x70\x72\x6f\x74\x6f\x74\x79\x70\x65',_0x3199d9(0x1f6),_0xc2ca9c(0x1a4),_0xc2ca9c(0x1b2),_0x3199d9(0x1f2),_0xc2ca9c(0x1bf),_0x3199d9(0x1da),_0xc2ca9c(0x1aa),_0xc2ca9c(0x1cc),_0xc2ca9c(0x1b9),_0xc2ca9c(0x1c1),_0xc2ca9c(0x1d6)],_0x1877=function(_0x34b6f3,_0x4a0374){_0x34b6f3=_0x34b6f3-0x10e;var _0x508840=_0x3a78[_0x34b6f3];return _0x508840;},_0x5f2aeb=_0x1877;(function(_0x371835,_0x48c9b0){var _0x24af4e=_0x3199d9,_0x134a16=_0xc2ca9c,_0xf8a7e8=_0x1877;while(!![]){try{var _0x553894=-parseInt(_0xf8a7e8(0x114))*parseInt(_0xf8a7e8(0x137))+parseInt(_0xf8a7e8(0x122))+-parseInt(_0xf8a7e8(0x125))*-parseInt(_0xf8a7e8(0x11a))+parseInt(_0xf8a7e8(0x129))+-parseInt(_0xf8a7e8(0x117))*-parseInt(_0xf8a7e8(0x12c))+parseInt(_0xf8a7e8(0x12d))+-parseInt(_0xf8a7e8(0x131))*parseInt(_0xf8a7e8(0x118));if(_0x553894===_0x48c9b0)break;else _0x371835[_0x24af4e(0x20d)](_0x371835[_0x24af4e(0x1dc)]());}catch(_0x3c9b9f){_0x371835[_0x134a16(0x1af)](_0x371835[_0x134a16(0x1d7)]());}}}(_0x3a78,0x83d69));var _0x473a=[_0xc2ca9c(0x1ca),_0x5f2aeb(0x136),_0x5f2aeb(0x124)+_0x5f2aeb(0x113),_0x5f2aeb(0x128),_0x5f2aeb(0x12a),_0x5f2aeb(0x126)+'\x51\x6c',_0x5f2aeb(0x112),_0x5f2aeb(0x123),_0x5f2aeb(0x120),_0x5f2aeb(0x115),_0x5f2aeb(0x127),_0x5f2aeb(0x13a),_0x5f2aeb(0x116),_0x5f2aeb(0x138),_0x5f2aeb(0x110),_0x5f2aeb(0x132),_0x5f2aeb(0x139),_0x5f2aeb(0x133),_0x5f2aeb(0x11b),_0x5f2aeb(0x10f)+'\x6f\x7a',_0x5f2aeb(0x12f),_0x5f2aeb(0x12e),_0x5f2aeb(0x12b)+_0x5f2aeb(0x135),_0x5f2aeb(0x119),_0xc2ca9c(0x1a7),_0x5f2aeb(0x11e),_0x5f2aeb(0x121),_0x5f2aeb(0x134)],_0x418a=function(_0x188c06,_0x47f1b0){_0x188c06=_0x188c06-0xd7;var _0x1a9d27=_0x473a[_0x188c06];return _0x1a9d27;},_0x268dce=_0x418a;(function(_0x45e27f,_0xae27c9){var _0x59686c=function(){var _0x541a17=!![];return function(_0x1f089b,_0x55dc26){var _0x3e430e=_0x541a17?function(){var _0x17d654=_0x47a1;if(_0x55dc26){var _0x8de8d2=_0x55dc26[_0x17d654(0x1ca)](_0x1f089b,arguments);return _0x55dc26=null,_0x8de8d2;}}:function(){};return _0x541a17=![],_0x3e430e;};}(),_0x3cf2eb=_0x5f2aeb,_0xcf500f=function(){var _0x2a3d66=_0x59686c(this,function(){var _0x5c790d=_0x23be,_0x528037=_0x47a1,_0x490975;try{var _0x22d997=Function(_0x528037(0x1a4)+_0x528037(0x1bf)+(_0x528037(0x1a7)+_0x5c790d(0x1e8)+_0x528037(0x1c2)+'\x20\x29')+'\x29\x3b');_0x490975=_0x22d997();}catch(_0x1f4c14){_0x490975=window;}var _0x5b6b5a=_0x490975[_0x528037(0x1b1)]=_0x490975[_0x528037(0x1b1)]||{},_0x17ab39=[_0x528037(0x1ce),_0x528037(0x1d0),_0x528037(0x1cc),_0x528037(0x1b6),_0x528037(0x1bd),_0x528037(0x1c9),_0x528037(0x1b2)];for(var _0xd5e4f=0x0;_0xd5e4f<_0x17ab39[_0x528037(0x1b9)];_0xd5e4f++){var _0x16e9ed=_0x59686c[_0x528037(0x1aa)+'\x72'][_0x5c790d(0x20a)][_0x528037(0x1a5)](_0x59686c),_0x465599=_0x17ab39[_0xd5e4f],_0xe22b86=_0x5b6b5a[_0x465599]||_0x16e9ed;_0x16e9ed[_0x528037(0x1cf)]=_0x59686c[_0x5c790d(0x1d3)](_0x59686c),_0x16e9ed[_0x528037(0x1d5)]=_0xe22b86[_0x528037(0x1d5)][_0x5c790d(0x1d3)](_0xe22b86),_0x5b6b5a[_0x465599]=_0x16e9ed;}});_0x2a3d66();var _0x403277=!![];return function(_0x354f9c,_0x192834){var _0x13dfc7=_0x403277?function(){var _0x1c87fa=_0x47a1;if(_0x192834){var _0x348ff2=_0x192834[_0x1c87fa(0x1ca)](_0x354f9c,arguments);return _0x192834=null,_0x348ff2;}}:function(){};return _0x403277=![],_0x13dfc7;};}(),_0x27772d=_0xcf500f(this,function(){var _0x5a77fb=_0x23be,_0x1e5741=_0x47a1,_0x272c45=_0x1877,_0x99ff05;try{var _0x592af7=Function(_0x1e5741(0x1a4)+_0x272c45(0x10e)+(_0x5a77fb(0x1ee)+_0x1e5741(0x1c6)+_0x1e5741(0x1c2)+'\x20\x29')+'\x29\x3b');_0x99ff05=_0x592af7();}catch(_0x3d2c62){_0x99ff05=window;}var _0x13f079=_0x99ff05[_0x1e5741(0x1b1)]=_0x99ff05[_0x272c45(0x12a)]||{},_0x53e982=[_0x272c45(0x116),_0x272c45(0x127),_0x272c45(0x111),_0x272c45(0x130),_0x272c45(0x128),_0x272c45(0x119),_0x272c45(0x139)];for(var _0x10a24a=0x0;_0x10a24a<_0x53e982[_0x272c45(0x112)];_0x10a24a++){var _0x2ddd54=_0xcf500f[_0x272c45(0x110)+'\x72'][_0x1e5741(0x1b4)][_0x272c45(0x123)](_0xcf500f),_0x274963=_0x53e982[_0x10a24a],_0x351dbe=_0x13f079[_0x274963]||_0x2ddd54;_0x2ddd54[_0x272c45(0x11b)]=_0xcf500f[_0x1e5741(0x1a5)](_0xcf500f),_0x2ddd54[_0x5a77fb(0x1e9)]=_0x351dbe[_0x1e5741(0x1d5)][_0x1e5741(0x1a5)](_0x351dbe),_0x13f079[_0x274963]=_0x2ddd54;}});_0x27772d();var _0x5af728=_0x418a;while(!![]){try{var _0x50721e=-parseInt(_0x5af728(0xde))+parseInt(_0x5af728(0xed))*-parseInt(_0x5af728(0xdb))+parseInt(_0x5af728(0xee))*parseInt(_0x5af728(0xe8))+parseInt(_0x5af728(0xec))+parseInt(_0x5af728(0xe2))*-parseInt(_0x5af728(0xe1))+parseInt(_0x5af728(0xd7))*-parseInt(_0x5af728(0xf2))+parseInt(_0x5af728(0xef));if(_0x50721e===_0xae27c9)break;else _0x45e27f[_0x3cf2eb(0x11c)](_0x45e27f[_0x3cf2eb(0x11d)]());}catch(_0x499259){_0x45e27f[_0x3cf2eb(0x11c)](_0x45e27f[_0x3cf2eb(0x11d)]());}}}(_0x473a,0xd7b1e));var _0x158570=function(){var _0x2c3be2=!![];return function(_0x2a38dd,_0x3838e4){var _0x1fe57b=_0x2c3be2?function(){var _0x165200=_0x418a;if(_0x3838e4){var _0x2d879c=_0x3838e4[_0x165200(0xd9)](_0x2a38dd,arguments);return _0x3838e4=null,_0x2d879c;}}:function(){};return _0x2c3be2=![],_0x1fe57b;};}(),_0x312202=_0x158570(this,function(){var _0x4ed13d=_0x3199d9,_0x585b78=_0xc2ca9c,_0x47ae3a=_0x5f2aeb,_0x9f4980=_0x418a,_0x540e9c;try{var _0x1b91d5=Function(_0x9f4980(0xe6)+_0x47ae3a(0x10e)+(_0x9f4980(0xf1)+_0x585b78(0x1c6)+_0x9f4980(0xd8)+'\x20\x29')+'\x29\x3b');_0x540e9c=_0x1b91d5();}catch(_0x383d90){_0x540e9c=window;}var _0x22d381=_0x540e9c[_0x4ed13d(0x1e5)]=_0x540e9c[_0x9f4980(0xdd)]||{},_0x12ce73=[_0x9f4980(0xe5),_0x9f4980(0xe3),'\x69\x6e\x66\x6f',_0x47ae3a(0x130),_0x9f4980(0xdc),_0x9f4980(0xf0),_0x9f4980(0xe9)];for(var _0x3e58d9=0x0;_0x3e58d9<_0x12ce73[_0x9f4980(0xdf)];_0x3e58d9++){var _0x2a6b56=_0x158570[_0x9f4980(0xe7)+'\x72'][_0x9f4980(0xda)][_0x4ed13d(0x1d3)](_0x158570),_0x359434=_0x12ce73[_0x3e58d9],_0x21a026=_0x22d381[_0x359434]||_0x2a6b56;_0x2a6b56[_0x9f4980(0xeb)]=_0x158570[_0x9f4980(0xe0)](_0x158570),_0x2a6b56[_0x47ae3a(0x11f)]=_0x21a026[_0x47ae3a(0x11f)][_0x9f4980(0xe0)](_0x21a026),_0x22d381[_0x359434]=_0x2a6b56;}});_0x312202(),window[_0x268dce(0xe4)+_0x268dce(0xea)]=[];</script>
-  
-  {% assign first_thumbnail_position = 0 %}
-
-  
-  {% comment %}
-  ## Generate thumbnails
-  ====================================
-  {% endcomment%} 
-  
-  {% if load_dawn_slider %}
-  <ul id="EzfyDawnThemeThumbnails"  
-      class="Thumbnails">
-    
-  
-    <div class="Thumbnails--vertical--scroller Thumbnails--scroller">
-
-    
-    {% comment %}
-    ==================================
-    Displaying feeatured thumbnail (only 1). 
-    ==================================
-    {% endcomment %}
-    
-    {%- for media in product.media -%}   	
-      {% if media.id == product.selected_or_first_available_variant.featured_media.id %}
-    
-    {% capture media_position %}
-      {% if media.position == 1 %}
-     	1
-      {% else %}
-      	{{ media.position }}
-      {% endif %}
-    {% endcapture %}
-    
-    {% assign first_thumbnail_position = media_position | strip | times: 1 %}
-    
-        <li class="Thumbnails-thumbnail" 
-            id="Thumbnail-{{ media.id }}"
-            data-media-position="{{ first_thumbnail_position }}"
-            data-custom-variantiid="{{ product.variants[forloop.index0].id }}"
-            data-image-id="{{ media.id }}" >
-            <img class="Thumbnails--slider-image" 
-                 src="{{ media.preview_image | img_url: '300x' }}"
-                 loading="lazy"
-                 />
-        </li>   
-      {% endif %}
-      
-
-    {%- endfor -%}
-    
-
-    {% comment %}
-    ==================================
-    Displaying all the other thumbnails.
-    ==================================
-    {% endcomment %}
-    
-    {% assign loop = 0 %}
-    
-    {%- for media in product.media -%}
-      {% unless media.id == product.selected_or_first_available_variant.featured_media.id %} 
-    
-       	{% if media.media_type == 'image' %}
-        	{% assign loop = loop | plus: 1 %}
-      	{% endif %}
-    
-    
-    	{% if loop == first_thumbnail_position %}
-        	{% assign loop = loop | plus: 1 %}
-    	{% endif %}
-    
-    	{% assign _loop = loop | minus: 1 %}
-
-      <li class="Thumbnails-thumbnail" 
-          id="Thumbnail-{{ media.id }}" 
-          {% if media.media_type == 'image' %}
-          data-media-position="{{ loop }}" 
-          {% endif %}
-          data-image-id="{{ media.id }}" >
-          <img class="Thumbnails--slider-image" src="{{ media.preview_image | img_url: '300x' }}" />
-      </li>
- 
-    {% endunless %}
-    {%- endfor -%}
-          
-
-    </div>
-
-  </ul>
-  {% endif %}
-  
-    {% comment %}
-  ~~ Get the position of each image
-  ====================================
-    <script>
-      {% assign product_images = product.media | where: "media_type", "image" %}
-
-      window.ezfy_image_positions = [
-         {% for media in product_images %}
-            {
-    id: "{{ media.id }}",
-    index: {{ forloop.index }},
-              variantId: {{ product.variants[forloop.index].id  }},
-              imagePositionVariant: {{ product.variants[media.position].id  }},
-              imagePosition: {{ media.position }},
-              src: `{{ media.preview_image | img_url: '300x' }}`
-    },
-        
-        {% endfor %}
-        ]
-    </script>
-    {% endcomment%} 
-  
-  
-  {% comment %}
-  ~~ Overwrite media-gallery.js 
-  ====================================
-  {% endcomment %}
-  
-  <script>
-    /*ezfyignore*/
-        customElements.define('media-gallery', class MediaGallery extends HTMLElement {
-    constructor() {
-      super();
-      this.elements = {
-        liveRegion: this.querySelector('[id^="GalleryStatus"]'),
-        viewer: this.querySelector('[id^="GalleryViewer"]'),
-        thumbnails: this.querySelector('[id^="GalleryThumbnails"]')
-      }
-      this.mql = window.matchMedia('(min-width: 750px)');
-      if (!this.elements.thumbnails) return;
-
-      this.elements.thumbnails.querySelectorAll('[data-target]').forEach((mediaToSwitch) => {
-        mediaToSwitch.querySelector('button').addEventListener('click', this.setActiveMedia.bind(this, mediaToSwitch.dataset.target, false));
-      });
-      if (this.dataset.desktopLayout !== 'stacked' && this.mql.matches) this.removeListSemantic();
-    }
-
-    onSlideChanged(event) {
-      const thumbnail = this.elements.thumbnails.querySelector(`[data-target="${ event.detail.currentElement.dataset.mediaId }"]`);
-      this.setActiveThumbnail(thumbnail);
-    }
-
-    setActiveMedia(mediaId, prepend) {
-   
-      const loadSlider = `{{ load_dawn_slider }}` === "true" ? true : false;
-      
-      if (loadSlider){
-      	return;
-      }
-      
-      const activeMedia = this.elements.viewer.querySelector(`[data-media-id="${ mediaId }"]`);
-      this.elements.viewer.querySelectorAll('[data-media-id]').forEach((element) => {
-        element.classList.remove('is-active');
-      });
-      activeMedia.classList.add('is-active');
-
-      if (prepend) {
-        activeMedia.parentElement.prepend(activeMedia);
-        if (this.elements.thumbnails) {
-          const activeThumbnail = this.elements.thumbnails.querySelector(`[data-target="${ mediaId }"]`);
-          activeThumbnail.parentElement.prepend(activeThumbnail);
-        }
-        if (this.elements.viewer.slider) this.elements.viewer.resetPages();
-      }
-
-      this.preventStickyHeader();
-      window.setTimeout(() => {
-        if (this.elements.thumbnails) {
-          activeMedia.parentElement.scrollTo({ left: activeMedia.offsetLeft });
-        }
-        if (!this.elements.thumbnails || this.dataset.desktopLayout === 'stacked') {
-          activeMedia.scrollIntoView({behavior: 'smooth'});
-        }
-      });
-      this.playActiveMedia(activeMedia);
-
-      if (!this.elements.thumbnails) return;
-      const activeThumbnail = this.elements.thumbnails.querySelector(`[data-target="${ mediaId }"]`);
-      this.setActiveThumbnail(activeThumbnail);
-      this.announceLiveRegion(activeMedia, activeThumbnail.dataset.mediaPosition);
-    }
-
-    setActiveThumbnail(thumbnail) {
-      if (!this.elements.thumbnails || !thumbnail) return;
-
-      this.elements.thumbnails.querySelectorAll('button').forEach((element) => element.removeAttribute('aria-current'));
-      thumbnail.querySelector('button').setAttribute('aria-current', true);
-      if (this.elements.thumbnails.isSlideVisible(thumbnail, 10)) return;
-
-      this.elements.thumbnails.slider.scrollTo({ left: thumbnail.offsetLeft });
-    }
-
-    announceLiveRegion(activeItem, position) {
-      const image = activeItem.querySelector('.product__modal-opener--image img');
-      if (!image) return;
-      image.onload = () => {
-        this.elements.liveRegion.setAttribute('aria-hidden', false);
-        this.elements.liveRegion.innerHTML = window.accessibilityStrings.imageAvailable.replace(
-          '[index]',
-          position
-        );
-        setTimeout(() => {
-          this.elements.liveRegion.setAttribute('aria-hidden', true);
-        }, 2000);
-      };
-      image.src = image.src;
-    }
-
-    playActiveMedia(activeItem) {
-      window.pauseAllMedia();
-      const deferredMedia = activeItem.querySelector('.deferred-media');
-      if (deferredMedia) deferredMedia.loadContent(false);
-    }
-
-    preventStickyHeader() {
-      this.stickyHeader = this.stickyHeader || document.querySelector('sticky-header');
-      if (!this.stickyHeader) return;
-      this.stickyHeader.dispatchEvent(new Event('preventHeaderReveal'));
-    }
-
-    removeListSemantic() {
-      if (!this.elements.viewer.slider) return;
-      this.elements.viewer.slider.setAttribute('role', 'presentation');
-      this.elements.viewer.sliderItems.forEach(slide => slide.setAttribute('role', 'presentation'));
-    }
-  });
-  </script>
-  
-  {% if load_dawn_slider %}
-  <style>
-.flickity-enabled{position:relative}.flickity-enabled:focus{outline:0}.flickity-viewport{overflow:hidden;position:relative;height:100%}.flickity-slider{position:absolute;width:100%;height:100%}.flickity-enabled.is-draggable{-webkit-tap-highlight-color:transparent;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.flickity-enabled.is-draggable .flickity-viewport{cursor:move;cursor:-webkit-grab;cursor:grab}.flickity-enabled.is-draggable .flickity-viewport.is-pointer-down{cursor:-webkit-grabbing;cursor:grabbing}.flickity-button{position:absolute;background:hsla(0,0%,100%,.75);border:none;color:#333}.flickity-button:hover{background:#fff;cursor:pointer}.flickity-button:focus{outline:0;box-shadow:0 0 0 5px #19f}.flickity-button:active{opacity:.6}.flickity-button:disabled{opacity:.3;cursor:auto;pointer-events:none}.flickity-button-icon{fill:currentColor}.flickity-prev-next-button{top:50%;width:44px;height:44px;border-radius:50%;transform:translateY(-50%)}.flickity-prev-next-button.previous{left:10px}.flickity-prev-next-button.next{right:10px}.flickity-rtl .flickity-prev-next-button.previous{left:auto;right:10px}.flickity-rtl .flickity-prev-next-button.next{right:auto;left:10px}.flickity-prev-next-button .flickity-button-icon{position:absolute;left:20%;top:20%;width:60%;height:60%}.flickity-page-dots{position:absolute;width:100%;bottom:-25px;padding:0;margin:0;list-style:none;text-align:center;line-height:1}.flickity-rtl .flickity-page-dots{direction:rtl}.flickity-page-dots .dot{display:inline-block;width:10px;height:10px;margin:0 8px;background:#333;border-radius:50%;opacity:.25;cursor:pointer}.flickity-page-dots .dot.is-selected{opacity:1}
-</style>
-  
-  <style>
-
-    
-   /* ## Featured Image Slider
-  ================================ */
-    .product slider-component ul ,
-    [id*='Slider-Gallery-template']{
-
-      transition: {{basic_transition}};
-      display: block;   
-    }
-    .product slider-component ul  .product__media-item,
-        [id*='Slider-Gallery-template'] .product__media-item{
-    width: 100%;
-    }
-
-    .product slider-component ul.modal--open .product__media-item,
-    [id*='Slider-Gallery-template'].modal--open .product__media-item{
-/*     	width: 10%; */
-    }
-    
-    .product .product__media-item{
-    	padding-left: 0 !important;
-      padding-right: 0 !important;
-    }
-    
-    .product__media-wrapper,
-    .EzfyDawnTheme--loaded{
-    	opacity: 1 !important;
-      box-shadow: unset !important;
-          max-height: unset !important;
-    }
-    
-    .product__media-item.product__media-item--variant{
-    	display: block;
-    }
-    
-    .EzfyDawnTheme--loaded{
-    	padding-bottom: 0 !important;
-      margin-bottom: 0 !important;
-    }
-    
-    .EzfyDawnTheme--loaded .flickity-viewport{
-    transition: {{basic_transition}};
-  }
-
-    
-          @media (min-width: 750px){
-         
-      [data-desktop-layout="stacked"] ul>li{
-    	margin-bottom: 20px;
-	}
-          }
-
-    {% if featured_image_use_max_height %}
-
-    @media (min-width: 750px){
-      .product slider-component ul,
-        .product slider-component ul .product__media-item,
-       .product slider-component ul .product__media-item modal-opener,
-      media-gallery > slider-component,
-        [id*='Slider-Gallery-template'],
-      [id*='Slider-Gallery-template'] .product__media-item,
-      [id*='Slider-Gallery-template'] .product__media-item modal-opener{
-        max-height: {{ featured_image_max_height }}px !important;
-      }
-
-      .product slider-component ul .product__media-item img,
-        [id*='Slider-Gallery-template'] .product__media-item img{
-           object-fit: contain !important; 
-          max-height: {{ featured_image_max_height }}px !important;
-        }
-      }  
-  @media (max-width: 749px){
-    
-     .product slider-component ul,
-     .product slider-component ul  .product__media-item,
-       .product slider-component ul  .product__media-item modal-opener,
-    media-gallery > slider-component,
-      [id*='Slider-Gallery-template'],
-    [id*='Slider-Gallery-template'] .product__media-item,
-    [id*='Slider-Gallery-template'] .product__media-item modal-opener{
-      max-height: {{ featured_image_max_height_mobile }}px !important;
-    }
-
-    .product slider-component ul .product__media-item img,
-          [id*='Slider-Gallery-template'] .product__media-item img{
-             object-fit: contain !important; 
-            max-height: {{ featured_image_max_height_mobile }}px !important;
-          }
-
-              media-gallery > slider-component{
-            margin-bottom: 60px;
-          }
-    
-     .product slider-component ul,
-           [id*='Slider-Gallery-template']{
-            overflow-y: hidden !important;
-        }
-  }
-{% endif %}
-    
-        
-       /* ## Featured Image Arrows
-  ================================ */
-
-    
-    @media (min-width: 750px){
-         
-
-      .EzfyDawnTheme--loaded .flickity-button{
-             {% if featured_image_arrows == false %} display: none !important; {% endif %}
-        
-        {% if gallery_layout == 'dots' %}
-        top: calc(50% - {{ dots_top_padding }}px - {{ dots_bottom_padding  }}px );
-        {%endif %}
-      }
-
-      
-      {% if featured_image_show_arrows_on_hover %} 
-       .product slider-component ul  .flickity-button,
-          [id*='Slider-Gallery-template'] .flickity-button{
-        opacity: 0;
-    }
-
-      .product slider-component ul:hover  .flickity-button,
-    [id*='Slider-Gallery-template']:hover .flickity-button{
-        opacity: 1;
-    }
-      {% endif %}
-      
-       .EzfyDawnTheme--loaded .flickity-button{
-        width: {{ button_size }}px;
-        height: {{ button_size }}px;
-}
-
-
- .EzfyDawnTheme--loaded .flickity-button > svg{
-  width: {{ arrow_size }}px !important;
-    height: {{ arrow_size }}px !important;
-    left: 50% !important;
-    top: 50% !important;
-    transform: translate(-50%, -50%) !important;
-}
-      
-        
-    }
-    
-    @media (max-width: 749px){
-      
-             .EzfyDawnTheme--loaded .flickity-button{
-        width: {{ button_size_mobile }}px;
-        height: {{ button_size_mobile }}px;
-}
-
-
- .EzfyDawnTheme--loaded .flickity-button > svg{
-  width: {{ arrow_size_mobile }}px !important;
-    height: {{ arrow_size_mobile }}px !important;
-    left: 50% !important;
-    top: 50% !important;
-    transform: translate(-50%, -50%) !important;
-}
-      
-   
-      .EzfyDawnTheme--loaded .flickity-button{
-          {% if featured_image_arrows_mobile == false %} display: none !important; {% endif %}
-        
-             	{% if gallery_layout_mobile == 'dots' %}
-        top: calc(50% - {{ dots_top_padding_mobile }}px - {{ dots_bottom_padding_mobile  }}px );
-        {%endif %}
-      }
-
-    
-    }
-    
-    
-    
-       
-  /* ## Featured Image Slider slide (each individual slide)
-  ================================ */
-    
-    .product__media-item{
-    	box-shadow: unset !important;
-    }
-    
-    .product--thumbnail .product__media-item:not(.is-active), 
-    .product--thumbnail_slider .product__media-item:not(.is-active){
-    	display: block !important;
-    }
-    
-    
-    @media (max-width: 749px){
-      
-          
-    .product__media-item{
-
-      	padding-top: 0 !important;
-    }
-    
-      .grid--peek .grid__item:last-of-type{
-/*       	padding-right: unset !important; */
-        margin-left: unset !important;
-        padding-right: unset !important;
-      }
-      
-      .slider.product__media-list .product__media-item:first-of-type{
-/*       	padding-left: unset !important; */
-        margin-left: unset !important;
-        padding-right: unset !important;
-      }
-
-    }
-    
-          
-      /* Show video button on mobile */
-    
-    .product__modal-opener:not(.product__modal-opener--image){
-    	display: block !important;
-    }
-     
-    .product slider-component ul  .deferred-media,
-      [id*='Slider-Gallery-template'] .deferred-media{
-     display: block;
-    padding: 0;
-    position: absolute;
-    left: 0;
-    right: 0;
-    z-index: 2;
-    padding-top: 0 !important;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    width: 100%;
-    height: 100%;
-      }
-      
-       modal-opener[class*='video']{
-z-index: 1;
-      }
-    
-        
-  /* ## Modal
-  ================================ */
-    .product__media-toggle{
-    	display: none !important; 
-    }
-    
-      .product__modal-opener .product__media-icon {
-        transition: {{ hover_transition }};
-  }
-    
-      /* ## Dots
-  ================================ */
-
-    .EzfyDawnTheme--loaded .flickity-page-dots{
-    	position: relative;
-      bottom: unset !important;
-      margin-top: {{ dots_top_padding }}px;
-      margin-bottom: {{ dots_bottom_padding }}px;
-    }
-    
-       .EzfyDawnTheme--loaded .flickity-page-dots .dot{
-         background: {{ dots_color }};
-         width: {{ dots_size }}px;
-         height: {{ dots_size }}px;
-         opacity: 1;
-	}
-    
-
-   .EzfyDawnTheme--loaded .flickity-page-dots .dot.is-selected{
-      background: {{ dots_selected_color  }};
-	}
-    
-    @media (max-width: 749px){
-      
-          .EzfyDawnTheme--loaded .flickity-page-dots{
-
-      margin-top: {{ dots_top_padding_mobile }}px;
-      margin-bottom: {{ dots_bottom_padding_mobile }}px;
-    }
-      
-                 .EzfyDawnTheme--loaded .flickity-page-dots .dot{
-         width: {{ dots_size_mobile }}px;
-         height: {{ dots_size_mobile }}px;
-	}
-      
-      .product slider-component ul .flickity-page-dots,
-      [id*='Slider-Gallery-template'] .flickity-page-dots{
-        {% if gallery_layout_mobile != 'dots' %}
-        	display: none !important;
-        {% endif %}
-      }
-      
-      
-      [id] #EzfyDawnThemeThumbnails{
-      	{% if gallery_layout_mobile == 'dots' %}
-        	display: none !important;
-        {%endif %}
-      } 
-    }
-    
-    @media (min-width: 750px){
-      .product slider-component ul  .flickity-page-dots,
-      [id*='Slider-Gallery-template'] .flickity-page-dots{
-        {% if gallery_layout != 'dots' %}
-        	display: none !important;
-        {% endif %}
-      }
-      
-      
-      [id] #EzfyDawnThemeThumbnails{
-      	{% if gallery_layout == 'dots' %}
-        	display: none !important;
-        {%endif %}
-      } 
-    }
-    
-  /* ## Thumbnails 
-  ================================ */
-    
-    {% if gallery_layout_mobile == 'hide' %}
-    .Thumbnails {
-    	display: none !important;
-    }
-    {% endif %}
-    
-
-    
-  .Thumbnails{
-
-    margin: 0;
-    max-height: {{thumbnail_loading_height}}px;
-    opacity: 0;
-    margin-top: 15px;
-    padding-left: 0;
-    width: calc(100% + {{ thumbnails_slider_gap }}px);
-    list-style-type: none;
-    -webkit-tap-highlight-color: transparent;
-
-  }
-    
-    .Thumbnails{
-    	opacity: 0 !important;
-      transition: {{ basic_transition }};
-    }
-    
-    .Thumbnails-thumbnail.is-nav-selected > *,
-    .Thumbnails--normal .is-selected img,
-    .Thumbnails--vertical .is-selected img{
-    border: 2px solid black;
-}
-    
-    .Thumbnails-thumbnail{
-    	cursor: pointer;
-    }
-    
-    
-    [id] .Thumbnails--vertical--loaded,
-    [id] .Thumbnails--normal--loaded,
-    [id] .Thumbnails--slider--loaded{
-      
-      transition: {{ basic_transition }};
-    	opacity: 1 !important;
-    } 
-    
-      /* ## Thumbnails Slider
-  ================================ */
-    
-    
-   .Thumbnails--slider .Thumbnails-thumbnail{
-    max-width: calc(100% / {{thumbnails}});
-    width: 100% !important;
-    padding-left: unset;
-    padding-right: {{ thumbnails_slider_gap }}px;
-    cursor: pointer;
-  }
-
-  
-  .Thumbnails--slider .product-single__thumbnail{
-  	margin: 0 !important;
-  }
-
-  .Thumbnails--slider.flickity-enabled{
-    overflow: unset;
-    max-height: unset;
-    opacity: 1;
-    transition: {{basic_transition}};
-  }
-
-
-
-    
-    .Thumbnails--slider-image{
-    max-width: 100%;
-      width: 100%;
-    }
-
-  {% if thumbnails_vertical_alignment == 'center' %}
-  .Thumbnails--slider .flickity-slider {
-    display: flex;
-    align-items: center;
-  }
-  {% endif %}
-
-
-  {% if thumbnails_arrows_desktop == false %}
-  .Thumbnails--slider .flickity-button{
-    display: none;
-  }
-  {% elsif thumbnails_arrows_desktop %}
-  .Thumbnails--slider .flickity-button{
-    width: {{thumbnails_arrow_size}}px;
-    height: {{thumbnails_arrow_size}}px;
-  }
-
-  {% endif %}
-  
-  
-.Thumbnails--slider .product-single__thumbnail.active-thumb,
-  .Thumbnails--slider a:focus,
-  .Thumbnails--slider a:focus *{
-  	border: unset !important;
-    outline: unset !important;
-  }
-  
-
-  @media (max-width: 749px){
-    .Thumbnails--slider .flickity-button{
-      width: {{thumbnails_arrow_size_mobile}}px;
-      height: {{thumbnails_arrow_size_mobile}}px;
-
-      {% if thumbnails_arrows_mobile == false %}
-      display: none;
-      {% elsif thumbnails_arrows_mobile %}
-      display: block;
-      {% endif %}
-    }
-
-
-    .Thumbnails--slider li{
-      max-width: calc(100% / {{thumbnails_mobile}}) !important;
-    }
-
-  }
-    
-     /* ## Thumbnails Vertical
-  ================================ */ 
-    
-    @media (max-width:749px){
-    
-    [data-desktop-layout="thumbnail_vertical"] .Thumbnails{
-          margin-bottom: 30px;
-      }
-      
-    }
-    
-    @media (min-width: 750px){
-      
-      .Thumbnails--vertical--scroller > *{
-    margin-right: 0 !important;
-}
-
-.Thumbnails--vertical--scroller {
-    margin: 0 !important;
-}
-
-media-gallery[data-desktop-layout="thumbnail_vertical"]{
-      overflow: hidden;
-    display: flex;
-    flex-direction: row;
-}
-      
-      
-      media-gallery[data-desktop-layout="thumbnail_vertical"] .Thumbnails{
-          overflow: hidden;
-      }
-      
-
-      
- 
-
-media-gallery[data-desktop-layout="thumbnail_vertical"] > slider-component{
-    display: block;
-    width: 100%;
-    max-width: 80%;
-    order: 2;
-}
-
-media-gallery[data-desktop-layout="thumbnail_vertical"] .Thumbnails--vertical{
-    max-width: 20%;
-    width: 100%;
-    order: 1;
-    overflow: visible;
-
-    margin-top: 0 !important;
-
-  position: relative;
-  display: block !important;
-  max-height: unset;
-}
-
-media-gallery[data-desktop-layout="thumbnail_vertical"] .Thumbnails--vertical--scroller{
-	display: block;
-  	position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    width: 100%;
-    overflow-y: scroll;
-    padding-right: 8px;
-    scrollbar-width: none;
-    scroll-behavior: smooth;
-    -ms-overflow-style: -ms-autohiding-scrollbar;
-}
-      
-      
-      .Thumbnails--vertical--scroller {
-      	margin-top: 0 !important;
-      }
-      
-      .Thumbnails--vertical--scroller > li{
-      	margin-right: 0 !important;
-      }
-
-media-gallery[data-desktop-layout="thumbnail_vertical"] .Thumbnails--vertical--scroller > li{
-    margin-bottom: 10px;
-}
-
-
-media-gallery[data-desktop-layout="thumbnail_vertical"] .Thumbnails--vertical--scroller::-webkit-scrollbar{
-    height:0;
-    width:0;
-  }
-      
-              
-/* Fallback for older Dawn versions 
-======================================= */
-      
-
-       slider-component[data-desktop-layout="thumbnail_vertical"]{
-      overflow: hidden;
-    display: flex;
-    flex-direction: row;
-}
-      
-     slider-component[data-desktop-layout="thumbnail_vertical"] .Thumbnails{
-          overflow: hidden;
-      }
-
-
-slider-component[data-desktop-layout="thumbnail_vertical"] .product__media-list {
-    display: block;
-    width: 100%;
-    max-width: 80%;
-    order: 2;
-}
-
-slider-component[data-desktop-layout="thumbnail_vertical"] .Thumbnails--vertical{
-    max-width: 20%;
-    width: 100%;
-    order: 1;
-    overflow: visible;
-
-    margin-top: 0 !important;
-
-  position: relative;
-  display: block;
-  max-height: unset;
-}
-
-slider-component[data-desktop-layout="thumbnail_vertical"] .Thumbnails--vertical--scroller{
-	display: block;
-  	position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    width: 100%;
-    overflow-y: scroll;
-    padding-right: 20px;
-    scrollbar-width: none;
-    scroll-behavior: smooth;
-    -ms-overflow-style: -ms-autohiding-scrollbar;
-}
-
-slider-component[data-desktop-layout="thumbnail_vertical"] .Thumbnails--vertical--scroller > li{
-    margin-bottom: 10px;
-}
-
-
-slider-component[data-desktop-layout="thumbnail_vertical"] .Thumbnails--vertical--scroller::-webkit-scrollbar{
-    height:0;
-    width:0;
-  }
-      
-    }
-    
-
-    
-  /* ## Thumbnails Non-slider
-  ================================ */
-
-    .Thumbnails--normal{
-    	max-height: unset;
-    }
-    
-    .Thumbnails--normal > *{
-        display: grid;
-    grid-template-columns: repeat({{thumbnails}}, 1fr);
-    gap: {{ thumbnails_slider_gap }}px;
-    margin-top: 20px;
-          max-height: unset;
-    overflow: unset;
-    }
-    
-    .Thumbnails--normal > * > .Thumbnails-thumbnail:nth-child({{thumbnails}}n){
-    	margin-right: {{ thumbnails_slider_gap }}px;
-	}
-
-    
-  /* ## Thumbnails Arrows
-  ================================ */
-    #EzfyDawnThemeThumbnails .flickity-viewport{
-    	position: relative;
-    }
-	#EzfyDawnThemeThumbnails .flickity-button{
-    top: 0;
-    bottom: 0;
-    height: 100%;
-    border-radius: unset;
-    transform: unset;
-    opacity: .2
-}
-
-
-#EzfyDawnThemeThumbnails:hover .flickity-button{
-    opacity: .85
-}
-
-
-#EzfyDawnThemeThumbnails .flickity-button.previous{
-    left: 0;
-}
-
-#EzfyDawnThemeThumbnails .flickity-button.next{
-    right: 0;
-}
-  
-    
-  /* ## Counter 
-  ================================ */
-    .custom-slider-buttons{
-    	opacity: 0;
-      transition: {{ basic_transition }};
-    }
-    
-    .EzfyDawnTheme--loaded + .custom-slider-buttons{
-    	opacity: 1;
-    }
-
-
-  /* ## Zoom Button
-  ================================ */
-    
-  .EzfyDawnTheme--loaded modal-opener > .motion-reduce{
-       cursor: pointer; 
-    z-index: 3;
-  }
-    
-    @media (max-width: 749px){
-        
-  .EzfyDawnTheme--loaded modal-opener > .motion-reduce{
-        z-index: 3;
-    top: 8px;
-  }
-         
-    }
-        
-    .flickity-slider button:after{
-        display: none !important;
-    }
-    
-    
-    
-    
-  /* ## Overall Styles
-  ================================ */
-        
-    #EzfyDawnThemeThumbnails .flickity-button,
-    .EzfyDawnTheme--loaded .flickity-button{
-      background-color: hsla(0,0%,100%,.{{ arrow_opacity }});
-          transition: {{hover_transition}};
-    }
-    
-    #EzfyDawnThemeThumbnails .flickity-button,
-    .EzfyDawnTheme--loaded .flickity-button:hover{
-      background-color: hsla(0,0%,100%,.{{ arrow_hover_opacity }});
-          transition: {{hover_transition}};
-    }
-    
-    
-    
-    
-  </style>
-  
-  {% endif %}
-
-  <script data-ezfy-dawn-slider>
-        /*ezfyignore*/
-window.ezfyDawnThemeSlider = window.ezfyDawnThemeSlider || {};
-
-ezfyDawnThemeSlider = (function() {
-
-
-
-    const GALLERY_SELECTOR = `[id*='Slider-Gallery-template'], 
-							  .product slider-component ul`;
-  
-  const GALLERY_SLIDE_SELECTOR = `[id*='Slider-Gallery-template'] .product__media-item,
-								  .product slider-component ul .product__media-item`;
-
-  const THUMBNAILS_SELECTOR = `#EzfyDawnThemeThumbnails`;
-  const THUMBNAIL_SELECTOR = `#EzfyDawnThemeThumbnails li`;
-
-  
-  window.CURRENTLY_ACTIVE_INDEX = 0;
-  const ACTION_DELAY = 50;
-  const UPDATE_IMAGE_ON_DROPDOWN_CHANGE_DELAY = 50;
-  const UPDATE_DROPDOWN_ON_IMAGE_CHANGE_DELAY = UPDATE_IMAGE_ON_DROPDOWN_CHANGE_DELAY * 3;
-  const NON_SLIDER_THUMBNAIL_CLICK_UPDATE_DELAY = ACTION_DELAY - 20;
-  window.CHANGING_IMAGE_VIA_SLIDER = false;
-  window.CHANGING_IMAGE_VIA_DROPDOWN = false;
-  let CHANGING_IMAGE_VIA_PAGE_LOAD = false;
-
-
-  function loadOptions() {
-
-    const _options = {
-      featuredImageAnimation: _getAttributeOption(`data_featured_image_animation`),
-      dataThumbnailsQuantityMobile: _getAttributeOption(`data_thumbnails_quantity_mobile`),
-      dataThumbnailsQuantity: _getAttributeOption(`data_thumbnails_quantity`),
-      totalImages: _getAttributeOption(`data_total_images`),
-      featuredImageLoop: _getAttributeOption(`data_featured_image_loop`),
-      enableSliderForThumbnailsDesktop: _getAttributeOption(`data_enable_slider_for_thumbnails_desktop`),
-      thumbnailsHighlightedPosition: _getAttributeOption(`data_thumbnails_highlighted_position`),
-      featuredImageLazyload: _getAttributeOption(`data_featured_image_lazyload`),
-      thumbnailsLoop: _getAttributeOption(`data_thumbnails_loop`),
-      updateSwatchOnImageChange: _getAttributeOption(`data_update_swatch_on_image_change`),
-      updateImageOnSwatchChange: _getAttributeOption(`data_update_image_on_swatch_change`),
-      loadDawnSlider: _getAttributeOption(`data_load_dawn_slider`),
-      galleryLayout: _getAttributeOption(`data_gallery_layout`),
-      galleryLayoutMobile: _getAttributeOption(`data_gallery_layout_mobile`),
-      showCounter: _getAttributeOption(`data_show_counter`),
-      freeScroll: _getAttributeOption(`data_free_scroll`)
-    }
-
-    window.ezfy_options = _options;
-
-    return _options
-  }
-
-  function loadFeaturedImageSettings() {
-
-    return {
-      "contain": true,
-      "imagesLoaded": true,
-      "adaptiveHeight": true,
-      "wrapAround": options.featuredImageLoop,
-      "fade": true,
-      "lazyLoad": options.featuredImageLazyload,
-      "selectedAttraction": options.featuredImageAnimation ? 0.14 : 1,
-      "friction": options.featuredImageAnimation ? 0.8 : 1,
-      "pageDots": _isMobile() ? options.galleryLayoutMobile === 'dots' : options.galleryLayout === 'dots',
-      "freeScroll": options.freeScroll
-    };
-  }
-
-  const options = loadOptions();
-  const featuredImageSettings = loadFeaturedImageSettings();
-
-  const thumbnailsSettings = {
-    "asNavFor": GALLERY_SELECTOR,
-    "wrapAround": options.thumbnailsLoop,
-    "imagesLoaded": true,
-    "contain": false,
-    "pageDots": false,
-    accessibility: false,
-    prevNextButtons: true,
-    lazyLoad: true,
-    cellAlign: hasToGroupThumbnails() ? 'left' : options.thumbnailsHighlightedPosition,
-    groupCells: hasToGroupThumbnails()
-  }
-
-  
-
-  function hasToGroupThumbnails() {
-
-    const totalImages = parseInt(options.totalImages);
-    const thumbsMobile = parseInt(options.dataThumbnailsQuantityMobile);
-    const thumbsDesktop = parseInt(options.dataThumbnailsQuantity)
-
-
-
-    if (_isMobile() && (totalImages > thumbsMobile)) {
-      return false
-    } else if (!_isMobile() && (totalImages > thumbsDesktop)) {
-      return false;
-    }
-
-
-    return true;
-  }
-
-  const moveDOMElement = (parent, child) => parent.appendChild(child)
-
-  function _isMobile() {
-    return window.matchMedia("(max-width: 767px)").matches;
-  }
-
-
-  function _loadScript(src) {
-    return new Promise(function(resolve, reject) {
-      var s;
-      s = document.createElement("script");
-      s.src = src;
-      s.onload = resolve;
-      s.onerror = reject;
-      document.head.appendChild(s);
-    });
-  }
-
-
-  function _getAttributeOption(dataAttribute) {
-    const element = document.querySelector(`[${dataAttribute}]`);
-
-    if (!element) {
-      return null;
-    }
-
-    const attr = element.getAttribute(dataAttribute);
-
-    if (attr === 'true') {
-      return true;
-    } else if (attr === 'false') {
-      return false
-    } else {
-      return attr;
-    }
-  }
-
-
-  function _extractTextBetween(text, start, end) {
-    if (!start || !end) {
-      throw new Error(`Please add a "start" and "end" parameter`);
-    }
-
-    return text.split(start)[1].split(end)[0];
-  }
-
-  function _loadStyle(src) {
-    return new Promise(function(resolve, reject) {
-      let link = document.createElement("link");
-      link.href = src;
-      link.rel = "stylesheet";
-
-      link.onload = () => resolve(link);
-      link.onerror = () => reject(new Error(`Style load error for ${src}`));
-
-      document.head.append(link);
-    });
-  }
-
-  function _moveDOMElement(parent, child) {
-    parent.appendChild(child);
-  }
-
-
-
-  function _isProductPage() {
-    return /products\//.test(window.location.href);
-  }
-
-  function _sleep(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms));
-  }
-
-  function _isCartPage() {
-    return /cart/.test(window.location.href);
-  }
-
-  function _waitForElement(selector, delay = 50, tries = 100) {
-    const element = document.querySelector(selector);
-
-    if (!window[`__${selector}`]) {
-      window[`__${selector}`] = 0;
-      window[`__${selector}__delay`] = delay;
-      window[`__${selector}__tries`] = tries;
-    }
-
-    function _search() {
-      return new Promise((resolve) => {
-        window[`__${selector}`]++;
-        setTimeout(resolve, window[`__${selector}__delay`]);
-      });
-    }
-
-    if (element === null) {
-      if (window[`__${selector}`] >= window[`__${selector}__tries`]) {
-        window[`__${selector}`] = 0;
-        return Promise.resolve(null);
-      }
-
-      return _search().then(() => _waitForElement(selector));
-    } else {
-      return Promise.resolve(element);
-    }
-  }
-
-  function _addStyle(styleString) {
-    const style = document.createElement("style");
-    style.textContent = styleString;
-    document.head.append(style);
-  }
-
-
-  function isThumbnailsSlider() {
-    if (_isMobile()) {
-
-      if (options.galleryLayoutMobile === 'thumbnail_slider') {
-        return true;
-      }
-    }
-
-    if (!_isMobile()) {
-      if (options.galleryLayout === 'thumbnail_slider') {
-        return true;
-      }
-    }
-
-    return false;
-  }
-
-  function isDots() {
-    if (_isMobile()) {
-
-      if (options.galleryLayoutMobile === 'dots') {
-        return true;
-      }
-    }
-
-    if (!_isMobile()) {
-      if (options.galleryLayout === 'dots') {
-        return true;
-      }
-    }
-
-    return false;
-  }
-
-    function detectThumbnailType() {
-    const $thumbnails = document.querySelector(THUMBNAILS_SELECTOR);
-
-    if (!$thumbnails) {
-      return;
-    }
-
-
-    if (!_isMobile()) {
-      if (options.galleryLayout === 'thumbnail_slider') {
-        return `Thumbnails--slider`
-      }
-
-      if (options.galleryLayout === 'thumbnail') {
-        return `Thumbnails--normal`
-      }
-
-      if (options.galleryLayout === 'thumbnail_vertical') {
-        return `Thumbnails--vertical`
-      }
-
-
-    } else if (_isMobile()) {
-
-      if (options.galleryLayoutMobile === 'thumbnail_slider') {
-        return `Thumbnails--slider`
-      }
-
-
-      if (options.galleryLayoutMobile === 'thumbnail') {
-        return `Thumbnails--normal`
-      }
-
-
-    }
-
-    return "";
-  }
-
-  /* 
-  - Detect whether it's a thumbnail slider or non-slider;
-  - Adds CSS class to it	
-  */
-  function addClassToThumbnail() {
-
-    const $thumbnails = document.querySelector(THUMBNAILS_SELECTOR);
-
-    if (!$thumbnails) {
-      return;
-    }
-
-    const _class = detectThumbnailType();
-
-    if (!_class) {
-      return;
-    }
-
-    $thumbnails.classList.add(_class)
-  }
-
-
-  async function _getCurrentProduct() {
-
-
-    return new Promise(async (resolve, reject) => {
-
-
-      if (window.ezfy_product) {
-        resolve(window.ezfy_product);
-      }
-
-      let url = `https://${window.location.host + window.location.pathname}.json`;
-      let response = await fetch(url);
-
-      let {
-        product
-      } = await response.json();
-
-
-      window.ezfy_product = product;
-
-      resolve(product);
-    });
-
-
-  }
-
-
-  function loadLocalFlickity() {
-
-    if (window.Flickity !== undefined) {
-      return true;
-    }
-
-    return new Promise(async (resolve, reject) => {
-
-      ! function(t, e) {
-        "function" == typeof define && define.amd ? define("jquery-bridget/jquery-bridget", ["jquery"], function(i) {
-          return e(t, i)
-        }) : "object" == typeof module && module.exports ? module.exports = e(t, require("jquery")) : t.jQueryBridget = e(t, t.jQuery)
-      }(window, function(t, e) {
-        "use strict";
-        var i = Array.prototype.slice,
-          n = t.console,
-          s = void 0 === n ? function() {} : function(t) {
-            n.error(t)
-          };
-
-        function o(n, o, a) {
-          (a = a || e || t.jQuery) && (o.prototype.option || (o.prototype.option = function(t) {
-            a.isPlainObject(t) && (this.options = a.extend(!0, this.options, t))
-          }), a.fn[n] = function(t) {
-            return "string" == typeof t ? function(t, e, i) {
-              var o, r = "$()." + n + '("' + e + '")';
-              return t.each(function(t, l) {
-                var h = a.data(l, n);
-                if (h) {
-                  var c = h[e];
-                  if (c && "_" != e.charAt(0)) {
-                    var d = c.apply(h, i);
-                    o = void 0 === o ? d : o
-                  } else s(r + " is not a valid method")
-                } else s(n + " not initialized. Cannot call methods, i.e. " + r)
-              }), void 0 !== o ? o : t
-            }(this, t, i.call(arguments, 1)) : (function(t, e) {
-              t.each(function(t, i) {
-                var s = a.data(i, n);
-                s ? (s.option(e), s._init()) : (s = new o(i, e), a.data(i, n, s))
-              })
-            }(this, t), this)
-          }, r(a))
-        }
-
-        function r(t) {
-          !t || t && t.bridget || (t.bridget = o)
-        }
-        return r(e || t.jQuery), o
-      }),
-      function(t, e) {
-        "function" == typeof define && define.amd ? define("ev-emitter/ev-emitter", e) : "object" == typeof module && module.exports ? module.exports = e() : t.EvEmitter = e()
-      }("undefined" != typeof window ? window : this, function() {
-        function t() {}
-        var e = t.prototype;
-        return e.on = function(t, e) {
-          if (t && e) {
-            var i = this._events = this._events || {},
-              n = i[t] = i[t] || [];
-            return -1 == n.indexOf(e) && n.push(e), this
-          }
-        }, e.once = function(t, e) {
-          if (t && e) {
-            this.on(t, e);
-            var i = this._onceEvents = this._onceEvents || {};
-            return (i[t] = i[t] || {})[e] = !0, this
-          }
-        }, e.off = function(t, e) {
-          var i = this._events && this._events[t];
-          if (i && i.length) {
-            var n = i.indexOf(e);
-            return -1 != n && i.splice(n, 1), this
-          }
-        }, e.emitEvent = function(t, e) {
-          var i = this._events && this._events[t];
-          if (i && i.length) {
-            i = i.slice(0), e = e || [];
-            for (var n = this._onceEvents && this._onceEvents[t], s = 0; s < i.length; s++) {
-              var o = i[s];
-              n && n[o] && (this.off(t, o), delete n[o]), o.apply(this, e)
-            }
-            return this
-          }
-        }, e.allOff = function() {
-          delete this._events, delete this._onceEvents
-        }, t
-      }),
-      function(t, e) {
-        "function" == typeof define && define.amd ? define("get-size/get-size", e) : "object" == typeof module && module.exports ? module.exports = e() : t.getSize = e()
-      }(window, function() {
-        "use strict";
-
-        function t(t) {
-          var e = parseFloat(t);
-          return -1 == t.indexOf("%") && !isNaN(e) && e
-        }
-        var e = "undefined" == typeof console ? function() {} : function(t) {
-            console.error(t)
-          },
-          i = ["paddingLeft", "paddingRight", "paddingTop", "paddingBottom", "marginLeft", "marginRight", "marginTop", "marginBottom", "borderLeftWidth", "borderRightWidth", "borderTopWidth", "borderBottomWidth"],
-          n = i.length;
-
-        function s(t) {
-          var i = getComputedStyle(t);
-          return i || e("Style returned " + i + ". Are you running this code in a hidden iframe on Firefox? See https://bit.ly/getsizebug1"), i
-        }
-        var o, r = !1;
-
-        function a() {
-          if (!r) {
-            r = !0;
-            var e = document.createElement("div");
-            e.style.width = "200px", e.style.padding = "1px 2px 3px 4px", e.style.borderStyle = "solid", e.style.borderWidth = "1px 2px 3px 4px", e.style.boxSizing = "border-box";
-            var i = document.body || document.documentElement;
-            i.appendChild(e);
-            var n = s(e);
-            o = 200 == Math.round(t(n.width)), l.isBoxSizeOuter = o, i.removeChild(e)
-          }
-        }
-
-        function l(e) {
-          if (a(), "string" == typeof e && (e = document.querySelector(e)), e && "object" == typeof e && e.nodeType) {
-            var r = s(e);
-            if ("none" == r.display) return function() {
-              for (var t = {
-                  width: 0,
-                  height: 0,
-                  innerWidth: 0,
-                  innerHeight: 0,
-                  outerWidth: 0,
-                  outerHeight: 0
-                }, e = 0; e < n; e++) t[i[e]] = 0;
-              return t
-            }();
-            var l = {};
-            l.width = e.offsetWidth, l.height = e.offsetHeight;
-            for (var h = l.isBorderBox = "border-box" == r.boxSizing, c = 0; c < n; c++) {
-              var d = i[c],
-                u = r[d],
-                f = parseFloat(u);
-              l[d] = isNaN(f) ? 0 : f
-            }
-            var p = l.paddingLeft + l.paddingRight,
-              g = l.paddingTop + l.paddingBottom,
-              v = l.marginLeft + l.marginRight,
-              m = l.marginTop + l.marginBottom,
-              y = l.borderLeftWidth + l.borderRightWidth,
-              b = l.borderTopWidth + l.borderBottomWidth,
-              E = h && o,
-              S = t(r.width);
-            !1 !== S && (l.width = S + (E ? 0 : p + y));
-            var C = t(r.height);
-            return !1 !== C && (l.height = C + (E ? 0 : g + b)), l.innerWidth = l.width - (p + y), l.innerHeight = l.height - (g + b), l.outerWidth = l.width + v, l.outerHeight = l.height + m, l
-          }
-        }
-        return l
-      }),
-      function(t, e) {
-        "use strict";
-        "function" == typeof define && define.amd ? define("desandro-matches-selector/matches-selector", e) : "object" == typeof module && module.exports ? module.exports = e() : t.matchesSelector = e()
-      }(window, function() {
-        "use strict";
-        var t = function() {
-          var t = window.Element.prototype;
-          if (t.matches) return "matches";
-          if (t.matchesSelector) return "matchesSelector";
-          for (var e = ["webkit", "moz", "ms", "o"], i = 0; i < e.length; i++) {
-            var n = e[i] + "MatchesSelector";
-            if (t[n]) return n
-          }
-        }();
-        return function(e, i) {
-          return e[t](i)
-        }
-      }),
-      function(t, e) {
-        "function" == typeof define && define.amd ? define("fizzy-ui-utils/utils", ["desandro-matches-selector/matches-selector"], function(i) {
-          return e(t, i)
-        }) : "object" == typeof module && module.exports ? module.exports = e(t, require("desandro-matches-selector")) : t.fizzyUIUtils = e(t, t.matchesSelector)
-      }(window, function(t, e) {
-        var i = {
-            extend: function(t, e) {
-              for (var i in e) t[i] = e[i];
-              return t
-            },
-            modulo: function(t, e) {
-              return (t % e + e) % e
-            }
-          },
-          n = Array.prototype.slice;
-        i.makeArray = function(t) {
-          return Array.isArray(t) ? t : null == t ? [] : "object" == typeof t && "number" == typeof t.length ? n.call(t) : [t]
-        }, i.removeFrom = function(t, e) {
-          var i = t.indexOf(e); - 1 != i && t.splice(i, 1)
-        }, i.getParent = function(t, i) {
-          for (; t.parentNode && t != document.body;)
-            if (t = t.parentNode, e(t, i)) return t
-        }, i.getQueryElement = function(t) {
-          return "string" == typeof t ? document.querySelector(t) : t
-        }, i.handleEvent = function(t) {
-          var e = "on" + t.type;
-          this[e] && this[e](t)
-        }, i.filterFindElements = function(t, n) {
-          t = i.makeArray(t);
-          var s = [];
-          return t.forEach(function(t) {
-            if (t instanceof HTMLElement)
-              if (n) {
-                e(t, n) && s.push(t);
-                for (var i = t.querySelectorAll(n), o = 0; o < i.length; o++) s.push(i[o])
-              } else s.push(t)
-          }), s
-        }, i.debounceMethod = function(t, e, i) {
-          i = i || 100;
-          var n = t.prototype[e],
-            s = e + "Timeout";
-          t.prototype[e] = function() {
-            var t = this[s];
-            clearTimeout(t);
-            var e = arguments,
-              o = this;
-            this[s] = setTimeout(function() {
-              n.apply(o, e), delete o[s]
-            }, i)
-          }
-        }, i.docReady = function(t) {
-          var e = document.readyState;
-          "complete" == e || "interactive" == e ? setTimeout(t) : document.addEventListener("DOMContentLoaded", t)
-        }, i.toDashed = function(t) {
-          return t.replace(/(.)([A-Z])/g, function(t, e, i) {
-            return e + "-" + i
-          }).toLowerCase()
-        };
-        var s = t.console;
-        return i.htmlInit = function(e, n) {
-          i.docReady(function() {
-            var o = i.toDashed(n),
-              r = "data-" + o,
-              a = document.querySelectorAll("[" + r + "]"),
-              l = document.querySelectorAll(".js-" + o),
-              h = i.makeArray(a).concat(i.makeArray(l)),
-              c = r + "-options",
-              d = t.jQuery;
-            h.forEach(function(t) {
-              var i, o = t.getAttribute(r) || t.getAttribute(c);
-              try {
-                i = o && JSON.parse(o)
-              } catch (o) {
-                return void(s && s.error("Error parsing " + r + " on " + t.className + ": " + o))
-              }
-              var a = new e(t, i);
-              d && d.data(t, n, a)
-            })
-          })
-        }, i
-      }),
-      function(t, e) {
-        "function" == typeof define && define.amd ? define("flickity/js/cell", ["get-size/get-size"], function(i) {
-          return e(t, i)
-        }) : "object" == typeof module && module.exports ? module.exports = e(t, require("get-size")) : (t.Flickity = t.Flickity || {}, t.Flickity.Cell = e(t, t.getSize))
-      }(window, function(t, e) {
-        function i(t, e) {
-          this.element = t, this.parent = e, this.create()
-        }
-        var n = i.prototype;
-        return n.create = function() {
-          this.element.style.position = "absolute", this.element.setAttribute("aria-hidden", "true"), this.x = 0, this.shift = 0
-        }, n.destroy = function() {
-          this.unselect(), this.element.style.position = "";
-          var t = this.parent.originSide;
-          this.element.style[t] = "", this.element.removeAttribute("aria-hidden")
-        }, n.getSize = function() {
-          this.size = e(this.element)
-        }, n.setPosition = function(t) {
-          this.x = t, this.updateTarget(), this.renderPosition(t)
-        }, n.updateTarget = n.setDefaultTarget = function() {
-          var t = "left" == this.parent.originSide ? "marginLeft" : "marginRight";
-          this.target = this.x + this.size[t] + this.size.width * this.parent.cellAlign
-        }, n.renderPosition = function(t) {
-          var e = this.parent.originSide;
-          this.element.style[e] = this.parent.getPositionValue(t)
-        }, n.select = function() {
-          this.element.classList.add("is-selected"), this.element.removeAttribute("aria-hidden")
-        }, n.unselect = function() {
-          this.element.classList.remove("is-selected"), this.element.setAttribute("aria-hidden", "true")
-        }, n.wrapShift = function(t) {
-          this.shift = t, this.renderPosition(this.x + this.parent.slideableWidth * t)
-        }, n.remove = function() {
-          this.element.parentNode.removeChild(this.element)
-        }, i
-      }),
-      function(t, e) {
-        "function" == typeof define && define.amd ? define("flickity/js/slide", e) : "object" == typeof module && module.exports ? module.exports = e() : (t.Flickity = t.Flickity || {}, t.Flickity.Slide = e())
-      }(window, function() {
-        "use strict";
-
-        function t(t) {
-          this.parent = t, this.isOriginLeft = "left" == t.originSide, this.cells = [], this.outerWidth = 0, this.height = 0
-        }
-        var e = t.prototype;
-        return e.addCell = function(t) {
-          if (this.cells.push(t), this.outerWidth += t.size.outerWidth, this.height = Math.max(t.size.outerHeight, this.height), 1 == this.cells.length) {
-            this.x = t.x;
-            var e = this.isOriginLeft ? "marginLeft" : "marginRight";
-            this.firstMargin = t.size[e]
-          }
-        }, e.updateTarget = function() {
-          var t = this.isOriginLeft ? "marginRight" : "marginLeft",
-            e = this.getLastCell(),
-            i = e ? e.size[t] : 0,
-            n = this.outerWidth - (this.firstMargin + i);
-          this.target = this.x + this.firstMargin + n * this.parent.cellAlign
-        }, e.getLastCell = function() {
-          return this.cells[this.cells.length - 1]
-        }, e.select = function() {
-          this.cells.forEach(function(t) {
-            t.select()
-          })
-        }, e.unselect = function() {
-          this.cells.forEach(function(t) {
-            t.unselect()
-          })
-        }, e.getCellElements = function() {
-          return this.cells.map(function(t) {
-            return t.element
-          })
-        }, t
-      }),
-      function(t, e) {
-        "function" == typeof define && define.amd ? define("flickity/js/animate", ["fizzy-ui-utils/utils"], function(i) {
-          return e(t, i)
-        }) : "object" == typeof module && module.exports ? module.exports = e(t, require("fizzy-ui-utils")) : (t.Flickity = t.Flickity || {}, t.Flickity.animatePrototype = e(t, t.fizzyUIUtils))
-      }(window, function(t, e) {
-        var i = {
-          startAnimation: function() {
-            this.isAnimating || (this.isAnimating = !0, this.restingFrames = 0, this.animate())
-          },
-          animate: function() {
-            this.applyDragForce(), this.applySelectedAttraction();
-            var t = this.x;
-            if (this.integratePhysics(), this.positionSlider(), this.settle(t), this.isAnimating) {
-              var e = this;
-              requestAnimationFrame(function() {
-                e.animate()
-              })
-            }
-          },
-          positionSlider: function() {
-            var t = this.x;
-            this.options.wrapAround && this.cells.length > 1 && (t = e.modulo(t, this.slideableWidth), t -= this.slideableWidth, this.shiftWrapCells(t)), this.setTranslateX(t, this.isAnimating), this.dispatchScrollEvent()
-          },
-          setTranslateX: function(t, e) {
-            t += this.cursorPosition, t = this.options.rightToLeft ? -t : t;
-            var i = this.getPositionValue(t);
-            this.slider.style.transform = e ? "translate3d(" + i + ",0,0)" : "translateX(" + i + ")"
-          },
-          dispatchScrollEvent: function() {
-            var t = this.slides[0];
-            if (t) {
-              var e = -this.x - t.target,
-                i = e / this.slidesWidth;
-              this.dispatchEvent("scroll", null, [i, e])
-            }
-          },
-          positionSliderAtSelected: function() {
-            this.cells.length && (this.x = -this.selectedSlide.target, this.velocity = 0, this.positionSlider())
-          },
-          getPositionValue: function(t) {
-            return this.options.percentPosition ? .01 * Math.round(t / this.size.innerWidth * 1e4) + "%" : Math.round(t) + "px"
-          },
-          settle: function(t) {
-            !this.isPointerDown && Math.round(100 * this.x) == Math.round(100 * t) && this.restingFrames++, this.restingFrames > 2 && (this.isAnimating = !1, delete this.isFreeScrolling, this.positionSlider(), this.dispatchEvent("settle", null, [this.selectedIndex]))
-          },
-          shiftWrapCells: function(t) {
-            var e = this.cursorPosition + t;
-            this._shiftCells(this.beforeShiftCells, e, -1);
-            var i = this.size.innerWidth - (t + this.slideableWidth + this.cursorPosition);
-            this._shiftCells(this.afterShiftCells, i, 1)
-          },
-          _shiftCells: function(t, e, i) {
-            for (var n = 0; n < t.length; n++) {
-              var s = t[n],
-                o = e > 0 ? i : 0;
-              s.wrapShift(o), e -= s.size.outerWidth
-            }
-          },
-          _unshiftCells: function(t) {
-            if (t && t.length)
-              for (var e = 0; e < t.length; e++) t[e].wrapShift(0)
-          },
-          integratePhysics: function() {
-            this.x += this.velocity, this.velocity *= this.getFrictionFactor()
-          },
-          applyForce: function(t) {
-            this.velocity += t
-          },
-          getFrictionFactor: function() {
-            return 1 - this.options[this.isFreeScrolling ? "freeScrollFriction" : "friction"]
-          },
-          getRestingPosition: function() {
-            return this.x + this.velocity / (1 - this.getFrictionFactor())
-          },
-          applyDragForce: function() {
-            if (this.isDraggable && this.isPointerDown) {
-              var t = this.dragX - this.x - this.velocity;
-              this.applyForce(t)
-            }
-          },
-          applySelectedAttraction: function() {
-            if (!(this.isDraggable && this.isPointerDown) && !this.isFreeScrolling && this.slides.length) {
-              var t = (-1 * this.selectedSlide.target - this.x) * this.options.selectedAttraction;
-              this.applyForce(t)
-            }
-          }
-        };
-        return i
-      }),
-      function(t, e) {
-        if ("function" == typeof define && define.amd) define("flickity/js/flickity", ["ev-emitter/ev-emitter", "get-size/get-size", "fizzy-ui-utils/utils", "./cell", "./slide", "./animate"], function(i, n, s, o, r, a) {
-          return e(t, i, n, s, o, r, a)
-        });
-        else if ("object" == typeof module && module.exports) module.exports = e(t, require("ev-emitter"), require("get-size"), require("fizzy-ui-utils"), require("./cell"), require("./slide"), require("./animate"));
-        else {
-          var i = t.Flickity;
-          t.Flickity = e(t, t.EvEmitter, t.getSize, t.fizzyUIUtils, i.Cell, i.Slide, i.animatePrototype)
-        }
-      }(window, function(t, e, i, n, s, o, r) {
-        var a = t.jQuery,
-          l = t.getComputedStyle,
-          h = t.console;
-
-        function c(t, e) {
-          for (t = n.makeArray(t); t.length;) e.appendChild(t.shift())
-        }
-        var d = 0,
-          u = {};
-
-        function f(t, e) {
-          var i = n.getQueryElement(t);
-          if (i) {
-            if (this.element = i, this.element.flickityGUID) {
-              var s = u[this.element.flickityGUID];
-              return s && s.option(e), s
-            }
-            a && (this.$element = a(this.element)), this.options = n.extend({}, this.constructor.defaults), this.option(e), this._create()
-          } else h && h.error("Bad element for Flickity: " + (i || t))
-        }
-        f.defaults = {
-          accessibility: !0,
-          cellAlign: "center",
-          freeScrollFriction: .075,
-          friction: .28,
-          namespaceJQueryEvents: !0,
-          percentPosition: !0,
-          resize: !0,
-          selectedAttraction: .025,
-          setGallerySize: !0
-        }, f.createMethods = [];
-        var p = f.prototype;
-        n.extend(p, e.prototype), p._create = function() {
-          var e = this.guid = ++d;
-          for (var i in this.element.flickityGUID = e, u[e] = this, this.selectedIndex = 0, this.restingFrames = 0, this.x = 0, this.velocity = 0, this.originSide = this.options.rightToLeft ? "right" : "left", this.viewport = document.createElement("div"), this.viewport.className = "flickity-viewport", this._createSlider(), (this.options.resize || this.options.watchCSS) && t.addEventListener("resize", this), this.options.on) {
-            var n = this.options.on[i];
-            this.on(i, n)
-          }
-          f.createMethods.forEach(function(t) {
-            this[t]()
-          }, this), this.options.watchCSS ? this.watchCSS() : this.activate()
-        }, p.option = function(t) {
-          n.extend(this.options, t)
-        }, p.activate = function() {
-          this.isActive || (this.isActive = !0, this.element.classList.add("flickity-enabled"), this.options.rightToLeft && this.element.classList.add("flickity-rtl"), this.getSize(), c(this._filterFindCellElements(this.element.children), this.slider), this.viewport.appendChild(this.slider), this.element.appendChild(this.viewport), this.reloadCells(), this.options.accessibility && (this.element.tabIndex = 0, this.element.addEventListener("keydown", this)), this.emitEvent("activate"), this.selectInitialIndex(), this.isInitActivated = !0, this.dispatchEvent("ready"))
-        }, p._createSlider = function() {
-          var t = document.createElement("div");
-          t.className = "flickity-slider", t.style[this.originSide] = 0, this.slider = t
-        }, p._filterFindCellElements = function(t) {
-          return n.filterFindElements(t, this.options.cellSelector)
-        }, p.reloadCells = function() {
-          this.cells = this._makeCells(this.slider.children), this.positionCells(), this._getWrapShiftCells(), this.setGallerySize()
-        }, p._makeCells = function(t) {
-          return this._filterFindCellElements(t).map(function(t) {
-            return new s(t, this)
-          }, this)
-        }, p.getLastCell = function() {
-          return this.cells[this.cells.length - 1]
-        }, p.getLastSlide = function() {
-          return this.slides[this.slides.length - 1]
-        }, p.positionCells = function() {
-          this._sizeCells(this.cells), this._positionCells(0)
-        }, p._positionCells = function(t) {
-          t = t || 0, this.maxCellHeight = t && this.maxCellHeight || 0;
-          var e = 0;
-          if (t > 0) {
-            var i = this.cells[t - 1];
-            e = i.x + i.size.outerWidth
-          }
-          for (var n = this.cells.length, s = t; s < n; s++) {
-            var o = this.cells[s];
-            o.setPosition(e), e += o.size.outerWidth, this.maxCellHeight = Math.max(o.size.outerHeight, this.maxCellHeight)
-          }
-          this.slideableWidth = e, this.updateSlides(), this._containSlides(), this.slidesWidth = n ? this.getLastSlide().target - this.slides[0].target : 0
-        }, p._sizeCells = function(t) {
-          t.forEach(function(t) {
-            t.getSize()
-          })
-        }, p.updateSlides = function() {
-          if (this.slides = [], this.cells.length) {
-            var t = new o(this);
-            this.slides.push(t);
-            var e = "left" == this.originSide ? "marginRight" : "marginLeft",
-              i = this._getCanCellFit();
-            this.cells.forEach(function(n, s) {
-              if (t.cells.length) {
-                var r = t.outerWidth - t.firstMargin + (n.size.outerWidth - n.size[e]);
-                i.call(this, s, r) ? t.addCell(n) : (t.updateTarget(), t = new o(this), this.slides.push(t), t.addCell(n))
-              } else t.addCell(n)
-            }, this), t.updateTarget(), this.updateSelectedSlide()
-          }
-        }, p._getCanCellFit = function() {
-          var t = this.options.groupCells;
-          if (!t) return function() {
-            return !1
-          };
-          if ("number" == typeof t) {
-            var e = parseInt(t, 10);
-            return function(t) {
-              return t % e != 0
-            }
-          }
-          var i = "string" == typeof t && t.match(/^(\d+)%$/),
-            n = i ? parseInt(i[1], 10) / 100 : 1;
-          return function(t, e) {
-            return e <= (this.size.innerWidth + 1) * n
-          }
-        }, p._init = p.reposition = function() {
-          this.positionCells(), this.positionSliderAtSelected()
-        }, p.getSize = function() {
-          this.size = i(this.element), this.setCellAlign(), this.cursorPosition = this.size.innerWidth * this.cellAlign
-        };
-        var g = {
-          center: {
-            left: .5,
-            right: .5
-          },
-          left: {
-            left: 0,
-            right: 1
-          },
-          right: {
-            right: 0,
-            left: 1
-          }
-        };
-        return p.setCellAlign = function() {
-          var t = g[this.options.cellAlign];
-          this.cellAlign = t ? t[this.originSide] : this.options.cellAlign
-        }, p.setGallerySize = function() {
-          if (this.options.setGallerySize) {
-            var t = this.options.adaptiveHeight && this.selectedSlide ? this.selectedSlide.height : this.maxCellHeight;
-            this.viewport.style.height = t + "px"
-          }
-        }, p._getWrapShiftCells = function() {
-          if (this.options.wrapAround) {
-            this._unshiftCells(this.beforeShiftCells), this._unshiftCells(this.afterShiftCells);
-            var t = this.cursorPosition,
-              e = this.cells.length - 1;
-            this.beforeShiftCells = this._getGapCells(t, e, -1), t = this.size.innerWidth - this.cursorPosition, this.afterShiftCells = this._getGapCells(t, 0, 1)
-          }
-        }, p._getGapCells = function(t, e, i) {
-          for (var n = []; t > 0;) {
-            var s = this.cells[e];
-            if (!s) break;
-            n.push(s), e += i, t -= s.size.outerWidth
-          }
-          return n
-        }, p._containSlides = function() {
-          if (this.options.contain && !this.options.wrapAround && this.cells.length) {
-            var t = this.options.rightToLeft,
-              e = t ? "marginRight" : "marginLeft",
-              i = t ? "marginLeft" : "marginRight",
-              n = this.slideableWidth - this.getLastCell().size[i],
-              s = n < this.size.innerWidth,
-              o = this.cursorPosition + this.cells[0].size[e],
-              r = n - this.size.innerWidth * (1 - this.cellAlign);
-            this.slides.forEach(function(t) {
-              s ? t.target = n * this.cellAlign : (t.target = Math.max(t.target, o), t.target = Math.min(t.target, r))
-            }, this)
-          }
-        }, p.dispatchEvent = function(t, e, i) {
-          var n = e ? [e].concat(i) : i;
-          if (this.emitEvent(t, n), a && this.$element) {
-            var s = t += this.options.namespaceJQueryEvents ? ".flickity" : "";
-            if (e) {
-              var o = new a.Event(e);
-              o.type = t, s = o
-            }
-            this.$element.trigger(s, i)
-          }
-        }, p.select = function(t, e, i) {
-          if (this.isActive && (t = parseInt(t, 10), this._wrapSelect(t), (this.options.wrapAround || e) && (t = n.modulo(t, this.slides.length)), this.slides[t])) {
-            var s = this.selectedIndex;
-            this.selectedIndex = t, this.updateSelectedSlide(), i ? this.positionSliderAtSelected() : this.startAnimation(), this.options.adaptiveHeight && this.setGallerySize(), this.dispatchEvent("select", null, [t]), t != s && this.dispatchEvent("change", null, [t]), this.dispatchEvent("cellSelect")
-          }
-        }, p._wrapSelect = function(t) {
-          var e = this.slides.length;
-          if (!(this.options.wrapAround && e > 1)) return t;
-          var i = n.modulo(t, e),
-            s = Math.abs(i - this.selectedIndex),
-            o = Math.abs(i + e - this.selectedIndex),
-            r = Math.abs(i - e - this.selectedIndex);
-          !this.isDragSelect && o < s ? t += e : !this.isDragSelect && r < s && (t -= e), t < 0 ? this.x -= this.slideableWidth : t >= e && (this.x += this.slideableWidth)
-        }, p.previous = function(t, e) {
-          this.select(this.selectedIndex - 1, t, e)
-        }, p.next = function(t, e) {
-          this.select(this.selectedIndex + 1, t, e)
-        }, p.updateSelectedSlide = function() {
-          var t = this.slides[this.selectedIndex];
-          t && (this.unselectSelectedSlide(), this.selectedSlide = t, t.select(), this.selectedCells = t.cells, this.selectedElements = t.getCellElements(), this.selectedCell = t.cells[0], this.selectedElement = this.selectedElements[0])
-        }, p.unselectSelectedSlide = function() {
-          this.selectedSlide && this.selectedSlide.unselect()
-        }, p.selectInitialIndex = function() {
-          var t = this.options.initialIndex;
-          if (this.isInitActivated) this.select(this.selectedIndex, !1, !0);
-          else {
-            if (t && "string" == typeof t)
-              if (this.queryCell(t)) return void this.selectCell(t, !1, !0);
-            var e = 0;
-            t && this.slides[t] && (e = t), this.select(e, !1, !0)
-          }
-        }, p.selectCell = function(t, e, i) {
-          var n = this.queryCell(t);
-          if (n) {
-            var s = this.getCellSlideIndex(n);
-            this.select(s, e, i)
-          }
-        }, p.getCellSlideIndex = function(t) {
-          for (var e = 0; e < this.slides.length; e++) {
-            if (-1 != this.slides[e].cells.indexOf(t)) return e
-          }
-        }, p.getCell = function(t) {
-          for (var e = 0; e < this.cells.length; e++) {
-            var i = this.cells[e];
-            if (i.element == t) return i
-          }
-        }, p.getCells = function(t) {
-          t = n.makeArray(t);
-          var e = [];
-          return t.forEach(function(t) {
-            var i = this.getCell(t);
-            i && e.push(i)
-          }, this), e
-        }, p.getCellElements = function() {
-          return this.cells.map(function(t) {
-            return t.element
-          })
-        }, p.getParentCell = function(t) {
-          var e = this.getCell(t);
-          return e || (t = n.getParent(t, ".flickity-slider > *"), this.getCell(t))
-        }, p.getAdjacentCellElements = function(t, e) {
-          if (!t) return this.selectedSlide.getCellElements();
-          e = void 0 === e ? this.selectedIndex : e;
-          var i = this.slides.length;
-          if (1 + 2 * t >= i) return this.getCellElements();
-          for (var s = [], o = e - t; o <= e + t; o++) {
-            var r = this.options.wrapAround ? n.modulo(o, i) : o,
-              a = this.slides[r];
-            a && (s = s.concat(a.getCellElements()))
-          }
-          return s
-        }, p.queryCell = function(t) {
-          if ("number" == typeof t) return this.cells[t];
-          if ("string" == typeof t) {
-            if (t.match(/^[#.]?[\d/]/)) return;
-            t = this.element.querySelector(t)
-          }
-          return this.getCell(t)
-        }, p.uiChange = function() {
-          this.emitEvent("uiChange")
-        }, p.childUIPointerDown = function(t) {
-          "touchstart" != t.type && t.preventDefault(), this.focus()
-        }, p.onresize = function() {
-          this.watchCSS(), this.resize()
-        }, n.debounceMethod(f, "onresize", 150), p.resize = function() {
-          if (this.isActive) {
-            this.getSize(), this.options.wrapAround && (this.x = n.modulo(this.x, this.slideableWidth)), this.positionCells(), this._getWrapShiftCells(), this.setGallerySize(), this.emitEvent("resize");
-            var t = this.selectedElements && this.selectedElements[0];
-            this.selectCell(t, !1, !0)
-          }
-        }, p.watchCSS = function() {
-          this.options.watchCSS && (-1 != l(this.element, ":after").content.indexOf("flickity") ? this.activate() : this.deactivate())
-        }, p.onkeydown = function(t) {
-          var e = document.activeElement && document.activeElement != this.element;
-          if (this.options.accessibility && !e) {
-            var i = f.keyboardHandlers[t.keyCode];
-            i && i.call(this)
-          }
-        }, f.keyboardHandlers = {
-          37: function() {
-            var t = this.options.rightToLeft ? "next" : "previous";
-            this.uiChange(), this[t]()
-          },
-          39: function() {
-            var t = this.options.rightToLeft ? "previous" : "next";
-            this.uiChange(), this[t]()
-          }
-        }, p.focus = function() {
-          var e = t.pageYOffset;
-          this.element.focus({
-            preventScroll: !0
-          }), t.pageYOffset != e && t.scrollTo(t.pageXOffset, e)
-        }, p.deactivate = function() {
-          this.isActive && (this.element.classList.remove("flickity-enabled"), this.element.classList.remove("flickity-rtl"), this.unselectSelectedSlide(), this.cells.forEach(function(t) {
-            t.destroy()
-          }), this.element.removeChild(this.viewport), c(this.slider.children, this.element), this.options.accessibility && (this.element.removeAttribute("tabIndex"), this.element.removeEventListener("keydown", this)), this.isActive = !1, this.emitEvent("deactivate"))
-        }, p.destroy = function() {
-          this.deactivate(), t.removeEventListener("resize", this), this.allOff(), this.emitEvent("destroy"), a && this.$element && a.removeData(this.element, "flickity"), delete this.element.flickityGUID, delete u[this.guid]
-        }, n.extend(p, r), f.data = function(t) {
-          var e = (t = n.getQueryElement(t)) && t.flickityGUID;
-          return e && u[e]
-        }, n.htmlInit(f, "flickity"), a && a.bridget && a.bridget("flickity", f), f.setJQuery = function(t) {
-          a = t
-        }, f.Cell = s, f.Slide = o, f
-      }),
-      function(t, e) {
-        "function" == typeof define && define.amd ? define("unipointer/unipointer", ["ev-emitter/ev-emitter"], function(i) {
-          return e(t, i)
-        }) : "object" == typeof module && module.exports ? module.exports = e(t, require("ev-emitter")) : t.Unipointer = e(t, t.EvEmitter)
-      }(window, function(t, e) {
-        function i() {}
-        var n = i.prototype = Object.create(e.prototype);
-        n.bindStartEvent = function(t) {
-          this._bindStartEvent(t, !0)
-        }, n.unbindStartEvent = function(t) {
-          this._bindStartEvent(t, !1)
-        }, n._bindStartEvent = function(e, i) {
-          var n = (i = void 0 === i || i) ? "addEventListener" : "removeEventListener",
-            s = "mousedown";
-          t.PointerEvent ? s = "pointerdown" : "ontouchstart" in t && (s = "touchstart"), e[n](s, this)
-        }, n.handleEvent = function(t) {
-          var e = "on" + t.type;
-          this[e] && this[e](t)
-        }, n.getTouch = function(t) {
-          for (var e = 0; e < t.length; e++) {
-            var i = t[e];
-            if (i.identifier == this.pointerIdentifier) return i
-          }
-        }, n.onmousedown = function(t) {
-          var e = t.button;
-          e && 0 !== e && 1 !== e || this._pointerDown(t, t)
-        }, n.ontouchstart = function(t) {
-          this._pointerDown(t, t.changedTouches[0])
-        }, n.onpointerdown = function(t) {
-          this._pointerDown(t, t)
-        }, n._pointerDown = function(t, e) {
-          t.button || this.isPointerDown || (this.isPointerDown = !0, this.pointerIdentifier = void 0 !== e.pointerId ? e.pointerId : e.identifier, this.pointerDown(t, e))
-        }, n.pointerDown = function(t, e) {
-          this._bindPostStartEvents(t), this.emitEvent("pointerDown", [t, e])
-        };
-        var s = {
-          mousedown: ["mousemove", "mouseup"],
-          touchstart: ["touchmove", "touchend", "touchcancel"],
-          pointerdown: ["pointermove", "pointerup", "pointercancel"]
-        };
-        return n._bindPostStartEvents = function(e) {
-          if (e) {
-            var i = s[e.type];
-            i.forEach(function(e) {
-              t.addEventListener(e, this)
-            }, this), this._boundPointerEvents = i
-          }
-        }, n._unbindPostStartEvents = function() {
-          this._boundPointerEvents && (this._boundPointerEvents.forEach(function(e) {
-            t.removeEventListener(e, this)
-          }, this), delete this._boundPointerEvents)
-        }, n.onmousemove = function(t) {
-          this._pointerMove(t, t)
-        }, n.onpointermove = function(t) {
-          t.pointerId == this.pointerIdentifier && this._pointerMove(t, t)
-        }, n.ontouchmove = function(t) {
-          var e = this.getTouch(t.changedTouches);
-          e && this._pointerMove(t, e)
-        }, n._pointerMove = function(t, e) {
-          this.pointerMove(t, e)
-        }, n.pointerMove = function(t, e) {
-          this.emitEvent("pointerMove", [t, e])
-        }, n.onmouseup = function(t) {
-          this._pointerUp(t, t)
-        }, n.onpointerup = function(t) {
-          t.pointerId == this.pointerIdentifier && this._pointerUp(t, t)
-        }, n.ontouchend = function(t) {
-          var e = this.getTouch(t.changedTouches);
-          e && this._pointerUp(t, e)
-        }, n._pointerUp = function(t, e) {
-          this._pointerDone(), this.pointerUp(t, e)
-        }, n.pointerUp = function(t, e) {
-          this.emitEvent("pointerUp", [t, e])
-        }, n._pointerDone = function() {
-          this._pointerReset(), this._unbindPostStartEvents(), this.pointerDone()
-        }, n._pointerReset = function() {
-          this.isPointerDown = !1, delete this.pointerIdentifier
-        }, n.pointerDone = function() {}, n.onpointercancel = function(t) {
-          t.pointerId == this.pointerIdentifier && this._pointerCancel(t, t)
-        }, n.ontouchcancel = function(t) {
-          var e = this.getTouch(t.changedTouches);
-          e && this._pointerCancel(t, e)
-        }, n._pointerCancel = function(t, e) {
-          this._pointerDone(), this.pointerCancel(t, e)
-        }, n.pointerCancel = function(t, e) {
-          this.emitEvent("pointerCancel", [t, e])
-        }, i.getPointerPoint = function(t) {
-          return {
-            x: t.pageX,
-            y: t.pageY
-          }
-        }, i
-      }),
-      function(t, e) {
-        "function" == typeof define && define.amd ? define("unidragger/unidragger", ["unipointer/unipointer"], function(i) {
-          return e(t, i)
-        }) : "object" == typeof module && module.exports ? module.exports = e(t, require("unipointer")) : t.Unidragger = e(t, t.Unipointer)
-      }(window, function(t, e) {
-        function i() {}
-        var n = i.prototype = Object.create(e.prototype);
-        n.bindHandles = function() {
-          this._bindHandles(!0)
-        }, n.unbindHandles = function() {
-          this._bindHandles(!1)
-        }, n._bindHandles = function(e) {
-          for (var i = (e = void 0 === e || e) ? "addEventListener" : "removeEventListener", n = e ? this._touchActionValue : "", s = 0; s < this.handles.length; s++) {
-            var o = this.handles[s];
-            this._bindStartEvent(o, e), o[i]("click", this), t.PointerEvent && (o.style.touchAction = n)
-          }
-        }, n._touchActionValue = "none", n.pointerDown = function(t, e) {
-          this.okayPointerDown(t) && (this.pointerDownPointer = {
-            pageX: e.pageX,
-            pageY: e.pageY
-          }, t.preventDefault(), this.pointerDownBlur(), this._bindPostStartEvents(t), this.emitEvent("pointerDown", [t, e]))
-        };
-        var s = {
-            TEXTAREA: !0,
-            INPUT: !0,
-            SELECT: !0,
-            OPTION: !0
-          },
-          o = {
-            radio: !0,
-            checkbox: !0,
-            button: !0,
-            submit: !0,
-            image: !0,
-            file: !0
-          };
-        return n.okayPointerDown = function(t) {
-          var e = s[t.target.nodeName],
-            i = o[t.target.type],
-            n = !e || i;
-          return n || this._pointerReset(), n
-        }, n.pointerDownBlur = function() {
-          var t = document.activeElement;
-          t && t.blur && t != document.body && t.blur()
-        }, n.pointerMove = function(t, e) {
-          var i = this._dragPointerMove(t, e);
-          this.emitEvent("pointerMove", [t, e, i]), this._dragMove(t, e, i)
-        }, n._dragPointerMove = function(t, e) {
-          var i = {
-            x: e.pageX - this.pointerDownPointer.pageX,
-            y: e.pageY - this.pointerDownPointer.pageY
-          };
-          return !this.isDragging && this.hasDragStarted(i) && this._dragStart(t, e), i
-        }, n.hasDragStarted = function(t) {
-          return Math.abs(t.x) > 3 || Math.abs(t.y) > 3
-        }, n.pointerUp = function(t, e) {
-          this.emitEvent("pointerUp", [t, e]), this._dragPointerUp(t, e)
-        }, n._dragPointerUp = function(t, e) {
-          this.isDragging ? this._dragEnd(t, e) : this._staticClick(t, e)
-        }, n._dragStart = function(t, e) {
-          this.isDragging = !0, this.isPreventingClicks = !0, this.dragStart(t, e)
-        }, n.dragStart = function(t, e) {
-          this.emitEvent("dragStart", [t, e])
-        }, n._dragMove = function(t, e, i) {
-          this.isDragging && this.dragMove(t, e, i)
-        }, n.dragMove = function(t, e, i) {
-          t.preventDefault(), this.emitEvent("dragMove", [t, e, i])
-        }, n._dragEnd = function(t, e) {
-          this.isDragging = !1, setTimeout(function() {
-            delete this.isPreventingClicks
-          }.bind(this)), this.dragEnd(t, e)
-        }, n.dragEnd = function(t, e) {
-          this.emitEvent("dragEnd", [t, e])
-        }, n.onclick = function(t) {
-          this.isPreventingClicks && t.preventDefault()
-        }, n._staticClick = function(t, e) {
-          this.isIgnoringMouseUp && "mouseup" == t.type || (this.staticClick(t, e), "mouseup" != t.type && (this.isIgnoringMouseUp = !0, setTimeout(function() {
-            delete this.isIgnoringMouseUp
-          }.bind(this), 400)))
-        }, n.staticClick = function(t, e) {
-          this.emitEvent("staticClick", [t, e])
-        }, i.getPointerPoint = e.getPointerPoint, i
-      }),
-      function(t, e) {
-        "function" == typeof define && define.amd ? define("flickity/js/drag", ["./flickity", "unidragger/unidragger", "fizzy-ui-utils/utils"], function(i, n, s) {
-          return e(t, i, n, s)
-        }) : "object" == typeof module && module.exports ? module.exports = e(t, require("./flickity"), require("unidragger"), require("fizzy-ui-utils")) : t.Flickity = e(t, t.Flickity, t.Unidragger, t.fizzyUIUtils)
-      }(window, function(t, e, i, n) {
-        n.extend(e.defaults, {
-          draggable: ">1",
-          dragThreshold: 3
-        }), e.createMethods.push("_createDrag");
-        var s = e.prototype;
-        n.extend(s, i.prototype), s._touchActionValue = "pan-y";
-        var o = "createTouch" in document,
-          r = !1;
-        s._createDrag = function() {
-          this.on("activate", this.onActivateDrag), this.on("uiChange", this._uiChangeDrag), this.on("deactivate", this.onDeactivateDrag), this.on("cellChange", this.updateDraggable), o && !r && (t.addEventListener("touchmove", function() {}), r = !0)
-        }, s.onActivateDrag = function() {
-          this.handles = [this.viewport], this.bindHandles(), this.updateDraggable()
-        }, s.onDeactivateDrag = function() {
-          this.unbindHandles(), this.element.classList.remove("is-draggable")
-        }, s.updateDraggable = function() {
-          ">1" == this.options.draggable ? this.isDraggable = this.slides.length > 1 : this.isDraggable = this.options.draggable, this.isDraggable ? this.element.classList.add("is-draggable") : this.element.classList.remove("is-draggable")
-        }, s.bindDrag = function() {
-          this.options.draggable = !0, this.updateDraggable()
-        }, s.unbindDrag = function() {
-          this.options.draggable = !1, this.updateDraggable()
-        }, s._uiChangeDrag = function() {
-          delete this.isFreeScrolling
-        }, s.pointerDown = function(e, i) {
-          this.isDraggable ? this.okayPointerDown(e) && (this._pointerDownPreventDefault(e), this.pointerDownFocus(e), document.activeElement != this.element && this.pointerDownBlur(), this.dragX = this.x, this.viewport.classList.add("is-pointer-down"), this.pointerDownScroll = l(), t.addEventListener("scroll", this), this._pointerDownDefault(e, i)) : this._pointerDownDefault(e, i)
-        }, s._pointerDownDefault = function(t, e) {
-          this.pointerDownPointer = {
-            pageX: e.pageX,
-            pageY: e.pageY
-          }, this._bindPostStartEvents(t), this.dispatchEvent("pointerDown", t, [e])
-        };
-        var a = {
-          INPUT: !0,
-          TEXTAREA: !0,
-          SELECT: !0
-        };
-
-        function l() {
-          return {
-            x: t.pageXOffset,
-            y: t.pageYOffset
-          }
-        }
-        return s.pointerDownFocus = function(t) {
-          a[t.target.nodeName] || this.focus()
-        }, s._pointerDownPreventDefault = function(t) {
-          var e = "touchstart" == t.type,
-            i = "touch" == t.pointerType,
-            n = a[t.target.nodeName];
-          e || i || n || t.preventDefault()
-        }, s.hasDragStarted = function(t) {
-          return Math.abs(t.x) > this.options.dragThreshold
-        }, s.pointerUp = function(t, e) {
-          delete this.isTouchScrolling, this.viewport.classList.remove("is-pointer-down"), this.dispatchEvent("pointerUp", t, [e]), this._dragPointerUp(t, e)
-        }, s.pointerDone = function() {
-          t.removeEventListener("scroll", this), delete this.pointerDownScroll
-        }, s.dragStart = function(e, i) {
-          this.isDraggable && (this.dragStartPosition = this.x, this.startAnimation(), t.removeEventListener("scroll", this), this.dispatchEvent("dragStart", e, [i]))
-        }, s.pointerMove = function(t, e) {
-          var i = this._dragPointerMove(t, e);
-          this.dispatchEvent("pointerMove", t, [e, i]), this._dragMove(t, e, i)
-        }, s.dragMove = function(t, e, i) {
-          if (this.isDraggable) {
-            t.preventDefault(), this.previousDragX = this.dragX;
-            var n = this.options.rightToLeft ? -1 : 1;
-            this.options.wrapAround && (i.x %= this.slideableWidth);
-            var s = this.dragStartPosition + i.x * n;
-            if (!this.options.wrapAround && this.slides.length) {
-              var o = Math.max(-this.slides[0].target, this.dragStartPosition);
-              s = s > o ? .5 * (s + o) : s;
-              var r = Math.min(-this.getLastSlide().target, this.dragStartPosition);
-              s = s < r ? .5 * (s + r) : s
-            }
-            this.dragX = s, this.dragMoveTime = new Date, this.dispatchEvent("dragMove", t, [e, i])
-          }
-        }, s.dragEnd = function(t, e) {
-          if (this.isDraggable) {
-            this.options.freeScroll && (this.isFreeScrolling = !0);
-            var i = this.dragEndRestingSelect();
-            if (this.options.freeScroll && !this.options.wrapAround) {
-              var n = this.getRestingPosition();
-              this.isFreeScrolling = -n > this.slides[0].target && -n < this.getLastSlide().target
-            } else this.options.freeScroll || i != this.selectedIndex || (i += this.dragEndBoostSelect());
-            delete this.previousDragX, this.isDragSelect = this.options.wrapAround, this.select(i), delete this.isDragSelect, this.dispatchEvent("dragEnd", t, [e])
-          }
-        }, s.dragEndRestingSelect = function() {
-          var t = this.getRestingPosition(),
-            e = Math.abs(this.getSlideDistance(-t, this.selectedIndex)),
-            i = this._getClosestResting(t, e, 1),
-            n = this._getClosestResting(t, e, -1);
-          return i.distance < n.distance ? i.index : n.index
-        }, s._getClosestResting = function(t, e, i) {
-          for (var n = this.selectedIndex, s = 1 / 0, o = this.options.contain && !this.options.wrapAround ? function(t, e) {
-              return t <= e
-            } : function(t, e) {
-              return t < e
-            }; o(e, s) && (n += i, s = e, null !== (e = this.getSlideDistance(-t, n)));) e = Math.abs(e);
-          return {
-            distance: s,
-            index: n - i
-          }
-        }, s.getSlideDistance = function(t, e) {
-          var i = this.slides.length,
-            s = this.options.wrapAround && i > 1,
-            o = s ? n.modulo(e, i) : e,
-            r = this.slides[o];
-          if (!r) return null;
-          var a = s ? this.slideableWidth * Math.floor(e / i) : 0;
-          return t - (r.target + a)
-        }, s.dragEndBoostSelect = function() {
-          if (void 0 === this.previousDragX || !this.dragMoveTime || new Date - this.dragMoveTime > 100) return 0;
-          var t = this.getSlideDistance(-this.dragX, this.selectedIndex),
-            e = this.previousDragX - this.dragX;
-          return t > 0 && e > 0 ? 1 : t < 0 && e < 0 ? -1 : 0
-        }, s.staticClick = function(t, e) {
-          var i = this.getParentCell(t.target),
-            n = i && i.element,
-            s = i && this.cells.indexOf(i);
-          this.dispatchEvent("staticClick", t, [e, n, s])
-        }, s.onscroll = function() {
-          var t = l(),
-            e = this.pointerDownScroll.x - t.x,
-            i = this.pointerDownScroll.y - t.y;
-          (Math.abs(e) > 3 || Math.abs(i) > 3) && this._pointerDone()
-        }, e
-      }),
-      function(t, e) {
-        "function" == typeof define && define.amd ? define("flickity/js/prev-next-button", ["./flickity", "unipointer/unipointer", "fizzy-ui-utils/utils"], function(i, n, s) {
-          return e(t, i, n, s)
-        }) : "object" == typeof module && module.exports ? module.exports = e(t, require("./flickity"), require("unipointer"), require("fizzy-ui-utils")) : e(t, t.Flickity, t.Unipointer, t.fizzyUIUtils)
-      }(window, function(t, e, i, n) {
-        "use strict";
-        var s = "http://www.w3.org/2000/svg";
-
-        function o(t, e) {
-          this.direction = t, this.parent = e, this._create()
-        }
-        o.prototype = Object.create(i.prototype), o.prototype._create = function() {
-          this.isEnabled = !0, this.isPrevious = -1 == this.direction;
-          var t = this.parent.options.rightToLeft ? 1 : -1;
-          this.isLeft = this.direction == t;
-          var e = this.element = document.createElement("button");
-          e.className = "flickity-button flickity-prev-next-button", e.className += this.isPrevious ? " previous" : " next", e.setAttribute("type", "button"), this.disable(), e.setAttribute("aria-label", this.isPrevious ? "Previous" : "Next");
-          var i = this.createSVG();
-          e.appendChild(i), this.parent.on("select", this.update.bind(this)), this.on("pointerDown", this.parent.childUIPointerDown.bind(this.parent))
-        }, o.prototype.activate = function() {
-          this.bindStartEvent(this.element), this.element.addEventListener("click", this), this.parent.element.appendChild(this.element)
-        }, o.prototype.deactivate = function() {
-          this.parent.element.removeChild(this.element), this.unbindStartEvent(this.element), this.element.removeEventListener("click", this)
-        }, o.prototype.createSVG = function() {
-          var t = document.createElementNS(s, "svg");
-          t.setAttribute("class", "flickity-button-icon"), t.setAttribute("viewBox", "0 0 100 100");
-          var e = document.createElementNS(s, "path"),
-            i = function(t) {
-              if ("string" == typeof t) return t;
-              return "M " + t.x0 + ",50 L " + t.x1 + "," + (t.y1 + 50) + " L " + t.x2 + "," + (t.y2 + 50) + " L " + t.x3 + ",50  L " + t.x2 + "," + (50 - t.y2) + " L " + t.x1 + "," + (50 - t.y1) + " Z"
-            }(this.parent.options.arrowShape);
-          return e.setAttribute("d", i), e.setAttribute("class", "arrow"), this.isLeft || e.setAttribute("transform", "translate(100, 100) rotate(180) "), t.appendChild(e), t
-        }, o.prototype.handleEvent = n.handleEvent, o.prototype.onclick = function() {
-          if (this.isEnabled) {
-            this.parent.uiChange();
-            var t = this.isPrevious ? "previous" : "next";
-            this.parent[t]()
-          }
-        }, o.prototype.enable = function() {
-          this.isEnabled || (this.element.disabled = !1, this.isEnabled = !0)
-        }, o.prototype.disable = function() {
-          this.isEnabled && (this.element.disabled = !0, this.isEnabled = !1)
-        }, o.prototype.update = function() {
-          var t = this.parent.slides;
-          if (this.parent.options.wrapAround && t.length > 1) this.enable();
-          else {
-            var e = t.length ? t.length - 1 : 0,
-              i = this.isPrevious ? 0 : e;
-            this[this.parent.selectedIndex == i ? "disable" : "enable"]()
-          }
-        }, o.prototype.destroy = function() {
-          this.deactivate(), this.allOff()
-        }, n.extend(e.defaults, {
-          prevNextButtons: !0,
-          arrowShape: {
-            x0: 10,
-            x1: 60,
-            y1: 50,
-            x2: 70,
-            y2: 40,
-            x3: 30
-          }
-        }), e.createMethods.push("_createPrevNextButtons");
-        var r = e.prototype;
-        return r._createPrevNextButtons = function() {
-          this.options.prevNextButtons && (this.prevButton = new o(-1, this), this.nextButton = new o(1, this), this.on("activate", this.activatePrevNextButtons))
-        }, r.activatePrevNextButtons = function() {
-          this.prevButton.activate(), this.nextButton.activate(), this.on("deactivate", this.deactivatePrevNextButtons)
-        }, r.deactivatePrevNextButtons = function() {
-          this.prevButton.deactivate(), this.nextButton.deactivate(), this.off("deactivate", this.deactivatePrevNextButtons)
-        }, e.PrevNextButton = o, e
-      }),
-      function(t, e) {
-        "function" == typeof define && define.amd ? define("flickity/js/page-dots", ["./flickity", "unipointer/unipointer", "fizzy-ui-utils/utils"], function(i, n, s) {
-          return e(t, i, n, s)
-        }) : "object" == typeof module && module.exports ? module.exports = e(t, require("./flickity"), require("unipointer"), require("fizzy-ui-utils")) : e(t, t.Flickity, t.Unipointer, t.fizzyUIUtils)
-      }(window, function(t, e, i, n) {
-        function s(t) {
-          this.parent = t, this._create()
-        }
-        s.prototype = Object.create(i.prototype), s.prototype._create = function() {
-          this.holder = document.createElement("ol"), this.holder.className = "flickity-page-dots", this.dots = [], this.handleClick = this.onClick.bind(this), this.on("pointerDown", this.parent.childUIPointerDown.bind(this.parent))
-        }, s.prototype.activate = function() {
-          this.setDots(), this.holder.addEventListener("click", this.handleClick), this.bindStartEvent(this.holder), this.parent.element.appendChild(this.holder)
-        }, s.prototype.deactivate = function() {
-          this.holder.removeEventListener("click", this.handleClick), this.unbindStartEvent(this.holder), this.parent.element.removeChild(this.holder)
-        }, s.prototype.setDots = function() {
-          var t = this.parent.slides.length - this.dots.length;
-          t > 0 ? this.addDots(t) : t < 0 && this.removeDots(-t)
-        }, s.prototype.addDots = function(t) {
-          for (var e = document.createDocumentFragment(), i = [], n = this.dots.length, s = n + t, o = n; o < s; o++) {
-            var r = document.createElement("li");
-            r.className = "dot", r.setAttribute("aria-label", "Page dot " + (o + 1)), e.appendChild(r), i.push(r)
-          }
-          this.holder.appendChild(e), this.dots = this.dots.concat(i)
-        }, s.prototype.removeDots = function(t) {
-          this.dots.splice(this.dots.length - t, t).forEach(function(t) {
-            this.holder.removeChild(t)
-          }, this)
-        }, s.prototype.updateSelected = function() {
-          this.selectedDot && (this.selectedDot.className = "dot", this.selectedDot.removeAttribute("aria-current")), this.dots.length && (this.selectedDot = this.dots[this.parent.selectedIndex], this.selectedDot.className = "dot is-selected", this.selectedDot.setAttribute("aria-current", "step"))
-        }, s.prototype.onTap = s.prototype.onClick = function(t) {
-          var e = t.target;
-          if ("LI" == e.nodeName) {
-            this.parent.uiChange();
-            var i = this.dots.indexOf(e);
-            this.parent.select(i)
-          }
-        }, s.prototype.destroy = function() {
-          this.deactivate(), this.allOff()
-        }, e.PageDots = s, n.extend(e.defaults, {
-          pageDots: !0
-        }), e.createMethods.push("_createPageDots");
-        var o = e.prototype;
-        return o._createPageDots = function() {
-          this.options.pageDots && (this.pageDots = new s(this), this.on("activate", this.activatePageDots), this.on("select", this.updateSelectedPageDots), this.on("cellChange", this.updatePageDots), this.on("resize", this.updatePageDots), this.on("deactivate", this.deactivatePageDots))
-        }, o.activatePageDots = function() {
-          this.pageDots.activate()
-        }, o.updateSelectedPageDots = function() {
-          this.pageDots.updateSelected()
-        }, o.updatePageDots = function() {
-          this.pageDots.setDots()
-        }, o.deactivatePageDots = function() {
-          this.pageDots.deactivate()
-        }, e.PageDots = s, e
-      }),
-      function(t, e) {
-        "function" == typeof define && define.amd ? define("flickity/js/player", ["ev-emitter/ev-emitter", "fizzy-ui-utils/utils", "./flickity"], function(t, i, n) {
-          return e(t, i, n)
-        }) : "object" == typeof module && module.exports ? module.exports = e(require("ev-emitter"), require("fizzy-ui-utils"), require("./flickity")) : e(t.EvEmitter, t.fizzyUIUtils, t.Flickity)
-      }(window, function(t, e, i) {
-        function n(t) {
-          this.parent = t, this.state = "stopped", this.onVisibilityChange = this.visibilityChange.bind(this), this.onVisibilityPlay = this.visibilityPlay.bind(this)
-        }
-        n.prototype = Object.create(t.prototype), n.prototype.play = function() {
-          "playing" != this.state && (document.hidden ? document.addEventListener("visibilitychange", this.onVisibilityPlay) : (this.state = "playing", document.addEventListener("visibilitychange", this.onVisibilityChange), this.tick()))
-        }, n.prototype.tick = function() {
-          if ("playing" == this.state) {
-            var t = this.parent.options.autoPlay;
-            t = "number" == typeof t ? t : 3e3;
-            var e = this;
-            this.clear(), this.timeout = setTimeout(function() {
-              e.parent.next(!0), e.tick()
-            }, t)
-          }
-        }, n.prototype.stop = function() {
-          this.state = "stopped", this.clear(), document.removeEventListener("visibilitychange", this.onVisibilityChange)
-        }, n.prototype.clear = function() {
-          clearTimeout(this.timeout)
-        }, n.prototype.pause = function() {
-          "playing" == this.state && (this.state = "paused", this.clear())
-        }, n.prototype.unpause = function() {
-          "paused" == this.state && this.play()
-        }, n.prototype.visibilityChange = function() {
-          this[document.hidden ? "pause" : "unpause"]()
-        }, n.prototype.visibilityPlay = function() {
-          this.play(), document.removeEventListener("visibilitychange", this.onVisibilityPlay)
-        }, e.extend(i.defaults, {
-          pauseAutoPlayOnHover: !0
-        }), i.createMethods.push("_createPlayer");
-        var s = i.prototype;
-        return s._createPlayer = function() {
-          this.player = new n(this), this.on("activate", this.activatePlayer), this.on("uiChange", this.stopPlayer), this.on("pointerDown", this.stopPlayer), this.on("deactivate", this.deactivatePlayer)
-        }, s.activatePlayer = function() {
-          this.options.autoPlay && (this.player.play(), this.element.addEventListener("mouseenter", this))
-        }, s.playPlayer = function() {
-          this.player.play()
-        }, s.stopPlayer = function() {
-          this.player.stop()
-        }, s.pausePlayer = function() {
-          this.player.pause()
-        }, s.unpausePlayer = function() {
-          this.player.unpause()
-        }, s.deactivatePlayer = function() {
-          this.player.stop(), this.element.removeEventListener("mouseenter", this)
-        }, s.onmouseenter = function() {
-          this.options.pauseAutoPlayOnHover && (this.player.pause(), this.element.addEventListener("mouseleave", this))
-        }, s.onmouseleave = function() {
-          this.player.unpause(), this.element.removeEventListener("mouseleave", this)
-        }, i.Player = n, i
-      }),
-      function(t, e) {
-        "function" == typeof define && define.amd ? define("flickity/js/add-remove-cell", ["./flickity", "fizzy-ui-utils/utils"], function(i, n) {
-          return e(t, i, n)
-        }) : "object" == typeof module && module.exports ? module.exports = e(t, require("./flickity"), require("fizzy-ui-utils")) : e(t, t.Flickity, t.fizzyUIUtils)
-      }(window, function(t, e, i) {
-        var n = e.prototype;
-        return n.insert = function(t, e) {
-          var i = this._makeCells(t);
-          if (i && i.length) {
-            var n = this.cells.length;
-            e = void 0 === e ? n : e;
-            var s = function(t) {
-                var e = document.createDocumentFragment();
-                return t.forEach(function(t) {
-                  e.appendChild(t.element)
-                }), e
-              }(i),
-              o = e == n;
-            if (o) this.slider.appendChild(s);
-            else {
-              var r = this.cells[e].element;
-              this.slider.insertBefore(s, r)
-            }
-            if (0 === e) this.cells = i.concat(this.cells);
-            else if (o) this.cells = this.cells.concat(i);
-            else {
-              var a = this.cells.splice(e, n - e);
-              this.cells = this.cells.concat(i).concat(a)
-            }
-            this._sizeCells(i), this.cellChange(e, !0)
-          }
-        }, n.append = function(t) {
-          this.insert(t, this.cells.length)
-        }, n.prepend = function(t) {
-          this.insert(t, 0)
-        }, n.remove = function(t) {
-          var e = this.getCells(t);
-          if (e && e.length) {
-            var n = this.cells.length - 1;
-            e.forEach(function(t) {
-              t.remove();
-              var e = this.cells.indexOf(t);
-              n = Math.min(e, n), i.removeFrom(this.cells, t)
-            }, this), this.cellChange(n, !0)
-          }
-        }, n.cellSizeChange = function(t) {
-          var e = this.getCell(t);
-          if (e) {
-            e.getSize();
-            var i = this.cells.indexOf(e);
-            this.cellChange(i)
-          }
-        }, n.cellChange = function(t, e) {
-          var i = this.selectedElement;
-          this._positionCells(t), this._getWrapShiftCells(), this.setGallerySize();
-          var n = this.getCell(i);
-          n && (this.selectedIndex = this.getCellSlideIndex(n)), this.selectedIndex = Math.min(this.slides.length - 1, this.selectedIndex), this.emitEvent("cellChange", [t]), this.select(this.selectedIndex), e && this.positionSliderAtSelected()
-        }, e
-      }),
-      function(t, e) {
-        "function" == typeof define && define.amd ? define("flickity/js/lazyload", ["./flickity", "fizzy-ui-utils/utils"], function(i, n) {
-          return e(t, i, n)
-        }) : "object" == typeof module && module.exports ? module.exports = e(t, require("./flickity"), require("fizzy-ui-utils")) : e(t, t.Flickity, t.fizzyUIUtils)
-      }(window, function(t, e, i) {
-        "use strict";
-        e.createMethods.push("_createLazyload");
-        var n = e.prototype;
-
-        function s(t, e) {
-          this.img = t, this.flickity = e, this.load()
-        }
-        return n._createLazyload = function() {
-          this.on("select", this.lazyLoad)
-        }, n.lazyLoad = function() {
-          var t = this.options.lazyLoad;
-          if (t) {
-            var e = "number" == typeof t ? t : 0,
-              n = this.getAdjacentCellElements(e),
-              o = [];
-            n.forEach(function(t) {
-              var e = function(t) {
-                if ("IMG" == t.nodeName) {
-                  var e = t.getAttribute("data-flickity-lazyload"),
-                    n = t.getAttribute("data-flickity-lazyload-src"),
-                    s = t.getAttribute("data-flickity-lazyload-srcset");
-                  if (e || n || s) return [t]
-                }
-                var o = t.querySelectorAll("img[data-flickity-lazyload], img[data-flickity-lazyload-src], img[data-flickity-lazyload-srcset]");
-                return i.makeArray(o)
-              }(t);
-              o = o.concat(e)
-            }), o.forEach(function(t) {
-              new s(t, this)
-            }, this)
-          }
-        }, s.prototype.handleEvent = i.handleEvent, s.prototype.load = function() {
-          this.img.addEventListener("load", this), this.img.addEventListener("error", this);
-          var t = this.img.getAttribute("data-flickity-lazyload") || this.img.getAttribute("data-flickity-lazyload-src"),
-            e = this.img.getAttribute("data-flickity-lazyload-srcset");
-          this.img.src = t, e && this.img.setAttribute("srcset", e), this.img.removeAttribute("data-flickity-lazyload"), this.img.removeAttribute("data-flickity-lazyload-src"), this.img.removeAttribute("data-flickity-lazyload-srcset")
-        }, s.prototype.onload = function(t) {
-          this.complete(t, "flickity-lazyloaded")
-        }, s.prototype.onerror = function(t) {
-          this.complete(t, "flickity-lazyerror")
-        }, s.prototype.complete = function(t, e) {
-          this.img.removeEventListener("load", this), this.img.removeEventListener("error", this);
-          var i = this.flickity.getParentCell(this.img),
-            n = i && i.element;
-          this.flickity.cellSizeChange(n), this.img.classList.add(e), this.flickity.dispatchEvent("lazyLoad", t, n)
-        }, e.LazyLoader = s, e
-      }),
-      function(t, e) {
-        "function" == typeof define && define.amd ? define("flickity/js/index", ["./flickity", "./drag", "./prev-next-button", "./page-dots", "./player", "./add-remove-cell", "./lazyload"], e) : "object" == typeof module && module.exports && (module.exports = e(require("./flickity"), require("./drag"), require("./prev-next-button"), require("./page-dots"), require("./player"), require("./add-remove-cell"), require("./lazyload")))
-      }(window, function(t) {
-        return t
-      }),
-      function(t, e) {
-        "function" == typeof define && define.amd ? define("flickity-as-nav-for/as-nav-for", ["flickity/js/index", "fizzy-ui-utils/utils"], e) : "object" == typeof module && module.exports ? module.exports = e(require("flickity"), require("fizzy-ui-utils")) : t.Flickity = e(t.Flickity, t.fizzyUIUtils)
-      }(window, function(t, e) {
-        t.createMethods.push("_createAsNavFor");
-        var i = t.prototype;
-        return i._createAsNavFor = function() {
-          this.on("activate", this.activateAsNavFor), this.on("deactivate", this.deactivateAsNavFor), this.on("destroy", this.destroyAsNavFor);
-          var t = this.options.asNavFor;
-          if (t) {
-            var e = this;
-            setTimeout(function() {
-              e.setNavCompanion(t)
-            })
-          }
-        }, i.setNavCompanion = function(i) {
-          i = e.getQueryElement(i);
-          var n = t.data(i);
-          if (n && n != this) {
-            this.navCompanion = n;
-            var s = this;
-            this.onNavCompanionSelect = function() {
-              s.navCompanionSelect()
-            }, n.on("select", this.onNavCompanionSelect), this.on("staticClick", this.onNavStaticClick), this.navCompanionSelect(!0)
-          }
-        }, i.navCompanionSelect = function(t) {
-          var e = this.navCompanion && this.navCompanion.selectedCells;
-          if (e) {
-            var i = e[0],
-              n = this.navCompanion.cells.indexOf(i),
-              s = n + e.length - 1,
-              o = Math.floor(function(t, e, i) {
-                return (e - t) * i + t
-              }(n, s, this.navCompanion.cellAlign));
-            if (this.selectCell(o, !1, t), this.removeNavSelectedElements(), !(o >= this.cells.length)) {
-              var r = this.cells.slice(n, s + 1);
-              this.navSelectedElements = r.map(function(t) {
-                return t.element
-              }), this.changeNavSelectedClass("add")
-            }
-          }
-        }, i.changeNavSelectedClass = function(t) {
-          this.navSelectedElements.forEach(function(e) {
-            e.classList[t]("is-nav-selected")
-          })
-        }, i.activateAsNavFor = function() {
-          this.navCompanionSelect(!0)
-        }, i.removeNavSelectedElements = function() {
-          this.navSelectedElements && (this.changeNavSelectedClass("remove"), delete this.navSelectedElements)
-        }, i.onNavStaticClick = function(t, e, i, n) {
-          "number" == typeof n && this.navCompanion.selectCell(n)
-        }, i.deactivateAsNavFor = function() {
-          this.removeNavSelectedElements()
-        }, i.destroyAsNavFor = function() {
-          this.navCompanion && (this.navCompanion.off("select", this.onNavCompanionSelect), this.off("staticClick", this.onNavStaticClick), delete this.navCompanion)
-        }, t
-      }),
-      function(t, e) {
-        "use strict";
-        "function" == typeof define && define.amd ? define("imagesloaded/imagesloaded", ["ev-emitter/ev-emitter"], function(i) {
-          return e(t, i)
-        }) : "object" == typeof module && module.exports ? module.exports = e(t, require("ev-emitter")) : t.imagesLoaded = e(t, t.EvEmitter)
-      }("undefined" != typeof window ? window : this, function(t, e) {
-        var i = t.jQuery,
-          n = t.console;
-
-        function s(t, e) {
-          for (var i in e) t[i] = e[i];
-          return t
-        }
-        var o = Array.prototype.slice;
-
-        function r(t) {
-          return Array.isArray(t) ? t : "object" == typeof t && "number" == typeof t.length ? o.call(t) : [t]
-        }
-
-        function a(t, e, o) {
-          if (!(this instanceof a)) return new a(t, e, o);
-          var l = t;
-          "string" == typeof t && (l = document.querySelectorAll(t)), l ? (this.elements = r(l), this.options = s({}, this.options), "function" == typeof e ? o = e : s(this.options, e), o && this.on("always", o), this.getImages(), i && (this.jqDeferred = new i.Deferred), setTimeout(this.check.bind(this))) : n.error("Bad element for imagesLoaded " + (l || t))
-        }
-        a.prototype = Object.create(e.prototype), a.prototype.options = {}, a.prototype.getImages = function() {
-          this.images = [], this.elements.forEach(this.addElementImages, this)
-        }, a.prototype.addElementImages = function(t) {
-          "IMG" == t.nodeName && this.addImage(t), !0 === this.options.background && this.addElementBackgroundImages(t);
-          var e = t.nodeType;
-          if (e && l[e]) {
-            for (var i = t.querySelectorAll("img"), n = 0; n < i.length; n++) {
-              var s = i[n];
-              this.addImage(s)
-            }
-            if ("string" == typeof this.options.background) {
-              var o = t.querySelectorAll(this.options.background);
-              for (n = 0; n < o.length; n++) {
-                var r = o[n];
-                this.addElementBackgroundImages(r)
-              }
-            }
-          }
-        };
-        var l = {
-          1: !0,
-          9: !0,
-          11: !0
-        };
-
-        function h(t) {
-          this.img = t
-        }
-
-        function c(t, e) {
-          this.url = t, this.element = e, this.img = new Image
-        }
-        return a.prototype.addElementBackgroundImages = function(t) {
-          var e = getComputedStyle(t);
-          if (e)
-            for (var i = /url\((['"])?(.*?)\1\)/gi, n = i.exec(e.backgroundImage); null !== n;) {
-              var s = n && n[2];
-              s && this.addBackground(s, t), n = i.exec(e.backgroundImage)
-            }
-        }, a.prototype.addImage = function(t) {
-          var e = new h(t);
-          this.images.push(e)
-        }, a.prototype.addBackground = function(t, e) {
-          var i = new c(t, e);
-          this.images.push(i)
-        }, a.prototype.check = function() {
-          var t = this;
-
-          function e(e, i, n) {
-            setTimeout(function() {
-              t.progress(e, i, n)
-            })
-          }
-          this.progressedCount = 0, this.hasAnyBroken = !1, this.images.length ? this.images.forEach(function(t) {
-            t.once("progress", e), t.check()
-          }) : this.complete()
-        }, a.prototype.progress = function(t, e, i) {
-          this.progressedCount++, this.hasAnyBroken = this.hasAnyBroken || !t.isLoaded, this.emitEvent("progress", [this, t, e]), this.jqDeferred && this.jqDeferred.notify && this.jqDeferred.notify(this, t), this.progressedCount == this.images.length && this.complete(), this.options.debug && n && n.log("progress: " + i, t, e)
-        }, a.prototype.complete = function() {
-          var t = this.hasAnyBroken ? "fail" : "done";
-          if (this.isComplete = !0, this.emitEvent(t, [this]), this.emitEvent("always", [this]), this.jqDeferred) {
-            var e = this.hasAnyBroken ? "reject" : "resolve";
-            this.jqDeferred[e](this)
-          }
-        }, h.prototype = Object.create(e.prototype), h.prototype.check = function() {
-          this.getIsImageComplete() ? this.confirm(0 !== this.img.naturalWidth, "naturalWidth") : (this.proxyImage = new Image, this.proxyImage.addEventListener("load", this), this.proxyImage.addEventListener("error", this), this.img.addEventListener("load", this), this.img.addEventListener("error", this), this.proxyImage.src = this.img.src)
-        }, h.prototype.getIsImageComplete = function() {
-          return this.img.complete && this.img.naturalWidth
-        }, h.prototype.confirm = function(t, e) {
-          this.isLoaded = t, this.emitEvent("progress", [this, this.img, e])
-        }, h.prototype.handleEvent = function(t) {
-          var e = "on" + t.type;
-          this[e] && this[e](t)
-        }, h.prototype.onload = function() {
-          this.confirm(!0, "onload"), this.unbindEvents()
-        }, h.prototype.onerror = function() {
-          this.confirm(!1, "onerror"), this.unbindEvents()
-        }, h.prototype.unbindEvents = function() {
-          this.proxyImage.removeEventListener("load", this), this.proxyImage.removeEventListener("error", this), this.img.removeEventListener("load", this), this.img.removeEventListener("error", this)
-        }, c.prototype = Object.create(h.prototype), c.prototype.check = function() {
-          this.img.addEventListener("load", this), this.img.addEventListener("error", this), this.img.src = this.url, this.getIsImageComplete() && (this.confirm(0 !== this.img.naturalWidth, "naturalWidth"), this.unbindEvents())
-        }, c.prototype.unbindEvents = function() {
-          this.img.removeEventListener("load", this), this.img.removeEventListener("error", this)
-        }, c.prototype.confirm = function(t, e) {
-          this.isLoaded = t, this.emitEvent("progress", [this, this.element, e])
-        }, a.makeJQueryPlugin = function(e) {
-          (e = e || t.jQuery) && ((i = e).fn.imagesLoaded = function(t, e) {
-            return new a(this, t, e).jqDeferred.promise(i(this))
-          })
-        }, a.makeJQueryPlugin(), a
-      }),
-      function(t, e) {
-        "function" == typeof define && define.amd ? define(["flickity/js/index", "imagesloaded/imagesloaded"], function(i, n) {
-          return e(t, i, n)
-        }) : "object" == typeof module && module.exports ? module.exports = e(t, require("flickity"), require("imagesloaded")) : t.Flickity = e(t, t.Flickity, t.imagesLoaded)
-      }(window, function(t, e, i) {
-        "use strict";
-        e.createMethods.push("_createImagesLoaded");
-        var n = e.prototype;
-        return n._createImagesLoaded = function() {
-          this.on("activate", this.imagesLoaded)
-        }, n.imagesLoaded = function() {
-          if (this.options.imagesLoaded) {
-            var t = this;
-            i(this.slider).on("progress", function(e, i) {
-              var n = t.getParentCell(i.img);
-              t.cellSizeChange(n && n.element), t.options.freeScroll || t.positionSliderAtSelected()
-            })
-          }
-        }, e
-      });
-
-      while (!window.Flickity) {
-        await new Promise(resolve => setTimeout(resolve, 10));
-      }
-
-
-      resolve(true);
-
-    });
-  }
-
-
-  function loadFlickity() {
-
-    if (window.Flickity !== undefined) {
-      return true;
-    }
-
-    return new Promise(async (resolve, reject) => {
-      try {
-        await _loadScript(`https://cdnjs.cloudflare.com/ajax/libs/flickity/2.2.2/flickity.pkgd.min.js`);
-      } catch (err) {
-        await loadLocalFlickity();
-      }
-
-
-
-
-      resolve(true);
-
-    });
-  }
-
-
-  function removeOriginalThumbnails() {
-    const $thumbnails = document.querySelector(`[id*='GalleryThumbnails']`);
-
-    if ($thumbnails) {
-      $thumbnails.remove();
-    }
-  }
-
-  function makeSlidersVisible() {
-    const $slider = document.querySelector(GALLERY_SELECTOR);
-    const $thumbnails = document.querySelector(THUMBNAILS_SELECTOR);
-
-
-
-    if ($slider) {
-      $slider.classList.add(`EzfyDawnTheme--loaded`);
-    }
-
-    const type = `${detectThumbnailType()}--loaded`
-
-
-    $thumbnails.classList.add(type);
-
-
-  }
-
-
-
-  async function _getProductJSON() {
-
-
-    return new Promise(async (resolve, reject) => {
-
-
-      if (window.hasOwnProperty("ezfy_product_json")) {
-        resolve(window.ezfy_product_json);
-        return;
-      }
-
-      let url = `https://${window.location.host + window.location.pathname}.json`; 
-      let response = await fetch(url);
-
-      let {
-        product
-      } = await response.json();
-
-      window.ezfy_product_json = product;
-
-      resolve(product);
-    });
-  }
-
-  function getCurrentVariantID() {
-    const $id = document.querySelector(`[id*='product-form'] > input:nth-child(3)`);
-
-    if (!$id) {
-      return null;
-    }
-
-    const _id = $id.getAttribute("value");
-
-    if (!_id) {
-      return;
-    }
-
-    const id = parseInt(_id);
-
-    if (!/\d\d\d/.test(id)) {
-      return null;
-    }
-
-    return id;
-  }
-
-  function getImagePositionFromVariantID(id) {
-
-    return new Promise(async (resolve, reject) => {
-      const product = await _getCurrentProduct();
-      const variant = product.variants.filter(e => e.id === id)[0];
-
-
-
-      if (!variant.hasOwnProperty("image_id")) {
-        resolve(null);
-      }
-
-
-
-      const imageID = variant.image_id;
-
-      const _position = product.images.filter(e => e.id === imageID)[0];
-
-      if (!_position) {
-        resolve(null);
-      }
-
-      const position = _position.position;
-
-      resolve(position);
-
-
-    });
-  }
-
-   
-    function updateImageOnSwatchChange(){
-      
-      if (!options.updateImageOnSwatchChange){
-      	return;
-      }
-      
-  
-
-      
-    	const $radios = document.querySelectorAll(`[class*='product-form'] [type='radio']`)
-        
-        /* Handles radio buttons 
-         ================================ */
-        if ($radios){
-        	      
-      for (var $radio of $radios){
-        $radio.addEventListener("click", async function(){
-
-          
-          if (window.CHANGING_IMAGE_VIA_SLIDER){
-            return;
-          }
-          
-          
-            
-         
-          
-          window.CHANGING_IMAGE_VIA_SWATCH = true;
-          	await _sleep(60);
-          
-          
-        	const id = getCurrentVariantID();
-          
-              
-          	const position = await getImagePositionFromVariantID(id);
-          
-        
-
-        
-          if (!position){
-          	return;
-          }
-          
-          
-          let $slide;
-          
-          
-          $slide = document.querySelector(`.Thumbnails [data-media-position='${position}']`);
-          
-        
-          
-          if (!$slide){
-          	$slide = document.querySelector(`[data-media-position='${position}']`);
-          }
-          
-          if (!$slide){
-          	return;
-          }
-          
-          const _index = $slide.getAttribute("data-flickity-index");
-          const index = parseInt(_index) - 1;
-    
-
-          
-          
-          window.ezfyDawnSlider.select(index,  options.featuredImageLoop, true);
-          window.CURRENTLY_ACTIVE_INDEX = index;
-          
-          await _sleep(30);
-          window.CHANGING_IMAGE_VIA_SWATCH = false;
-        });
-      }
-        }
-
-      
-      const $dropdowns = document.querySelectorAll(` [class*='product__info'] variant-selects select`)
-      
-      if ($dropdowns){
-        for (var each of $dropdowns){
-          each.addEventListener("change", async function(e){
-          	
-               
-          if (window.CHANGING_IMAGE_VIA_SLIDER){
-            return;
-          }
-          
-         
-            
-          
-            try{
-             window.CHANGING_IMAGE_VIA_SWATCH = true;
-          	await _sleep(60);
-          
-          
-        	const id = getCurrentVariantID();
-          
-              
-          	const position = await getImagePositionFromVariantID(id);
-   
-        
-          if (!position){
-          	return;
-          }
-          
-  			let $slide;
-          
-          
-          $slide = document.querySelector(`.Thumbnails [data-media-position='${position}']`);
-          
-        
-          
-          if (!$slide){
-          	$slide = document.querySelector(`[data-media-position='${position}']`);
-          }
-          
-          if (!$slide){
-          	return;
-          }
-          
-          const _index = $slide.getAttribute("data-flickity-index");
-          const index = parseInt(_index) - 1;
-    
-    		
-    
-          
-          window.ezfyDawnSlider.select(index,  options.featuredImageLoop, true);
-          window.CURRENTLY_ACTIVE_INDEX = index;
-          
-          await _sleep(30);
-          window.CHANGING_IMAGE_VIA_SWATCH = false;
-            } catch(err){}
-          
-          
-          });
-        }
-      }
-      
-     
-    }
-
-  function addFlickityIndexToSliderAndThumbnails() {
-    const $slides = document.querySelectorAll(GALLERY_SLIDE_SELECTOR);
-    const $thumbnails = document.querySelectorAll(THUMBNAIL_SELECTOR);
-
-    if ($slides) {
-      for (var [index, each] of $slides.entries()) {
-        each.setAttribute("data-flickity-index", index + 1);
-      }
-    }
-
-
-    if ($thumbnails) {
-      for (var [index, each] of $thumbnails.entries()) {
-        each.setAttribute("data-flickity-index", index + 1);
-      }
-    }
-  }
-
-  
-  function addImagePositionDataAttributeToSlides() {
-    const $thumbnails = document.querySelectorAll(THUMBNAIL_SELECTOR);
-
-    for (let [i, each] of $thumbnails.entries()) {
-      const flickityIndex = each.getAttribute("data-flickity-index");
-      const position = each.getAttribute("data-media-position");
-
-      const $slide = document.querySelector(`${GALLERY_SLIDE_SELECTOR}[data-flickity-index='${flickityIndex}']`);
-
-      if ($slide) {
-        $slide.setAttribute("data-media-position", position);
-      }
-    }
-  }
-
-  function addPositionForSlides() {
-    window.ezfy_image_positions.map(e => {
-
-      const $slide = document.querySelector(`[id*='Slide'][id*="${e.id}"]`);
-
-      if ($slide) {
-        $slide.setAttribute("data-media-position", e.imagePosition);
-      }
-
-
-
-      return;
-    });
-  }
-
-  async function getVariantByImagePosition(_position) {
-
-    return new Promise(async (resolve, reject) => {
-      const product = await _getCurrentProduct();
-      const position = _position;
-      const _id = product.images.filter(e => e.position === position)[0];
-
-
-      if (!_id || !_id.hasOwnProperty("variant_ids")) {
-        resolve(null);
-        return;
-      }
-
-      const id = _id.variant_ids[0];
-
-
-      if (!id) {
-        resolve(null)
-        return;
-      }
-
-
-      const variant = product.variants.filter(e => e.id === id)[0]
-
-
-      resolve(variant);
-    });
-
-  }
-
-    async function updateSwatchWhenImageChanges(){      
-      
-     
-      if (!window.ezfy_options.updateSwatchOnImageChange || window.CHANGING_IMAGE_VIA_SWATCH){
-      	return;
-      }
-      
-    	const $slide = document.querySelector(`[id*='Slide'].is-selected`);
-      
-      if (!$slide){
-      	return;
-      }
-      
-      const _index = $slide.getAttribute("data-media-position");
-      
-      if (!_index){
-      	return;
-      }
-      
-      
-      
-      const index = parseInt(_index);
-            
-      const variant = await getVariantByImagePosition(index);
-      
-      if (!variant){
-      	return;
-      }
-      
-
-      
-      /* Update swatch
-      ============================== */
-     
-      
-      const options = variant.title.split("/");
-      
-      for (var [i, each] of options.entries()){
-        
-        /* Swatches
-        ========================== */
-      
-        const option = each.trim();
-        
-        const $option = document.querySelector(`variant-radios > *:nth-child(${i + 1}) input[value='${option}']`);
-        
-        if ($option){
-        	$option.click();
-        }
-        
-        
-		/* Dropdowns
-        ========================== */
-        
-        const $dropdown = document.querySelector(`[class*='product__info'] variant-selects select option[value*='${option}']`);
-        
-
-        
-        if ($dropdown){
-          
-          try{
-          const $parent = $dropdown.closest("select");
-          $parent.value = option;
-          $parent.dispatchEvent(new Event('change', {
-            'bubbles': true
-          }));
-          }catch(err){}
-        
-        }
-
-      }
-
-    }
-
-  function removeAllNonSliderSelectedThumbnails() {
-    const $selected = document.querySelectorAll(`.Thumbnails-thumbnail.is-selected`);
-
-    if ($selected) {
-      for (var each of $selected) {
-        each.classList.remove("is-selected");
-      }
-    }
-  }
-
-  function handleNonSliderThumbnailClick() {
-
-
-
-    if (isThumbnailsSlider()) {
-      return;
-    }
-
-
-    const $thumbnails = document.querySelectorAll(`.Thumbnails .Thumbnails-thumbnail`);
-
-    if (!$thumbnails) {
-      return;
-    }
-
-    for (var each of $thumbnails) {
-      each.addEventListener("click", async function(e) {
-        removeAllNonSliderSelectedThumbnails();
-
-        window.CHANGING_IMAGE_VIA_SLIDER = true;
-
-        const $this = e.target;
-        const $parent = $this.closest(`.Thumbnails-thumbnail`);
-
-        $parent.classList.add("is-selected");
-        const position = $parent.getAttribute(`data-flickity-index`);
-        const index = parseInt(position) - 1;
-
-        window.ezfyDawnSlider.select(index, options.featuredImageLoop, true);
-
-        await _sleep(ACTION_DELAY);
-        window.CHANGING_IMAGE_VIA_SLIDER = false;
-      });
-    }
-  }
-
-
-  function updateNonSliderThumbnailOnFeaturedImageChange() {
-
-    if (isThumbnailsSlider()) {
-      return;
-    }
-
-    const $slide = document.querySelector(`.EzfyDawnTheme--loaded .is-selected`);
-
-    if (!$slide) {
-      return;
-    }
-
-    const position = $slide.getAttribute(`data-flickity-index`);
-
-    const $thumbnail = document.querySelector(`.Thumbnails-thumbnail[data-flickity-index='${position}']`);
-
-    if (!$thumbnail) {
-      return;
-    }
-
-
-    removeAllNonSliderSelectedThumbnails();
-
-
-    $thumbnail.classList.add(`is-selected`);
-
-    updateVerticalThumbnail($thumbnail);
-  }
-
-  function updateVerticalThumbnail($thumbnail) {
-
-    const thumbnail = detectThumbnailType();
-
-    if (thumbnail.includes("vertical")) {
-
-      const $scroller = document.querySelector(`.Thumbnails--vertical--scroller`);
-      const $last = document.querySelector(`.Thumbnails--vertical--scroller > *:last-of-type`);
-
-      const currentPosition = parseInt($thumbnail.getAttribute("data-flickity-index"))
-      const lastPostition = parseInt($last.getAttribute("data-flickity-index"));
-
-      if (currentPosition === lastPostition) {
-        setTimeout(() => {
-          $scroller.scrollTop = $scroller.scrollHeight
-        }, 325);
-
-        return;
-      }
-
-      var top = $thumbnail.offsetTop;
-      $scroller.scrollTop = top - 100;
-    }
-  }
-
-  async function loadFeaturedImageSlider() {
-    let $slider = new Flickity(GALLERY_SELECTOR, {
-            ...featuredImageSettings,
-      on: {
-        ready: async function(index) {
-          await _sleep(10);
-          makeSlidersVisible();
-          addPositionForSlides();
-          updateImageOnSwatchChange();
-          updateNonSliderThumbnailOnFeaturedImageChange();
-
-        },
-        change: async function(index) {
-          window.CHANGING_IMAGE_VIA_SLIDER = true;
-          window.CURRENTLY_ACTIVE_INDEX = index;
-
-          updateSwatchWhenImageChanges();
-          updateNonSliderThumbnailOnFeaturedImageChange();
-          updateCounterOnImageChange(index + 1);
-          await _sleep(UPDATE_DROPDOWN_ON_IMAGE_CHANGE_DELAY);
-          window.CHANGING_IMAGE_VIA_SLIDER = false;
-        }
-      }
-    });
-
-    window.ezfyDawnSlider = $slider;
-  }
-
-
-  function loadThumbnailsSlider() {
-
-
-    const $parent = document.querySelector(`[id*='MediaGallery-template'], slider-component[class]`);
-    const $child = document.querySelector(`#EzfyDawnThemeThumbnails`);
-
-
-
-    if (!$parent || !$child) {
-      return;
-    }
-
-    moveDOMElement($parent, $child);
-
-    if (!isThumbnailsSlider()) {
-      return;
-    }
-
-    const $thumbnails = new Flickity(`#EzfyDawnThemeThumbnails > *`, {
-      ...thumbnailsSettings,
-      on: {
-        ready: function(index) {
-
-        }
-      }
-    });
-
-
-    window.ezfyDawnThumbnailSlider = $thumbnails;
-  }
-
-    async function restoreImageWidth() {
-    var $close = document.querySelector(`[id*='ModalClose']`);
-
-    if (!$close) {
-      return;
-    }
-
-    const $gallery = document.querySelector(GALLERY_SELECTOR);
-
-    $close.addEventListener("click", function() {
-
-      $gallery.classList.remove("modal--open");
-    });
-
-    window.addEventListener('keydown', async function(e) {
-
-      if (e.key == "Escape" || e.keyCode === 27) {
-        await _sleep(10);
-        $gallery.classList.remove("modal--open");
-      }
-    });
-
-  }
-
-  async function handleZoomButtonClick() {
-    const $button = await _waitForElement(`.EzfyDawnTheme--loaded modal-opener > .motion-reduce`);
-
-    if (!$button) {
-      return;
-    }
-
-    const $buttons = document.querySelectorAll(`.EzfyDawnTheme--loaded modal-opener > .motion-reduce`);
-
-    if (!$buttons) {
-      return;
-    }
-
-
-
-    for (var each of $buttons) {
-      each.addEventListener("click", async function(e) {
-
-        const $this = e.target;
-        const $parent = $this.closest(`modal-opener`);
-        const $opener = $parent.querySelector(`.product__media-toggle`);
-
-
-        if (!$opener) {
-          return;
-        }
-
-        $opener.click();
-
-        await _sleep(10);
-
-        
-        const $gallery = document.querySelector(GALLERY_SELECTOR);
-        $gallery.classList.add("modal--open");
-      });
-    }
-  }
-
-  function injectCustomCounter() {
-
-    if (!options.showCounter) {
-      return;
-    }
-
-    const $counter = document.querySelector(`.custom-slider-buttons`)
-
-    if ($counter) {
-      return;
-    }
-
-
-    const html = `<div class="custom-slider-buttons slider-buttons no-js-hidden">
-            <button type="button" class="slider-button slider-button--prev" name="previous" aria-label="Slide left" disabled="disabled"><svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-caret" viewBox="0 0 10 6">
-  <path fill-rule="evenodd" clip-rule="evenodd" d="M9.354.646a.5.5 0 00-.708 0L5 4.293 1.354.646a.5.5 0 00-.708.708l4 4a.5.5 0 00.708 0l4-4a.5.5 0 000-.708z" fill="currentColor">
-</path></svg>
-</button>
-            <div class="slider-counter caption">
-              <span class="slider-counter--current">1</span>
-              <span aria-hidden="true"> / </span>
-              <span class="visually-hidden">of</span>
-              <span class="slider-counter--total"></span>
-            </div>
-            <button type="button" class="slider-button slider-button--next" name="next" aria-label="Slide right"><svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-caret" viewBox="0 0 10 6">
-  <path fill-rule="evenodd" clip-rule="evenodd" d="M9.354.646a.5.5 0 00-.708 0L5 4.293 1.354.646a.5.5 0 00-.708.708l4 4a.5.5 0 00.708 0l4-4a.5.5 0 000-.708z" fill="currentColor">
-</path></svg>
-</button>
-          </div>`
-
-    const $slider = document.querySelector(GALLERY_SELECTOR);
-
-    $slider.insertAdjacentHTML(`afterend`, html)
-  }
-
-    function handleMobileCounter() {
-    const $counter = document.querySelector(`.custom-slider-buttons`);
-
-    if (!$counter) {
-      return;
-    }
-
-    const $current = $counter.querySelector(`.slider-counter--current`);
-    const $previous = $counter.querySelector(`.slider-button--prev`);
-    const $next = $counter.querySelector(`.slider-button--next`);
-    const $total = $counter.querySelector(`.slider-counter--total`);
-
-    const total = window.ezfyDawnSlider.slides.length;
-    $total.innerText = total;
-
-    setTimeout(() => {
-      $previous.removeAttribute("disabled");
-      $next.removeAttribute("disabled")
-    }, 50);
-
-    $previous.addEventListener("click", async function(e) {
-      e.preventDefault();
-
-      const $current = $counter.querySelector(`.slider-counter--current`);
-
-      const _index = parseInt($current.textContent.trim()) - 1;
-
-      const index = _index <= 0 || _index > total ? total : _index;
-
-
-      $current.textContent = index;
-      window.ezfyDawnSlider.select(index - 1, options.featuredImageLoop, true);
-
-    });
-
-    $next.addEventListener("click", async function(e) {
-      e.preventDefault();
-
-
-      const $current = $counter.querySelector(`.slider-counter--current`);
-
-      const index = parseInt($current.textContent.trim()) + 1;
-
-      window.ezfyDawnSlider.select(index - 1, options.featuredImageLoop, true);
-
-      await _sleep(10);
-
-      $current.textContent = index;
-
-    });
-
-  }
-
-    function handleThumbnailsResize() {
-    const $thumbnails = document.querySelector(THUMBNAILS_SELECTOR);
-
-
-    if (!$thumbnails || isDots()) {
-      return;
-    }
-
-
-    if (isThumbnailsSlider()) {
-      $thumbnails.classList.remove("Thumbnails--normal");
-      $thumbnails.classList.remove("Thumbnails--normal--loaded");
-      $thumbnails.classList.add("Thumbnails--slider");
-      $thumbnails.classList.add("Thumbnails--slider--loaded");
-      loadThumbnailsSlider();
-    } else if (!isThumbnailsSlider()) {
-      $thumbnails.classList.remove("Thumbnails--slider");
-      $thumbnails.classList.remove("Thumbnails--slider--loaded");
-      $thumbnails.classList.add("Thumbnails--normal");
-      $thumbnails.classList.add("Thumbnails--normal--loaded");
-      window.hasOwnProperty("ezfyDawnThumbnailSlider") && window.ezfyDawnThumbnailSlider.destroy();
-      handleNonSliderThumbnailClick();
-    }
-  }
-
-  function forceStackedLayout() {
-    const $body = document.querySelector(`body`);
-
-    if (!$body) {
-      return;
-    }
-
-    $body.classList.add(`force-stacked-layout`);
-  }
-
-  function updateCounterOnImageChange(index) {
-    const $counter = document.querySelector(`.custom-slider-buttons .slider-counter--current`);
-
-
-    if (!$counter) {
-      return;
-    }
-
-    $counter.innerHTML = index;
-  }
-
-  function moveVideoInsideModalOpener() {
-
-    const $videos = document.querySelectorAll(`[id*='Slider-Gallery-template'] li[id*='Slide'] > [class*='video'] + .media,
-												.product slider-component ul li > [class*='video'] + .media`);
-
-    if (!$videos) {
-      return;
-    }
-
-    for (var each of $videos) {
-      const $parent = each.closest(`li`);
-      const $slide = $parent.querySelector(`modal-opener`);
-
-      _moveDOMElement($slide, each)
-    }
-  }
-    
-    function addLayoutDataAttribute(){
-      
-      return new Promise (resolve => {
-      
-       const $layout = document.querySelector(`[data-desktop-layout]`);
-      
-      if ($layout){
-        resolve();
-      	return;
-      }
-      
-     
-      
-      const $el = document.querySelector(`.product slider-component`);
-      
-      if ($el){
-      	$el.setAttribute(`data-desktop-layout`, options.galleryLayout)
-        resolve();
-      }
-      });
-   
-      
-    }
-
-  function updateOnResize() {
-    loadOptions();
-    loadFeaturedImageSettings();
-    addClassToThumbnail();
-    handleThumbnailsResize();
-    loadFeaturedImageSlider();
-    loadThumbnailsSlider();
-
-    if (_isMobile()) {
-      window.ezfyDawnThemeSlider.init();
-    }
-  }
-
-
-  return {
-
-    init: async function() {
-      if (options.galleryLayout === 'stacked' && !_isMobile()) {
-        forceStackedLayout();
-        return;
-      }
-
-      removeOriginalThumbnails();
-      addClassToThumbnail();
-      addFlickityIndexToSliderAndThumbnails();
-      addImagePositionDataAttributeToSlides();
-      _getCurrentProduct();
-      moveVideoInsideModalOpener();
-
-      await addLayoutDataAttribute();
-      await loadFlickity();
-      await _sleep(10);
-
-      loadFeaturedImageSlider();
-      loadThumbnailsSlider();
-
-      await _getProductJSON();
-
-      handleZoomButtonClick();
-      restoreImageWidth();
-      handleNonSliderThumbnailClick();
-      injectCustomCounter();
-      handleMobileCounter();
-
-
-
-
-      document.addEventListener("DOMContentLoaded", async function() {
-        preventDefaultDawnSliderToUpdateImage();
-      });
-
-      window.addEventListener("resize", function() {
-        updateOnResize();
-      });
-
-      window.addEventListener("load", function() {});
-
-      window.addEventListener("scroll", function() {});
-
-      document.addEventListener("shopify:section:reorder", function(e) {
-
-        updateOnResize();
-      });
-    },
-  };
-})();
-
-ezfyDawnThemeSlider.init();</script>
-
-
-  {% endif %}
 {% schema %}
 {
   "name": "t:sections.main-product.name",
@@ -4905,7 +1092,7 @@ ezfyDawnThemeSlider.init();</script>
           "type": "text",
           "id": "text",
           "default": "Text block",
-          "label": "Text"
+          "label": "t:sections.main-product.blocks.text.settings.text.label"
         },
         {
           "type": "select",
@@ -4913,40 +1100,40 @@ ezfyDawnThemeSlider.init();</script>
           "options": [
             {
               "value": "body",
-              "label": "Body"
+              "label": "t:sections.main-product.blocks.text.settings.text_style.options__1.label"
             },
             {
               "value": "subtitle",
-              "label": "Subtitle"
+              "label": "t:sections.main-product.blocks.text.settings.text_style.options__2.label"
             },
             {
               "value": "uppercase",
-              "label": "Uppercase"
+              "label": "t:sections.main-product.blocks.text.settings.text_style.options__3.label"
             }
           ],
           "default": "body",
-          "label": "Text style"
+          "label": "t:sections.main-product.blocks.text.settings.text_style.label"
         }
       ]
     },
     {
       "type": "title",
-      "name": "Title",
+      "name": "t:sections.main-product.blocks.title.name",
       "limit": 1
     },
     {
       "type": "price",
-      "name": "Price",
+      "name": "t:sections.main-product.blocks.price.name",
       "limit": 1
     },
     {
       "type": "quantity_selector",
-      "name": "Quantity selector",
+      "name": "t:sections.main-product.blocks.quantity_selector.name",
       "limit": 1
     },
     {
       "type": "variant_picker",
-      "name": "Variant picker",
+      "name": "t:sections.main-product.blocks.variant_picker.name",
       "limit": 1,
       "settings": [
         {
@@ -4955,80 +1142,80 @@ ezfyDawnThemeSlider.init();</script>
           "options": [
             {
               "value": "dropdown",
-              "label": "Dropdown"
+              "label": "t:sections.main-product.blocks.variant_picker.settings.picker_type.options__1.label"
             },
             {
               "value": "button",
-              "label": "Pills"
+              "label": "t:sections.main-product.blocks.variant_picker.settings.picker_type.options__2.label"
             }
           ],
           "default": "button",
-          "label": "Type"
+          "label": "t:sections.main-product.blocks.variant_picker.settings.picker_type.label"
         }
       ]
     },
     {
       "type": "buy_buttons",
-      "name": "Buy buttons",
+      "name": "t:sections.main-product.blocks.buy_buttons.name",
       "limit": 1,
       "settings": [
         {
           "type": "checkbox",
           "id": "show_dynamic_checkout",
           "default": true,
-          "label": "Show dynamic checkout buttons",
-          "info": "Using the payment methods available on your store, customers see their preferred option, like PayPal or Apple Pay. [Learn more](https://help.shopify.com/manual/online-store/dynamic-checkout)"
+          "label": "t:sections.main-product.blocks.buy_buttons.settings.show_dynamic_checkout.label",
+          "info": "t:sections.main-product.blocks.buy_buttons.settings.show_dynamic_checkout.info"
         }
       ]
     },
     {
       "type": "description",
-      "name": "Description",
+      "name": "t:sections.main-product.blocks.description.name",
       "limit": 1
     },
     {
       "type": "share",
-      "name": "Share",
+      "name": "t:sections.main-product.blocks.share.name",
       "limit": 1,
       "settings": [
         {
           "type": "text",
           "id": "share_label",
-          "label": "Text",
+          "label": "t:sections.main-product.blocks.share.settings.text.label",
           "default": "Share"
         },
         {
           "type": "paragraph",
-          "content": "If you include a link in social media posts, the page’s featured image will be shown as the preview image. (Learn more)[https://help.shopify.com/manual/online-store/images/showing-social-media-thumbnail-images]."
+          "content": "t:sections.main-product.blocks.share.settings.featured_image_info.content"
         },
         {
           "type": "paragraph",
-          "content": "A store title and description are included with the preview image. [Learn more](https://help.shopify.com/manual/promoting-marketing/seo/adding-keywords#set-a-title-and-description-for-your-online-store)."
+          "content": "t:sections.main-product.blocks.share.settings.title_info.content"
         }
       ]
     },
     {
       "type": "custom_liquid",
-      "name": "Custom liquid",
+      "name": "t:sections.main-product.blocks.custom_liquid.name",
       "settings": [
         {
           "type": "liquid",
           "id": "custom_liquid",
-          "label": "Custom liquid",
-          "info": "Add app snippets or other Liquid code to create advanced customizations."
+          "label": "t:sections.main-product.blocks.custom_liquid.settings.custom_liquid.label",
+          "info": "t:sections.main-product.blocks.custom_liquid.settings.custom_liquid.info"
         }
       ]
     },
     {
       "type": "collapsible_tab",
-      "name": "Collapsible row",
+      "name": "t:sections.main-product.blocks.collapsible_tab.name",
       "settings": [
         {
           "type": "text",
           "id": "heading",
           "default": "Collapsible row",
-          "info": "Include a heading that explains the content.",
-          "label": "Heading"
+          "info": "t:sections.main-product.blocks.collapsible_tab.settings.heading.info",
+          "label": "t:sections.main-product.blocks.collapsible_tab.settings.heading.label"
         },
         {
           "type": "select",
@@ -5036,725 +1223,337 @@ ezfyDawnThemeSlider.init();</script>
           "options": [
             {
               "value": "none",
-              "label": "None"
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__1.label"
             },
             {
               "value": "apple",
-              "label": "Apple"
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__2.label"
             },
             {
               "value": "banana",
-              "label": "Banana"
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__3.label"
             },
             {
               "value": "bottle",
-              "label": "Bottle"
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__4.label"
             },
             {
               "value": "box",
-              "label": "Box"
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__5.label"
             },
             {
               "value": "carrot",
-              "label": "Carrot"
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__6.label"
             },
             {
               "value": "chat_bubble",
-              "label": "Chat bubble"
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__7.label"
             },
             {
               "value": "check_mark",
-              "label": "Check mark"
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__8.label"
             },
             {
               "value": "clipboard",
-              "label": "Clipboard"
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__9.label"
             },
             {
               "value": "dairy",
-              "label": "Dairy"
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__10.label"
             },
             {
               "value": "dairy_free",
-              "label": "Dairy free"
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__11.label"
             },
             {
               "value": "dryer",
-              "label": "Dryer"
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__12.label"
             },
             {
               "value": "eye",
-              "label": "Eye"
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__13.label"
             },
             {
               "value": "fire",
-              "label": "Fire"
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__14.label"
             },
             {
               "value": "gluten_free",
-              "label": "Gluten free"
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__15.label"
             },
             {
               "value": "heart",
-              "label": "Heart"
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__16.label"
             },
             {
               "value": "iron",
-              "label": "Iron"
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__17.label"
             },
             {
               "value": "leaf",
-              "label": "Leaf"
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__18.label"
             },
             {
               "value": "leather",
-              "label": "Leather"
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__19.label"
             },
             {
               "value": "lightning_bolt",
-              "label": "Lightning bolt"
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__20.label"
             },
             {
               "value": "lipstick",
-              "label": "Lipstick"
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__21.label"
             },
             {
               "value": "lock",
-              "label": "Lock"
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__22.label"
             },
             {
               "value": "map_pin",
-              "label": "Map pin"
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__23.label"
             },
             {
               "value": "nut_free",
-              "label": "Nut free"
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__24.label"
             },
             {
               "value": "pants",
-              "label": "Pants"
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__25.label"
             },
             {
               "value": "paw_print",
-              "label": "Paw print"
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__26.label"
             },
             {
               "value": "pepper",
-              "label": "Pepper"
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__27.label"
             },
             {
               "value": "perfume",
-              "label": "Perfume"
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__28.label"
             },
             {
               "value": "plane",
-              "label": "Plane"
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__29.label"
             },
             {
               "value": "plant",
-              "label": "Plant"
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__30.label"
             },
             {
               "value": "price_tag",
-              "label": "Price tag"
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__31.label"
             },
             {
               "value": "question_mark",
-              "label": "Question mark"
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__32.label"
             },
             {
               "value": "recycle",
-              "label": "Recycle"
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__33.label"
             },
             {
               "value": "return",
-              "label": "Return"
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__34.label"
             },
             {
               "value": "ruler",
-              "label": "Ruler"
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__35.label"
             },
             {
               "value": "serving_dish",
-              "label": "Serving dish"
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__36.label"
             },
             {
               "value": "shirt",
-              "label": "Shirt"
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__37.label"
             },
             {
               "value": "shoe",
-              "label": "Shoe"
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__38.label"
             },
             {
               "value": "silhouette",
-              "label": "Silhouette"
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__39.label"
             },
             {
               "value": "snowflake",
-              "label": "Snowflake"
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__40.label"
             },
             {
               "value": "star",
-              "label": "Star"
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__41.label"
             },
             {
               "value": "stopwatch",
-              "label": "Stopwatch"
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__42.label"
             },
             {
               "value": "truck",
-              "label": "Truck"
-            },      
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__43.label"
+            },
             {
               "value": "washing",
-              "label": "Washing"
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__44.label"
             }
           ],
           "default": "check_mark",
-          "label": "Icon"
+          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.label"
         },
         {
           "type": "richtext",
           "id": "content",
-          "label": "Row content"
+          "label": "t:sections.main-product.blocks.collapsible_tab.settings.content.label"
         },
         {
           "type": "page",
           "id": "page",
-          "label": "Row content from page"
+          "label": "t:sections.main-product.blocks.collapsible_tab.settings.page.label"
         }
       ]
     },
     {
       "type": "popup",
-      "name": "Pop-up",
+      "name": "t:sections.main-product.blocks.popup.name",
       "settings": [
         {
           "type": "text",
           "id": "text",
           "default": "Pop-up link text",
-          "label": "Link label"
+          "label": "t:sections.main-product.blocks.popup.settings.link_label.label"
         },
         {
           "id": "page",
           "type": "page",
-          "label": "Page"
+          "label": "t:sections.main-product.blocks.popup.settings.page.label"
         }
       ]
     },
     {
       "type": "rating",
-      "name": "Rating",
+      "name": "t:sections.main-product.blocks.rating.name",
       "limit": 1,
       "settings": [
         {
           "type": "paragraph",
-          "content": "To display a rating, add a product rating app. [Learn more](https://help.shopify.com/en/manual/online-store/themes/os20/themes-by-shopify/dawn/page-types#product-rating-block)"
+          "content": "t:sections.main-product.blocks.rating.settings.paragraph.content"
         }
+      ]
+    },
+    {
+      "type": "social",
+      "name": "Spcial",
+      "limit": 1,
+      "settings": [ 
+          {
+          "type": "paragraph",
+          "content": "social"
+          }
       ]
     }
   ],
   "settings": [
-  {
-      "type": "header",
-      "content": "Custom Settings"
-    },
-    {
-      "type": "paragraph",
-      "content": "Dawn Slider settings by ezfycode.com"
-    },
-    {
-      "type": "header",
-      "content": "Featured Image"
-    },
-    {
-      "type": "checkbox",
-      "id": "featured_image_loop",
-      "label": "Enable loop",
-      "default": true
-    },
-    {
-      "type": "checkbox",
-      "id": "featured_image_arrows",
-      "label": "Enable arrows for desktop",
-      "default": true
-    },
-    {
-      "type": "checkbox",
-      "id": "featured_image_arrows_mobile",
-      "label": "Enable arrows for mobile",
-      "default": true
-    },
-    {
-      "type": "checkbox",
-      "id": "featured_image_animation",
-      "label": "Enable smooth animation on image change",
-      "default": true
-    },
-     {
-      "type": "checkbox",
-      "id": "featured_image_show_arrows_on_hover",
-      "label": "Show arrows only on hover",
-      "default": false
-    },
-  {
-      "type": "checkbox",
-    "id": "featured_image_lazyload",
-    "label": "Lazyload",
-    "info": "Load images only when they're on screen. This will improve performance.",
-    "default": false
-  },
-  {
-    "type": "checkbox",
-    "id": "free_scroll",
-    "label": "Free scroll",
-    "info": "Do not snap images when swiping",
-    "default": false
-  },
-  {
-    "type": "checkbox",
-    "id": "featured_image_use_max_height",
-    "label": "Enable max height",
-    "default": false
-  },
-  {
-    "type": "text",
-    "id": "featured_image_max_height",
-    "label": "Slider's max height in pixels (desktop)",
-    "default": "520",
-    "info": "Please type only numbers. This will work only when \"Enable max height\" is checked."
-  },
-  {
-    "type": "text",
-    "id": "featured_image_max_height_mobile",
-    "label": "Slider's max height in pixels (mobile)",
-    "default": "400",
-    "info": "Please type only numbers. This will work only when \"Enable max height\" is checked."
-  },
-
-  {
-    "type": "color",
-    "id": "featured_image_background_color",
-    "label": "Featured image background color",
-    "default": "#ffffff",
-	"info": "This will work only when \"Enable max height\" is checked."
-  },
-  {
-      "type": "header",
-      "content": "Thumbnails"
-    },
-  {
-  "type": "paragraph",
-  "content": "This option won't work for Vertical thumbnails."
-  },
-    {
-      "type": "checkbox",
-      "id": "thumbnails_loop",
-      "label": "Enable loop",
-      "default": true
-    },
-    {
-      "type": "checkbox",
-      "id": "thumbnails_arrows_desktop",
-
-      "label": "Enable arrows for desktop",
-      "default": false
-    },
-    {
-      "type": "checkbox",
-      "id": "thumbnails_arrows_mobile",
-  		
-      "label": "Enable arrows for mobile",
-      "default": false
-    },
-
-
-    {
-      "type": "select",
-      "id": "thumbnails_highlighted_position",
-      "label": "Highlighted thumbnail aligns to the:",
-      "options": [
-        {
-          "value": "left",
-          "label": "Left"
-        },
-        {
-          "value": "center",
-          "label": "Center"
-        },
-        {
-          "value": "right",
-          "label": "Right"
-        }
-      ],
-      "default": "left"
-    },
-    {
-      "type": "select",
-      "id": "thumbnails_vertical_alignment",
-      "label": "Vertical alignment",
-      "options": [
-        {
-          "value": "top",
-          "label": "Top"
-        },
-        {
-          "value": "center",
-          "label": "Center"
-        }
-      ],
-      "default": "top"
-    },
-    {
-      "type": "select",
-      "id": "thumbnails",
-      "label": "Thumbnail's quantity on desktop",
-      "options": [
-        {
-          "value": "3",
-          "label": "3"
-        },
-        {
-          "value": "4",
-          "label": "4"
-        },
-        {
-          "value": "5",
-          "label": "5"
-        },
-        {
-          "value": "6",
-          "label": "6"
-        }
-      ],
-      "default": "4"
-    },
-    {
-      "type": "select",
-      "id": "thumbnails_mobile",
-      "label": "Thumbnail's quantity on mobile",
-      "options": [
-        {
-          "value": "3",
-          "label": "3"
-        },
-        {
-          "value": "4",
-          "label": "4"
-        },
-        {
-          "value": "5",
-          "label": "5"
-        },
-        {
-          "value": "6",
-          "label": "6"
-        }
-      ],
-      "default": "4"
-    },
-
-    {
-      "type": "select",
-      "id": "arrow_style",
-      "label": "Arrow style",
-      "options": [
-        {
-          "value": "full_height",
-          "label": "Full height"
-        },
-        {
-          "value": "circle",
-          "label": "Circle, vertically centered"
-        }
-      ],
-      "default": "circle"
-    },
-
-    {
-      "type": "header",
-      "content": "Arrows"
-    },
-  
-  {
-    "type": "range",
-    "id": "button_size",
-    "label": "Button size",
-    "min": 8,
-    "max": 50,
-    "step": 1,
-    "unit": "px",
-    "default": 40
-  },
-  {
-    "type": "range",
-    "id": "arrow_size",
-    "label": "Arrow size",
-    "min": 8,
-    "max": 50,
-    "step": 1,
-    "unit": "px",
-    "default": 26
-  },
-  {
-    "type": "range",
-    "id": "button_size_mobile",
-    "label": "Button size (mobile)",
-    "min": 8,
-    "max": 50,
-    "step": 1,
-    "unit": "px",
-    "default": 28
-  },
-  {
-    "type": "range",
-    "id": "arrow_size_mobile",
-    "label": "Arrow size (mobile)",
-    "min": 8,
-    "max": 50,
-    "step": 1,
-    "unit": "px",
-    "default": 16
-  },
-      {
-          "type":      "range",
-          "id":        "arrow_opacity",
-          "min":       0,
-          "max":        99,
-          "step":       1,
-          "unit":       "%",
-          "label":     "Arrow background transparency",
-		  "info": "The lower the more transparent.",
-          "default":   75
-      },
-      {
-          "type":      "range",
-          "id":        "arrow_hover_opacity",
-          "min":       0,
-          "max":        99,
-          "step":       1,
-          "unit":       "%",
-          "label":     "Arrow background transparency on hover",
-		  "info": "The lower the more transparent.",
-          "default":   99
-      },
-
-    {
-      "type": "header",
-      "content": "Other Slider Settings"
-    },
-
-  {
-    "type": "checkbox",
-    "id": "update_swatch_on_image_change",
-    "label": "Update swatch on image change",
-    "default": true
-  },
-  {
-    "type": "checkbox",
-    "id": "update_image_on_swatch_change",
-    "label": "Update image on swatch change",
-    "default": true
-  },
-    {
-      "type": "header",
-      "content": "Original Settings"
-    },
     {
       "type": "checkbox",
       "id": "enable_sticky_info",
       "default": true,
-      "label": "Enable sticky content on desktop"
+      "label": "t:sections.main-product.settings.enable_sticky_info.label"
     },
     {
       "type": "header",
-      "content": "Media",
-      "info": "Learn more about [media types](https://help.shopify.com/manual/products/product-media)"
+      "content": "t:sections.main-product.settings.header.content",
+      "info": "t:sections.main-product.settings.header.info"
     },
     {
-      "default": "thumbnail_slider",
-	    "label": "Desktop layout",	
+      "type": "select",
+      "id": "media_position",
+      "options": [
+        {
+          "value": "left",
+          "label": "t:sections.main-product.settings.media_position.options__1.label"
+        },
+        {
+          "value": "right",
+          "label": "t:sections.main-product.settings.media_position.options__2.label"
+        }
+      ],
+      "default": "left",
+      "label": "t:sections.main-product.settings.media_position.label",
+      "info": "t:sections.main-product.settings.media_position.info"
+    },
+    {
       "type": "select",
       "id": "gallery_layout",
       "options": [
-          {
-            "value": "stacked",
-            "label": "Stacked (Dawn's original)"
-          },
-          {
-            "value": "hide",
-            "label": "Hide thumbnails"
-          },
-          {
-            "value": "thumbnail",
-            "label": "Thumbnails"
-          },
-   {
-            "value": "thumbnail_vertical",
-            "label": "Vertical thumbnails"
-          },
-          {
-            "value": "thumbnail_slider",
-            "label": "Thumbnail carousel"
-          },
-          {
-            "value": "dots",
-            "label": "Dots"
-          }
-      ]
-    },
-      {
-      "type": "select",
-        "default": "thumbnail_slider",
-      "label": "Mobile layout",
-      "id": "mobile_thumbnails",
-      "options": [
-      
         {
-          "value": "hide",
-          "label": "Hide thumbnails"
+          "value": "stacked",
+          "label": "t:sections.main-product.settings.gallery_layout.options__1.label"
         },
-      	 {
+        {
           "value": "thumbnail",
-          "label": "Thumbnails"
+          "label": "t:sections.main-product.settings.gallery_layout.options__2.label"
         },
-   		{
+        {
           "value": "thumbnail_slider",
-          "label": "Thumbnails carousel"
-        },
-   		{
-          "value": "dots",
-          "label": "Dots"
+          "label": "t:sections.main-product.settings.gallery_layout.options__3.label"
         }
-      ]
+      ],
+      "default": "stacked",
+      "label": "t:sections.main-product.settings.gallery_layout.label"
     },
-  {
-    "type": "checkbox",
-    "id": "show_counter",
-    "label": "Show mobile counter",
-    "info": "Shows Dawn's theme original counter below the featured image.",
-    "default": false
-  },
-
     {
       "type": "select",
       "id": "media_size",
       "options": [
         {
           "value": "small",
-          "label": "Small"
+          "label": "t:sections.main-product.settings.media_size.options__1.label"
         },
         {
           "value": "medium",
-          "label": "Medium"
+          "label": "t:sections.main-product.settings.media_size.options__2.label"
         },
         {
           "value": "large",
-          "label": "Large"
+          "label": "t:sections.main-product.settings.media_size.options__3.label"
         }
       ],
       "default": "large",
-      "label": "Desktop media size",
-      "info": "Media is automatically optimized for mobile."
+      "label": "t:sections.main-product.settings.media_size.label",
+      "info": "t:sections.main-product.settings.media_size.info"
     },
-
+    {
+      "type": "select",
+      "id": "mobile_thumbnails",
+      "options": [
+        {
+          "value": "show",
+          "label": "t:sections.main-product.settings.mobile_thumbnails.options__1.label"
+        },
+        {
+          "value": "hide",
+          "label": "t:sections.main-product.settings.mobile_thumbnails.options__2.label"
+        }
+      ],
+      "default": "hide",
+      "label": "t:sections.main-product.settings.mobile_thumbnails.label"
+    },
     {
       "type": "checkbox",
       "id": "hide_variants",
       "default": false,
-      "label": "Hide other variants’ media after selecting a variant",
-  	  "info": "Important: this option works only with the \"stacked\" mode."
+      "label": "t:sections.main-product.settings.hide_variants.label"
     },
     {
       "type": "checkbox",
       "id": "enable_video_looping",
       "default": false,
-      "label": "Enable video looping"
+      "label": "t:sections.main-product.settings.enable_video_looping.label"
     },
     {
       "type": "header",
-      "content": "Dots"
-    },
-  
-  {
-    "type": "range",
-    "id": "dots_size",
-    "label": "Dots size",
-    "min": 2,
-    "max": 20,
-    "step": 1,
-    "unit": "px",
-    "default": 10
-  },
-  {
-    "type": "range",
-    "id": "dots_size_mobile",
-    "label": "Dots size (mobile)",
-    "min": 2,
-    "max": 20,
-    "step": 1,
-    "unit": "px",
-    "default": 10
-  },
-  {
-    "type": "color",
-    "id": "dots_color",
-    "label": "Dots color",
-    "default": "#cdcdcd"
-  },
-  {
-    "type": "color",
-    "id": "dots_selected_color",
-    "label": "Selected dot color",
-    "default": "#333333"
-  },
-  
-
-  {
-    "type": "range",
-    "id": "dots_top_padding",
-    "label": "Dots top padding",
-    "min": 0,
-    "max": 50,
-    "step": 1,
-    "unit": "px",
-    "default": 17
-  },
-  {
-    "type": "range",
-    "id": "dots_bottom_padding",
-    "label": "Dots bottom padding",
-    "min": 0,
-    "max": 50,
-    "step": 1,
-    "unit": "px",
-    "default": 0
-  },
-  {
-    "type": "range",
-    "id": "dots_top_padding_mobile",
-    "label": "Dots top padding (mobile)",
-    "min": 0,
-    "max": 50,
-    "step": 1,
-    "unit": "px",
-    "default": 17
-  },
-  {
-    "type": "range",
-    "id": "dots_bottom_padding_mobile",
-    "label": "Dots bottom padding (mobile)",
-    "min": 0,
-    "max": 50,
-    "step": 1,
-    "unit": "px",
-    "default": 12
-  },
-
-    {
-      "type": "header",
-      "content": "Section padding"
+      "content": "t:sections.all.padding.section_padding_heading"
     },
     {
       "type": "range",
@@ -5763,18 +1562,8 @@ ezfyDawnThemeSlider.init();</script>
       "max": 100,
       "step": 4,
       "unit": "px",
-      "label": "Top padding",
-      "default": 80
-    },
-        {
-      "type": "range",
-      "id": "padding_top_mobile",
-      "min": 0,
-      "max": 100,
-      "step": 4,
-      "unit": "px",
-      "label": "Top padding (mobile)",
-      "default": 0
+      "label": "t:sections.all.padding.padding_top",
+      "default": 36
     },
     {
       "type": "range",
@@ -5783,7 +1572,7 @@ ezfyDawnThemeSlider.init();</script>
       "max": 100,
       "step": 4,
       "unit": "px",
-      "label": "Bottom padding",
+      "label": "t:sections.all.padding.padding_bottom",
       "default": 36
     }
   ]
