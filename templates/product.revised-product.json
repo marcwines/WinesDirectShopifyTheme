@@ -106,7 +106,7 @@
         "featured_image_arrows_mobile": false,
         "featured_image_animation": false,
         "featured_image_show_arrows_on_hover": false,
-        "featured_image_lazyload": false,
+        "featured_image_lazyload": true,
         "free_scroll": false,
         "featured_image_use_max_height": false,
         "featured_image_max_height": "400",
