@@ -129,7 +129,7 @@
         "update_swatch_on_image_change": true,
         "update_image_on_swatch_change": true,
         "enable_sticky_info": true,
-        "gallery_layout": "stacked",
+        "gallery_layout": "thumbnail",
         "mobile_thumbnails": "hide",
         "show_counter": false,
         "media_size": "medium",
