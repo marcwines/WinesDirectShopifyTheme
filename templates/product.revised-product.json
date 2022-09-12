@@ -111,7 +111,7 @@
         "featured_image_use_max_height": false,
         "featured_image_max_height": "520",
         "featured_image_max_height_mobile": "400",
-        "featured_image_background_color": "#ffffff",
+        "featured_image_background_color": "#334fb4",
         "thumbnails_loop": true,
         "thumbnails_arrows_desktop": true,
         "thumbnails_arrows_mobile": true,
