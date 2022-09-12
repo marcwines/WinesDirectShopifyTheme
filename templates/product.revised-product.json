@@ -109,7 +109,7 @@
         "featured_image_lazyload": false,
         "free_scroll": false,
         "featured_image_use_max_height": false,
-        "featured_image_max_height": "520",
+        "featured_image_max_height": "400",
         "featured_image_max_height_mobile": "400",
         "featured_image_background_color": "#ffffff",
         "thumbnails_loop": true,
