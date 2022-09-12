@@ -4887,6 +4887,7 @@ ezfyDawnThemeSlider.init();</script>
 
 
   {% endif %}
+
 {% schema %}
 {
   "name": "t:sections.main-product.name",
@@ -4904,7 +4905,7 @@ ezfyDawnThemeSlider.init();</script>
           "type": "text",
           "id": "text",
           "default": "Text block",
-          "label": "Text"
+          "label": "t:sections.main-product.blocks.text.settings.text.label"
         },
         {
           "type": "select",
@@ -4912,40 +4913,40 @@ ezfyDawnThemeSlider.init();</script>
           "options": [
             {
               "value": "body",
-              "label": "Body"
+              "label": "t:sections.main-product.blocks.text.settings.text_style.options__1.label"
             },
             {
               "value": "subtitle",
-              "label": "Subtitle"
+              "label": "t:sections.main-product.blocks.text.settings.text_style.options__2.label"
             },
             {
               "value": "uppercase",
-              "label": "Uppercase"
+              "label": "t:sections.main-product.blocks.text.settings.text_style.options__3.label"
             }
           ],
           "default": "body",
-          "label": "Text style"
+          "label": "t:sections.main-product.blocks.text.settings.text_style.label"
         }
       ]
     },
     {
       "type": "title",
-      "name": "Title",
+      "name": "t:sections.main-product.blocks.title.name",
       "limit": 1
     },
     {
       "type": "price",
-      "name": "Price",
+      "name": "t:sections.main-product.blocks.price.name",
       "limit": 1
     },
     {
       "type": "quantity_selector",
-      "name": "Quantity selector",
+      "name": "t:sections.main-product.blocks.quantity_selector.name",
       "limit": 1
     },
     {
       "type": "variant_picker",
-      "name": "Variant picker",
+      "name": "t:sections.main-product.blocks.variant_picker.name",
       "limit": 1,
       "settings": [
         {
@@ -4954,80 +4955,80 @@ ezfyDawnThemeSlider.init();</script>
           "options": [
             {
               "value": "dropdown",
-              "label": "Dropdown"
+              "label": "t:sections.main-product.blocks.variant_picker.settings.picker_type.options__1.label"
             },
             {
               "value": "button",
-              "label": "Pills"
+              "label": "t:sections.main-product.blocks.variant_picker.settings.picker_type.options__2.label"
             }
           ],
           "default": "button",
-          "label": "Type"
+          "label": "t:sections.main-product.blocks.variant_picker.settings.picker_type.label"
         }
       ]
     },
     {
       "type": "buy_buttons",
-      "name": "Buy buttons",
+      "name": "t:sections.main-product.blocks.buy_buttons.name",
       "limit": 1,
       "settings": [
         {
           "type": "checkbox",
           "id": "show_dynamic_checkout",
           "default": true,
-          "label": "Show dynamic checkout buttons",
-          "info": "Using the payment methods available on your store, customers see their preferred option, like PayPal or Apple Pay. [Learn more](https://help.shopify.com/manual/online-store/dynamic-checkout)"
+          "label": "t:sections.main-product.blocks.buy_buttons.settings.show_dynamic_checkout.label",
+          "info": "t:sections.main-product.blocks.buy_buttons.settings.show_dynamic_checkout.info"
         }
       ]
     },
     {
       "type": "description",
-      "name": "Description",
+      "name": "t:sections.main-product.blocks.description.name",
       "limit": 1
     },
     {
       "type": "share",
-      "name": "Share",
+      "name": "t:sections.main-product.blocks.share.name",
       "limit": 1,
       "settings": [
         {
           "type": "text",
           "id": "share_label",
-          "label": "Text",
+          "label": "t:sections.main-product.blocks.share.settings.text.label",
           "default": "Share"
         },
         {
           "type": "paragraph",
-          "content": "If you include a link in social media posts, the page’s featured image will be shown as the preview image. (Learn more)[https://help.shopify.com/manual/online-store/images/showing-social-media-thumbnail-images]."
+          "content": "t:sections.main-product.blocks.share.settings.featured_image_info.content"
         },
         {
           "type": "paragraph",
-          "content": "A store title and description are included with the preview image. [Learn more](https://help.shopify.com/manual/promoting-marketing/seo/adding-keywords#set-a-title-and-description-for-your-online-store)."
+          "content": "t:sections.main-product.blocks.share.settings.title_info.content"
         }
       ]
     },
     {
       "type": "custom_liquid",
-      "name": "Custom liquid",
+      "name": "t:sections.main-product.blocks.custom_liquid.name",
       "settings": [
         {
           "type": "liquid",
           "id": "custom_liquid",
-          "label": "Custom liquid",
-          "info": "Add app snippets or other Liquid code to create advanced customizations."
+          "label": "t:sections.main-product.blocks.custom_liquid.settings.custom_liquid.label",
+          "info": "t:sections.main-product.blocks.custom_liquid.settings.custom_liquid.info"
         }
       ]
     },
     {
       "type": "collapsible_tab",
-      "name": "Collapsible row",
+      "name": "t:sections.main-product.blocks.collapsible_tab.name",
       "settings": [
         {
           "type": "text",
           "id": "heading",
           "default": "Collapsible row",
-          "info": "Include a heading that explains the content.",
-          "label": "Heading"
+          "info": "t:sections.main-product.blocks.collapsible_tab.settings.heading.info",
+          "label": "t:sections.main-product.blocks.collapsible_tab.settings.heading.label"
         },
         {
           "type": "select",
@@ -5035,725 +5036,337 @@ ezfyDawnThemeSlider.init();</script>
           "options": [
             {
               "value": "none",
-              "label": "None"
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__1.label"
             },
             {
               "value": "apple",
-              "label": "Apple"
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__2.label"
             },
             {
               "value": "banana",
-              "label": "Banana"
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__3.label"
             },
             {
               "value": "bottle",
-              "label": "Bottle"
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__4.label"
             },
             {
               "value": "box",
-              "label": "Box"
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__5.label"
             },
             {
               "value": "carrot",
-              "label": "Carrot"
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__6.label"
             },
             {
               "value": "chat_bubble",
-              "label": "Chat bubble"
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__7.label"
             },
             {
               "value": "check_mark",
-              "label": "Check mark"
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__8.label"
             },
             {
               "value": "clipboard",
-              "label": "Clipboard"
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__9.label"
             },
             {
               "value": "dairy",
-              "label": "Dairy"
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__10.label"
             },
             {
               "value": "dairy_free",
-              "label": "Dairy free"
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__11.label"
             },
             {
               "value": "dryer",
-              "label": "Dryer"
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__12.label"
             },
             {
               "value": "eye",
-              "label": "Eye"
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__13.label"
             },
             {
               "value": "fire",
-              "label": "Fire"
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__14.label"
             },
             {
               "value": "gluten_free",
-              "label": "Gluten free"
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__15.label"
             },
             {
               "value": "heart",
-              "label": "Heart"
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__16.label"
             },
             {
               "value": "iron",
-              "label": "Iron"
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__17.label"
             },
             {
               "value": "leaf",
-              "label": "Leaf"
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__18.label"
             },
             {
               "value": "leather",
-              "label": "Leather"
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__19.label"
             },
             {
               "value": "lightning_bolt",
-              "label": "Lightning bolt"
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__20.label"
             },
             {
               "value": "lipstick",
-              "label": "Lipstick"
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__21.label"
             },
             {
               "value": "lock",
-              "label": "Lock"
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__22.label"
             },
             {
               "value": "map_pin",
-              "label": "Map pin"
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__23.label"
             },
             {
               "value": "nut_free",
-              "label": "Nut free"
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__24.label"
             },
             {
               "value": "pants",
-              "label": "Pants"
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__25.label"
             },
             {
               "value": "paw_print",
-              "label": "Paw print"
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__26.label"
             },
             {
               "value": "pepper",
-              "label": "Pepper"
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__27.label"
             },
             {
               "value": "perfume",
-              "label": "Perfume"
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__28.label"
             },
             {
               "value": "plane",
-              "label": "Plane"
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__29.label"
             },
             {
               "value": "plant",
-              "label": "Plant"
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__30.label"
             },
             {
               "value": "price_tag",
-              "label": "Price tag"
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__31.label"
             },
             {
               "value": "question_mark",
-              "label": "Question mark"
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__32.label"
             },
             {
               "value": "recycle",
-              "label": "Recycle"
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__33.label"
             },
             {
               "value": "return",
-              "label": "Return"
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__34.label"
             },
             {
               "value": "ruler",
-              "label": "Ruler"
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__35.label"
             },
             {
               "value": "serving_dish",
-              "label": "Serving dish"
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__36.label"
             },
             {
               "value": "shirt",
-              "label": "Shirt"
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__37.label"
             },
             {
               "value": "shoe",
-              "label": "Shoe"
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__38.label"
             },
             {
               "value": "silhouette",
-              "label": "Silhouette"
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__39.label"
             },
             {
               "value": "snowflake",
-              "label": "Snowflake"
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__40.label"
             },
             {
               "value": "star",
-              "label": "Star"
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__41.label"
             },
             {
               "value": "stopwatch",
-              "label": "Stopwatch"
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__42.label"
             },
             {
               "value": "truck",
-              "label": "Truck"
-            },      
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__43.label"
+            },
             {
               "value": "washing",
-              "label": "Washing"
+              "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.options__44.label"
             }
           ],
           "default": "check_mark",
-          "label": "Icon"
+          "label": "t:sections.main-product.blocks.collapsible_tab.settings.icon.label"
         },
         {
           "type": "richtext",
           "id": "content",
-          "label": "Row content"
+          "label": "t:sections.main-product.blocks.collapsible_tab.settings.content.label"
         },
         {
           "type": "page",
           "id": "page",
-          "label": "Row content from page"
+          "label": "t:sections.main-product.blocks.collapsible_tab.settings.page.label"
         }
       ]
     },
     {
       "type": "popup",
-      "name": "Pop-up",
+      "name": "t:sections.main-product.blocks.popup.name",
       "settings": [
         {
           "type": "text",
           "id": "text",
           "default": "Pop-up link text",
-          "label": "Link label"
+          "label": "t:sections.main-product.blocks.popup.settings.link_label.label"
         },
         {
           "id": "page",
           "type": "page",
-          "label": "Page"
+          "label": "t:sections.main-product.blocks.popup.settings.page.label"
         }
       ]
     },
     {
       "type": "rating",
-      "name": "Rating",
+      "name": "t:sections.main-product.blocks.rating.name",
       "limit": 1,
       "settings": [
         {
           "type": "paragraph",
-          "content": "To display a rating, add a product rating app. [Learn more](https://help.shopify.com/en/manual/online-store/themes/os20/themes-by-shopify/dawn/page-types#product-rating-block)"
+          "content": "t:sections.main-product.blocks.rating.settings.paragraph.content"
         }
+      ]
+    },
+    {
+      "type": "social",
+      "name": "Spcial",
+      "limit": 1,
+      "settings": [ 
+          {
+          "type": "paragraph",
+          "content": "social"
+          }
       ]
     }
   ],
   "settings": [
-  {
-      "type": "header",
-      "content": "Custom Settings"
-    },
-    {
-      "type": "paragraph",
-      "content": "Dawn Slider settings by ezfycode.com"
-    },
-    {
-      "type": "header",
-      "content": "Featured Image"
-    },
-    {
-      "type": "checkbox",
-      "id": "featured_image_loop",
-      "label": "Enable loop",
-      "default": true
-    },
-    {
-      "type": "checkbox",
-      "id": "featured_image_arrows",
-      "label": "Enable arrows for desktop",
-      "default": true
-    },
-    {
-      "type": "checkbox",
-      "id": "featured_image_arrows_mobile",
-      "label": "Enable arrows for mobile",
-      "default": true
-    },
-    {
-      "type": "checkbox",
-      "id": "featured_image_animation",
-      "label": "Enable smooth animation on image change",
-      "default": true
-    },
-     {
-      "type": "checkbox",
-      "id": "featured_image_show_arrows_on_hover",
-      "label": "Show arrows only on hover",
-      "default": false
-    },
-  {
-      "type": "checkbox",
-    "id": "featured_image_lazyload",
-    "label": "Lazyload",
-    "info": "Load images only when they're on screen. This will improve performance.",
-    "default": false
-  },
-  {
-    "type": "checkbox",
-    "id": "free_scroll",
-    "label": "Free scroll",
-    "info": "Do not snap images when swiping",
-    "default": false
-  },
-  {
-    "type": "checkbox",
-    "id": "featured_image_use_max_height",
-    "label": "Enable max height",
-    "default": false
-  },
-  {
-    "type": "text",
-    "id": "featured_image_max_height",
-    "label": "Slider's max height in pixels (desktop)",
-    "default": "520",
-    "info": "Please type only numbers. This will work only when \"Enable max height\" is checked."
-  },
-  {
-    "type": "text",
-    "id": "featured_image_max_height_mobile",
-    "label": "Slider's max height in pixels (mobile)",
-    "default": "400",
-    "info": "Please type only numbers. This will work only when \"Enable max height\" is checked."
-  },
-
-  {
-    "type": "color",
-    "id": "featured_image_background_color",
-    "label": "Featured image background color",
-    "default": "#ffffff",
-	"info": "This will work only when \"Enable max height\" is checked."
-  },
-  {
-      "type": "header",
-      "content": "Thumbnails"
-    },
-  {
-  "type": "paragraph",
-  "content": "This option won't work for Vertical thumbnails."
-  },
-    {
-      "type": "checkbox",
-      "id": "thumbnails_loop",
-      "label": "Enable loop",
-      "default": true
-    },
-    {
-      "type": "checkbox",
-      "id": "thumbnails_arrows_desktop",
-
-      "label": "Enable arrows for desktop",
-      "default": false
-    },
-    {
-      "type": "checkbox",
-      "id": "thumbnails_arrows_mobile",
-  		
-      "label": "Enable arrows for mobile",
-      "default": false
-    },
-
-
-    {
-      "type": "select",
-      "id": "thumbnails_highlighted_position",
-      "label": "Highlighted thumbnail aligns to the:",
-      "options": [
-        {
-          "value": "left",
-          "label": "Left"
-        },
-        {
-          "value": "center",
-          "label": "Center"
-        },
-        {
-          "value": "right",
-          "label": "Right"
-        }
-      ],
-      "default": "left"
-    },
-    {
-      "type": "select",
-      "id": "thumbnails_vertical_alignment",
-      "label": "Vertical alignment",
-      "options": [
-        {
-          "value": "top",
-          "label": "Top"
-        },
-        {
-          "value": "center",
-          "label": "Center"
-        }
-      ],
-      "default": "top"
-    },
-    {
-      "type": "select",
-      "id": "thumbnails",
-      "label": "Thumbnail's quantity on desktop",
-      "options": [
-        {
-          "value": "3",
-          "label": "3"
-        },
-        {
-          "value": "4",
-          "label": "4"
-        },
-        {
-          "value": "5",
-          "label": "5"
-        },
-        {
-          "value": "6",
-          "label": "6"
-        }
-      ],
-      "default": "4"
-    },
-    {
-      "type": "select",
-      "id": "thumbnails_mobile",
-      "label": "Thumbnail's quantity on mobile",
-      "options": [
-        {
-          "value": "3",
-          "label": "3"
-        },
-        {
-          "value": "4",
-          "label": "4"
-        },
-        {
-          "value": "5",
-          "label": "5"
-        },
-        {
-          "value": "6",
-          "label": "6"
-        }
-      ],
-      "default": "4"
-    },
-
-    {
-      "type": "select",
-      "id": "arrow_style",
-      "label": "Arrow style",
-      "options": [
-        {
-          "value": "full_height",
-          "label": "Full height"
-        },
-        {
-          "value": "circle",
-          "label": "Circle, vertically centered"
-        }
-      ],
-      "default": "circle"
-    },
-
-    {
-      "type": "header",
-      "content": "Arrows"
-    },
-  
-  {
-    "type": "range",
-    "id": "button_size",
-    "label": "Button size",
-    "min": 8,
-    "max": 50,
-    "step": 1,
-    "unit": "px",
-    "default": 40
-  },
-  {
-    "type": "range",
-    "id": "arrow_size",
-    "label": "Arrow size",
-    "min": 8,
-    "max": 50,
-    "step": 1,
-    "unit": "px",
-    "default": 26
-  },
-  {
-    "type": "range",
-    "id": "button_size_mobile",
-    "label": "Button size (mobile)",
-    "min": 8,
-    "max": 50,
-    "step": 1,
-    "unit": "px",
-    "default": 28
-  },
-  {
-    "type": "range",
-    "id": "arrow_size_mobile",
-    "label": "Arrow size (mobile)",
-    "min": 8,
-    "max": 50,
-    "step": 1,
-    "unit": "px",
-    "default": 16
-  },
-      {
-          "type":      "range",
-          "id":        "arrow_opacity",
-          "min":       0,
-          "max":        99,
-          "step":       1,
-          "unit":       "%",
-          "label":     "Arrow background transparency",
-		  "info": "The lower the more transparent.",
-          "default":   75
-      },
-      {
-          "type":      "range",
-          "id":        "arrow_hover_opacity",
-          "min":       0,
-          "max":        99,
-          "step":       1,
-          "unit":       "%",
-          "label":     "Arrow background transparency on hover",
-		  "info": "The lower the more transparent.",
-          "default":   99
-      },
-
-    {
-      "type": "header",
-      "content": "Other Slider Settings"
-    },
-
-  {
-    "type": "checkbox",
-    "id": "update_swatch_on_image_change",
-    "label": "Update swatch on image change",
-    "default": true
-  },
-  {
-    "type": "checkbox",
-    "id": "update_image_on_swatch_change",
-    "label": "Update image on swatch change",
-    "default": true
-  },
-    {
-      "type": "header",
-      "content": "Original Settings"
-    },
     {
       "type": "checkbox",
       "id": "enable_sticky_info",
       "default": true,
-      "label": "Enable sticky content on desktop"
+      "label": "t:sections.main-product.settings.enable_sticky_info.label"
     },
     {
       "type": "header",
-      "content": "Media",
-      "info": "Learn more about [media types](https://help.shopify.com/manual/products/product-media)"
+      "content": "t:sections.main-product.settings.header.content",
+      "info": "t:sections.main-product.settings.header.info"
     },
     {
-      "default": "thumbnail_slider",
-	    "label": "Desktop layout",	
+      "type": "select",
+      "id": "media_position",
+      "options": [
+        {
+          "value": "left",
+          "label": "t:sections.main-product.settings.media_position.options__1.label"
+        },
+        {
+          "value": "right",
+          "label": "t:sections.main-product.settings.media_position.options__2.label"
+        }
+      ],
+      "default": "left",
+      "label": "t:sections.main-product.settings.media_position.label",
+      "info": "t:sections.main-product.settings.media_position.info"
+    },
+    {
       "type": "select",
       "id": "gallery_layout",
       "options": [
-          {
-            "value": "stacked",
-            "label": "Stacked (Dawn's original)"
-          },
-          {
-            "value": "hide",
-            "label": "Hide thumbnails"
-          },
-          {
-            "value": "thumbnail",
-            "label": "Thumbnails"
-          },
-   {
-            "value": "thumbnail_vertical",
-            "label": "Vertical thumbnails"
-          },
-          {
-            "value": "thumbnail_slider",
-            "label": "Thumbnail carousel"
-          },
-          {
-            "value": "dots",
-            "label": "Dots"
-          }
-      ]
-    },
-      {
-      "type": "select",
-        "default": "thumbnail_slider",
-      "label": "Mobile layout",
-      "id": "mobile_thumbnails",
-      "options": [
-      
         {
-          "value": "hide",
-          "label": "Hide thumbnails"
+          "value": "stacked",
+          "label": "t:sections.main-product.settings.gallery_layout.options__1.label"
         },
-      	 {
+        {
           "value": "thumbnail",
-          "label": "Thumbnails"
+          "label": "t:sections.main-product.settings.gallery_layout.options__2.label"
         },
-   		{
+        {
           "value": "thumbnail_slider",
-          "label": "Thumbnails carousel"
-        },
-   		{
-          "value": "dots",
-          "label": "Dots"
+          "label": "t:sections.main-product.settings.gallery_layout.options__3.label"
         }
-      ]
+      ],
+      "default": "stacked",
+      "label": "t:sections.main-product.settings.gallery_layout.label"
     },
-  {
-    "type": "checkbox",
-    "id": "show_counter",
-    "label": "Show mobile counter",
-    "info": "Shows Dawn's theme original counter below the featured image.",
-    "default": false
-  },
-
     {
       "type": "select",
       "id": "media_size",
       "options": [
         {
           "value": "small",
-          "label": "Small"
+          "label": "t:sections.main-product.settings.media_size.options__1.label"
         },
         {
           "value": "medium",
-          "label": "Medium"
+          "label": "t:sections.main-product.settings.media_size.options__2.label"
         },
         {
           "value": "large",
-          "label": "Large"
+          "label": "t:sections.main-product.settings.media_size.options__3.label"
         }
       ],
       "default": "large",
-      "label": "Desktop media size",
-      "info": "Media is automatically optimized for mobile."
+      "label": "t:sections.main-product.settings.media_size.label",
+      "info": "t:sections.main-product.settings.media_size.info"
     },
-
+    {
+      "type": "select",
+      "id": "mobile_thumbnails",
+      "options": [
+        {
+          "value": "show",
+          "label": "t:sections.main-product.settings.mobile_thumbnails.options__1.label"
+        },
+        {
+          "value": "hide",
+          "label": "t:sections.main-product.settings.mobile_thumbnails.options__2.label"
+        }
+      ],
+      "default": "hide",
+      "label": "t:sections.main-product.settings.mobile_thumbnails.label"
+    },
     {
       "type": "checkbox",
       "id": "hide_variants",
       "default": false,
-      "label": "Hide other variants’ media after selecting a variant",
-  	  "info": "Important: this option works only with the \"stacked\" mode."
+      "label": "t:sections.main-product.settings.hide_variants.label"
     },
     {
       "type": "checkbox",
       "id": "enable_video_looping",
       "default": false,
-      "label": "Enable video looping"
+      "label": "t:sections.main-product.settings.enable_video_looping.label"
     },
     {
       "type": "header",
-      "content": "Dots"
-    },
-  
-  {
-    "type": "range",
-    "id": "dots_size",
-    "label": "Dots size",
-    "min": 2,
-    "max": 20,
-    "step": 1,
-    "unit": "px",
-    "default": 10
-  },
-  {
-    "type": "range",
-    "id": "dots_size_mobile",
-    "label": "Dots size (mobile)",
-    "min": 2,
-    "max": 20,
-    "step": 1,
-    "unit": "px",
-    "default": 10
-  },
-  {
-    "type": "color",
-    "id": "dots_color",
-    "label": "Dots color",
-    "default": "#cdcdcd"
-  },
-  {
-    "type": "color",
-    "id": "dots_selected_color",
-    "label": "Selected dot color",
-    "default": "#333333"
-  },
-  
-
-  {
-    "type": "range",
-    "id": "dots_top_padding",
-    "label": "Dots top padding",
-    "min": 0,
-    "max": 50,
-    "step": 1,
-    "unit": "px",
-    "default": 17
-  },
-  {
-    "type": "range",
-    "id": "dots_bottom_padding",
-    "label": "Dots bottom padding",
-    "min": 0,
-    "max": 50,
-    "step": 1,
-    "unit": "px",
-    "default": 0
-  },
-  {
-    "type": "range",
-    "id": "dots_top_padding_mobile",
-    "label": "Dots top padding (mobile)",
-    "min": 0,
-    "max": 50,
-    "step": 1,
-    "unit": "px",
-    "default": 17
-  },
-  {
-    "type": "range",
-    "id": "dots_bottom_padding_mobile",
-    "label": "Dots bottom padding (mobile)",
-    "min": 0,
-    "max": 50,
-    "step": 1,
-    "unit": "px",
-    "default": 12
-  },
-
-    {
-      "type": "header",
-      "content": "Section padding"
+      "content": "t:sections.all.padding.section_padding_heading"
     },
     {
       "type": "range",
@@ -5762,18 +5375,8 @@ ezfyDawnThemeSlider.init();</script>
       "max": 100,
       "step": 4,
       "unit": "px",
-      "label": "Top padding",
-      "default": 80
-    },
-        {
-      "type": "range",
-      "id": "padding_top_mobile",
-      "min": 0,
-      "max": 100,
-      "step": 4,
-      "unit": "px",
-      "label": "Top padding (mobile)",
-      "default": 0
+      "label": "t:sections.all.padding.padding_top",
+      "default": 36
     },
     {
       "type": "range",
@@ -5782,7 +5385,7 @@ ezfyDawnThemeSlider.init();</script>
       "max": 100,
       "step": 4,
       "unit": "px",
-      "label": "Bottom padding",
+      "label": "t:sections.all.padding.padding_bottom",
       "default": 36
     }
   ]
