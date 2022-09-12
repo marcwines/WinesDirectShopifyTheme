@@ -2952,7 +2952,3 @@ details-disclosure > details {
     outline: transparent solid 1px;
   }
 }
-
-.grid--quarter-max.grid--4-col-desktop .grid__item {
-padding: 30px;
-}
