@@ -22,6 +22,13 @@
             "text_style": "subtitle"
           }
         },
+        "ccad419f-168b-4a57-b84b-3803539e5dfc": {
+          "type": "text",
+          "settings": {
+            "text": "Produced by: {{ product.metafields.custom.vineyard.value }}",
+            "text_style": "body"
+          }
+        },
         "price": {
           "type": "price",
           "settings": {
@@ -90,12 +97,20 @@
           "settings": {
             "share_label": "Share"
           }
+        },
+        "1783f684-6835-4b29-81ac-2d34e8a3051d": {
+          "type": "text",
+          "settings": {
+            "text": "Style: {{ product.metafields.custom.style | metafield_text }}",
+            "text_style": "body"
+          }
         }
       },
       "block_order": [
         "title",
         "557ebab9-ba97-4dfe-9e1b-bda24ea80c5c",
         "caption",
+        "ccad419f-168b-4a57-b84b-3803539e5dfc",
         "price",
         "variant_picker",
         "quantity_selector",
@@ -105,7 +120,8 @@
         "collapsible-row-1",
         "collapsible-row-2",
         "collapsible-row-3",
-        "share"
+        "share",
+        "1783f684-6835-4b29-81ac-2d34e8a3051d"
       ],
       "settings": {
         "enable_sticky_info": true,
