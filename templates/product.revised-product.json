@@ -11,7 +11,7 @@
         "557ebab9-ba97-4dfe-9e1b-bda24ea80c5c": {
           "type": "text",
           "settings": {
-            "text": "Country of Origin",
+            "text": "Country of Origin:",
             "text_style": "body"
           }
         },
