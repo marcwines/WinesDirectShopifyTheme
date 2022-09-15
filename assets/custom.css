@@ -4,7 +4,7 @@
 
 .product__text.caption-with-letter-spacing {
     text-transform: lowercase
-    font-size: 1em;
+    font-size: 20px;
 }
 
 .quantity__button:not(:focus-visible):not(.focused), .quantity__input:not(:focus-visible):not(.focused) {
