@@ -9,10 +9,10 @@
 
 .product-form__input .form__label {
     margin-bottom: 1em !important;
+    font-size: 1em !important;
 }
 
 .quantity__button:not(:focus-visible):not(.focused), .quantity__input:not(:focus-visible):not(.focused) {
-    font-size: 1em !important;
     box-shadow: inherit;
     background-color: #efefef;
 }
