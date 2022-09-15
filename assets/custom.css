@@ -9,7 +9,7 @@
 .quantity__button:not(:focus-visible):not(.focused), .quantity__input:not(:focus-visible):not(.focused) {
     box-shadow: inherit;
     background-color: #efefef;
-    border-color: #cdcdcd;
+    border: #cdcdcd;
 }
 
 .quantity__input {
