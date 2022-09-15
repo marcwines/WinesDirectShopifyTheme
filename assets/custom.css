@@ -6,12 +6,17 @@
     text-transform: lowercase
 }
 
+.quantity__button:not(:focus-visible):not(.focused), .quantity__input:not(:focus-visible):not(.focused) {
+    box-shadow: inherit;
+    background-color: blue;
+}
+
 .quantity__input {
-    background: #efefef;
+    background-color: #efefef;
 }
 
 input, textarea, select {
-    background-color: #f4f4f4;
+    background-color: red;
     color: #333;
     border: 0;
     max-width: 100%;
