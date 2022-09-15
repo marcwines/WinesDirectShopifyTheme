@@ -12,13 +12,13 @@
 }
 
 .quantity__button:not(:focus-visible):not(.focused), .quantity__input:not(:focus-visible):not(.focused) {
-    width: 100%;
     box-shadow: inherit;
     background-color: #efefef;
 }
 
 .quantity__input {
     background-color: #fff !important;
+      width: 100%;
 }
 
 /* .product__media-toggle:after {
