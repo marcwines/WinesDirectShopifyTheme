@@ -7,7 +7,17 @@
 }
 
 .js-qty__adjust {
-    background-color: #efefef;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    text-align: center;
+    width: 30px;
+    padding: 0;
+    background: #efefef;
+    border-style: solid;
+    border-color: #efe7e7;
+    border-width: 0;
+    transition: background-color .03s ease-in;
 }
 
 .quantity__input[type=number] {
