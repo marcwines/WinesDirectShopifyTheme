@@ -28,6 +28,10 @@
     background-color: #fff !important;
 }
 
+.button:after, .shopify-challenge__button:after, .customer button:after, .shopify-payment-button__button--unbranded:after {
+    width: 100px !important;
+}
+
 /* .product__media-toggle:after {
     background-color: #efefef !important;
 } */
