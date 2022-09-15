@@ -2,8 +2,8 @@
     font-weight: bold;
 }
 
-.product__text.caption-with-letter-spacing {
-   
+.product__text {
+    font-size: 20px;
 }
 
 .quantity__button:not(:focus-visible):not(.focused), .quantity__input:not(:focus-visible):not(.focused) {
