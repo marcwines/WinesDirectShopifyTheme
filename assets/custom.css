@@ -4,6 +4,7 @@
 
 .product__text {
     font-size: 1em;
+    margin-bottom: -1em !important;
 }
 
 .quantity__button:not(:focus-visible):not(.focused), .quantity__input:not(:focus-visible):not(.focused) {
