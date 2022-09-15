@@ -3,7 +3,7 @@
 }
 
 .product__text {
-    font-size: 20px;
+    font-size: 1em;
 }
 
 .quantity__button:not(:focus-visible):not(.focused), .quantity__input:not(:focus-visible):not(.focused) {
