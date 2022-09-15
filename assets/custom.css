@@ -10,3 +10,8 @@
     box-shadow: inherit;
     background-color: #efefef;
 }
+
+.quantity__input[type=number] {
+    -moz-appearance: textfield;
+   background-color: #efefef;
+}
