@@ -12,12 +12,5 @@
 }
 
 .quantity__input {
-    background-color: #efefef;
-}
-
-input, textarea, select {
     background-color: red;
-    color: #333;
-    border: 0;
-    max-width: 100%;
 }
