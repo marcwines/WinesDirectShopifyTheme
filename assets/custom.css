@@ -17,8 +17,9 @@
 }
 
 .quantity {
-    width: 100% !important;
+    width: 378px; !important;
     margin-top: -3em !important;
+    margin-left: 60px; !important;
 }
 
 .quantity__input {
