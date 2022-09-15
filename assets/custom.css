@@ -15,7 +15,6 @@
     padding: 0;
     background: #efefef;
     border-style: solid;
-    border-color: #efe7e7;
     border-width: 0;
     transition: background-color .03s ease-in;
 }
