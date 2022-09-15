@@ -18,6 +18,7 @@
 
 .quantity {
     width: 438px !important;
+    margin-left: -2em !important;
 }
 
 .quantity__input {
