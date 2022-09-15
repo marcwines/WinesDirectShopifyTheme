@@ -7,18 +7,7 @@
 }
 
 .quantity__input {
-    color: darkred;
-    font-size: 1.4rem;
-    font-weight: 500;
-    opacity: .85;
-    text-align: center;
     background-color: #efefef;
-    border: 0;
-    padding: 0 0.5rem;
-    width: 100%;
-    flex-grow: 1;
-    -webkit-appearance: none;
-    appearance: none;
 }
 
 input, textarea, select {
