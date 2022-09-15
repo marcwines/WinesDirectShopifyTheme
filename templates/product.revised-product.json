@@ -13,6 +13,11 @@
           "settings": {
           }
         },
+        "a6db7502-1503-44d0-820a-0fe82ff1a82f": {
+          "type": "rating",
+          "settings": {
+          }
+        },
         "557ebab9-ba97-4dfe-9e1b-bda24ea80c5c": {
           "type": "text",
           "settings": {
@@ -109,6 +114,7 @@
       "block_order": [
         "title",
         "price",
+        "a6db7502-1503-44d0-820a-0fe82ff1a82f",
         "557ebab9-ba97-4dfe-9e1b-bda24ea80c5c",
         "caption",
         "ccad419f-168b-4a57-b84b-3803539e5dfc",
