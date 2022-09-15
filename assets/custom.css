@@ -12,5 +12,5 @@
 }
 
 .quantity__input {
-    background-color: red;
+    background-color: red !important;
 }
