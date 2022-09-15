@@ -12,6 +12,7 @@
 }
 
 .quantity__button:not(:focus-visible):not(.focused), .quantity__input:not(:focus-visible):not(.focused) {
+    width: 100%;
     box-shadow: inherit;
     background-color: #efefef;
 }
