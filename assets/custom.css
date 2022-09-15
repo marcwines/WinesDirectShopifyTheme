@@ -16,9 +16,12 @@
     background-color: #efefef;
 }
 
+.quantity {
+    width: 100% !important;
+}
+
 .quantity__input {
     background-color: #fff !important;
-      width: 100%;
 }
 
 /* .product__media-toggle:after {
