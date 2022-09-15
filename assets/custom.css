@@ -17,6 +17,11 @@
 
 .product__media-toggle:after {
     background-color: #efefef !important;
+ height: 248px;
+  margin: 0;
+  overflow: hidden;
+  padding: 3px 0 0 3px;
+  width: 996px;
 }
 
 .thumbnail {
