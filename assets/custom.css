@@ -19,12 +19,3 @@
     border-width: 0;
     transition: background-color .03s ease-in;
 }
-
-.quantity__input[type=number] {
-    -moz-appearance: textfield;
-    background-color: #ffffff;
-}
-
-.js-qty__adjust .icon {
-color: #e7267a !important;
-}
