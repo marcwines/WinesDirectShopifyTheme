@@ -1,3 +1,7 @@
 .product__title {
     font-weight: bold;
 }
+
+.product__text.caption-with-letter-spacing {
+    text-transform: lowercase
+}
