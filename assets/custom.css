@@ -19,18 +19,12 @@
 
 .quantity {
     width: 90% !important;
-    margin-top: -3em !important;
-    margin-left: 29% !important;
-    margin-right: 0px !important;
 }
 
 .quantity__input {
     background-color: #fff !important;
 }
 
-/* .product__media-toggle:after {
-    background-color: #efefef !important;
-} */
 
 .thumbnail {
     background-color: #efefef !important;
