@@ -368,6 +368,10 @@
                 <ul class="additional-details-list">
                     <li><b>Region:</b> {{ custom.region_of_origin }} </li>
                      <li><b>Regions:</b> {% for grapes in product.metafield.custom.grapes.value %}
+                        <p>{{ grapes }}</p>
+                      {% endfor %}
+                     </li>
+                    <li><b>Regions:</b> {% for grapes in product.metafield.custom.grapes.value %}
                         {{ grapes }}
                       {% endfor %}
                      </li>
