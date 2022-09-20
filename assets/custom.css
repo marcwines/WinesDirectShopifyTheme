@@ -48,7 +48,7 @@
 
 .bar-cont {
     position: relative;
-    width: 120px;
+    width: 75%;
     height: 6px;
     border-radius: 6px;
     background: #cccbc7;
@@ -83,7 +83,7 @@
     border-radius: 6px;
 }
 .behave {
-  width: 80px!important;
+  width: 15%!important;
   display: inline-block;
   vertical-align: middle;
 }
