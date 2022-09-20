@@ -325,6 +325,7 @@
                 <li><b>Country of Origin:</b> France</li>
                 <li><b>Produced by:</b> Small Vineyard Number Two</li>
                 <li><b>Style:</b> White</li>
+                <li><b>Grapes:</b> {{ product.metafields.custom.grapes }} }}</li>
             </ul>
       {% when 'Wine_scales' %}
             <div class="characterstics-block">
@@ -364,12 +365,12 @@
               <div class="additional-details">
               <h2>Additional Details</h2>
                 <ul class="additional-details-list">
-                    <li>List Item </li>
-                    <li>List Item </li>
-                    <li>List Item </li>
-                    <li>List Item </li>
-                    <li>List Item </li>
-                    <li>List Item </li>
+                    <li><b>Region:</b> {{ product.metafield.custom.region_of_origin }} }} </li>
+                    <li><b>Vintage:</b> {{ product.metafield.custom.vintage }} }} </li>
+                    <li><b>ABV:</b> {{ product.metafield.custom.abv }} }} </li>
+            <li><b>Style:</b> {{ product.metafield.custom.style }} }} </li>
+            <li><b>ABV:</b> {{ product.metafield.custom.abv }} }} </li>
+            <li><b>ABV:</b> {{ product.metafield.custom.abv }} }} </li>
                 </ul>
               </div>
             
