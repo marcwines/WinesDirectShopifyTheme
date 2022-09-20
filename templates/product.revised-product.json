@@ -18,32 +18,9 @@
           "settings": {
           }
         },
-        "557ebab9-ba97-4dfe-9e1b-bda24ea80c5c": {
-          "type": "text",
+        "ddce421d-a6ee-4d50-a39e-d3e1dd7d76f0": {
+          "type": "Wine_basics",
           "settings": {
-            "text": "Country of Origin: {{ product.metafields.custom.country_of_origin | metafield_text }}",
-            "text_style": "body"
-          }
-        },
-        "caption": {
-          "type": "text",
-          "settings": {
-            "text": "{{ product.metafields.descriptors.subtitle.value }}",
-            "text_style": "subtitle"
-          }
-        },
-        "ccad419f-168b-4a57-b84b-3803539e5dfc": {
-          "type": "text",
-          "settings": {
-            "text": "Produced by: {{ product.metafields.custom.vineyard.value }}",
-            "text_style": "body"
-          }
-        },
-        "1783f684-6835-4b29-81ac-2d34e8a3051d": {
-          "type": "text",
-          "settings": {
-            "text": "Style: {{ product.metafields.custom.style | metafield_text }}",
-            "text_style": "body"
           }
         },
         "variant_picker": {
@@ -84,10 +61,7 @@
         "title",
         "price",
         "a6db7502-1503-44d0-820a-0fe82ff1a82f",
-        "557ebab9-ba97-4dfe-9e1b-bda24ea80c5c",
-        "caption",
-        "ccad419f-168b-4a57-b84b-3803539e5dfc",
-        "1783f684-6835-4b29-81ac-2d34e8a3051d",
+        "ddce421d-a6ee-4d50-a39e-d3e1dd7d76f0",
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
