@@ -367,13 +367,11 @@
               <hr class="product-page-rule">
                 <ul class="additional-details-list">
                     <li><b>Region:</b> {{ custom.region_of_origin }} </li>
-                      {% for grapes in product.metafield.custom.grapes.value %}
+                     <li><b>Regions:</b> {% for grapes in product.metafield.custom.grapes.value %}
                         {{ grapes }}
                       {% endfor %}
-                    <li><b>Vintage:</b> {{ product.metafield.custom.vintage }} </li>
-                    <li><b>Style:</b> <p>{{ product.metafield.custom.style }}</p></li>
-                    <li><b>ABV:</b> {{ product.metafield.custom.abv }}</li>
-                    <li><b>ABV:</b> {{ product.metafield.custom.abv }}</li>
+                     </li>
+
                 </ul>
               </div>
             
