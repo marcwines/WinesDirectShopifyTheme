@@ -109,9 +109,9 @@ ul.additional-details-list {
 /*  */
 
 .product-page-rule {
-  padding-top: 1px;
-  padding-bottom: 1px;
-  margin-top: 5px;
-  margin-bottom: 5px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  margin-top: 1px;
+  margin-bottom: 1px;
   height: 1px!important;
 }
