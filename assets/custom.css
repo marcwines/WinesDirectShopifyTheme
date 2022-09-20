@@ -94,3 +94,9 @@
   list-style-type: none;
   padding-left: 0px;
 }
+
+ul.additional-details-list {
+  columns: 2;
+  -webkit-columns: 2;
+  -moz-columns: 2;
+}
