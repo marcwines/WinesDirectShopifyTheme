@@ -200,11 +200,17 @@
         "padding_top": 36,
         "padding_bottom": 28
       }
+    },
+    "1663683421f4542f86": {
+      "type": "wine-scales",
+      "settings": {
+      }
     }
   },
   "order": [
     "main",
     "multicolumn",
-    "product-recommendations"
+    "product-recommendations",
+    "1663683421f4542f86"
   ]
 }

@@ -30,3 +30,64 @@
     background-color: #efefef !important;
     border: 1px #cdcdcd; !important;
 }
+
+/* Wine Characteristic Scales  */
+
+
+.char-ratings {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background: #f2f2f2;
+  width: auto;
+  display: inline-block;
+  padding: 1em;
+  border-radius: 8px;
+}
+
+.char-ratings > li {
+  margin-bottom: 1em;
+}
+
+.bar-cont {
+    position: relative;
+    width: 120px;
+    height: 6px;
+    border-radius: 6px;
+    background: #cccbc7;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    display: inline-block;
+}
+
+.bar-cont.progress-1:before {
+    width: 20%;
+}
+.bar-cont.progress-2:before {
+    width: 40%;
+}
+.bar-cont.progress-3:before {
+    width: 60%;
+}
+.bar-cont.progress-4:before {
+    width: 80%;
+}
+.bar-cont.progress-5:before {
+    width: 100%;
+}
+.bar-cont.rating-bar:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: #6d1942;
+    height: 6px;
+    border-radius: 6px;
+}
+.behave {
+  width: 80px!important;
+  display: inline-block;
+  vertical-align: middle;
+}
