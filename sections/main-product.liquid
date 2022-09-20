@@ -195,8 +195,7 @@
                     aria-label="{%- if featured_media.media_type == 'image' -%}{{ 'products.product.media.load_image' | t: index: media_index }}{%- elsif featured_media.media_type == 'model' -%}{{ 'products.product.media.load_model' | t: index: media_index }}{%- elsif featured_media.media_type == 'video' or featured_media.media_type == 'external_video' -%}{{ 'products.product.media.load_video' | t: index: media_index }}{%- endif -%}"
                     aria-current="true"
                     aria-controls="GalleryViewer-{{ section.id }}"
-                    aria-describedby="Thumbnail-{{ section.id }}-0"
-                  >
+                    aria-describedby="Thumbnail-{{ section.id }}-0">
                     <img
                       id="Thumbnail-{{ section.id }}-0"
                       srcset="
