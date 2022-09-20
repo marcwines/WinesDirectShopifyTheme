@@ -52,8 +52,8 @@
 
 .bar-cont {
     position: relative;
+    display: block;  
     width: 100%;
-    display: inline-block;
 }
 
 .bar-cont.progress-1:before {
