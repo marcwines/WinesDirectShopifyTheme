@@ -366,15 +366,16 @@
               <h2>Additional Details</h2>
               <hr class="product-page-rule">
                 <ul class="additional-details-list">
-                     <li><b>Grapes:</b> {% for grapes in product.metafield.custom.grapes.value %}
-                        <p>{{ grapes }}</p>
+                     <li><b>Grapes:</b>
+                          {% for grapes in product.metafield.custom.grapes.value %}
+                          <p>{{ grapes }}</p>
                       {% endfor %}
                      </li>
-                    <li><b>Grapes:</b> {% for grapes in product.metafield.custom.grapes.value %}
-                        {{ grapes }}
+                    <li><b>Grapes:</b>
+                          {% for grapes in product.metafield.custom.grapes.value %}
+                          {{ grapes }}
                       {% endfor %}
                      </li>
-
                 </ul>
               </div>
             
