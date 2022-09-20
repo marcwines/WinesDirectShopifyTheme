@@ -89,3 +89,8 @@
 }
 
 /* General Info Fields */
+
+ul.wine-basics-list {
+  list-style-type: none;
+  padding-left: none;
+}
