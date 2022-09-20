@@ -320,16 +320,12 @@
                 </a>
               </div>
 
-      {% when 'Wine_basics' %}
+            {% when 'Wine_basics' %}
             <ul class="wine-basics-list">
                 <li><b>Country of Origin:</b> France</li>
-            <li> <b>Grapes:</b> {% for grape in product.metafields.custom.grapes.value %} {{ grape }} {% endfor %}</li>    
+            <li> <b>Grapes:</b> {% for grape in product.metafields.custom.grapes.value %} {{ grape }}, {% endfor %}</li>    
             <li><b>Produced by:</b> Small Vineyard Number Two</li>
                 <li><b>Style:</b> White</li>
-                
-
-
-            
             </ul>
       {% when 'Wine_scales' %}
             <div class="characterstics-block">
