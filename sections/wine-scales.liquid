@@ -15,7 +15,7 @@
   <li>
     <span><span class="behave">Acidity:</span>
 <!--If we can just replace the number in the classnames with the ating metafield via liquid we are flying!-->
-      <div class="bar-cont rating-bar progress-{{ product.metafields.custom.acidity.value }}">
+      <div class="bar-cont rating-bar progress-{{ product.metafields.custom.acidity.value | round }}">
         <div class="bar"></div>
     </span>
   </li>
