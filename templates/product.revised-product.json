@@ -1,10 +1,5 @@
 {
   "sections": {
-    "1663683421f4542f86": {
-      "type": "wine-scales",
-      "settings": {
-      }
-    },
     "main": {
       "type": "main-product",
       "blocks": {
@@ -70,48 +65,7 @@
         },
         "description": {
           "type": "description",
-          "disabled": true,
           "settings": {
-          }
-        },
-        "collapsible-row-0": {
-          "type": "collapsible_tab",
-          "disabled": true,
-          "settings": {
-            "heading": "Materials",
-            "icon": "leather",
-            "content": "",
-            "page": ""
-          }
-        },
-        "collapsible-row-1": {
-          "type": "collapsible_tab",
-          "disabled": true,
-          "settings": {
-            "heading": "Shipping & Returns",
-            "icon": "truck",
-            "content": "",
-            "page": ""
-          }
-        },
-        "collapsible-row-2": {
-          "type": "collapsible_tab",
-          "disabled": true,
-          "settings": {
-            "heading": "Dimensions",
-            "icon": "ruler",
-            "content": "",
-            "page": ""
-          }
-        },
-        "collapsible-row-3": {
-          "type": "collapsible_tab",
-          "disabled": true,
-          "settings": {
-            "heading": "Care Instructions",
-            "icon": "heart",
-            "content": "",
-            "page": ""
           }
         },
         "d5b5df8f-8dfd-47b2-b32f-de1444ffe215": {
@@ -138,10 +92,6 @@
         "quantity_selector",
         "buy_buttons",
         "description",
-        "collapsible-row-0",
-        "collapsible-row-1",
-        "collapsible-row-2",
-        "collapsible-row-3",
         "d5b5df8f-8dfd-47b2-b32f-de1444ffe215",
         "share"
       ],
@@ -219,7 +169,6 @@
     }
   },
   "order": [
-    "1663683421f4542f86",
     "main",
     "multicolumn",
     "product-recommendations"
