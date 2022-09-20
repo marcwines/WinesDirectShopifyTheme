@@ -367,8 +367,8 @@
               <hr class="product-page-rule">
                 <ul class="additional-details-list">
                     <li><b>Region:</b> {{ custom.region_of_origin }} </li>
-                      {% for field in resource.metafields.namespace %}
-                        {{ field | metafield_tag }}
+                      {% for grapes in product.metafield.custom.grapes %}
+                        {{ grapes | metafield_tag }}
                       {% endfor %}
                     <li><b>Vintage:</b> {{ product.metafield.custom.vintage }} </li>
                     <li><b>Style:</b> <p>{{ product.metafield.custom.style }}</p></li>
