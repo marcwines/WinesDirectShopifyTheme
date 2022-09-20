@@ -90,7 +90,7 @@
 
 /* General Info Fields */
 
-wine-basics-list {
+.wine-basics-list {
   list-style-type: none;
-  padding-left: none;
+  padding-left: 0px;
 }
