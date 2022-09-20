@@ -326,6 +326,13 @@
                 <li><b>Produced by:</b> Small Vineyard Number Two</li>
                 <li><b>Style:</b> White</li>
                 <li> <b>Grapes:</b> {{ product.metafields.custom.grapes.value[0] }}, {{ product.metafields.custom.grapes.value[1] }}</li>
+
+                <li> <b>Grapes:</b> </li>
+
+{% for grape in product.metafields.custom.grapes.value %}
+<li>{{ grape }}</li>
+{% endfor %}
+            
             </ul>
       {% when 'Wine_scales' %}
             <div class="characterstics-block">
