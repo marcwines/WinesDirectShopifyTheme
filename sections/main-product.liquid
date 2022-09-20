@@ -327,43 +327,42 @@
                 <li><b>Produced by:</b> Small Vineyard Number Two</li>
                 <li><b>Style:</b> White</li>
             </ul>
-            {% when 'Wine_scales' %}
-
+<!---->
+      {% when 'Wine_scales' %}
             <div class="characterstics-block">
-  <ul class="char-ratings">
-  <h2>Characteristics</h2>
-  <li>
-    <span>
-      <span class="behave">Acidity:</span>
-      <div class="bar-cont rating-bar progress-{{ product.metafields.custom.acidity.value | slice: 0 }}">
-        <div class="bar"></div>
-    </span>
-  </li>
-  <li>
-    <span>
-      <span class="behave">Intensity:</span>
-            <div class="bar-cont rating-bar progress-{{ product.metafields.custom.intensity.value | slice: 0 }}">
-        <div class="bar"></div>
-    </span>
-  </li>
-  <li>
-  <span>
-    <span class="behave">Dry/Sweet:</span>
-            <div class="bar-cont rating-bar progress-{{ product.metafields.custom.dry_sweet.value | slice: 0 }}">
-        <div class="bar"></div>
-    </span>
-  </li>
-  <li>
-    <span>
-      <span class="behave">Tannins:</span>
-            <div class="bar-cont rating-bar progress-{{ product.metafields.custom.tannic.value | slice: 0 }}">
-        <div class="bar"></div>
-    </span>
-  </li>
-</ul>
-</div>
-            
-            
+              <ul class="char-ratings">
+              <h2>Characteristics</h2>
+              <li>
+                <span>
+                  <span class="behave">Acidity:</span>
+                  <div class="bar-cont rating-bar progress-{{ product.metafields.custom.acidity.value | slice: 0 }}">
+                    <div class="bar"></div>
+                </span>
+              </li>
+              <li>
+                <span>
+                  <span class="behave">Intensity:</span>
+                        <div class="bar-cont rating-bar progress-{{ product.metafields.custom.intensity.value | slice: 0 }}">
+                    <div class="bar"></div>
+                </span>
+              </li>
+              <li>
+              <span>
+                <span class="behave">Dry/Sweet:</span>
+                        <div class="bar-cont rating-bar progress-{{ product.metafields.custom.dry_sweet.value | slice: 0 }}">
+                    <div class="bar"></div>
+                </span>
+              </li>
+              <li>
+                <span>
+                  <span class="behave">Tannins:</span>
+                        <div class="bar-cont rating-bar progress-{{ product.metafields.custom.tannic.value | slice: 0 }}">
+                    <div class="bar"></div>
+                </span>
+              </li>
+            </ul>
+            </div>
+<!---->
             {%- when 'price' -%}
               <div class="no-js-hidden" id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
                 {%- render 'price', product: product, use_variant: true, show_badges: true, price_class: 'price--large' -%}
