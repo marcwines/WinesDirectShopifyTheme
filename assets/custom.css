@@ -100,3 +100,8 @@ ul.additional-details-list {
   -webkit-columns: 2;
   -moz-columns: 2;
 }
+
+ul.additional-details-list {
+  list-style-type: none;
+  padding-left: 0px;
+}
