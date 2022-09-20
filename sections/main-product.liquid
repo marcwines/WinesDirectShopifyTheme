@@ -372,8 +372,8 @@
                       {% endfor %}
                      </li>
                     <li><b>Grapes:</b>
-                          {% for grapes in product.metafield.custom.grapes.value %}
-                          {{ grapes }}
+                          {% for grapes in custom.grapes %}
+                          <h3>{{ grapes }}</h3>
                       {% endfor %}
                      </li>
                 </ul>
