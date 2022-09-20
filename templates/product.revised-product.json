@@ -114,6 +114,11 @@
           "settings": {
             "share_label": "Share"
           }
+        },
+        "d5b5df8f-8dfd-47b2-b32f-de1444ffe215": {
+          "type": "Wine_scales",
+          "settings": {
+          }
         }
       },
       "block_order": [
@@ -132,7 +137,8 @@
         "collapsible-row-1",
         "collapsible-row-2",
         "collapsible-row-3",
-        "share"
+        "share",
+        "d5b5df8f-8dfd-47b2-b32f-de1444ffe215"
       ],
       "settings": {
         "enable_sticky_info": false,
