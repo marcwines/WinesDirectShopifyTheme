@@ -105,3 +105,12 @@ ul.additional-details-list {
   list-style-type: none;
   padding-left: 0px;
 }
+
+/*  */
+
+.product-page-rule {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
