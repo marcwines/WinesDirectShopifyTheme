@@ -323,7 +323,7 @@
             {% when 'Wine_basics' %}
             <ul class="wine-basics-list">
                 <li><b>Country of Origin:</b> France</li>
-            <li> <b>Grapes:</b> {% for grape in product.metafields.custom.grapes.value %} <a href="#">{{ grape }}</a>, {% endfor %}</li>    
+            <li> <b>Grapes:</b> {% for grape in product.metafields.custom.grapes.value %} <a href="/collection/{{ grape | handleize }} }}">{{ grape }}</a>, {% endfor %}</li>    
             <li><b>Produced by:</b> Small Vineyard Number Two</li>
                 <li><b>Style:</b> White</li>
             </ul>
