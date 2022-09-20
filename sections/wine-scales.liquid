@@ -1,6 +1,6 @@
 {% schema %}
   {
-    "name": "Section name",
+    "name": "Wine Scales",
     "settings": []
   }
 {% endschema %}
@@ -10,3 +10,28 @@
 
 {% javascript %}
 {% endjavascript %}
+
+<div class="characterstics-block">
+  <ul class="char-ratings">
+   <h2>Characteristics</h2>
+  <li>
+    <span><span class="behave">Acidity:</span>
+<!--If we can just replace the number in the classnames with the ating metafield via liquid we are flying!-->
+      <div class="bar-cont rating-bar progress-2">
+        <div class="bar"></div>
+    </span>
+  </li>
+  <li>
+    <span><span class="behave">Intensity:</span>
+      <div class="bar-cont rating-bar progress-5">
+        <div class="bar"></div>
+    </span>
+  </li>
+  <li>
+    <span><span class="behave">Tannins:</span>
+      <div class="bar-cont rating-bar progress-3">
+        <div class="bar"></div>
+    </span>
+  </li>
+</ul>
+</div>
