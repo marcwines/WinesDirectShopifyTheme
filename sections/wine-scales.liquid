@@ -13,26 +13,29 @@
   <ul class="char-ratings">
    <h2>Characteristics</h2>
   <li>
-    <span><span class="behave">Acidity:</span>
-<!--If we can just replace the number in the classnames with the ating metafield via liquid we are flying!-->
+    <span>
+      <span class="behave">Acidity:</span>
       <div class="bar-cont rating-bar progress-{{ product.metafields.custom.acidity.value | slice: 0 }}">
         <div class="bar"></div>
     </span>
   </li>
   <li>
-    <span><span class="behave">Intensity:</span>
+    <span>
+      <span class="behave">Intensity:</span>
             <div class="bar-cont rating-bar progress-{{ product.metafields.custom.intensity.value | slice: 0 }}">
         <div class="bar"></div>
     </span>
   </li>
   <li>
-  <span><span class="behave">Dry/Sweet:</span>
+  <span>
+    <span class="behave">Dry/Sweet:</span>
             <div class="bar-cont rating-bar progress-{{ product.metafields.custom.dry_sweet.value | slice: 0 }}">
         <div class="bar"></div>
     </span>
   </li>
   <li>
-    <span><span class="behave">Tannins:</span>
+    <span>
+      <span class="behave">Tannins:</span>
             <div class="bar-cont rating-bar progress-{{ product.metafields.custom.tannic.value | slice: 0 }}">
         <div class="bar"></div>
     </span>
