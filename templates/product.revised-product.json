@@ -70,11 +70,13 @@
         },
         "description": {
           "type": "description",
+          "disabled": true,
           "settings": {
           }
         },
         "collapsible-row-0": {
           "type": "collapsible_tab",
+          "disabled": true,
           "settings": {
             "heading": "Materials",
             "icon": "leather",
@@ -84,6 +86,7 @@
         },
         "collapsible-row-1": {
           "type": "collapsible_tab",
+          "disabled": true,
           "settings": {
             "heading": "Shipping & Returns",
             "icon": "truck",
@@ -93,6 +96,7 @@
         },
         "collapsible-row-2": {
           "type": "collapsible_tab",
+          "disabled": true,
           "settings": {
             "heading": "Dimensions",
             "icon": "ruler",
@@ -102,6 +106,7 @@
         },
         "collapsible-row-3": {
           "type": "collapsible_tab",
+          "disabled": true,
           "settings": {
             "heading": "Care Instructions",
             "icon": "heart",
@@ -109,15 +114,15 @@
             "page": ""
           }
         },
+        "d5b5df8f-8dfd-47b2-b32f-de1444ffe215": {
+          "type": "Wine_scales",
+          "settings": {
+          }
+        },
         "share": {
           "type": "share",
           "settings": {
             "share_label": "Share"
-          }
-        },
-        "d5b5df8f-8dfd-47b2-b32f-de1444ffe215": {
-          "type": "Wine_scales",
-          "settings": {
           }
         }
       },
@@ -137,8 +142,8 @@
         "collapsible-row-1",
         "collapsible-row-2",
         "collapsible-row-3",
-        "share",
-        "d5b5df8f-8dfd-47b2-b32f-de1444ffe215"
+        "d5b5df8f-8dfd-47b2-b32f-de1444ffe215",
+        "share"
       ],
       "settings": {
         "enable_sticky_info": false,
