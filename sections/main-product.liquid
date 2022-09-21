@@ -383,8 +383,8 @@
                     </summary>
                           <ul class="additional-details-list">            
                               <li><b>Region:</b>
-                                    {% for grape in custom.grapes %}
-                                    <h3>{{ grape }}</h3>
+                                    {% for region in product.metafields.custom.region_of_origin %}
+                                    <h3>{{ region }}</h3>
                                 {% endfor %}
                                </li>
                                 <li>
