@@ -389,9 +389,7 @@
                                </li>
                                 <li>
                                     <b>Vintage:</b>
-                              {% for year in product.metafields.custom.vintage.value %}
-                                    {{ year }}
-                                {% endfor %}
+                        {{  product.metafields.custom.vintage.value }}
                                </li>
                                           <li><b>ABV:</b>
                                     {% for grapes in custom.grapes %}
