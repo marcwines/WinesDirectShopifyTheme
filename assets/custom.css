@@ -107,6 +107,12 @@ ul.additional-details-list {
   padding-left: 0px;
 }
 
+
+ul.food-pairings-list {
+  list-style-type: none;
+  padding-left: 0px;
+}
+
 /*  */
 
 .product-page-rule {
