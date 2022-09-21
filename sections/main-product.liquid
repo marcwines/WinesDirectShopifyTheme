@@ -393,17 +393,12 @@
                                <li><b>ABV:</b>
                                     {{  product.metafields.custom.abv.value }}%
                                </li>
-                                          <li><b>Style:</b>
+                              <li><b>Profile:</b>
                                     {% for grapes in custom.grapes %}
                                     <h3>{{ grapes }}</h3>
                                 {% endfor %}
                                </li>
-                                          <li><b>Profile:</b>
-                                    {% for grapes in custom.grapes %}
-                                    <h3>{{ grapes }}</h3>
-                                {% endfor %}
-                               </li>
-                                <li><b>Methods:</b>
+                                <li><b>Style:</b>
                                     {% for style in product.metafields.custom.style.value  %} {{ style }}
                                 {% endfor %}
                                </li>
