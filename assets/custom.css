@@ -40,7 +40,7 @@
   width: 100%;
   display: block;
   padding-left: 0px;
-  margin-top: 16px;
+  margin-top: 16px!important;
 }
 
 .char-ratings > li {
