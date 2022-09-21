@@ -363,10 +363,9 @@
             </ul>
             </div>
             {%- when 'Wine_additional' -%}
-              <div class="additional-details">
-                <h2>Additional Details</h2>
-                <hr class="product-page-rule">
- 	<div class="product__accordion accordion quick-add-hidden" {{ block.shopify_attributes }}>
+
+
+	<div class="product__accordion accordion quick-add-hidden" {{ block.shopify_attributes }}>
     <details id="Details-{{ block.id }}-{{ section.id }}">
       <summary>
         <div class="summary__title">
@@ -386,6 +385,11 @@
   <div class="product__description rte quick-add-hidden">
     {{ product.description }}
   </div>
+            
+              <div class="additional-details">
+                <h2>Additional Details</h2>
+                <hr class="product-page-rule">
+ 
               </div>
             
             {%- when 'price' -%}
