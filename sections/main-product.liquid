@@ -411,6 +411,16 @@
                                </li>
                           </ul>
 
+
+<ul>
+            <li>
+                                      <b> Food Pairings: </b>
+            {% for pairing in product.metafields.custom.food_pairings.value %}
+                                    {{ pairing }}
+              {% endfor %}
+            </li>
+</ul>
+            
                     </details>
                   </div>
               </div>
