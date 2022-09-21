@@ -403,9 +403,8 @@
                                     <h3>{{ grapes }}</h3>
                                 {% endfor %}
                                </li>
-                                          <li><b>Methods:</b>
-                                    {% for style in product.metafields.custom.style.value  %}
-                                    <h3>{{ style }}</h3>
+                                <li><b>Methods:</b>
+                                    {% for style in product.metafields.custom.style.value  %} {{ style }}
                                 {% endfor %}
                                </li>
                           </ul>            
