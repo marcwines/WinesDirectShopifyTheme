@@ -380,8 +380,33 @@
             
                     </details>
                   </div>
+  </div>
+            {%- when 'Wine_additional' -%}
+              <div class="additional-details">
+              <h2>Additional Details</h2>
+              <hr class="product-page-rule">
+                <div class="product__accordion accordion"  {{ block.shopify_attributes }}>
+                <details id="Details-{{ block.id }}-{{ section.id }}">
+                    <summary> 
+                      <div class="summary__title">
+                         {% render 'icon-accordion', icon: 'clipboard' %}
+                        <h3> Additional Details</h3>
+                      </div>
+                    {% render 'icon-caret' %}
+                    </summary>
+                          <ul class="additional-details-list">            
+                              <li><b>Grapes:</b>
+                                    {% for grapes in custom.grapes %}
+                                    <h3>{{ grapes }}</h3>
+                                {% endfor %}
+                               </li>
+                          </ul>
+                    </details>
+                  </div>
 
-          
+            
+
+              </div>
             
             {%- when 'price' -%}
               <div class="no-js-hidden" id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
