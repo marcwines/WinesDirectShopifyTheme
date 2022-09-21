@@ -102,13 +102,7 @@ ul.additional-details-list {
   -moz-columns: 2;
 }
 
-ul.additional-details-list {
-  list-style-type: none;
-  padding-left: 0px;
-}
-
-
-ul.food-pairings-list,ul.wine-methods-list {
+ul.additional-details-list,ul.food-pairings-list,ul.wine-methods-list {
   list-style-type: none;
   padding-left: 0px;
 }
