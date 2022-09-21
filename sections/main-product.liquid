@@ -407,7 +407,19 @@
 
             <ul class="food-pairings-list">
 
-            <li><b> Food Pairings: </b>{% for pairing in product.metafields.custom.food_pairings.value %} {{ pairing }}, {% endfor %}</li>
+                <li><b> Food Pairings: </b>{% for pairing in product.metafields.custom.food_pairings.value %} {{ pairing }}, {% endfor %}</li>
+            
+            </ul>
+
+            <ul class="wine-methods-list">
+
+                <li>
+            <b>Methods: </b>
+            {% if product.metafields.custom.organic.value == true %}
+                                 Organic
+                                  {% else %}
+                                {% endif %}
+            </li>
             
             </ul>
             
