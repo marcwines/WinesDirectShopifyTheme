@@ -328,13 +328,7 @@
                 <li><b>Style:</b> White</li>
             </ul>
       {% when 'Wine_scales' %}
-
-
-
-
-
-
- <div class="characteristics-block">
+           <div class="characteristics-block">
                 <div class="product__accordion accordion"  {{ block.shopify_attributes }}>
                 <details id="Details-{{ block.id }}-{{ section.id }}">
                     <summary> 
@@ -343,42 +337,40 @@
                         <h3>Characteristics</h3>
                       </div>
                     {% render 'icon-caret' %}
-                    </summary>
-            <ul class="char-ratings">
-              <li>
-                <span>
-                  <span class="behave">Acidity:</span>
-                  <div class="bar-cont rating-bar progress-{{ product.metafields.custom.acidity.value | slice: 0 }}">
-                    <div class="bar"></div>
-                </span>
-              </li>
-              <li>
-                <span>
-                  <span class="behave">Intensity:</span>
-                        <div class="bar-cont rating-bar progress-{{ product.metafields.custom.intensity.value | slice: 0 }}">
-                    <div class="bar"></div>
-                </span>
-              </li>
-              <li>
-              <span>
-                <span class="behave">Dry/Sweet:</span>
-                        <div class="bar-cont rating-bar progress-{{ product.metafields.custom.dry_sweet.value | slice: 0 }}">
-                    <div class="bar"></div>
-                </span>
-              </li>
-              <li>
-                <span>
-                  <span class="behave">Tannins:</span>
-                        <div class="bar-cont rating-bar progress-{{ product.metafields.custom.tannic.value | slice: 0 }}">
-                    <div class="bar"></div>
-                </span>
-              </li>
-            </ul>
-
-            
+                                  </summary>
+                          <ul class="char-ratings">
+                            <li>
+                              <span>
+                                <span class="behave">Acidity:</span>
+                                <div class="bar-cont rating-bar progress-{{ product.metafields.custom.acidity.value | slice: 0 }}">
+                                  <div class="bar"></div>
+                              </span>
+                            </li>
+                            <li>
+                              <span>
+                                <span class="behave">Intensity:</span>
+                                      <div class="bar-cont rating-bar progress-{{ product.metafields.custom.intensity.value | slice: 0 }}">
+                                  <div class="bar"></div>
+                              </span>
+                            </li>
+                            <li>
+                            <span>
+                              <span class="behave">Dry/Sweet:</span>
+                                      <div class="bar-cont rating-bar progress-{{ product.metafields.custom.dry_sweet.value | slice: 0 }}">
+                                  <div class="bar"></div>
+                              </span>
+                            </li>
+                            <li>
+                              <span>
+                                <span class="behave">Tannins:</span>
+                                      <div class="bar-cont rating-bar progress-{{ product.metafields.custom.tannic.value | slice: 0 }}">
+                                  <div class="bar"></div>
+                              </span>
+                            </li>
+                          </ul>
                     </details>
                   </div>
-  </div>
+              </div>
             {%- when 'Wine_additional' -%}
               <div class="additional-details">
                 <div class="product__accordion accordion"  {{ block.shopify_attributes }}>
