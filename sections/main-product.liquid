@@ -381,12 +381,12 @@
                     {% render 'icon-caret' %}
                     </summary>
                           <ul class="additional-details-list">            
-                              <li><b>Region:</b>
+                            <li><b>Region:</b>
                                     {% for region in product.metafields.custom.region_of_origin.value %}
                                     {{ region }}
                                 {% endfor %}
-                               </li>
-                                <li>
+                              </li>
+                              <li>
                                     <b>Vintage:</b>
                                     {{  product.metafields.custom.vintage.value }}
                                </li>
