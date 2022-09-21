@@ -78,7 +78,7 @@
     position: absolute;
     left: 0;
     top: 0;
-    background: green;
+    background: #000;
     height: 6px;
     border-radius: 6px;
 }
