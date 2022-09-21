@@ -389,8 +389,8 @@
                                </li>
                                 <li>
                                     <b>Vintage:</b>
-                                    {% for grapes in custom.grapes %}
-                                    <h3>{{ grapes }}</h3>
+                              {% for abvolume in product.metafields.custom.abv.value %}
+                                    {{ abvolume }}%
                                 {% endfor %}
                                </li>
                                           <li><b>ABV:</b>
