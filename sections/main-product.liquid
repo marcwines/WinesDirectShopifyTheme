@@ -402,17 +402,12 @@
                                     {% for style in product.metafields.custom.style.value  %} {{ style }}
                                 {% endfor %}
                                </li>
-            <li> 
-
-<b>Methods: </b>
-
-            {% if product.metafields.custom.organic.value == true %}
-             Organic
-              {% else %}
-              Not Organic
-{% endif %}
-            
-            </li>
+                              <li> <b>Methods: </b>
+                                {% if product.metafields.custom.organic.value == true %}
+                                 Organic
+                                  {% else %}
+                                {% endif %}
+                                </li>
                           </ul>            
                     </details>
                   </div>
