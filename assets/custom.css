@@ -108,7 +108,7 @@ ul.additional-details-list {
 }
 
 
-ul.food-pairings-list ul.wine-methods-list {
+ul.food-pairings-list,ul.wine-methods-list {
   list-style-type: none;
   padding-left: 0px;
 }
