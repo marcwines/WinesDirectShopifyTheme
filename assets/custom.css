@@ -218,14 +218,14 @@ ul.tabs {
 }
 .custom-badge-wd {
   font-size: 8px;
-  font-weight: 700;
+  font-weight: 900;
   color: white;
   padding: 8px;
   border-radius: 100%;
   width: 80px;
   height: 80px;
   text-align: center;
-  line-height: 30px;
+  line-height: 40px;
 }
 .product-badge-row {
     display: flex;
