@@ -235,9 +235,9 @@ ul.tabs {
 .custom-badge-wd p {
   font-weight: 800;
   vertical-align: middle;
-      padding: 0px;
-    margin: 0 auto;
-  line-height: 12px;
+  padding: 0px;
+  margin: 0 auto;
+  line-height: 24px;
 }
 
 .vegan-badge {
