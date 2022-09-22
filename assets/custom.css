@@ -1,16 +1,9 @@
 /* Typography  */
 
 .product_title > h1 {
-  font-family: roc-grotesk-condensed, sans-serif;
-
-font-weight: 700;
-
-font-style: normal;
-}
-
-
-.product__title {
-    font-weight: bold;
+    font-family: roc-grotesk-condensed, sans-serif;
+    font-weight: 700;
+    font-style: normal;
 }
 
 .product-form__input .form__label {
