@@ -181,11 +181,11 @@ ul.additional-details-list,ul.food-pairings-list,ul.wine-methods-list {
   display: block;
 }
 
-p.link {
+.product-tab-section p.link {
   clear: both;
   margin: 380px 0 0 15px;
 }
-p.link a {
+.product-tab-section p.link a {
   text-transform: uppercase;
   text-decoration: none;
   display: inline-block;
@@ -198,7 +198,7 @@ p.link a {
   -webkit-transition: all 0.2s ease-in;
   transition: all 0.2s ease-in;
 }
-p.link a:hover {
+.product-tab-section p.link a:hover {
   background-color: red;
 }
 
