@@ -223,6 +223,8 @@ ul.tabs {
   color: white;
   padding: 8px;
   border-radius: 100%;
+  max-width: 80px;
+  height: 80px;
 }
 
 .vegan-badge {
