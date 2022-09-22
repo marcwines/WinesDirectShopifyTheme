@@ -198,10 +198,11 @@ ul.additional-details-list,ul.food-pairings-list,ul.wine-methods-list {
 }
 
 ul.tabs {
-  display: row;  
-  padding-left: 0px;
+    display: flex;
+    padding-left: 0;
+    flex-direction: row;
+    margin: 0 auto;
 }
-
 .tabs li {
     float: left;
     display: block;
