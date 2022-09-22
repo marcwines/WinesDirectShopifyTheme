@@ -153,7 +153,7 @@ ul.additional-details-list,ul.food-pairings-list,ul.wine-methods-list {
   transition: all 0.2s ease-in-out;
 }
 .tabs label:hover {
-  background: #703688;
+  background: #ededed;
 }
 .tabs .tab-content {
   z-index: 2;
