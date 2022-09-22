@@ -257,3 +257,8 @@ ul.tabs {
 .sustainable-badge {
     background-color: #e98;
 }
+
+.wine-basics-list a {
+  color: #e17162;
+  text-decoration: none;
+}
