@@ -1,6 +1,13 @@
 /* Typography  */
 
-.product_title {
+
+h1 {
+      font-family: roc-grotesk-condensed, sans-serif!important;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.product_title>h1 {
     font-family: roc-grotesk-condensed, sans-serif!important;
     font-weight: 700;
     font-style: normal;
