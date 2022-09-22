@@ -227,6 +227,13 @@ ul.tabs {
   height: 50px;
 }
 
+.product-badge-row {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+}
+}
+
 .vegan-badge {
     background-color: #6a6;
 }
