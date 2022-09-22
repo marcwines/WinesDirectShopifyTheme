@@ -223,7 +223,7 @@ ul.tabs {
   color: white;
   padding: 8px;
   border-radius: 100%;
-  max-width: 60px;
+  width: 60px;
   height: 60px;
 }
 
