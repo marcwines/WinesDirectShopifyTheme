@@ -211,3 +211,7 @@ ul.tabs {
     display: block;
     flex: 1 1 auto;
 }
+
+.product-tab-label {
+  text-align: center!important;
+}
