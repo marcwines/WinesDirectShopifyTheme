@@ -144,6 +144,7 @@ ul.additional-details-list,ul.food-pairings-list,ul.wine-methods-list {
   font-weight: normal;
   text-transform: uppercase;
   background: #fff;
+  border-bottom: 2px solid #ededed;
   cursor: pointer;
   position: relative;
   top: 4px;
