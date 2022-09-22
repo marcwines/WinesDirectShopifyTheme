@@ -1,6 +1,6 @@
 /* Typography  */
 
-.product_title > h1 {
+.product_title h1 {
     font-family: roc-grotesk-condensed, sans-serif;
     font-weight: 700;
     font-style: normal;
