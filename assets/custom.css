@@ -40,6 +40,20 @@ h1,h2,h3,h4,h5,h6, p {
     border: 1px #cdcdcd; !important;
 }
 
+
+
+
+
+/* Buttons */\
+
+.button--primary {
+  font-family: roc-grotesk-condensed, sans-serif!important;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 18px;
+    text-transform: capitalize;
+}
+
 /* Wine Characteristic Scales  */
 
 .char-ratings {
