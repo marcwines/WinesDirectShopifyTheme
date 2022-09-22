@@ -224,6 +224,7 @@ ul.tabs {
   padding: 8px;
   text-align: center;
   line-height: 24px;
+  vertical-align: middle;
 }
 .product-badge-row {
     display: flex;
@@ -233,6 +234,7 @@ ul.tabs {
 
 .custom-badge-wd p {
   font-weight: 800;
+  vertical-align: middle;
 }
 
 .vegan-badge {
