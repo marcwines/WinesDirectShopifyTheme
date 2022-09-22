@@ -232,8 +232,12 @@ ul.tabs {
     flex-direction: row;
     gap: 8px;
 }
-}
+
 
 .vegan-badge {
     background-color: #6a6;
+}
+
+.organic-badge {
+    background-color: #CBB978;
 }
