@@ -203,7 +203,7 @@ ul.additional-details-list,ul.food-pairings-list,ul.wine-methods-list {
 }
 
 ul.tabs {
-  display: column;  
+  display: row;  
   padding-left: 0px;
 }
 
@@ -229,7 +229,7 @@ ul.tabs {
 }
 .product-badge-row {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     gap: 8px;
 }
 
