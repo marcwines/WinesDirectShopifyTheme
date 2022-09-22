@@ -195,5 +195,5 @@ p.link a {
   transition: all 0.2s ease-in;
 }
 p.link a:hover {
-  background-color: #522764;
+  background-color: red;
 }
