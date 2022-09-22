@@ -2,11 +2,6 @@
     font-weight: bold;
 }
 
-.product__text {
-    font-size: .8em;
-    margin-top: -.5em !important;
-}
-
 .product-form__input .form__label {
     margin-bottom: 1em !important;
     font-size: 1em !important;
