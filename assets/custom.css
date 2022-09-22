@@ -204,6 +204,7 @@ p.link a:hover {
 
 ul.tabs {
   display: flex;  
+  padding-left: 0px;
 }
 
 .tabs li {
