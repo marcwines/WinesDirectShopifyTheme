@@ -216,7 +216,6 @@ ul.tabs {
 .product-tab-label {
   text-align: center!important;
 }
-
 .custom-badge-wd {
   font-size: 8px;
   font-weight: 700;
@@ -228,13 +227,11 @@ ul.tabs {
   text-align: center;
   line-height: 30px;
 }
-
 .product-badge-row {
     display: flex;
     flex-direction: row;
     gap: 8px;
 }
-
 
 .vegan-badge {
     background-color: #6a6;
