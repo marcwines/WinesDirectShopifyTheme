@@ -151,10 +151,10 @@ ul.additional-details-list,ul.food-pairings-list,ul.wine-methods-list {
   -o-transition: all 0.2s ease-in-out;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
-    border-bottom: 2px solid green;
+  border-bottom: 2px solid green;
 }
 .tabs label:hover {
-  background: red;
+  background: #ddd;
 }
 .tabs .tab-content {
   z-index: 2;
