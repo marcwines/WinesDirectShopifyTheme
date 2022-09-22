@@ -203,7 +203,7 @@ ul.additional-details-list,ul.food-pairings-list,ul.wine-methods-list {
 }
 
 ul.tabs {
-  display: flex;  
+  display: column;  
   padding-left: 0px;
 }
 
