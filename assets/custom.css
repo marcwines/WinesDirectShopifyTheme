@@ -233,6 +233,10 @@ ul.tabs {
     gap: 8px;
 }
 
+.custom-badge-wd p {
+  font-weight: 900;
+}
+
 .vegan-badge {
     background-color: #6a6;
 }
