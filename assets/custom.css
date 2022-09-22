@@ -45,6 +45,10 @@ h1,h2,h3,h4,h5,h6, p {
 .product__description {
       font-family: roc-grotesk-regular, sans-serif!important;
 }
+.product-form__input .product-form__quantity {
+      font-family: roc-grotesk-regular, sans-serif!important;
+}
+
 
 /* Buttons */
 
