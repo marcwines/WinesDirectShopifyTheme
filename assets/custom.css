@@ -226,6 +226,7 @@ ul.tabs {
   width: 60px;
   height: 60px;
   text-align: center;
+  line-height: 30px;
 }
 
 .product-badge-row {
