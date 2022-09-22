@@ -147,6 +147,7 @@ ul.additional-details-list,ul.food-pairings-list,ul.wine-methods-list {
   cursor: pointer;
   position: relative;
   top: 4px;
+  bottom: 4px;
   -moz-transition: all 0.2s ease-in-out;
   -o-transition: all 0.2s ease-in-out;
   -webkit-transition: all 0.2s ease-in-out;
