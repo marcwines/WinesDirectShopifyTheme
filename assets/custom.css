@@ -216,3 +216,15 @@ ul.tabs {
 .product-tab-label {
   text-align: center!important;
 }
+
+.custom-badge-wd {
+  font-size: 9px;
+  font-weight: 700;
+  color: white;
+  padding: 8px;
+  border-radius: 100%;
+}
+
+.vegan-badge {
+    background-color: red;
+}
