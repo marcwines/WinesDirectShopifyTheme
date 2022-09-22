@@ -201,6 +201,11 @@ p.link a {
 p.link a:hover {
   background-color: red;
 }
+
+ul.tabs {
+  display: flex;  
+}
+
 .tabs li {
     float: left;
     display: block;
