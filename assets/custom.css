@@ -142,7 +142,7 @@ ul.additional-details-list,ul.food-pairings-list,ul.wine-methods-list {
   border-radius: 2px 2px 0 0;
   font-size: 20px;
   font-weight: normal;
-  text-transform: uppercase;
+  text-transform: capitalize;
   background: #fff;
   cursor: pointer;
   position: relative;
