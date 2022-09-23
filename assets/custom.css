@@ -312,9 +312,9 @@ ul.tabs {
   text-align: center;
 }
 .summary-tasting-notes {
-   font-family: roc-grotesk-regular, sans-serif!important;
+   font-family: roc-grotesk-italic, sans-serif!important;
    text-align: center;
-    font-size: 14px;
+    font-size: 10px;
 }
 
 /* Collection Pages */
