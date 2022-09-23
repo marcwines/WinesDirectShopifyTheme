@@ -314,7 +314,8 @@ ul.tabs {
 .summary-tasting-notes {
    font-family: roc-grotesk-italic, sans-serif!important;
    text-align: center;
-    font-size: 10px;
+  font-size: 10px;
+  color: rgba(0,0,0,0.6)
 }
 
 /* Collection Pages */
