@@ -307,6 +307,11 @@ ul.tabs {
   background: #f0eee7;
 }
 
+.card__heading {
+  font-family: roc-grotesk-regular, sans-serif!important;
+  text-align: center;
+}
+
 /* Collection Pages */
 
 h1.collection-hero__title:after {
