@@ -294,3 +294,9 @@ ul.tabs {
 .price-item price-item--regular {
   font-family: roc-grotesk-regular, sans-serif!important;
 }
+
+/* Collection Pages */
+
+h1.collection-hero__title:after {
+    content: " Online";
+}
