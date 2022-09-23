@@ -295,6 +295,12 @@ ul.tabs {
   font-family: roc-grotesk-regular, sans-serif!important;
 }
 
+/* Product Cards */
+
+.card.card--media {
+  background: green;
+}
+
 /* Collection Pages */
 
 h1.collection-hero__title:after {
