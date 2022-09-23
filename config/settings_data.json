@@ -118,6 +118,7 @@
     "predictive_search_show_vendor": false,
     "predictive_search_show_price": false,
     "currency_code_enabled": true,
+    "cart_type": "drawer",
     "sections": {
       "announcement-bar": {
         "type": "announcement-bar",
@@ -208,6 +209,27 @@
         "type": "main-password-footer",
         "settings": {
           "color_scheme": "background-1"
+        }
+      },
+      "eg-super-cart-drawer": {
+        "type": "eg-super-cart-drawer",
+        "settings": {
+          "drawer_width": "600",
+          "show_taxes_shipping_text": true,
+          "show_view_cart_btn": true,
+          "show_payment_icons": true,
+          "cart_goal_value": 0,
+          "cart_goal_description_before": "<p><strong>[amount]<\/strong> away from FREE Shipping!<\/p>",
+          "cart_goal_color_before": "#fd7e14",
+          "cart_goal_description_after": "<p>Congrats! You're eligible for <strong>FREE Shipping.<\/strong><\/p>",
+          "cart_goal_color_after": "#158754",
+          "cart_upsells_enable": true,
+          "cart_upsells_title": "Recommended to you",
+          "cart_upsells_item_width": "30",
+          "cart_upsells_btn_text": "Add",
+          "text_btn_view_cart": "View cart",
+          "text_btn_save_note": "Save note",
+          "text_payment_icons": "100% secure and protected payments"
         }
       }
     },
