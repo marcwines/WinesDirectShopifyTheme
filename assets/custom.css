@@ -320,6 +320,7 @@ ul.tabs {
 .card-information > .price {
   font-family: roc-grotesk-regular, sans-serif!important;
   text-align: center;
+  font-size: 13px;
 }
 
 /* Collection Pages */
