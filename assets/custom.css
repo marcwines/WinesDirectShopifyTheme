@@ -6,9 +6,15 @@ h1 {
     font-style: normal;
 }
 
-h1,h2,h3,h4,h5,h6, p {
+h1,h2,h3,h4,h5,h6 {
       font-family: roc-grotesk-condensed, sans-serif!important;
 }
+
+
+p {
+      font-family: roc-grotesk-regular, sans-serif!important;
+}
+
 
 .product_title>h1 {
     font-family: roc-grotesk-condensed, sans-serif!important;
