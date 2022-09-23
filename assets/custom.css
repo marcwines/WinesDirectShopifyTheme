@@ -315,7 +315,7 @@ ul.tabs {
    font-family: roc-grotesk-italic, sans-serif!important;
    text-align: center;
   font-size: 10px;
-  color: rgba(0,0,0,0.6)
+  color: rgba(0,0,0,0.6)!important;
 }
 
 /* Collection Pages */
