@@ -317,6 +317,10 @@ ul.tabs {
   font-size: 10px;
   color: rgba(0,0,0,0.6)!important;
 }
+.card-information > .price {
+  font-family: roc-grotesk-regular, sans-serif!important;
+  text-align: center;
+}
 
 /* Collection Pages */
 
