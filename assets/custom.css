@@ -77,6 +77,7 @@ p {
   display: block;
   padding-left: 0px;
   margin-top: 16px!important;
+  font-family: roc-grotesk-regular, sans-serif!important;
 }
 
 .char-ratings > li {
