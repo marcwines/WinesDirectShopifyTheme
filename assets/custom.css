@@ -130,12 +130,14 @@ p {
 .wine-basics-list {
   list-style-type: none;
   padding-left: 0px;
+  font-family: roc-grotesk-regular, sans-serif!important;
 }
 
 ul.additional-details-list {
   columns: 2;
   -webkit-columns: 2;
   -moz-columns: 2;
+  font-family: roc-grotesk-regular, sans-serif!important;
 }
 
 ul.additional-details-list,ul.food-pairings-list,ul.wine-methods-list {
