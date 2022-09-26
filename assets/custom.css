@@ -175,6 +175,10 @@ ul.additional-details-list,ul.food-pairings-list,ul.wine-methods-list {
 
 /* Product Tabs */
 
+.product-tab-label {
+       font-family: roc-grotesk-regular, sans-serif!important; 
+}
+
 .tabs {
   width: 100%;
   float: none;
