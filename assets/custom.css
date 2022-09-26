@@ -1,4 +1,9 @@
 /* Typography  */
+body {
+      font-family: roc-grotesk-regular, sans-serif!important;
+}
+
+
 
 h1 {
     font-family: roc-grotesk-condensed, sans-serif!important;
