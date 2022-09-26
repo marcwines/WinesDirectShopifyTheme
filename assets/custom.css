@@ -169,6 +169,10 @@ ul.additional-details-list,ul.food-pairings-list,ul.wine-methods-list {
      font-family: roc-grotesk-regular, sans-serif!important; 
 }
 
+.price-item {
+       font-family: roc-grotesk-regular, sans-serif!important; 
+}
+
 /* Product Tabs */
 
 .tabs {
