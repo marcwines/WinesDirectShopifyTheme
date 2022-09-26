@@ -146,7 +146,12 @@ ul.additional-details-list,ul.food-pairings-list,ul.wine-methods-list {
   padding-left: 0px;
 }
 
-.food-pairings-list .wine-methods-list {
+.food-pairings-list  {
+      font-family: roc-grotesk-regular, sans-serif!important;
+}
+
+
+.wine-methods-list {
       font-family: roc-grotesk-regular, sans-serif!important;
 }
 
