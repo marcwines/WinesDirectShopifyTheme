@@ -322,7 +322,7 @@
 
             {% when 'Wine_basics' %}
             <ul class="wine-basics-list">
-            <li><b>Winemaker:</b>{% for maker in product.metafields.custom.winemaker.value %} <a href="/collection/{{ winemaker | url_encode }} }}">{{ product.metafields.custom.winemaker.value }}</a>, {% endfor %}</li>    
+            <li><b>Winemaker:</b>{% for maker in product.metafields.custom.winemaker.value %} <a href="/collection/{{ product.metafields.custom.winemaker.value | url_encode }} }}">{{ product.metafields.custom.winemaker.value }}</a>, {% endfor %}</li>    
             <li><b>Country of Origin:</b>{% for origin in product.metafields.custom.country_of_origin.value %} <a href="/collection/{{ grape | handleize }} }}">{{ product.metafields.custom.country_of_origin.value }}</a>, {% endfor %}</li>
             <li> <b>Grapes:</b> {% for grape in product.metafields.custom.grapes.value %} <a href="/collection/{{ grape | handleize }} }}">{{ grape }}</a>, {% endfor %}</li>    
 
