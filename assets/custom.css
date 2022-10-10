@@ -287,7 +287,7 @@ ul.tabs {
   font-weight: 900;
   color: white;
   max-height: 24px;
-  text-align: center;
+  text-align: left;
   vertical-align: middle;
   padding: 2px 6px;
   border-radius: 3px;
@@ -295,7 +295,7 @@ ul.tabs {
 }
 .product-badge-row {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     gap: 8px;
 }
 
