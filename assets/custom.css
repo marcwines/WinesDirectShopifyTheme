@@ -307,6 +307,10 @@ ul.tabs {
   line-height: 20px;
 }
 
+.custom-badge-wd {
+  width: fit-content;
+}
+
 .vegan-badge {
     background-color: #2AB474;
 }
