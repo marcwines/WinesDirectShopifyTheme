@@ -1,5 +1,49 @@
 {
   "sections": {
+    "f7e8800b-417d-45ed-913b-e4a90ac28848": {
+      "type": "image-with-text",
+      "disabled": true,
+      "blocks": {
+        "template--16522173120726__f7e8800b-417d-45ed-913b-e4a90ac28848-166550065498002164-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Image with text",
+            "heading_size": "h1"
+          }
+        },
+        "template--16522173120726__f7e8800b-417d-45ed-913b-e4a90ac28848-166550065498002164-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "text_style": "body"
+          }
+        },
+        "template--16522173120726__f7e8800b-417d-45ed-913b-e4a90ac28848-166550065498002164-2": {
+          "type": "button",
+          "settings": {
+            "button_label": "Button label",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--16522173120726__f7e8800b-417d-45ed-913b-e4a90ac28848-166550065498002164-0",
+        "template--16522173120726__f7e8800b-417d-45ed-913b-e4a90ac28848-166550065498002164-1",
+        "template--16522173120726__f7e8800b-417d-45ed-913b-e4a90ac28848-166550065498002164-2"
+      ],
+      "settings": {
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "image_banner": {
       "type": "image-banner",
       "blocks": {
@@ -36,6 +80,7 @@
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/Screenshot_2022-09-22_at_15.56.38.png",
+        "image_2": "shopify:\/\/shop_images\/11494_w.png",
         "image_overlay_opacity": 0,
         "image_height": "large",
         "adapt_height_first_image": false,
@@ -151,6 +196,7 @@
     }
   },
   "order": [
+    "f7e8800b-417d-45ed-913b-e4a90ac28848",
     "image_banner",
     "rich_text",
     "featured_collection",
