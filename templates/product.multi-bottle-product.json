@@ -69,7 +69,7 @@
           "type": "custom_liquid",
           "disabled": true,
           "settings": {
-            "custom_liquid": "<div class=\"\">{{ product.description }}<\/div>"
+            "custom_liquid": "<div class=\"\"><p>{{ product.description }}<\/p><\/div>"
           }
         }
       },
