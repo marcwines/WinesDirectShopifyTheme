@@ -65,7 +65,7 @@
         "4eddca81-1a72-40bc-a186-8fe3bfbd7eeb": {
           "type": "custom_liquid",
           "settings": {
-            "custom_liquid": "<div class=\"page-width\">\n{{ product.description }}\n<\/div>"
+            "custom_liquid": "TEST\n{{ product.description }}"
           }
         }
       },
