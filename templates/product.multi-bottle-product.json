@@ -48,22 +48,26 @@
         },
         "699e1804-97db-4a44-a58a-18c82c594a33": {
           "type": "Wine_additional",
+          "disabled": true,
           "settings": {
           }
         },
         "d5b5df8f-8dfd-47b2-b32f-de1444ffe215": {
           "type": "Wine_scales",
+          "disabled": true,
           "settings": {
           }
         },
         "share": {
           "type": "share",
+          "disabled": true,
           "settings": {
             "share_label": "Share"
           }
         },
         "4eddca81-1a72-40bc-a186-8fe3bfbd7eeb": {
           "type": "custom_liquid",
+          "disabled": true,
           "settings": {
             "custom_liquid": "<div class=\"\">{{ product.description }}<\/div>"
           }
@@ -95,6 +99,15 @@
         "padding_bottom": 36
       }
     },
+    "9841dc40-034c-4b33-b48d-e3ae32f30a2d": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<div class=\"\">{{ product.description }}<\/div>",
+        "color_scheme": "background-1",
+        "padding_top": 0,
+        "padding_bottom": 52
+      }
+    },
     "product-recommendations": {
       "type": "product-recommendations",
       "settings": {
@@ -120,6 +133,7 @@
   },
   "order": [
     "main",
+    "9841dc40-034c-4b33-b48d-e3ae32f30a2d",
     "product-recommendations",
     "1663835923c6b020ca"
   ]
