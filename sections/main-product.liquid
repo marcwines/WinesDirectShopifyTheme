@@ -324,7 +324,7 @@
             <ul class="wine-basics-list">
             <li><b>Winemaker:</b>{% for maker in product.metafields.custom.winemaker.value %} <a href="/collections/{{ product.metafields.custom.winemaker.value | handleize }}">{{ product.metafields.custom.winemaker.value }}</a>{% endfor %}</li>    
 
-            <li><b>Bundle:</b>{% for bottle in product.custom.bundle_bottles.product_1.value %} <a href="/collections/{{ product.custom.bundle_bottles.product_1.value | handleize }}">{{ product.custom.bundle_bottles.product_1.value }}</a>{% endfor %}</li>    
+            <li><b>Bundle:</b>{% for bottle in product.custom.bundle_bottles.product_1.value %} <a href="/collections/{{ product.custom.bundle_bottles.product_1.value | handleize }}">{{ product.custom.bundle_bottles.product_1 }}</a>{% endfor %}</li>    
 
             
             <li><b>Country of Origin:</b>{% for origin in product.metafields.custom.country_of_origin.value %} <a href="/collection/{{ product.metafields.custom.grape.value | handleize }}">{{ product.metafields.custom.country_of_origin.value }}</a>, {% endfor %}</li>
