@@ -393,27 +393,10 @@
                                     {% for style in product.metafields.custom.style.value  %} {{ style }}
                                 {% endfor %}
                                </li>
-                              <li> <b>Methods: </b>
-                                {% if product.metafields.custom.organic.value == true %}
-                                 Organic
-                                  {% else %}
-                                {% endif %}
-                                </li>
                           </ul>         
 
             <ul class="food-pairings-list">
                 <li><b> Food Pairings: </b>{% for pairing in product.metafields.custom.food_pairings.value %} {{ pairing }}, {% endfor %}</li>
-            </ul>
-
-            <ul class="wine-methods-list">
-                <li>
-                    <b>Methods: </b>
-                        {% if product.metafields.custom.organic.value == true %}Organic, {% else %}{% endif %}
-                        {% if product.metafields.custom.vegan.value == true %}Vegan, {% else %}{% endif %}
-                        {% if product.metafields.custom.biodynamic.value == true %}Byodynamic, {% else %}{% endif %}
-                        {% if product.metafields.custom.natural.value == true %}Natural, {% else %}{% endif %}
-                        {% if product.metafields.custom.sustainable.value == true %}Sustainable {% else %}{% endif %}
-              </li>
             </ul>
                     </details>
                   </div>
