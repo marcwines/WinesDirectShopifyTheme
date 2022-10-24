@@ -323,16 +323,15 @@
             {% when 'Wine_basics' %}
             <ul class="wine-basics-list">
             <li><b>Winemaker:</b>{% for maker in product.metafields.custom.winemaker.value %} <a href="/collections/{{ product.metafields.custom.winemaker.value | handleize }}">{{ product.metafields.custom.winemaker.value }}</a>{% endfor %}</li>    
+
+            <li><b>Bundle:</b>{% for bottle in product.custom.bundle_bottles.product_1.value %} <a href="/collections/{{ product.custom.bundle_bottles.product_1.value | handleize }}">{{ product.custom.bundle_bottles.product_1.value }}</a>{% endfor %}</li>    
+
+            
             <li><b>Country of Origin:</b>{% for origin in product.metafields.custom.country_of_origin.value %} <a href="/collection/{{ product.metafields.custom.grape.value | handleize }}">{{ product.metafields.custom.country_of_origin.value }}</a>, {% endfor %}</li>
             <li> <b>Grapes:</b> {% for grape in product.metafields.custom.grapes.value %} <a href="/collection/{{ grape | handleize }} }}">{{ grape }}</a>, {% endfor %}</li>                
             </ul>
 
-          <ul class="wine-basics-list">
-              <li><b>Product Reference:</b> {% for bottle in custom.bundle_bottles.product_1 %} 
-                {product.metafields.custom.bundle_bottles.product_1}
-              {% endfor %}</li>
-          </ul>       
-                      
+
       {% when 'Wine_scales' %}
            <div class="characteristics-block">
                 <div class="product__accordion accordion"  {{ block.shopify_attributes }}>
