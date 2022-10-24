@@ -328,7 +328,7 @@
             </ul>
 
 <ul class="wine-basics-list">
-<li><b>Product Reference:</b>{% for bottle in product.metafields.custom.bundle_bottles %} <a href="/collections/{{ product.metafields.custom.bundle_bottles.value | handleize }}">{{ product.metafields.custom.bundle_bottles.value }}</a>{% endfor %}</li>                
+<li><b>Product Reference:</b>{% for bottle in product.metafields.custom.bundle_bottles.product_1 %} <a href="/collections/{{ product.metafields.custom.bundle_bottles.value | handleize }}">{{ product.metafields.custom.bundle_bottles.value }}</a>{% endfor %}</li>                
 </ul>       
             
       {% when 'Wine_scales' %}
