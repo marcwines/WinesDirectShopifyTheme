@@ -331,6 +331,8 @@
             <p> {{ product.metafields.custom.bundle_bottles.value.url }} </p>
             <p> {{ ref_p }} </p>
             <p> {{ ref_p.title }} </p>
+            <p> {{ ref_p.value.title }} </p>
+            <p> {{ ref_p.url }} </p>
             
             <li><b>Country of Origin:</b>{% for origin in product.metafields.custom.country_of_origin.value %} <a href="/collection/{{ product.metafields.custom.grape.value | handleize }}">{{ product.metafields.custom.country_of_origin.value }}</a>, {% endfor %}</li>
             <li> <b>Grapes:</b> {% for grape in product.metafields.custom.grapes.value %} <a href="/collection/{{ grape | handleize }} }}">{{ grape }}</a>, {% endfor %}</li>                
