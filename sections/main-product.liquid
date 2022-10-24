@@ -327,10 +327,10 @@
             <li> <b>Grapes:</b> {% for grape in product.metafields.custom.grapes.value %} <a href="/collection/{{ grape | handleize }} }}">{{ grape }}</a>, {% endfor %}</li>                
             </ul>
 
-<ul class="wine-basics-list">
-<li><b>Product Reference:</b>{& product.custom.bundle_bottles.product_1 %} </li>
-</ul>       
-            
+          <ul class="wine-basics-list">
+              <li><b>Product Reference:</b> {& product.custom.bundle_bottles.product_1 %} </li>
+          </ul>       
+                      
       {% when 'Wine_scales' %}
            <div class="characteristics-block">
                 <div class="product__accordion accordion"  {{ block.shopify_attributes }}>
