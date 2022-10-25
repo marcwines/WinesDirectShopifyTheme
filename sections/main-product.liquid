@@ -360,11 +360,9 @@
         </span>
 
         <span class="bundle-item__img">
-                  <a href="{{ product.url }}">
-                    {{product.title}}
-                  </a>
-                     {{product.description  | truncate: 60 }}
-            </span>
+            <a href="{{ product.url }}">{{product.title}}</a>
+            <p>{{product.description  | truncate: 60 }}</p>
+        </span>
     
 
     </li>
