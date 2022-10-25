@@ -355,11 +355,18 @@
   {% assign bundle-contains =  product.metafields.custom.bundle_bottles.value %}
   {% for product in bundle-contains  %}     
     <li class="bundle-item">
-      <a href="{{ product.url }}">
-        {{ product.featured_image | image_url: width: 150 | image_tag: loading: 'lazy' }}
-        {{product.title}}
-      </a>
-         {{product.description  | truncate: 60 }}
+        <span class="bundle-item__img">
+            {{ product.featured_image | image_url: width: 150 | image_tag: loading: 'lazy' }}
+        </span>
+
+        <span class="bundle-item__img">
+                  <a href="{{ product.url }}">
+                    {{product.title}}
+                  </a>
+                     {{product.description  | truncate: 60 }}
+            </span>
+    
+
     </li>
   {% endfor %}
 </ul>
