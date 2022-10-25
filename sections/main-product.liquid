@@ -323,12 +323,19 @@
               </div>
 
             {% when 'Wine_basics' %}
-             <h4> {{ product.metafields.custom.bundle_bottle.value }}</h4>
-            <h4> {{ product.metafields.custom.bundle_bottle }}</h4>
-
-
-            {{ product.metafields.custom.bundle_bottles.value }}
-            {{ product.metafields.custom.bundle_bottles }}
+   
+   <h3>Bundle Contains</h3>
+<ul class="recommended_products">
+  {% assign bundle-contains =  product.metafields.custom.bundle_bottles.value %}
+  {% for product in bundle-contains  %}     
+    <li>
+      <a href="{{ product.url }}">
+        {{ product.featured_image | image_url: width: 400 | image_tag: loading: 'lazy' }}
+        {{product.title}}
+      </a>
+    </li>
+  {% endfor %}
+</ul>
             
             <ul class="wine-basics-list">
              <li>
