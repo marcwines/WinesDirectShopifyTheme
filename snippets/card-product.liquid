@@ -116,10 +116,10 @@
           </div>
           <div class="card__badge {{ settings.badge_position }}">
             <div class="product-badge-row">
-
-{% if product.metafield.custom.custom.vegan.value == true %}
-  These shoes are awesome!
-{% endif %}
+                
+                {% if product.metafields.custom.custom.vegan.value == true %}
+                  These shoes are awesome!
+                {% endif %}
   
                     <div class="custom-badge-wd vegan-badge">
                           <p>VEGAN</p>
