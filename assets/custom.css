@@ -35,7 +35,16 @@ p {
     background-color: #efefef;
 }
 
-.quantity__button:* {
+.quantity__button:active {
+  border: solid 1px black!important;
+}
+.quantity__button:hover {
+  border: solid 1px black!important;
+}
+.quantity__button:visited {
+  border: solid 1px black!important;
+}
+.quantity__button:focus {
   border: solid 1px black!important;
 }
 
