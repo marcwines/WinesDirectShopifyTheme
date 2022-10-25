@@ -117,19 +117,18 @@
           <div class="card__badge {{ settings.badge_position }}">
            
           <div class="product-badge-row">
-                
                 {% if card_product.metafields.custom.vegan.value == true %}
                     <div class="custom-badge-wd vegan-badge">
                         <p>VEGAN</p>
                     </div>
                 {% endif %}
-
+  
                 {% if card_product.metafields.custom.organic.value == true %}
                     <div class="custom-badge-wd organic-badge">
                           <p>ORGANIC</p>
                     </div>
                 {% endif %}
-
+  
                 {% if card_product.metafields.custom.organic.sustainable == true %}
                       <div class="custom-badge-wd sustainable-badge">
                           <p>SUSTAINABLE</p>
@@ -138,13 +137,13 @@
 
                   {% if card_product.metafields.custom.organic.natural == true %}
                       <div class="custom-badge-wd natural-badge">
-                          <p>SUSTAINABLE</p>
+                          <p>NATURAL</p>
                     </div>
                 {% endif %}
 
                   {% if card_product.metafields.custom.organic.biodynamic == true %}
                       <div class="custom-badge-wd biodynamic-badge">
-                          <p>SUSTAINABLE</p>
+                          <p>BIODYNAMIC</p>
                     </div>
                 {% endif %}
 
