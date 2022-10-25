@@ -332,8 +332,15 @@
             <p> {{ ref_p.title | product_reference  }} </p>
             <p> {{ ref_p.value.title | product_reference  }} </p>
             <p> {{ ref_p.url | product_reference }} </p>
+
+            <li>
+                <b>Country Of Origin:</b> 
+                    {% for origin in product.metafields.custom.country_of_origin.value %} 
+                        <a href="/collection/{{product.metafields.custom.country_of_origin.value}}">{{ product.metafields.custom.country_of_origin.value }}</a>
+                        {% unless forloop.last %},{% endunless %}
+                    {% endfor %}         
+            </li>
             
-            <li><b>Country of Origin:</b>{% for origin in product.metafields.custom.country_of_origin.value %} <a href="/collection/{{ product.metafields.custom.grape.value | handleize }}">{{ product.metafields.custom.country_of_origin.value }}</a>, {% endfor %}</li>
             <li>
                 <b>Grapes:</b> 
                     {% for grape in product.metafields.custom.grapes.value %} 
