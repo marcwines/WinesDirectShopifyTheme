@@ -327,14 +327,14 @@
            <li>
                 <b>Winemaker:</b> 
                     {% for maker in product.metafields.custom.winemaker.value %} 
-                        <a href="/collection/{{product.metafields.custom.winemaker.value}}">{{ product.metafields.custom.winemaker.value }}</a>
+                        <a href="/collection/{{product.metafields.custom.winemaker.value | handleize }}">{{ product.metafields.custom.winemaker.value }}</a>
                         {% unless forloop.last %},{% endunless %}
                     {% endfor %}         
             </li>
             <li>
                 <b>Country Of Origin:</b> 
                     {% for origin in product.metafields.custom.country_of_origin.value %} 
-                        <a href="/collection/{{product.metafields.custom.country_of_origin.value}}">{{ product.metafields.custom.country_of_origin.value }}</a>
+                        <a href="/collection/{{product.metafields.custom.country_of_origin.value | handleize }}">{{ product.metafields.custom.country_of_origin.value }}</a>
                         {% unless forloop.last %},{% endunless %}
                     {% endfor %}         
             </li>
