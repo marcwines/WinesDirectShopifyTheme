@@ -35,6 +35,10 @@ p {
     background-color: #efefef;
 }
 
+.quantity__button:active {
+  border: solid 1px black!important;
+}
+
 .quantity {
     width: 90% !important;
 }
