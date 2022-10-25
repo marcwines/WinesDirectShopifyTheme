@@ -356,8 +356,9 @@
   {% for product in bundle-contains  %}     
     <li>
       <a href="{{ product.url }}">
-        {{ product.featured_image | image_url: width: 400 | image_tag: loading: 'lazy' }}
+        {{ product.featured_image | image_url: width: 150 | image_tag: loading: 'lazy' }}
         {{product.title}}
+     {{product.description}}
       </a>
     </li>
   {% endfor %}
