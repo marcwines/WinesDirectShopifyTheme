@@ -359,7 +359,7 @@
         {{ product.featured_image | image_url: width: 150 | image_tag: loading: 'lazy' }}
         {{product.title}}
       </a>
-         {{product.description}}
+         {{product.description  | truncate: 35 }}
     </li>
   {% endfor %}
 </ul>
