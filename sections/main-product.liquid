@@ -328,7 +328,7 @@
 
 <h3>Recommended Producta</h3>
 <ul class="recommended_products">
-  {% assign recommended_products =  product.metafields.custom.bundle_bottle.value %}
+  {% assign recommended_products =  product.metafields.custom.bundle_bottle %}
   {% for product in recommended_products  %}     
     <li>
       <a href="{{ product.url }}">
