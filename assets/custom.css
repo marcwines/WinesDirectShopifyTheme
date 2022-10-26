@@ -408,3 +408,10 @@ h1.collection-hero__title:after {
   margin-bottom: 1em;
   align-items: center;
 }
+
+
+/* Homepage */
+
+.image-with-text__heading {
+  font-color: red;
+}
