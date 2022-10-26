@@ -389,3 +389,7 @@ h1.collection-hero__title:after {
 .bundle-container {
   list-style-type: none;
 }
+.bundle-item {
+  display: flex;
+  background: red;
+}
