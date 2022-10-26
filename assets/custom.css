@@ -412,6 +412,6 @@ h1.collection-hero__title:after {
 
 /* Homepage */
 
-.image-with-text__heading {
+.image-with-text__heading.h1 {
   font-color: red;
 }
