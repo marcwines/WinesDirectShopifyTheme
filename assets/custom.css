@@ -428,6 +428,10 @@ h1.collection-hero__title:after {
   background-size: 20%, 15%;
 }
 
+#shopify-section-template--16522173120726__16641958187a4b1df5 > .button--primary {
+  background-color: var(--brand-red);
+}
+
 .image-with-text__media {
   border: none!important;
 }
