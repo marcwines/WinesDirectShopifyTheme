@@ -435,3 +435,10 @@ h1.collection-hero__title:after {
 .image-with-text__media {
   border: none!important;
 }
+
+
+.list-menu.list-menu--inline {
+    font-family: roc-grotesk, sans-serif!important;
+    font-weight: 600;
+    font-style: normal;
+}
