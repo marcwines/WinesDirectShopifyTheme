@@ -424,6 +424,7 @@ h1.collection-hero__title:after {
   background-color: var(--brand-bg);
   background-image: url("https://cdn.shopify.com/s/files/1/0657/2471/1126/files/Screenshot_2022-10-26_at_15.56.05-removebg-preview.png?v=1666798404");  
   background-repeat: no-repeat;
+  background-position: top right;
 }
 
 .image-with-text__media {
