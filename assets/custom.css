@@ -422,9 +422,13 @@ h1.collection-hero__title:after {
 
 #shopify-section-template--16522173120726__16641958187a4b1df5 {
   background-color: var(--brand-bg);
-  background-image: url("https://cdn.shopify.com/s/files/1/0657/2471/1126/files/Screenshot_2022-10-26_at_15.56.05-removebg-preview.png?v=1666798404");  
-  background-repeat: no-repeat;
-  background-position: top right;
+  background-image: url("https://cdn.shopify.com/s/files/1/0657/2471/1126/files/Screenshot_2022-10-26_at_15.56.05-removebg-preview.png?v=1666798404"),url("https://cdn.shopify.com/s/files/1/0657/2471/1126/files/wines-direct-ireland-wine.png?v=1666798708");  
+  background-repeat: no-repeat, no repeat;
+  background-position: top right, center left;
+
+
+
+  
 }
 
 .image-with-text__media {
