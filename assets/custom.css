@@ -413,6 +413,8 @@ h1.collection-hero__title:after {
 /* Homepage */
 
 #ImageWithText--template--16522173120726__16641958187a4b1df5 > h2 {
-    font-color: red;
-  color: red;
+  color: var(--brand-green);
+   font-family: roc-grotesk-condensed, sans-serif!important;
+    font-weight: 700;
+    font-style: normal;
 }
