@@ -423,3 +423,7 @@ h1.collection-hero__title:after {
 #shopify-section-template--16522173120726__16641958187a4b1df5 {
   background: var(--brand-bg)
 }
+
+.image-with-text__media {
+  border: none!important;
+}
