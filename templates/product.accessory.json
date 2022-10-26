@@ -13,22 +13,6 @@
           "settings": {
           }
         },
-        "a6db7502-1503-44d0-820a-0fe82ff1a82f": {
-          "type": "rating",
-          "settings": {
-          }
-        },
-        "ddce421d-a6ee-4d50-a39e-d3e1dd7d76f0": {
-          "type": "Wine_basics",
-          "settings": {
-          }
-        },
-        "variant_picker": {
-          "type": "variant_picker",
-          "settings": {
-            "picker_type": "button"
-          }
-        },
         "quantity_selector": {
           "type": "quantity_selector",
           "settings": {
@@ -65,9 +49,6 @@
       "block_order": [
         "title",
         "price",
-        "a6db7502-1503-44d0-820a-0fe82ff1a82f",
-        "ddce421d-a6ee-4d50-a39e-d3e1dd7d76f0",
-        "variant_picker",
         "quantity_selector",
         "buy_buttons",
         "description",
