@@ -386,6 +386,9 @@
                     </details>
                   </div>
               </div>
+
+
+            
             {%- when 'Wine_additional' -%}
               <div class="additional-details">
                 <div class="product__accordion accordion"  {{ block.shopify_attributes }}>
@@ -424,6 +427,8 @@
 
 
 
+            
+
 <h3>Bundle Contains</h3>
 <ul class="bundle-container">
   {% assign bundle-contains =  product.metafields.custom.bundle_bottles.value %}
@@ -442,7 +447,7 @@
     </li>
   {% endfor %}
 </ul>
-            
+     
 
 
             
