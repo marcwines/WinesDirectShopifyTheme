@@ -194,6 +194,48 @@
         "padding_top": 28,
         "padding_bottom": 36
       }
+    },
+    "0595bd0e-3546-4083-81f5-5e110014623a": {
+      "type": "collage",
+      "blocks": {
+        "template--16522173120726__0595bd0e-3546-4083-81f5-5e110014623a-166679915390af51ad-0": {
+          "type": "video",
+          "settings": {
+            "cover_image": "shopify:\/\/shop_images\/wine-and-cheese-party-hosts.jpg",
+            "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+            "description": "Describe the video",
+            "image_padding": false
+          }
+        },
+        "template--16522173120726__0595bd0e-3546-4083-81f5-5e110014623a-166679915390af51ad-1": {
+          "type": "product",
+          "settings": {
+            "product": "adios-melissinos-case-of-6",
+            "second_image": false
+          }
+        },
+        "template--16522173120726__0595bd0e-3546-4083-81f5-5e110014623a-166679915390af51ad-2": {
+          "type": "collection",
+          "settings": {
+            "collection": "australian-wine"
+          }
+        }
+      },
+      "block_order": [
+        "template--16522173120726__0595bd0e-3546-4083-81f5-5e110014623a-166679915390af51ad-0",
+        "template--16522173120726__0595bd0e-3546-4083-81f5-5e110014623a-166679915390af51ad-1",
+        "template--16522173120726__0595bd0e-3546-4083-81f5-5e110014623a-166679915390af51ad-2"
+      ],
+      "settings": {
+        "heading": "Multimedia collage",
+        "heading_size": "h1",
+        "desktop_layout": "left",
+        "mobile_layout": "collage",
+        "card_styles": "product-card-wrapper",
+        "color_scheme": "background-1",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
@@ -201,6 +243,7 @@
     "f7e8800b-417d-45ed-913b-e4a90ac28848",
     "image_banner",
     "rich_text",
-    "featured_collection"
+    "featured_collection",
+    "0595bd0e-3546-4083-81f5-5e110014623a"
   ]
 }
