@@ -391,5 +391,8 @@ h1.collection-hero__title:after {
 }
 .bundle-item {
   display: flex;
-  background: red;
+  background: #f0eee7;
+  padding: 1em;
+  margin: 1em;
+  align-items: center;
 }
