@@ -1,3 +1,17 @@
+/* Colour Declarations */
+
+
+:root {
+    --brand-primary: {{ settings.color_primary }};
+    --brand-body-text: {{ settings.color_body_text }};
+    --brand-red: #E1625E;
+    --brand-green: #23B382;
+    --brand-blue: #88C8EE;
+  }
+
+
+
+
 /* Typography  */
 body {
       font-family: roc-grotesk-regular, sans-serif!important;
