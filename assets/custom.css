@@ -393,6 +393,6 @@ h1.collection-hero__title:after {
   display: flex;
   background: #f0eee7;
   padding: 1em;
-  margin: 1em;
+  margin-bottom: 1em;
   align-items: center;
 }
