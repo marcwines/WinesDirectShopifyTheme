@@ -1,0 +1,118 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+          }
+        },
+        "a6db7502-1503-44d0-820a-0fe82ff1a82f": {
+          "type": "rating",
+          "settings": {
+          }
+        },
+        "ddce421d-a6ee-4d50-a39e-d3e1dd7d76f0": {
+          "type": "Wine_basics",
+          "settings": {
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button"
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "settings": {
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {
+          }
+        },
+        "699e1804-97db-4a44-a58a-18c82c594a33": {
+          "type": "Wine_additional",
+          "settings": {
+          }
+        },
+        "d5b5df8f-8dfd-47b2-b32f-de1444ffe215": {
+          "type": "Wine_scales",
+          "settings": {
+          }
+        },
+        "share": {
+          "type": "share",
+          "settings": {
+            "share_label": "Share"
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "price",
+        "a6db7502-1503-44d0-820a-0fe82ff1a82f",
+        "ddce421d-a6ee-4d50-a39e-d3e1dd7d76f0",
+        "variant_picker",
+        "quantity_selector",
+        "buy_buttons",
+        "description",
+        "699e1804-97db-4a44-a58a-18c82c594a33",
+        "d5b5df8f-8dfd-47b2-b32f-de1444ffe215",
+        "share"
+      ],
+      "settings": {
+        "enable_sticky_info": false,
+        "media_position": "left",
+        "gallery_layout": "thumbnail",
+        "media_size": "small",
+        "mobile_thumbnails": "hide",
+        "hide_variants": false,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "settings": {
+        "heading": "You may also like",
+        "heading_size": "h2",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "color_scheme": "background-1",
+        "image_ratio": "square",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "columns_mobile": "2",
+        "padding_top": 36,
+        "padding_bottom": 28
+      }
+    },
+    "1663835923c6b020ca": {
+      "type": "product-info-tabs",
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "main",
+    "product-recommendations",
+    "1663835923c6b020ca"
+  ]
+}
