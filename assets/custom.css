@@ -425,7 +425,7 @@ h1.collection-hero__title:after {
   background-image: url("https://cdn.shopify.com/s/files/1/0657/2471/1126/files/Screenshot_2022-10-26_at_15.56.05-removebg-preview.png?v=1666798404"),url("https://cdn.shopify.com/s/files/1/0657/2471/1126/files/wines-direct-ireland-wine.png?v=1666798708");  
   background-repeat: no-repeat, no-repeat;
   background-position: top right, center left;
-  background-size: 15%, 25%;
+  background-size: 20%, 15%;
 }
 
 .image-with-text__media {
