@@ -29,16 +29,6 @@
           "settings": {
           }
         },
-        "699e1804-97db-4a44-a58a-18c82c594a33": {
-          "type": "Wine_additional",
-          "settings": {
-          }
-        },
-        "d5b5df8f-8dfd-47b2-b32f-de1444ffe215": {
-          "type": "Wine_scales",
-          "settings": {
-          }
-        },
         "share": {
           "type": "share",
           "settings": {
@@ -52,8 +42,6 @@
         "quantity_selector",
         "buy_buttons",
         "description",
-        "699e1804-97db-4a44-a58a-18c82c594a33",
-        "d5b5df8f-8dfd-47b2-b32f-de1444ffe215",
         "share"
       ],
       "settings": {
