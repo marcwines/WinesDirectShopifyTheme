@@ -388,6 +388,7 @@ h1.collection-hero__title:after {
 
 .bundle-container {
   list-style-type: none;
+  padding: 0;
 }
 .bundle-item {
   display: flex;
