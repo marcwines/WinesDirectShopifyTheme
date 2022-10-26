@@ -423,6 +423,7 @@
               </div>
 
 
+
 <h3>Bundle Contains</h3>
 <ul class="bundle-container">
   {% assign bundle-contains =  product.metafields.custom.bundle_bottles.value %}
@@ -441,6 +442,9 @@
     </li>
   {% endfor %}
 </ul>
+            
+
+
             
             {%- when 'price' -%}
               <div class="no-js-hidden" id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
