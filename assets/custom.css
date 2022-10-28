@@ -75,7 +75,8 @@ p {
 
 
 /* Navigation links */
-.mega-menu__link--level-2:not(:only-child) a:hover {
+
+.mega-menu__link--level-2:not(:only-child) {
     text-decoration: none!important;
     color: #121212BF!important;
     cursor: default;
