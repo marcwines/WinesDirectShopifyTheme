@@ -74,7 +74,13 @@ p {
 }
 
 
-/* Product Page Typography  */
+/* Navigation links */
+.mega-menu__link mega-menu__link--level-2 link {
+  text-decoration: none;
+}
+
+
+/* Product Page Typography */
 
 .product__description {
       font-family: roc-grotesk-regular, sans-serif!important;
