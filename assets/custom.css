@@ -84,8 +84,9 @@ p {
 
 .mega-menu__link { font-weight: 500;}
 
-.mega-menu__link a:active { font-weight: 500; color:#cc6666!important;}
-
+.mega-menu__link:hover, .mega-menu__link--active {
+   color:#cc6666!important;
+}
 
 /* Product Page Typography */
 
