@@ -103,6 +103,8 @@
                 
                 {%- assign media_position = 1 -%}
               
+                {% render 'product-thumbnail', media: featured_media, position: media_position, loop: section.settings.enable_video_looping, modal_id: section.id, xr_button: true, media_width: media_width, lazy_load: false %}
+             
  <div class="product-badge-row">
                 {% if product.metafields.custom.vegan.value == true %}
                     <div class="custom-badge-wd vegan-badge">
@@ -134,7 +136,6 @@
                     </div>
                 {% endif %}
             </div>
-                {% render 'product-thumbnail', media: featured_media, position: media_position, loop: section.settings.enable_video_looping, modal_id: section.id, xr_button: true, media_width: media_width, lazy_load: false %}
               </li>
             {%- endif -%}
             {%- for media in product.media -%}
