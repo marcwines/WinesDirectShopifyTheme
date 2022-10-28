@@ -959,40 +959,6 @@
                       >
                     </button>
                   </li>
-
-
- <div class="product-badge-row">
-                {% if product.metafields.custom.vegan.value == true %}
-                    <div class="custom-badge-wd vegan-badge">
-                        <p>VEGAN</p>
-                    </div>
-                {% endif %}
-  
-                {% if product.metafields.custom.organic.value == true %}
-                    <div class="custom-badge-wd organic-badge">
-                          <p>ORGANIC</p>
-                    </div>
-                {% endif %}
-  
-                {% if product.metafields.custom.sustainable.value == true %}
-                      <div class="custom-badge-wd sustainable-badge">
-                          <p>SUSTAINABLE</p>
-                    </div>
-                {% endif %}
-
-                  {% if product.metafields.custom.natural.value == true %}
-                      <div class="custom-badge-wd natural-badge">
-                          <p>NATURAL</p>
-                    </div>
-                {% endif %}
-
-                  {% if product.metafields.custom.biodynamic.value == true %}
-                      <div class="custom-badge-wd sustainable-badge">
-                          <p>BIODYNAMIC</p>
-                    </div>
-                {% endif %}
-            </div>
-        </div>
                   
                 {%- endif -%}
                 {%- for media in product.media -%}
@@ -1055,6 +1021,10 @@
                   {%- endunless -%}
                 {%- endfor -%}
               </ul>
+
+
+
+              
               <button
                 type="button"
                 class="slider-button slider-button--next{% if media_count <= 3 %} small-hide{% endif %}{% if media_count <= 4 %} medium-hide large-up-hide{% endif %}"
