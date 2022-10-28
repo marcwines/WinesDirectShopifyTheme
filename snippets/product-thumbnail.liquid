@@ -78,37 +78,7 @@
 
       
 
-       <div class="product-badge-row" style="z-index:9999;">
-                {% if product.metafields.custom.vegan.value == true %}
-                    <div class="custom-badge-wd vegan-badge">
-                        <p>VEGAN</p>
-                    </div>
-                {% endif %}
-  
-                {% if product.metafields.custom.organic.value == true %}
-                    <div class="custom-badge-wd organic-badge">
-                          <p>ORGANIC</p>
-                    </div>
-                {% endif %}
-  
-                {% if product.metafields.custom.sustainable.value == true %}
-                      <div class="custom-badge-wd sustainable-badge">
-                          <p>SUSTAINABLE</p>
-                    </div>
-                {% endif %}
-
-                  {% if product.metafields.custom.natural.value == true %}
-                      <div class="custom-badge-wd natural-badge">
-                          <p>NATURAL</p>
-                    </div>
-                {% endif %}
-
-                  {% if product.metafields.custom.biodynamic.value == true %}
-                      <div class="custom-badge-wd sustainable-badge">
-                          <p>BIODYNAMIC</p>
-                    </div>
-                {% endif %}
-            </div>
+      
 
       
     </div>
@@ -150,6 +120,39 @@
       height="{{ 973 | divided_by: media.preview_image.aspect_ratio | ceil }}"
       alt="{{ media.preview_image.alt | escape }}"
     >
+
+ <div class="product-badge-row" style="z-index:9999;">
+                {% if product.metafields.custom.vegan.value == true %}
+                    <div class="custom-badge-wd vegan-badge">
+                        <p>VEGAN</p>
+                    </div>
+                {% endif %}
+  
+                {% if product.metafields.custom.organic.value == true %}
+                    <div class="custom-badge-wd organic-badge">
+                          <p>ORGANIC</p>
+                    </div>
+                {% endif %}
+  
+                {% if product.metafields.custom.sustainable.value == true %}
+                      <div class="custom-badge-wd sustainable-badge">
+                          <p>SUSTAINABLE</p>
+                    </div>
+                {% endif %}
+
+                  {% if product.metafields.custom.natural.value == true %}
+                      <div class="custom-badge-wd natural-badge">
+                          <p>NATURAL</p>
+                    </div>
+                {% endif %}
+
+                  {% if product.metafields.custom.biodynamic.value == true %}
+                      <div class="custom-badge-wd sustainable-badge">
+                          <p>BIODYNAMIC</p>
+                    </div>
+                {% endif %}
+            </div>
+    
   </div>
   <button class="product__media-toggle quick-add-hidden" type="button" aria-haspopup="dialog" data-media-id="{{ media.id }}">
     <span class="visually-hidden">
