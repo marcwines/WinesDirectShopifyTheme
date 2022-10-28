@@ -342,6 +342,15 @@ ul.tabs {
     gap: 8px;
 }
 
+.product-page-row__badges {
+    z-index: 9999;
+    display: flex;
+    align-items: baseline;
+    justify-content: end;
+    margin-bottom: 5em;
+    padding: 1em;
+}
+
 .custom-badge-wd p {
   font-weight: 800;
   vertical-align: middle;
