@@ -428,7 +428,6 @@
 
             
 {% if product.metafields.custom.product_type.value == "Bundle" %}
-
       <h2>Bundle Contains</h2>
       <ul class="bundle-container">
         {% assign bundle-contains =  product.metafields.custom.bundle_bottles.value %}
@@ -437,17 +436,13 @@
               <span class="bundle-item__img">
                   {{ product.featured_image | image_url: width: 150 | image_tag: loading: 'lazy' }}
               </span>
-      
               <span class="bundle-item__img">
                   <a href="{{ product.url }}">{{product.title}}</a>
                   <p>{{product.description  | truncate: 120 }}</p>
               </span>
-          
-      
           </li>
         {% endfor %}
       </ul>
-  
 {% endif %}
 
             
