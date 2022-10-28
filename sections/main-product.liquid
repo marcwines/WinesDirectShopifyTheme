@@ -61,6 +61,19 @@
         data-desktop-layout="{{ section.settings.gallery_layout }}"
       >
 
+        <div id="GalleryStatus-{{ section.id }}" class="visually-hidden" role="status"></div>
+        <slider-component id="GalleryViewer-{{ section.id }}" class="slider-mobile-gutter">
+          <a class="skip-to-content-link button visually-hidden quick-add-hidden" href="#ProductInfo-{{ section.id }}">
+            {{ "accessibility.skip_to_product_info" | t }}
+          </a>
+          <ul
+            id="Slider-Gallery-{{ section.id }}"
+            class="product__media-list contains-media grid grid--peek list-unstyled slider slider--mobile"
+            role="list"
+          >
+
+
+
  <div class="product-badge-row">
                 {% if product.metafields.custom.vegan.value == true %}
                     <div class="custom-badge-wd vegan-badge">
@@ -93,16 +106,7 @@
                 {% endif %}
             </div>
         
-        <div id="GalleryStatus-{{ section.id }}" class="visually-hidden" role="status"></div>
-        <slider-component id="GalleryViewer-{{ section.id }}" class="slider-mobile-gutter">
-          <a class="skip-to-content-link button visually-hidden quick-add-hidden" href="#ProductInfo-{{ section.id }}">
-            {{ "accessibility.skip_to_product_info" | t }}
-          </a>
-          <ul
-            id="Slider-Gallery-{{ section.id }}"
-            class="product__media-list contains-media grid grid--peek list-unstyled slider slider--mobile"
-            role="list"
-          >
+            
             {%- liquid
               assign variant_images = product.images | where: 'attached_to_variant?', true | map: 'src'
               assign media_count = product.media.size
