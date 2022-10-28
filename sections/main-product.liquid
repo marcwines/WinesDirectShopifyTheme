@@ -444,7 +444,7 @@
 
 {% endif %}
             
-            {%- when 'price' -%}
+  {%- when 'price' -%}
               <div class="no-js-hidden" id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
                 {%- render 'price', product: product, use_variant: true, show_badges: true, price_class: 'price--large' -%}
               </div>
@@ -959,6 +959,41 @@
                       >
                     </button>
                   </li>
+
+
+ <div class="product-badge-row">
+                {% if card_product.metafields.custom.vegan.value == true %}
+                    <div class="custom-badge-wd vegan-badge">
+                        <p>VEGAN</p>
+                    </div>
+                {% endif %}
+  
+                {% if card_product.metafields.custom.organic.value == true %}
+                    <div class="custom-badge-wd organic-badge">
+                          <p>ORGANIC</p>
+                    </div>
+                {% endif %}
+  
+                {% if card_product.metafields.custom.sustainable.value == true %}
+                      <div class="custom-badge-wd sustainable-badge">
+                          <p>SUSTAINABLE</p>
+                    </div>
+                {% endif %}
+
+                  {% if card_product.metafields.custom.natural.value == true %}
+                      <div class="custom-badge-wd natural-badge">
+                          <p>NATURAL</p>
+                    </div>
+                {% endif %}
+
+                  {% if card_product.metafields.custom.biodynamic.value == true %}
+                      <div class="custom-badge-wd sustainable-badge">
+                          <p>BIODYNAMIC</p>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+                  
                 {%- endif -%}
                 {%- for media in product.media -%}
                   {%- unless media.id == product.selected_or_first_available_variant.featured_media.id -%}
