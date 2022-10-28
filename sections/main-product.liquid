@@ -417,9 +417,13 @@
                                 {% endfor %}
                               </li>
                               <li>
-                                <b>Vintage:</b>
+                         <b>Vintage:</b>
+  {%- if product.metafields.custom.vintage.value != blank -%}
                                     {{  product.metafields.custom.vintage.value }}
+    {% endif %}
                                </li>
+
+              
                                <li><b>ABV:</b>
                                     {{  product.metafields.custom.abv.value }}%
                                </li>
