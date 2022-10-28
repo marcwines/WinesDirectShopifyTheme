@@ -5,6 +5,17 @@
     font-family: roc-grotesk, sans-serif!important;
 }
 
+.rich-text__text {
+     font-family: roc-grotesk, sans-serif!important;
+}
+
+
+.rich-text__heading {
+     font-family: roc-grotesk-condensed, sans-serif!important;
+}
+
+ 
+
 :root,
 .color-background-1 {
   --color-foreground: var(--color-base-text);
