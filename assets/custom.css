@@ -77,7 +77,7 @@ p {
 /* Navigation links */
 .mega-menu__link--level-2:not(:only-child) {
     text-decoration: none!important;
-    text-color: #121212!important;
+    text-color: red!important;
     cursor: default;
     font-weight: bold;
 }
