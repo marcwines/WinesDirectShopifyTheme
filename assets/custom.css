@@ -76,7 +76,7 @@ p {
 
 /* Navigation links */
 .mega-menu__link--level-2:not(:only-child) {
-    color: red;
+    link-decoration: none;
 }
 
 
