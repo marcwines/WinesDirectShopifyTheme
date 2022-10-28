@@ -75,12 +75,9 @@ p {
 
 
 /* Navigation links */
-.mega-menu__link mega-menu__link--level-2 link a:link a:active a:visited {
-  text-decoration: none!important;
-  color: red!important;
-
+.mega-menu__link--level-2:not(:only-child) {
+    color: red;
 }
-
 
 
 /* Product Page Typography */
