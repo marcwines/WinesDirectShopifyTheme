@@ -75,7 +75,7 @@ p {
 
 
 /* Navigation links */
-.mega-menu__link mega-menu__link--level-2 link {
+.mega-menu__link mega-menu__link--level-2 link a {
   text-decoration: none!important;
   color: red!important;
 
