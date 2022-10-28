@@ -1,5 +1,10 @@
 /* Color custom properties */
 
+
+:root {
+    font-family: roc-grotesk, sans-serif!important;
+}
+
 :root,
 .color-background-1 {
   --color-foreground: var(--color-base-text);
