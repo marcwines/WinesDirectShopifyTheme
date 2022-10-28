@@ -376,8 +376,11 @@
         {% endfor %}
       </ul>
 {% endif %}
+
+     
             
       {% when 'Wine_scales' %}
+            {% if product.metafields.custom.product_type.value contains 'Bottle' %} 
            <div class="characteristics-block">
                 <div class="product__accordion accordion"  {{ block.shopify_attributes }}>
                 <details id="Details-{{ block.id }}-{{ section.id }}">
@@ -414,9 +417,12 @@
                   </div>
               </div>
 
+{% endif %}
+
 
             
             {%- when 'Wine_additional' -%}
+            {% if product.metafields.custom.product_type.value contains 'Bottle' %} 
               <div class="additional-details">
                 <div class="product__accordion accordion"  {{ block.shopify_attributes }}>
                 <details id="Details-{{ block.id }}-{{ section.id }}">
@@ -452,6 +458,7 @@
                   </div>
               </div>
 
+{% endif %}
 
 
             
