@@ -75,7 +75,7 @@ p {
 
 
 /* Navigation links */
-.mega-menu__link--level-2:not(:only-child) a:link, .mega-menu__link--level-2:not(:only-child) .mega-menu__link--level-2:not(:only-child) a:visited, .mega-menu__link--level-2:not(:only-child) a:hover, .mega-menu__link--level-2:not(:only-child) a:active {
+.mega-menu__link--level-2:not(:only-child) a:hover {
     text-decoration: none!important;
     color: #121212BF!important;
     cursor: default;
