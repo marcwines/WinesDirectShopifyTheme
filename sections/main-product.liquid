@@ -425,28 +425,32 @@
                   </div>
               </div>
 
+{% if product.metafields.custom.product_type == "Bundle" %}
 
+      <h2>Bundle Contains</h2>
+      <ul class="bundle-container">
+        {% assign bundle-contains =  product.metafields.custom.bundle_bottles.value %}
+        {% for product in bundle-contains  %}     
+          <li class="bundle-item">
+              <span class="bundle-item__img">
+                  {{ product.featured_image | image_url: width: 150 | image_tag: loading: 'lazy' }}
+              </span>
+      
+              <span class="bundle-item__img">
+                  <a href="{{ product.url }}">{{product.title}}</a>
+                  <p>{{product.description  | truncate: 120 }}</p>
+              </span>
+          
+      
+          </li>
+        {% endfor %}
+      </ul>
+  
+{% endif %}
 
             
 
-<h2>Bundle Contains</h2>
-<ul class="bundle-container">
-  {% assign bundle-contains =  product.metafields.custom.bundle_bottles.value %}
-  {% for product in bundle-contains  %}     
-    <li class="bundle-item">
-        <span class="bundle-item__img">
-            {{ product.featured_image | image_url: width: 150 | image_tag: loading: 'lazy' }}
-        </span>
 
-        <span class="bundle-item__img">
-            <a href="{{ product.url }}">{{product.title}}</a>
-            <p>{{product.description  | truncate: 120 }}</p>
-        </span>
-    
-
-    </li>
-  {% endfor %}
-</ul>
      
 
 
