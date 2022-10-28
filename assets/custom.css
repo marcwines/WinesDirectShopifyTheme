@@ -343,7 +343,6 @@ ul.tabs {
 }
 
 .product-page-row__badges {
-    z-index: 9999!important;
     display: flex!important;
     align-items: baseline!important;
     justify-content: end!important;
