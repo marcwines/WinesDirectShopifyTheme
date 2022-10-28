@@ -76,7 +76,7 @@ p {
 
 /* Navigation links */
 .mega-menu__link mega-menu__link--level-2 link {
-  text-decoration: none;
+  text-decoration: none!important;
 }
 
 
