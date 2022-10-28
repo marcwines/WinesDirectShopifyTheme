@@ -418,9 +418,11 @@
                               </li>
                               <li>
                          <b>Vintage:</b>
-  {%- if product.metafields.custom.vintage.value != blank -%}
+                                {%- if product.metafields.custom.vintage.value != blank -%}
                                     {{  product.metafields.custom.vintage.value }}
-    {% endif %}
+                                  {% else %}
+                                      NV (Non-Vintage)
+                                  {% endif %}
                                </li>
 
               
