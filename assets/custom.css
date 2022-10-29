@@ -200,7 +200,7 @@ ul.additional-details-list,ul.food-pairings-list,ul.wine-methods-list {
 
 
 .wine-methods-list {
-      font-family: roc-grotesk-regular, sans-serif!important;
+      font-family: roc-grotesk, sans-serif!important;
 }
 
 /*  */
@@ -213,18 +213,18 @@ ul.additional-details-list,ul.food-pairings-list,ul.wine-methods-list {
   height: 1px!important;
 }
 
-.price-item--regular {
-     font-family: roc-grotesk-regular, sans-serif!important; 
+.price-item- {
+     font-family: roc-grotesk, sans-serif!important; 
 }
 
 .price-item {
-       font-family: roc-grotesk-regular, sans-serif!important; 
+       font-family: roc-grotesk, sans-serif!important; 
 }
 
 /* Product Tabs */
 
 .product-tab-label {
-       font-family: roc-grotesk-regular, sans-serif!important; 
+       font-family: roc-grotesk, sans-serif!important; 
 }
 
 .tabs {
@@ -386,11 +386,11 @@ ul.tabs {
 }
 
 .wine-basics-list {
-  font-family: roc-grotesk-regular, sans-serif!important;
+  font-family: roc-grotesk, sans-serif!important;
 }
 
-.price-item price-item--regular {
-  font-family: roc-grotesk-regular, sans-serif!important;
+.price-item price-item- {
+  font-family: roc-grotesk, sans-serif!important;
 }
 
 /* Product Cards */
@@ -400,7 +400,7 @@ ul.tabs {
 }
 
 .card__heading {
-  font-family: roc-grotesk-regular, sans-serif!important;
+  font-family: roc-grotesk, sans-serif!important;
   text-align: center;
 }
 .summary-tasting-notes {
@@ -410,7 +410,7 @@ ul.tabs {
   color: rgba(0,0,0,0.6)!important;
 }
 .card-information > .price {
-  font-family: roc-grotesk-regular, sans-serif!important;
+  font-family: roc-grotesk, sans-serif!important;
   text-align: center;
   font-size: 13px;
 }
