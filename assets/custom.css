@@ -480,7 +480,7 @@ h1.collection-hero__title:after {
 hr.product-divider {margin: 18px 0px!important;}
 
 
-.product__media-wrapper {
+media-gallery {
   position: sticky!important;
   top: 25px;
 }
