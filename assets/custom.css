@@ -473,5 +473,5 @@ h1.collection-hero__title:after {
 .usb-band {
   background: red;
   background: var(--brand-red);
-  
+  border: solid 3px black;
 }
