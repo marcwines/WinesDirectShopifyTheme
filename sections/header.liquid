@@ -668,16 +668,7 @@
   </header>
 </{% if section.settings.enable_sticky_header %}sticky-header{% else %}div{% endif %}>
 
-<div class="usp-band"> 
-    <div class="usp-item"> 
-      <span class="usp-icon">
-          
-      </span>
-      <span class="usp-text">
-        <h3>Free Shipping Over 70</h3>
-      </span>
-    </div>
-</div>
+
                     
 {%- if settings.cart_type == "notification" -%}
   {%- render 'cart-notification', color_scheme: section.settings.color_scheme -%}
@@ -986,3 +977,15 @@
   ]
 }
 {% endschema %}
+
+
+<div class="usp-band"> 
+    <div class="usp-item"> 
+      <span class="usp-icon">
+          
+      </span>
+      <span class="usp-text">
+        <h3>Free Shipping Over 70</h3>
+      </span>
+    </div>
+</div>
