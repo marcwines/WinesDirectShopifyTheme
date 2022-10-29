@@ -76,12 +76,6 @@ p {
 
 /* Navigation links */
 
-.usb-band {
-  background: red;
-  background: var(--brand-red);
-  
-}
-
 .mega-menu__link--level-2:not(:only-child) {
     text-decoration: none!important;
     color: #121212BF!important;
@@ -474,4 +468,10 @@ h1.collection-hero__title:after {
 
 #ImageWithText--template--16522173120726__16641958187a4b1df5 {
   background: rgba(0,0,0,0);
+}
+
+.usb-band {
+  background: red;
+  background: var(--brand-red);
+  
 }
