@@ -413,14 +413,7 @@
             {%- when 'Wine_additional' -%}
             {% if product.metafields.custom.product_type.value contains 'Bottle' %} 
               <div class="additional-details">
-                <div class="product__accordion accordion"  {{ block.shopify_attributes }} >
-                <details id="Details-{{ block.id }}-{{ section.id }}">
-                    <summary aria-expanded="true"> 
-                      <div class="summary__title">
                         <h2> Additional Details</h2>
-                      </div>
-                    {% render 'icon-caret' %}
-                    </summary>
                           <ul class="additional-details-list">            
                             <li><b>Region:</b>
                                     {% for region in product.metafields.custom.region_of_origin.value %}
