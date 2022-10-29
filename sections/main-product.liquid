@@ -413,9 +413,9 @@
             {%- when 'Wine_additional' -%}
             {% if product.metafields.custom.product_type.value contains 'Bottle' %} 
               <div class="additional-details">
-                <div class="product__accordion accordion"  {{ block.shopify_attributes }} aria-expanded="true">
+                <div class="product__accordion accordion"  {{ block.shopify_attributes }} >
                 <details id="Details-{{ block.id }}-{{ section.id }}">
-                    <summary> 
+                    <summary aria-expanded="true"> 
                       <div class="summary__title">
                         <h2> Additional Details</h2>
                       </div>
