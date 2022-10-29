@@ -134,7 +134,7 @@ p {
 
 .bar-cont {
     position: relative;
-    width: 75%;
+    width: 50%;
     height: 6px;
     border-radius: 6px;
     background: #cccbc7;
@@ -483,4 +483,10 @@ hr.product-divider {margin: 18px 0px!important;}
 media-gallery {
   position: sticky!important;
   top: 25px;
+}
+
+.range-ratings {
+    display: flex;
+    justify-content: space-around;
+
 }
