@@ -475,3 +475,5 @@ h1.collection-hero__title:after {
   background: var(--brand-red);
   border: solid 3px black;
 }
+
+hr.product-divider {margin: 18px 0px!important;}
