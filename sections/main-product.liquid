@@ -371,7 +371,7 @@
       {% when 'Wine_scales' %}
             {% if product.metafields.custom.product_type.value contains 'Bottle' %} 
            <div class="characteristics-block">
-              <hr>
+              <hr class="product-divider">
                       <div class="summary__title">
                         <h2>Characteristics</h2>
                           <ul class="char-ratings">
@@ -402,12 +402,11 @@
               </div>
 
 {% endif %}
-
-
             
             {%- when 'Wine_additional' -%}
             {% if product.metafields.custom.product_type.value contains 'Bottle' %} 
               <div class="additional-details">
+              <hr class="product-divider">
                         <h2> Additional Details</h2>
                           <ul class="additional-details-list">            
                             <li><b>Region:</b>
