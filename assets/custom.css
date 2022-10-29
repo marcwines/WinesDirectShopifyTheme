@@ -12,7 +12,7 @@
 
 /* Typography  */
 body {
-      font-family: roc-grotesk-regular, sans-serif!important;
+      font-family: roc-grotesk, sans-serif!important;
 }
 
 h1 {
@@ -27,7 +27,7 @@ h1,h2,h3,h4,h5,h6 {
 
 
 p {
-      font-family: roc-grotesk-regular, sans-serif!important;
+      font-family: roc-grotesk, sans-serif!important;
 }
 
 
@@ -92,10 +92,10 @@ p {
 /* Product Page Typography */
 
 .product__description {
-      font-family: roc-grotesk-regular, sans-serif!important;
+      font-family: roc-grotesk, sans-serif!important;
 }
 .product-form__quantity {
-      font-family: roc-grotesk-regular, sans-serif!important;
+      font-family: roc-grotesk, sans-serif!important;
 }
 
 /* Product Page Image Background */
@@ -125,7 +125,7 @@ p {
   display: block;
   padding-left: 0px;
   margin-top: 16px!important;
-  font-family: roc-grotesk-regular, sans-serif!important;
+  font-family: roc-grotesk, sans-serif!important;
 }
 
 .char-ratings > li {
@@ -179,7 +179,7 @@ p {
 .wine-basics-list {
   list-style-type: none;
   padding-left: 0px;
-  font-family: roc-grotesk-regular, sans-serif!important;
+  font-family: roc-grotesk, sans-serif!important;
 }
 
 ul.additional-details-list {
