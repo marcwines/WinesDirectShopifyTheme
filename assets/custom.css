@@ -76,6 +76,10 @@ p {
 
 /* Navigation links */
 
+.usb-band {
+  background: var(--brand-red);
+}
+
 .mega-menu__link--level-2:not(:only-child) {
     text-decoration: none!important;
     color: #121212BF!important;
