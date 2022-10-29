@@ -481,6 +481,6 @@ hr.product-divider {margin: 18px 0px!important;}
 
 
 .product__media-wrapper {
-  position: sticky;
+  position: sticky!important;
   top: 25px;
 }
