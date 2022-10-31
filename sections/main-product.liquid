@@ -383,13 +383,21 @@
                               </span>
                               <span>High Acidity</span>
                             </li>
-                            <li>
-                              <span>
-                                <span class="behave">Intensity:</span>
-                                      <div class="bar-cont rating-bar progress-{{ product.metafields.custom.intensity.value | slice: 0 }}">
+
+
+                            <li class="range-ratings">
+                                <span>Low Intensity</span>
+                                <div class="bar-cont rating-bar progress-{{ product.metafields.custom.intensity.value | slice: 0 }}">
                                   <div class="bar"></div>
+                                </div>
                               </span>
+                              <span>High Intensity</span>
                             </li>
+                            <li>
+
+
+
+              
                             <li>
                             <span>
                               <span class="behave">Dry/Sweet:</span>
