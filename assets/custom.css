@@ -130,6 +130,7 @@ p {
 
 .char-ratings > li {
   margin-bottom: 1em;
+  
 }
 
 .bar-cont {
@@ -487,6 +488,6 @@ media-gallery {
 
 .range-ratings {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 
 }
