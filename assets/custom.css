@@ -492,5 +492,5 @@ media-gallery {
 }
 
 .mega-menu__link--level-2:hover {
-  color: green;
+  color: green!important;
 }
