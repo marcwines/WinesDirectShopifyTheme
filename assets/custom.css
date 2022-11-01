@@ -489,5 +489,8 @@ media-gallery {
 .range-ratings {
     display: flex;
     justify-content: space-between;
+}
 
+.mega-menu__link--level-2:hover {
+  color: green;
 }
