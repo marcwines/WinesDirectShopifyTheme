@@ -369,17 +369,6 @@
       {% when 'Wine_scales' %}
             {% if product.metafields.custom.product_type.value contains 'Bottle' %} 
            <div class="characteristics-block">
-
-
-
-              
-              
-              <h2>{{ pages[ winemaker-dyn ].title }}</h2>
-              <p>{{ pages[ winemaker-dyn ].metafields.custom.featured_page_text }}</p>
-              <img src="{{ pages[ winemaker-dyn ].metafields.custom.winemaker-image }}"/>
-
-              
-              
               <hr class="product-divider">
                       <div class="summary__title">
                         <h2>Characteristics</h2>
@@ -1060,8 +1049,12 @@
   <dt>Tab 1</dt>
   <dd>
      <!-- Winemaker Output Content Block  -->
-    {% assign winemaker-dyn = product.metafields.custom.winemaker | metafield_text | append: '-page' | handleize %}
-  <h4>{{ winemaker-dyn }}</h4>
+            {% assign winemaker-dyn = product.metafields.custom.winemaker | metafield_text | append: '-page' | handleize %}              
+              <h2>{{ pages[ winemaker-dyn ].title }}</h2>
+              <p>{{ pages[ winemaker-dyn ].metafields.custom.featured_page_text }}</p>
+              <img src="{{ pages[ winemaker-dyn ].metafields.custom.winemaker-image }}"/>
+
+    
   </dd>
 
   <dt>Tab 2</dt>
