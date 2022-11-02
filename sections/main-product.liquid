@@ -1051,7 +1051,7 @@
               <h2>{{ pages[ winemaker-dyn ].title }}</h2>
               <p>{{ pages[ winemaker-dyn ].metafields.custom.featured_page_text }}</p>
     <p> Wine Image URL: {{ pages[ winemaker-dyn ].metafields.custom.winemaker_image  | file_url }}</p>
-              <img src="{{ pages[ winemaker-dyn ].metafields.custom.winemaker_image | append: '.jpg' }}" alt="Girl in a jacket" width="500" height="600">
+              <img src="{{ pages[ winemaker-dyn ].metafields.custom.winemaker_image | file_url }}" alt="Girl in a jacket" width="500" height="600">
 
     
   </dd>
