@@ -420,6 +420,15 @@ media-gallery {
   display: none;
   }
 
+dt.active {
+    background: white;
+    border-bottom: 3px solid red;
+    color: red;
+    width: 200px;
+    text-align: center;
+
+}
+
 
 @media only screen and (min-width: 768px) {
   
