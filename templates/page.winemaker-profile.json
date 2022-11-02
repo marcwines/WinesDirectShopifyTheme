@@ -13,7 +13,7 @@
         "template--16775121502422__424ee295-2579-47f7-93f9-2e90143c1004-16673857557c9dfcd5-0": {
           "type": "heading",
           "settings": {
-            "heading": "Image with text{{ page.title }}",
+            "heading": "{{ page.title }}",
             "heading_size": "h1"
           }
         },
