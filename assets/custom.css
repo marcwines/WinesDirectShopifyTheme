@@ -402,7 +402,7 @@ media-gallery {
     border-top: 1px solid #ccc;
     cursor: pointer;
     text-align: center;
-    padding: 2em 0em;
+    padding: 0em 2em;
     }
   .responsive-tabs dt:first-child {
     border-top: 0;
