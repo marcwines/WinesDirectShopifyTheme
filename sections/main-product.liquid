@@ -364,20 +364,17 @@
             </li>
             </ul>
 {% endif %}
+
+
+{% assign winemaker = product.metafields.custom.winemaker | metafield_text | append: '-page' %}
+            {{ pages[winemaker].testwinemaker }}
             
       {% when 'Wine_scales' %}
             {% if product.metafields.custom.product_type.value contains 'Bottle' %} 
            <div class="characteristics-block">
 
 
-<!-- WINEMAKER INFO START -->
-{% assign winemaker = product.metafields.custom.winemaker | metafield_text | append: '-page' %}
-            {{ pages[winemaker].testwinemaker }} TEST
-<!-- WINEMAKER INFO END -->        
-
-
-
-
+<h2>Jjjjjj</h2>
               <hr class="product-divider">
                       <div class="summary__title">
                         <h2>Characteristics</h2>
