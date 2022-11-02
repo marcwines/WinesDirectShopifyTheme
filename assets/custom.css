@@ -401,12 +401,15 @@ media-gallery {
     padding: 0.5em;
     border-top: 1px solid #ccc;
     cursor: pointer;
+    width: 300px;
+    text-align: center;
     }
   .responsive-tabs dt:first-child {
     border-top: 0;
     }
   .responsive-tabs .active {
-    background-color: #ccc;
+        color: var(--brand-red);
+        border-bottom: 3px solid var(--brand-red);
     }
   .responsive-tabs .active + dd {
     display: block;
@@ -420,14 +423,6 @@ media-gallery {
   display: none;
   }
 
-dt.active {
-    background: white;
-    border-bottom: 3px solid red;
-    color: red;
-    width: 200px;
-    text-align: center;
-
-}
 
 
 @media only screen and (min-width: 768px) {
