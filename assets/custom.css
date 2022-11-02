@@ -340,6 +340,10 @@ ul.additional-details-list,ul.food-pairings-list,ul.wine-methods-list {
   background: var(--brand-bg);
   color: black!important;
 }
+
+.collection-hero > h1 {
+  color: var(--brand-green);
+}
 /* Homepage */
 
 
