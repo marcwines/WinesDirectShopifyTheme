@@ -434,6 +434,14 @@ media-gallery {
 
 
 
+@media only screen and (max-width: 768px) {
+.winemaker-info-tab {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+}
+
 @media only screen and (min-width: 768px) {
   
   .responsive-tabs {
