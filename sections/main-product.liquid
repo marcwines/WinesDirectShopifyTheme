@@ -368,6 +368,16 @@
       {% when 'Wine_scales' %}
             {% if product.metafields.custom.product_type.value contains 'Bottle' %} 
            <div class="characteristics-block">
+
+
+{% assign designer_handle = product.metafields.custom.winemaker | metafield_text | append: '-page' %}
+            {{ pages[designer_handle].test-winemaker }}
+
+              
+
+
+
+
               <hr class="product-divider">
                       <div class="summary__title">
                         <h2>Characteristics</h2>
