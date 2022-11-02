@@ -379,6 +379,13 @@
                           <ul class="char-ratings">
                             <li class="range-ratings">
 
+
+
+
+                                <span>Low Acidity
+
+
+
 <!-- WINEMAKER INFO START -->
 {% assign winemaker = product.metafields.custom.winemaker | metafield_text | append: '-page' %}
             {{ pages[winemaker].testwinemaker }}
@@ -386,8 +393,7 @@ TEST TEXT
 <!-- WINEMAKER INFO END -->        
 
 
-
-                                <span>Low Acidity</span>
+</span>
                                 <div class="bar-cont rating-bar progress-{{ product.metafields.custom.acidity.value | slice: 0 }}">
                                   <div class="bar"></div>
                                 </div>
