@@ -10,6 +10,11 @@
     --brand-bg: #f0eee7;
 }
 
+
+sticky-header {
+  background: white!important;
+}
+
 /* Typography  */
 body {
       font-family: roc-grotesk, sans-serif!important; font-weight: 500;
