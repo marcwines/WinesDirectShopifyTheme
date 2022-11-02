@@ -1,4 +1,4 @@
-// tabbed content
+ // tabbed content
     // http://www.entheosweb.com/tutorials/css/tabs.asp
     document.querySelector(".tab_content").hide();
     document.querySelector(".tab_content:first").show();
