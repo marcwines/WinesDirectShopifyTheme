@@ -338,7 +338,7 @@ ul.additional-details-list,ul.food-pairings-list,ul.wine-methods-list {
 
 .collection-hero  {
   background: var(--brand-bg);
-  color: var(--brand-green)!important;
+  color: --brand-body-text);
 }
 
 .collection-hero h1 {
