@@ -1057,60 +1057,49 @@
 
 <!-- Product Info Tabs -->
  
-        <!--Start tab labels-->
-        <ul class="tabs">
-          <li>
-            <a class="" href="#tab1">
-              
-                Tab 1
-              
-            </a>
-          </li>
-          <li>
-            <a href="#tab2" class="active">
-              
-                Tab 2
-              
-            </a>
-          </li>
-          <li>
-            <a href="#tab3">
-              
-                Tab 3
-              
-            </a>
-          </li>
-        </ul>
-        <!--Start tab content-->
-        <ul class="tabs-content">
-          <li class="" id="tab1" style="display: none;">
-            <div>
-            <p>Tab 1 content
-            <br>
-            Need a new paragraph? Try using Shift + Enter
-            <br><br>
-            </p>
-            </div>
-          </li>
-          <li id="tab2" class="active" style="display: block;">
-            <div>
-            <p>Tab 2 content
-            <br>
-            Need a new paragraph? Try using Shift + Enter
-            <br><br>
-            </p>
-            </div>
-          </li>
-          <li id="tab3" style="display: none;">
-            <div>
-            <p>Tab 3 content
-            <br>
-            Need a new paragraph? Try using Shift + Enter
-            <br><br>
-            </p>
-            </div>
-          </li>
-        </ul>
+<div class="tab-customize">
+  <button class="tablinks-cus" onclick="openTab(event, 'tab-1')" id="tab-cus-active" >Information</button>
+  <button class="tablinks-cus" onclick="openTab(event, 'tab-2')">Shipping</button>
+  <button class="tablinks-cus" onclick="openTab(event, 'tab-3')">Policy</button>
+</div>
+<!-- Tab content -->
+<div id="tab-1" class="tabcontent-cus">
+  {{ product.description }}
+</div>
+<div id="tab-2" class="tabcontent-cus ">
+  {{ pages.shipping.content }}
+</div>
+<div id="tab-3" class="tabcontent-cus ">
+  {{ pages.policy.content }}
+</div>
+<style>
+.tab-customize {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+.tab-customize button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+}
+.tab-customize button:hover {
+  background-color: #ddd;
+}
+.tab-customize button.active {
+  background-color: #ccc;
+}
+.tabcontent-cus {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+</style>
     
 <!-- End Of Tabs -->
 
