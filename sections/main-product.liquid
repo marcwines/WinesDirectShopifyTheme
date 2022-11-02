@@ -1050,7 +1050,7 @@
             {% assign winemaker-dyn = product.metafields.custom.winemaker | metafield_text | append: '-page' | handleize %}              
               <h2>{{ pages[ winemaker-dyn ].title }}</h2>
               <p>{{ pages[ winemaker-dyn ].metafields.custom.featured_page_text }}</p>
-              <img src="{{ pages[ winemaker-dyn ].metafields.custom.winemaker-image | append: '.jpg' }}"/>
+              <img src="{{ pages[ winemaker-dyn ].metafields.custom.winemaker-image | append: '.jpg' }}" alt="Girl in a jacket" width="500" height="600">
 
     
   </dd>
@@ -1088,6 +1088,7 @@
               <span class="bundle-item__img">
                   <a href="{{ product.url }}">{{product.title}}</a>
                   <p>{{product.description  | truncate: 120 }}</p>
+                
               </span>
           </li>
         {% endfor %}
