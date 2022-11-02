@@ -333,7 +333,7 @@ h1.collection-hero__title:after {
 }
 .bundle-item {
   display: flex;
-  background: #f0eee7;
+  background: var(--brand-bg);
   padding: 1em;
   margin-bottom: 1em;
   align-items: center;
