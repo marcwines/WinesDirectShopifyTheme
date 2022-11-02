@@ -21,7 +21,7 @@
         "template--16775121502422__424ee295-2579-47f7-93f9-2e90143c1004-16673857557c9dfcd5-1": {
           "type": "text",
           "settings": {
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.{{ page.metafields.custom.featured_page_text | metafield_tag }}<\/p>",
             "text_style": "body"
           }
         },
@@ -41,7 +41,7 @@
       ],
       "settings": {
         "image": "{{ page.metafields.custom.winemaker_image.value }}",
-        "height": "adapt",
+        "height": "small",
         "desktop_image_width": "medium",
         "layout": "image_first",
         "desktop_content_position": "top",
