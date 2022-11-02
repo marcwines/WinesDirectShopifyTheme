@@ -442,3 +442,7 @@ media-gallery {
 
 }
 
+.winemaker-info-tab {
+  display: flex;
+}
+
