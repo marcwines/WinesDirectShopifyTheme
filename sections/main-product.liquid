@@ -332,8 +332,6 @@
 
 
 
-
-
             
             {% when 'Wine_basics' %}
    
@@ -372,9 +370,17 @@
             {% if product.metafields.custom.product_type.value contains 'Bottle' %} 
            <div class="characteristics-block">
 
+<!-- Winemaker Output Content Block  -->
+              
 {% assign winemaker-dyn = product.metafields.custom.winemaker | metafield_text | append: '-page' | handleize %}
-<h4>{{ winemaker-dyn }}</h4>
-{{ pages[ winemaker-dyn ].content }}
+  <h4>{{ winemaker-dyn }}</h4>
+
+              
+              <p>{{ pages[ winemaker-dyn ].metafields.custom.featured_page_text }}</p>
+
+
+              
+              
               <hr class="product-divider">
                       <div class="summary__title">
                         <h2>Characteristics</h2>
