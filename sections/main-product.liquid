@@ -1046,28 +1046,19 @@
 <dl class="responsive-tabs">
   <dt>Winemaker</dt>
   <dd>
-     <!-- Winemaker Output Content Block  -->
+<!-- Winemaker Output Content Block  -->
 <div class="winemaker-info-tab">
-
-            {% assign winemaker-dyn = product.metafields.custom.winemaker | metafield_text | append: '-page' | handleize %}              
-
-
-                <div class="winemaker-tab-image"> 
-                <img src="{{ pages[ winemaker-dyn ].metafields.custom.winemaker_image | file_url }}" width="400px">            
-                </div>
-  
-                
-             <div class="winemaker-tab-text">
-                <h2>{{ pages[ winemaker-dyn ].title }}</h2>
-              <p>{{ pages[ winemaker-dyn ].metafields.custom.featured_page_text }}</p>
-               <a class="winemaker-links" href="/collections/{{ pages[ winemaker-dyn ].title | handleize }}""> View All Wines by this Winemaker</a>
-             </div
-              
-  
+{% assign winemaker-dyn = product.metafields.custom.winemaker | metafield_text | append: '-page' | handleize %}              
+      <div class="winemaker-tab-image"> 
+            <img src="{{ pages[ winemaker-dyn ].metafields.custom.winemaker_image | file_url }}" width="400px">            
+      </div>
+      <div class="winemaker-tab-text">
+            <h2>{{ pages[ winemaker-dyn ].title }}</h2>
+            <p>{{ pages[ winemaker-dyn ].metafields.custom.featured_page_text }}</p>
+            <a class="winemaker-links" href="/collections/{{ pages[ winemaker-dyn ].title | handleize }}""> View All Wines by this Winemaker</a>
+      </div
 </div>
-
-    
-  </dd>
+</dd>
 
   <dt>Tab 2</dt>
   <dd>
