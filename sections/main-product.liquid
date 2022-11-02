@@ -365,16 +365,18 @@
             </ul>
 {% endif %}
 
-
 {% assign winemaker = product.metafields.custom.winemaker | metafield_text | append: '-page' %}
-            {{ pages[winemaker].winemaker }}
+<h2>{{ pages[winemaker].winemaker }}</h2>
+
+
             
+
       {% when 'Wine_scales' %}
             {% if product.metafields.custom.product_type.value contains 'Bottle' %} 
            <div class="characteristics-block">
 
 
-<h2>Jjjjjj</h2>
+
               <hr class="product-divider">
                       <div class="summary__title">
                         <h2>Characteristics</h2>
