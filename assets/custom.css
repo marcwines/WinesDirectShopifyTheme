@@ -439,6 +439,8 @@ media-gallery {
     display: flex;
     justify-content: space-evenly;
     align-items: flex-start;
+    flex-direction: column;
+    max-width: 1000%;
 }
 }
 
