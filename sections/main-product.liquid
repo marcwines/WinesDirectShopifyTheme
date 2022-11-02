@@ -365,11 +365,11 @@
             </ul>
 {% endif %}
 
-{% assign winemaker = product.metafields.custom.winemaker | metafield_text | append: '-page' %}
-<h2>{{ pages[winemaker].winemaker }}</h2>
+{% assign winemaker-dyn = product.metafields.custom.winemaker | metafield_text | append: '-page' %}
+<h2>{{ pages[winemaker].winemaker-dyn }}</h2>
 
 
-            
+<h2>{{ winemaker-dyn }}</h2>
 
       {% when 'Wine_scales' %}
             {% if product.metafields.custom.product_type.value contains 'Bottle' %} 
