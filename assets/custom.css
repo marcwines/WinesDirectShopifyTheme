@@ -323,10 +323,6 @@ ul.additional-details-list,ul.food-pairings-list,ul.wine-methods-list {
 
 /* Collection Pages */
 
-h1.collection-hero__title:after {
-    content: " Online";
-}
-
 .bundle-container {
   list-style-type: none;
   padding: 0;
