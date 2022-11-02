@@ -410,7 +410,10 @@ media-gallery {
 background: var(--brand-bg);
 }
 
-
+.winemaker-links {
+  text-align: right;
+  color: var(--brand-red);
+}
 
   .responsive-tabs .active {
         color: var(--brand-red);
