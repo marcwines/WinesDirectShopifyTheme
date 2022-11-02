@@ -402,12 +402,13 @@ media-gallery {
     border-top: 1px solid #ccc;
     cursor: pointer;
     text-align: center;
+    padding: 2em 0em;
     }
   .responsive-tabs dt:first-child {
     border-top: 0;
     }
 .responsive-tabs-placeholder {
-    padding: 1em;
+    padding: 1em; 
 }
 
 .winemaker-links {
