@@ -374,12 +374,7 @@
 
 {% assign winemaker-dyn = product.metafields.custom.winemaker | metafield_text | append: '-page' | handleize %}
 <h4>{{ winemaker-dyn }}</h4>
-
-   {{ pages[ winemaker-dyn ].content }}
-
-            
-              
-
+{{ pages[ winemaker-dyn ].content }}
               <hr class="product-divider">
                       <div class="summary__title">
                         <h2>Characteristics</h2>
