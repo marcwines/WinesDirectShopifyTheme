@@ -901,6 +901,8 @@ class VariantRadios extends VariantSelects {
 customElements.define('variant-radios', VariantRadios);
 
 
+// Product Tabs
+
 $.fn.responsiveTabs = function() {
 
   return this.each(function() {
