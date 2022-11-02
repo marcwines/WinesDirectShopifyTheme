@@ -373,10 +373,11 @@
            <div class="characteristics-block">
 
 {% assign winemaker-dyn = product.metafields.custom.winemaker | metafield_text | append: '-page' | handleize %}
-<h4>{{ winemaker-dyn  }}</h4>
+<h4>{{ winemaker-dyn }}</h4>
 
-   {{ pages[winemaker-dyn].content }}
-              {{ pages[winemaker-dyn].url }}
+   {{ pages[ winemaker-dyn ].content }}
+
+            
               
 
               <hr class="product-divider">
