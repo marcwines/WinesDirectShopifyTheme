@@ -39,6 +39,7 @@
         "template--16775121502422__424ee295-2579-47f7-93f9-2e90143c1004-16673857557c9dfcd5-2"
       ],
       "settings": {
+        "image": "{{ page.metafields.custom.winemaker_image.value }}",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
