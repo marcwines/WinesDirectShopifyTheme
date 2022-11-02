@@ -372,8 +372,8 @@
             {% if product.metafields.custom.product_type.value contains 'Bottle' %} 
            <div class="characteristics-block">
 
-{% assign winemaker-dyn = product.metafields.custom.winemaker | metafield_text | append: '-page' %}
-<h4>{{ winemaker-dyn | handleize }}</h4>
+{% assign winemaker-dyn = product.metafields.custom.winemaker | metafield_text | append: '-page' | handleize %}
+<h4>{{ winemaker-dyn  }}</h4>
 
    {{ pages[winemaker-dyn].content }}
               
