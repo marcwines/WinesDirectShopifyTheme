@@ -1050,6 +1050,7 @@
             {% assign winemaker-dyn = product.metafields.custom.winemaker | metafield_text | append: '-page' | handleize %}              
               <h2>{{ pages[ winemaker-dyn ].title }}</h2>
               <p>{{ pages[ winemaker-dyn ].metafields.custom.featured_page_text }}</p>
+    <p> Wine Image URL: {{ pages[ winemaker-dyn ].metafields.custom.featured_page_text }}</p>
               <img src="{{ pages[ winemaker-dyn ].metafields.custom.winemaker-image | append: '.jpg' }}" alt="Girl in a jacket" width="500" height="600">
 
     
