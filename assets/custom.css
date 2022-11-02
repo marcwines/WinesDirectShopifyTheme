@@ -336,7 +336,11 @@ ul.additional-details-list,ul.food-pairings-list,ul.wine-methods-list {
 }
 
 
+.collection-hero  {
+  background: green!important;
+}
 /* Homepage */
+
 
 #ImageWithText--template--16522173120726__16641958187a4b1df5 > h2 {
   color: var(--brand-green);
