@@ -447,6 +447,10 @@ media-gallery {
   max-width: 100%;
 }
 
+.winemaker-tab-image > img {
+  max-width: 100%;
+}
+
   
 }
 
