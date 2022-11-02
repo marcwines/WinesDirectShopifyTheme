@@ -1056,42 +1056,62 @@
   </div>
 
 <!-- Product Info Tabs -->
-<div class="tabs">
-  
-  <input type="radio" name="tabs" id="tab1" class="tab-content-1" checked="checked">
-  <label for="tab1">Tab 1</label>
-				
-  <input type="radio" name="tabs" id="tab2" class="tab-content-2">
-	<label for="tab2">Tab 2</label>
-				
-  <input type="radio" name="tabs" id="tab3" class="tab-content-3">
-  <label for="tab3">Tab 3</label>
-				
-  <input type="radio" name="tabs" id="tab5" class="tab-content-4">
-  <label for="tab5">Tab 4</label>
-				
-  <ul>
+ 
+        <!--Start tab labels-->
+        <ul class="tabs">
+          <li>
+            <a class="" href="#tab1">
+              
+                Tab 1
+              
+            </a>
+          </li>
+          <li>
+            <a href="#tab2" class="active">
+              
+                Tab 2
+              
+            </a>
+          </li>
+          <li>
+            <a href="#tab3">
+              
+                Tab 3
+              
+            </a>
+          </li>
+        </ul>
+        <!--Start tab content-->
+        <ul class="tabs-content">
+          <li class="" id="tab1" style="display: none;">
+            <div>
+            <p>Tab 1 content
+            <br>
+            Need a new paragraph? Try using Shift + Enter
+            <br><br>
+            </p>
+            </div>
+          </li>
+          <li id="tab2" class="active" style="display: block;">
+            <div>
+            <p>Tab 2 content
+            <br>
+            Need a new paragraph? Try using Shift + Enter
+            <br><br>
+            </p>
+            </div>
+          </li>
+          <li id="tab3" style="display: none;">
+            <div>
+            <p>Tab 3 content
+            <br>
+            Need a new paragraph? Try using Shift + Enter
+            <br><br>
+            </p>
+            </div>
+          </li>
+        </ul>
     
-    <li class="tab-content tab-content-1">
-      <p>TAB 1 : Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    </li>
-					
-    <li class="tab-content tab-content-2">
-      <p>TAB 2 : In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best, every pleasure is to be welcomed and every pain avoided. But in certain circumstances and owing to the claims of duty or the obligations of business it will frequently occur that pleasures have to be repudiated and annoyances accepted. The wise man therefore always holds in these matters to this principle of selection: he rejects pleasures to secure other greater pleasures, or else he endures pains to avoid worse pains.</p>
-    </li>
-					
-    <li class="tab-content tab-content-3">
-      <p>TAB 3 : At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.</p>		
-    </li>
-					
-    <li class="tab-content tab-content-4">
-      <p>TAB 4 : On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best, every pleasure is to be welcomed and every pain avoided. But in certain circumstances and owing to the claims of duty or the obligations of business it will frequently occur that pleasures have to be repudiated and annoyances accepted. The wise man therefore always holds in these matters to this principle of selection: he rejects pleasures to secure other greater pleasures, or else he endures pains to avoid worse pains.</p>		
-    </li>
-    
-  </ul>
-  
-</div>
-
 <!-- End Of Tabs -->
 
 {% if product.metafields.custom.product_type.value contains 'Bundle' %}
