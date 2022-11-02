@@ -1044,13 +1044,26 @@
 <!-- Product Info Tabs -->
 
 <dl class="responsive-tabs">
-  <dt>Tab 1</dt>
+  <dt>Winemaker</dt>
   <dd>
      <!-- Winemaker Output Content Block  -->
+<div class="winemaker-info-tab">
+
             {% assign winemaker-dyn = product.metafields.custom.winemaker | metafield_text | append: '-page' | handleize %}              
-              <h2>{{ pages[ winemaker-dyn ].title }}</h2>
+
+
+                <div class="winemaker-tab-image"> 
+                <img src="{{ pages[ winemaker-dyn ].metafields.custom.winemaker_image | file_url }}">            
+                </div>
+  
+                
+             <div class="winemaker-tab-text">
+                <h2>{{ pages[ winemaker-dyn ].title }}</h2>
               <p>{{ pages[ winemaker-dyn ].metafields.custom.featured_page_text }}</p>
-              <img src="{{ pages[ winemaker-dyn ].metafields.custom.winemaker_image | file_url }}">
+             </div
+              
+  
+</div>
 
     
   </dd>
