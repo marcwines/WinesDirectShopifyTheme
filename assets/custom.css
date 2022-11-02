@@ -402,85 +402,79 @@ media-gallery {
        font-family: roc-grotesk, sans-serif!important; font-weight: 500;  font-weight: 500;
 }
 
-
-ul.tabs {
+.tabs { 
+  max-width: 1200px;
+  padding: 10px;
+  position: relative;
+}
+.tabs > input {
+	position: absolute;
+	left: -9999px;
+}
+.tabs > label {
+	background-color: #ff5400;
+  color: #fff;
+  position: relative;
+	display: inline-block;
+	padding: 8px 12px;
+	border: 0;
+	outline: none;
+	cursor: pointer;
+	transition: all .3s ease;
+  margin: 0 4px 4px 0;
+	border-radius: 4px;
+	opacity: 0.8;
+}
+.tabs > input:checked + label {
+	background-color: #fff;
+	color: #ff5400;
+  cursor: default;
+  margin-bottom: 0;
+	padding-bottom: 12px;
+	border-bottom-right-radius: 0;
+	border-bottom-left-radius: 0;
+	opacity: 1;
+}
+.tabs > ul {
+	list-style: none;
+	display: block;
+	overflow: hidden;
 	margin: 0;
 	padding: 0;
-	float: left;
-	list-style: none;
-	height: 32px;
-	border-bottom: 1px solid #333;
-	width: 100%;
+	border: 0;
+	outline: none;
+	font-size: 14px;
 }
-
-ul.tabs li {
-	float: left;
-	margin: 0;
-	cursor: pointer;
-	padding: 0px 21px;
-	height: 31px;
-	line-height: 31px;
-	border-top: 1px solid #333;
-	border-left: 1px solid #333;
-	border-bottom: 1px solid #333;
-	background-color: #666;
-	color: #ccc;
-	overflow: hidden;
-	position: relative;
-}
-
-.tab_last { border-right: 1px solid #333; }
-
-ul.tabs li:hover {
-	background-color: #ccc;
-	color: #333;
-}
-
-ul.tabs li.active {
+.tabs > ul > li {
 	background-color: #fff;
-	color: #333;
-	border-bottom: 1px solid #fff;
-	display: block;
-}
-
-.tab_container {
-	border: 1px solid #333;
-	border-top: none;
-	clear: both;
-	float: left;
+  display: none;
 	width: 100%;
-	background: #fff;
 	overflow: auto;
+	padding: 30px 40px 40px;
+	opacity: 0;
+	transition: all .5s ease;
+  -moz-box-sizing: border-box;
+	box-sizing: border-box;
 }
-
-.tab_content {
-	padding: 20px;
-	display: none;
+.tabs > .tab-content-1:checked ~ ul .tab-content-1,
+.tabs > .tab-content-2:checked ~ ul .tab-content-2,
+.tabs > .tab-content-3:checked ~ ul .tab-content-3,
+.tabs > .tab-content-4:checked ~ ul .tab-content-4 {
+	display: block;
+	opacity: 1;
 }
-
-.tab_drawer_heading { display: none; }
-
-@media screen and (max-width: 480px) {
-	.tabs {
-		display: none;
-	}
-	.tab_drawer_heading {
-		background-color: #ccc;
-		color: #fff;
-		border-top: 1px solid #333;
-		margin: 0;
-		padding: 5px 20px;
+/* RESPONSIVE */
+@media screen and (max-width: 800px) {
+	.tabs > label {
 		display: block;
-		cursor: pointer;
-		-webkit-touch-callout: none;
-		-webkit-user-select: none;
-		-khtml-user-select: none;
-		-moz-user-select: none;
-		-ms-user-select: none;
-		user-select: none;
+    margin-right: 0;
 	}
-	.d_active {
-		background-color: #666;
-		color: #fff;
-	}
+  .tabs > input:checked + label {
+    border-radius: 4px;
+    margin-bottom: 4px;
+    padding-bottom: 8px;
+  }
+  .tabs > ul > li {
+    border-radius: 4px;
+  }
 }
