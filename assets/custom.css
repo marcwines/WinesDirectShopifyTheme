@@ -443,6 +443,9 @@ media-gallery {
 }
 
 .winemaker-info-tab {
-  display: flex;
+
+      display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
 }
 
