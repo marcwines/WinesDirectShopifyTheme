@@ -370,10 +370,7 @@
            <div class="characteristics-block">
 
 
-<!-- WINEMAKER INFO START -->
-{% assign winemaker = product.metafields.custom.winemaker | metafield_text | append: '-page' %}
-            {{ pages[winemaker].testwinemaker }}
-<!-- WINEMAKER INFO END -->          
+
 
 
               <hr class="product-divider">
@@ -381,6 +378,14 @@
                         <h2>Characteristics</h2>
                           <ul class="char-ratings">
                             <li class="range-ratings">
+
+<!-- WINEMAKER INFO START -->
+{% assign winemaker = product.metafields.custom.winemaker | metafield_text | append: '-page' %}
+            {{ pages[winemaker].testwinemaker }}
+<!-- WINEMAKER INFO END -->          
+
+
+
                                 <span>Low Acidity</span>
                                 <div class="bar-cont rating-bar progress-{{ product.metafields.custom.acidity.value | slice: 0 }}">
                                   <div class="bar"></div>
