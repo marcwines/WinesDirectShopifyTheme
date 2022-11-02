@@ -60,6 +60,12 @@
           "settings": {
             "share_label": "Share"
           }
+        },
+        "9b2f6ce9-0e2b-4ebb-9740-0a87d1300fb9": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "{% assign designer_handle = product.metafields.custom.winemaker | metafield_text | append: '-page' %}\n            {{ pages[designer_handle].content }}"
+          }
         }
       },
       "block_order": [
@@ -73,7 +79,8 @@
         "description",
         "699e1804-97db-4a44-a58a-18c82c594a33",
         "d5b5df8f-8dfd-47b2-b32f-de1444ffe215",
-        "share"
+        "share",
+        "9b2f6ce9-0e2b-4ebb-9740-0a87d1300fb9"
       ],
       "settings": {
         "enable_sticky_info": false,
