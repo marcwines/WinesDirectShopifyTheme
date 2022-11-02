@@ -371,7 +371,7 @@
 
 
 <!-- WINEMAKER INFO START -->
-{% assign Winemaker = product.metafields.custom.winemaker.value | metafield_text | append: '-page' %}
+{% assign Winemaker = product.metafields.custom.winemaker | metafield_text | append: '-page' %}
             {{ pages[Winemaker].testwinemaker }}
 <!-- WINEMAKER INFO END -->          
 
