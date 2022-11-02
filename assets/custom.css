@@ -342,7 +342,7 @@ ul.additional-details-list,ul.food-pairings-list,ul.wine-methods-list {
 }
 
 .collection-hero > h1 {
-  color: var(--brand-green);
+  color: var(--brand-green)!important;
 }
 /* Homepage */
 
