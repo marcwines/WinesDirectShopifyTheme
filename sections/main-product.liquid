@@ -370,10 +370,7 @@
             {% if product.metafields.custom.product_type.value contains 'Bottle' %} 
            <div class="characteristics-block">
 
-<!-- Winemaker Output Content Block  -->
-              
-{% assign winemaker-dyn = product.metafields.custom.winemaker | metafield_text | append: '-page' | handleize %}
-  <h4>{{ winemaker-dyn }}</h4>
+
 
               
               
@@ -1062,8 +1059,9 @@
 <dl class="responsive-tabs">
   <dt>Tab 1</dt>
   <dd>
-      <p>Content for item 1</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vel odio non elit tincidunt placerat. Donec quis dolor eleifend, venenatis urna nec, feugiat purus. Morbi dapibus leo lorem, vel tempor quam euismod ac. Pellentesque elementum ac ante ut gravida.</p>
+     <!-- Winemaker Output Content Block  -->
+    {% assign winemaker-dyn = product.metafields.custom.winemaker | metafield_text | append: '-page' | handleize %}
+  <h4>{{ winemaker-dyn }}</h4>
   </dd>
 
   <dt>Tab 2</dt>
