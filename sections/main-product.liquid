@@ -370,7 +370,7 @@
            <div class="characteristics-block">
 
 
-{% assign designer_handle = product.metafields.custom.winemaker | metafield_text | append: '-page' %}
+{% assign designer_handle = product.metafields.custom.winemaker.value | metafield_text | append: '-page' %}
             {{ pages[designer_handle]. test-winemaker }}
 
               
