@@ -407,7 +407,7 @@ media-gallery {
     border-top: 0;
     }
 .responsive-tabs-placeholder {
-background: var(--brand-bg);
+    padding: 1em;
 }
 
 .winemaker-links {
