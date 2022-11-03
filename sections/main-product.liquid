@@ -352,21 +352,21 @@
              <li>
                 <b>Winemaker:</b> 
                     {% for maker in product.metafields.custom.winemaker.value %} 
-                        <a href="/collection/{{product.metafields.custom.winemaker.value | handleize }}">{{ product.metafields.custom.winemaker.value }}</a>
+                        <a href="/collections/{{product.metafields.custom.winemaker.value | handleize }}">{{ product.metafields.custom.winemaker.value }}</a>
                         {% unless forloop.last %},{% endunless %}
                     {% endfor %}         
             </li>
             <li>
                 <b>Country Of Origin:</b> 
                     {% for origin in product.metafields.custom.country_of_origin.value %} 
-                        <a href="/collection/{{product.metafields.custom.country_of_origin.value | handleize }}">{{ product.metafields.custom.country_of_origin.value }}</a>
+                        <a href="/collections/{{product.metafields.custom.country_of_origin.value | handleize }}">{{ product.metafields.custom.country_of_origin.value }}</a>
                         {% unless forloop.last %},{% endunless %}
                     {% endfor %}         
             </li>
             <li>
                 <b>Grapes:</b> 
                     {% for grape in product.metafields.custom.grapes.value %} 
-                        <a href="/collection/{{ grape | handleize }} }}">{{ grape }}</a>
+                        <a href="/collections/{{ grape | handleize }} }}">{{ grape }}</a>
                         {% unless forloop.last %},{% endunless %}
                     {% endfor %}         
             </li>
@@ -414,7 +414,7 @@
 
 {% endif %}
             
-            {%- when 'Wine_additional' -%}
+{%- when 'Wine_additional' -%}
             {% if product.metafields.custom.product_type.value contains 'Bottle' %} 
               <div class="additional-details">
               <hr class="product-divider">
@@ -444,14 +444,20 @@
                                </li>
                           </ul>         
 
-            <ul class="food-pairings-list">
-                <li><b> Food Pairings: </b>{% for pairing in product.metafields.custom.food_pairings.value %} {{ pairing }}, {% endfor %}</li>
-            </ul>
-                    </details>
-                  </div>
-              </div>
+                          <ul class="food-pairings-list">
+                            <li><b> Food Pairings: </b>{% for pairing in product.metafields.custom.food_pairings.value %} {{ pairing }}, {% endfor %}</li>
+                                {% for maker in product.metafields.custom.winemaker.value %} 
+                                    <li> <b> Food Pairings: </b> {% for pairing in product.metafields.custom.food_pairings.value %} {{ pairing }} 
+                                    {% unless forloop.last %},{% endunless %}
+                                {% endfor %}  
+                                                                 {% endfor %}  
+                                  </li>
+                                  </ul>
+                                  </details>
+                              </div>
+                          </div>
+                        {% endif %}
 
-{% endif %}
             
   {%- when 'price' -%}
               <div class="no-js-hidden" id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
