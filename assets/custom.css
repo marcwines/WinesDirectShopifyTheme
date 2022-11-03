@@ -399,6 +399,7 @@ media-gallery {
 .range-ratings {
     display: inline;
     justify-content: space-between;
+object-fit: fill;
 }
 
 .mega-menu__link--level-2:hover {
