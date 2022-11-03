@@ -371,11 +371,11 @@
 {% assign d = countries.size | minus:1 %}
 {% for i in (0..d) %}
 
-{% if product.metafields.custom.country_of_origin.value == countries[i] %}
-
-  <h2> denonyms[i]</h2>
-  
-{% endif %}
+            {% if product.metafields.custom.country_of_origin.value == countries[i] %}
+            
+              <h2> {{ denonyms[i] }} </h2>
+              
+            {% endif %}
   
   {% assign denonized = product.metafields.custom.country_of_origin.value | replace: countries[i],denonyms[i] %}
   {% endfor %}
