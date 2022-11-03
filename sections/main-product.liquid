@@ -371,7 +371,7 @@
 {% assign d = countries.size | minus:1 %}
 {% for i in (0..d) %}
 
-            {% if product.metafields.custom.country_of_origin.value == countries[i] %}
+            {% if product.metafields.custom.country_of_origin.value == 'France' %}
             
               <h2> {{ denonyms[i] }} lad </h2>
               
