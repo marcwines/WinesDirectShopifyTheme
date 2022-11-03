@@ -445,7 +445,6 @@
                           </ul>         
 
                           <ul class="food-pairings-list">
-                            <li><b> Food Pairings: </b>{% for pairing in product.metafields.custom.food_pairings.value %} {{ pairing }}, {% endfor %}</li>
                                 {% for maker in product.metafields.custom.winemaker.value %} 
                                     <li> <b> Food Pairings: </b> {% for pairing in product.metafields.custom.food_pairings.value %} {{ pairing }} 
                                     {% unless forloop.last %},{% endunless %}
