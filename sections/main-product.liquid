@@ -439,14 +439,14 @@
                                     {{  product.metafields.custom.abv.value }}%
                                </li>
                                 <li><b>Style:</b>
-                                    {% for style in product.metafields.custom.style.value  %} {{ style }}
+                                    {% for style in product.metafields.custom.style.value %} {{ style }}
                                 {% endfor %}
                                </li>
                           </ul>         
 
                           <ul class="food-pairings-list">
                                 {% for maker in product.metafields.custom.winemaker.value %} 
-                                    <li> <b> Food Pairings: </b> {% for pairing in product.metafields.custom.food_pairings.value %}{{pairing}} 
+                                    <li> <b> Food Pairings: </b> {% for pairing in product.metafields.custom.food_pairings.value %} {{ pairing }} 
                                     {% unless forloop.last %},{% endunless %}
                                 {% endfor %}  
                                 {% endfor %}  
