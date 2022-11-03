@@ -399,7 +399,7 @@ media-gallery {
 .range-ratings {
 
  justify-content: space-between; 
-
+display: inline-block;
 }
 
 .mega-menu__link--level-2:hover {
