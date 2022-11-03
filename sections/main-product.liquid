@@ -378,9 +378,10 @@
             {% endif %}
   
   {% assign denonized = product.metafields.custom.country_of_origin.value | replace: countries[i],denonyms[i] %}
-  {% endfor %}
 
  <h2>{{ denonized }}</h2>
+  {% endfor %}
+
 
 
   
