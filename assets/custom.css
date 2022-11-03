@@ -397,7 +397,7 @@ media-gallery {
 }
 
 .range-ratings {
-    display: flex;
+    display: inline;
     justify-content: space-between;
 }
 
