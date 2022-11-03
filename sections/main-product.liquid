@@ -365,8 +365,8 @@
             </li>
 <!-- Country Of Origin Replacement Test -->
 
-{% assign countries = "Australia, France, Germany, Spain" | split: ", "%}
-{% assign denonyms = "Australian, French, German, Spanish" | split: ", "%}
+{% assign countries = "Australia, France, Chile, Spain" | split: ", "%}
+{% assign denonyms = "Australian, French, Chilean, Spanish" | split: ", "%}
 {% assign d = countries.size | minus:1 %}
 {% for i in (0..d) %}
   {% assign denonized = product.metafields.custom.country_of_origin.value | replace: countries[i],denonyms[i] %}
