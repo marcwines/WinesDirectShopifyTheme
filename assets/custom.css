@@ -125,7 +125,7 @@ p {
   list-style-type: none;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+/*  justify-content: flex-start; */
   width: 100%;
   display: block;
   padding-left: 0px;
