@@ -373,13 +373,6 @@
 {% endfor %}
   {{ denonized }}
 
-   <li>
-      <b>Country Of Origin:</b> 
-          {% for origin in product.metafields.custom.country_of_origin.value %} 
-              <a href="/collections/{{product.metafields.custom.country_of_origin.value | handleize }}">{{ product.metafields.custom.country_of_origin.value }}</a>
-              {% unless forloop.last %},{% endunless %}
-          {% endfor %}         
-    </li>
   
 <!--  Test Complete -->
             <li>
