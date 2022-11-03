@@ -366,7 +366,7 @@
             <li>
                 <b>Grapes:</b> 
                     {% for grape in product.metafields.custom.grapes.value %} 
-                        <a href="/collections/{{ grape | handleize }} }}">{{ grape }}</a>
+                        <a href="/collections/{{ grape | handleize }}">{{ grape }}</a>
                         {% unless forloop.last %},{% endunless %}
                     {% endfor %}         
             </li>
