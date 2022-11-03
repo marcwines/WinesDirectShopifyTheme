@@ -398,7 +398,7 @@ media-gallery {
 
 .range-ratings {
     display: inline;
-   /* justify-content: space-between; */
+   justify-content: space-between; 
  text-align-last: center;
 }
 
