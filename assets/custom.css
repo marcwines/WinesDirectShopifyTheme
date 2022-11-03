@@ -397,9 +397,8 @@ media-gallery {
 }
 
 .range-ratings {
-
  justify-content: space-between; 
-display: block;
+ display: inherit;
 }
 
 .mega-menu__link--level-2:hover {
