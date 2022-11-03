@@ -372,12 +372,11 @@
     {% for i in (0..d) %}
           {% if product.metafields.custom.country_of_origin == countries[i] %}
                   {% assign denonized = product.metafields.custom.country_of_origin.value | replace: countries[i],denonyms[i] %}
+            {{ denonized }}
           {% endif %}
     {% endfor %}
 
 
-
-  
 <!--  Test Complete -->
             <li>
                 <b>Grapes:</b> 
