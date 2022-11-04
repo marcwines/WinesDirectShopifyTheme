@@ -494,6 +494,7 @@ media-gallery {
     .winemaker-info-tab {
    overflow: hidden;
       transition: height 200ms;
+      display: none;
     }
 
     .winemaker-info-tab .active {
