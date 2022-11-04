@@ -364,18 +364,13 @@
                     {% endfor %}         
             </li>
 <!-- Country Of Origin Replacement Test -->
-
-{% assign countries = "France, Chile, Spain, Australia" | split: ", "%}
-{% assign denonyms = "French, Chilean, Spanish, Australian" | split: ", "%}
+{% assign countries = "France, Chile, Spain, Australia" | split: ", " %}
+{% assign denonyms = "French, Chilean, Spanish, Australian" | split: ", " %}
 {% assign denonized = product.metafields.custom.country_of_origin.value %}
-{% assign d = countries.size | minus:1 %}
-    {% for i in (0..d) %}
-          {% if product.metafields.custom.country_of_origin == countries[i] %}
-                  {% assign denonized = product.metafields.custom.country_of_origin.value | replace: countries[i],denonyms[i] %}
-            {{ denonized }}
-          {% endif %}
-    {% endfor %}
-
+{% for country in countries %}
+    {% assign denonized = replaced | replace: country, denonyms[forloop.index0] %}
+{% endfor %}
+{{ denonized }}
 
 <!--  Test Complete -->
             <li>
