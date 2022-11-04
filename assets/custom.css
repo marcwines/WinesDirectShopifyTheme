@@ -493,14 +493,13 @@ a {
     display:block;
 @media only screen and (max-width: 768px) {
     .winemaker-info-tab {
-    
     display: none;
     overflow: hidden;
     justify-content: space-evenly;
     align-items: flex-start;
     }
 
-   .winemaker-info-tab a {
+   .winemaker-info-tab .active {
     display:block;
     overflow: hidden;
     justify-content: space-evenly;
