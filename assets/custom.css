@@ -493,7 +493,7 @@ media-gallery {
 @media only screen and (max-width: 768px) {
     .winemaker-info-tab {
     visibility: hidden;
-    height: auto;
+    height: 0px;
     }
 
    .winemaker-info-tab .active {
