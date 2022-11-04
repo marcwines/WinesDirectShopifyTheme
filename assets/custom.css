@@ -492,6 +492,7 @@ media-gallery {
 
 @media only screen and (min-width: 600px) {
 .winemaker-info-tab {
+    content-visibility:hidden;
     display: none;
     overflow: hidden;
     justify-content: space-evenly;
