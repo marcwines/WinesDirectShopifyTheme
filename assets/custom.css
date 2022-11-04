@@ -504,10 +504,7 @@ media-gallery {
     }
 
 :root {
-    --brand-primary: {{ settings.color_primary }};
-    --brand-body-text: {{ settings.color_body_text }};
-    --brand-red: #E1625E;
-
+    --brand-red: #FFFFFF;
 }
 
 
