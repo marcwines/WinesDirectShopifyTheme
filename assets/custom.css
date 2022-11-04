@@ -493,13 +493,10 @@ media-gallery {
 @media only screen and (max-width: 768px) {
     .winemaker-info-tab {
    overflow: hidden;
+      transition: height 200ms;
     }
-  
-    .winemaker-info-tab .collapsable {
-   color: red;
-    }
-  
- .winemaker-info-tab .active {
+
+    .winemaker-info-tab .active {
     display: block;
     justify-content: space-evenly;
     align-items: flex-start;
