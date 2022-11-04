@@ -497,7 +497,7 @@ media-gallery {
 
    .winemaker-info-tab .active {
     display: block; 
-    overflow: active;
+    overflow: auto;
     justify-content: space-evenly;
     align-items: flex-start;
     }
