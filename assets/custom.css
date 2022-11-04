@@ -501,7 +501,7 @@ text-indent: 100%;
 
    .winemaker-info-tab .active {
     display: block; 
-    overflow: hidden;
+    overflow: active;
     justify-content: space-evenly;
     align-items: flex-start;
     }
