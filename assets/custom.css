@@ -500,7 +500,7 @@ media-gallery {
     }
 
     .responsive-tabs .active {
-    color: black;
+    color: #121212BF;
     border-bottom: 3px solid var(--brand-red); 
     }
 
