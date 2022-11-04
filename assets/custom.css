@@ -500,7 +500,7 @@ media-gallery {
 }
 
 .responsive-tabs .active {
-    /* color: var(--brand-red); */
+    color: none;
     border-bottom: 3px solid var(--brand-red); 
 }
 
