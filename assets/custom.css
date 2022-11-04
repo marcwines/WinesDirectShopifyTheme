@@ -491,7 +491,8 @@ media-gallery {
 }
 
 .winemaker-info-tab {
-    display: flex;overflow: hidden;
+    display: none;
+    overflow: hidden;
     justify-content: space-evenly;
     align-items: flex-start;
 }
