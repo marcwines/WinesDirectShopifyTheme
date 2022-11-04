@@ -492,7 +492,7 @@ media-gallery {
 
 @media only screen and (max-width: 768px) {
     .winemaker-info-tab {
-text-indent: 100%;
+    visibility: hidden;
     white-space: nowrap;
     overflow: hidden;
     justify-content: space-evenly;
