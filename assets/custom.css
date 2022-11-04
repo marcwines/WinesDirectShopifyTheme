@@ -492,7 +492,7 @@ media-gallery {
 
 @media only screen and (max-width: 768px) {
     .winemaker-info-tab {
-    visibility: collapse;
+    display: none;
  
     }
 
