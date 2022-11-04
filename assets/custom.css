@@ -491,18 +491,18 @@ media-gallery {
 }
 
 @media only screen and (max-width: 768px) {
-.winemaker-info-tab {
+    .winemaker-info-tab {
     content-visibility:hidden;
     display: none;
     overflow: hidden;
     justify-content: space-evenly;
     align-items: flex-start;
-}
+    }
 
-.responsive-tabs .active {
+    .responsive-tabs .active {
     color: none;
     border-bottom: 3px solid var(--brand-red); 
-}
+    }
 
 }
 
