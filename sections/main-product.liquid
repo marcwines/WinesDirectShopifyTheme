@@ -364,14 +364,14 @@
                     {% endfor %}         
             </li>
 <!-- Country Of Origin Replacement Test -->
-{% assign countries = "France, Chile, Spain, Australia" | split: ", " %}
-{% assign denonyms = "French, Chilean, Spanish, Australian" | split: ", " %}
+% assign countries = "France, Chile, Spain, Australia" | split: ", "%}
+{% assign denonyms = "French, Chilean, Spanish, Australian" | split: ", "%}
+{% assign d = countries.size | minus:1 %}
 {% assign denonized = product.metafields.custom.country_of_origin.value %}
-{% for country in countries %}
-    {% assign denonized = replaced | replace: country, denonyms[forloop.index0] %}
+{% for i in (0..d) %}
+  {% assign denonized = denonized | replace: countries[i],denonyms[i] %}
 {% endfor %}
-{{ denonized }}
-
+  {{ denonized }}
 <!--  Test Complete -->
             <li>
                 <b>Grapes:</b> 
