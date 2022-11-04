@@ -492,7 +492,7 @@ media-gallery {
 
 @media only screen and (min-width: 600px) {
 .winemaker-info-tab {
-    display: flex;
+    display: none;
     overflow: hidden;
     justify-content: space-evenly;
     align-items: flex-start;
