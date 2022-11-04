@@ -490,7 +490,7 @@ media-gallery {
 
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 750px) {
 .winemaker-info-tab {
     content-visibility:hidden;
     display: none;
