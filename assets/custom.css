@@ -493,9 +493,6 @@ media-gallery {
 @media only screen and (max-width: 768px) {
     .winemaker-info-tab {
     visibility: hidden;
-    overflow: hidden;
-    justify-content: space-evenly;
-    align-items: flex-start;
     }
 
    .winemaker-info-tab .active {
