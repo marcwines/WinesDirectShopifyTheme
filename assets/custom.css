@@ -499,6 +499,13 @@ media-gallery {
     align-items: flex-start;
 }
 
+.responsive-tabs .active {
+    /* color: var(--brand-red); */
+    /* border-bottom: 3px solid var(--brand-red); */
+}
+
+}
+
 
 .winemaker-info-tab {
     display: flex;
