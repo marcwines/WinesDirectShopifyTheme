@@ -501,8 +501,12 @@ media-gallery {
 
     .responsive-tabs .active {
     color: #121212BF;
-    border-bottom: 3px solid var(--brand-red); 
     }
+
+:root {
+    --brand-primary: {{ settings.color_primary }};
+    --brand-body-text: {{ settings.color_body_text }};
+    --brand-red: #E1625E;
 
 }
 
