@@ -497,7 +497,7 @@ media-gallery {
     }
 
    .winemaker-info-tab .active {
-    visiblity: 
+    visibility: Visible;
     height: auto;
     overflow: auto;
     justify-content: space-evenly;
