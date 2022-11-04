@@ -505,26 +505,17 @@ media-gallery {
 
     .responsive-tabs .active {
     color: #121212BF;
+    max-height: 0;
+	max-width: 0;
+	opacity: 0;
+	overflow: hidden;
+	white-space:nowrap;
     }
 
 :root {
     --brand-red: #FFFFFF;
 }
 
-
-.winemaker-info-tab {
-    display: flex;
-    overflow: hidden;
-    justify-content: space-evenly;
-    align-items: flex-start;
-}
-
-.winemaker-info-tab {
-    display: flex;
-    overflow: hidden;
-    justify-content: space-evenly;
-    align-items: flex-start;
-}
 
 .winemaker-tab-image {
   margin-right: 1em;
