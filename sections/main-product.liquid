@@ -372,7 +372,7 @@
 {% for i in (0..d) %}
   {% assign denonized = denonized | replace: countries[i],denonyms[i] %}
 {% endfor %}
-  {{ denonized | escape }}
+  {{ denonized | escape | remove: "[]"}}
 
   
 <!--  Test Complete -->
