@@ -501,7 +501,7 @@ media-gallery {
 
 .responsive-tabs .active {
     /* color: var(--brand-red); */
-    /* border-bottom: 3px solid var(--brand-red); */
+    border-bottom: 3px solid var(--brand-red); 
 }
 
 }
