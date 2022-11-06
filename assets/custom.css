@@ -214,6 +214,7 @@ ul.additional-details-list,ul.food-pairings-list,ul.wine-methods-list {
 
 @media screen and (min-width: 100%)
 .collection-hero__title+.collection-hero__description {
+    width: 100%;
 }
 
 .collection-hero__text-wrapper {
