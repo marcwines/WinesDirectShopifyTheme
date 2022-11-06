@@ -540,7 +540,7 @@ media-gallery {
 
 .product__info-wrapper .price-item--regular { font-size: 24px;}
 
-@media screen and (max-width: 750px) {
+@media (max-width:768px) {
   .sticky-button {
       display: block;
       /*   position: fixed; */
