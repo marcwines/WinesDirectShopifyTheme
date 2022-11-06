@@ -219,9 +219,9 @@ ul.additional-details-list,ul.food-pairings-list,ul.wine-methods-list {
     margin-bottom: 4rem;
 }
 
-.collection-hero__text-wrapper {
+.collection-hero {
     flex-basis: 100%;
-    margin-botom: 200px;
+    margin-botom: 200px!important;
 }
 
 .product-page-rule {
