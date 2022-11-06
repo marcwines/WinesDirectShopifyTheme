@@ -358,6 +358,12 @@
             </li>
             <li>
                 <b>Country Of Origin:</b> 
+                    {% for origin in product.metafields.custom.country_of_origin.value %} 
+                        <a href="/collections/{{product.metafields.custom.country_of_origin.value | handleize }}">{{ product.metafields.custom.country_of_origin.value }}</a>
+                        {% unless forloop.last %},{% endunless %}
+                    {% endfor %}         
+            </li>
+<!-- Country Of Origin Replacement Test -->
 
 {% assign countries = "France, Chile, Spain, Australia" | split: ", "%}
 {% assign denonyms = "French, Chilean, Spanish, Australian" | split: ", "%}
@@ -366,18 +372,10 @@
 {% for i in (0..d) %}
   {% assign denonized = denonized | replace: countries[i],denonyms[i] %}
 {% endfor %}
+  {{ denonized | handleize }}
 
   
-  
-                    {% for origin in product.metafields.custom.country_of_origin.value %} 
-                        <a href="/collections/buy-{{ denonized | handleize }}-wine-online"> {{ product.metafields.custom.country_of_origin.value }} </a>
-                        {% unless forloop.last %},{% endunless %}
-                    {% endfor %}         
-            </li>
-<!-- Country Of Origin Replacement Test -->
-
-
-  
+  <a href="/collections/buy-{{ denonized | handleize }}-wine-online"> {{ product.metafields.custom.country_of_origin.value }} </a>
   
 <!--  Test Complete -->
             <li>
@@ -750,7 +748,7 @@
                       <button
                         type="submit"
                         name="add"
-                        class="{% if section.settings.enable_sticky_addtocart_button %}sticky-button {% endif %} product-form__submit button button--full-width {% if block.settings.show_dynamic_checkout %}button--secondary{% else %}button--primary{% endif %}"
+                        class="product-form__submit button button--full-width {% if block.settings.show_dynamic_checkout %}button--secondary{% else %}button--primary{% endif %}"
                         {% if product.selected_or_first_available_variant.available == false %}
                           disabled
                         {% endif %}
@@ -1714,12 +1712,6 @@
       "id": "enable_sticky_info",
       "default": true,
       "label": "t:sections.main-product.settings.enable_sticky_info.label"
-    },
- {
-      "type": "checkbox",
-      "id": "enable_sticky_addtocart_button",
-      "default": true,
-      "label": "Enable Sticky Add to Cart button"
     },
     {
       "type": "header",
