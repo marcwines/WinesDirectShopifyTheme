@@ -220,6 +220,8 @@ ul.additional-details-list,ul.food-pairings-list,ul.wine-methods-list {
     width: 100%;
 }
 
+.category-description { width: 100%; }
+
 
 .collection-hero__text-wrapper {
     flex-basis: 100%;
