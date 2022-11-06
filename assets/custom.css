@@ -212,11 +212,10 @@ ul.additional-details-list,ul.food-pairings-list,ul.wine-methods-list {
 
 /* Collection page text block */
 
-@media screen and (min-width: 750px)
-.collection-hero__title+.collection-hero__description {
-    font-size: 1.8rem;
-    margin-top: 2rem;
-    margin-bottom: 10rem!important;
+.collection-hero {
+    background: var(--brand-bg);
+    color: var(--brand-body-text);
+    bottom-padding: 300px;
 }
 
 .product-page-rule {
