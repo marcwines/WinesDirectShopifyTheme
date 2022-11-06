@@ -212,7 +212,6 @@ ul.additional-details-list,ul.food-pairings-list,ul.wine-methods-list {
 
 /* Collection page text block */
 
-@media screen and (min-width: 1px)
 .collection-hero__title+.collection-hero__description {
     font-size: 1.8rem;
     margin-top: 2rem;
