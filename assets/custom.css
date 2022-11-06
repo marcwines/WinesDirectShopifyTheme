@@ -210,13 +210,18 @@ ul.additional-details-list,ul.food-pairings-list,ul.wine-methods-list {
       font-family: roc-grotesk, sans-serif!important; font-weight: 500;
 }
 
-/* Collection page text block  */
+/* Collection page text block */
 
 @media screen and (min-width: 750px)
 .collection-hero__title+.collection-hero__description {
     font-size: 1.8rem;
     margin-top: 2rem;
     margin-bottom: 4rem;
+}
+
+.collection-hero__text-wrapper {
+    flex-basis: 100%;
+    margin-botom: 200px;
 }
 
 .product-page-rule {
