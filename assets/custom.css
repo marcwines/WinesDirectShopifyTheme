@@ -212,10 +212,9 @@ ul.additional-details-list,ul.food-pairings-list,ul.wine-methods-list {
 
 /* Collection page text block */
 
-.collection-hero {
-    background: var(--brand-bg);
-    color: var(--brand-body-text);
-    bottom-padding: 300px;
+.collection-hero__text-wrapper {
+    flex-basis: 100%;
+    padding: 100px!important;
 }
 
 .product-page-rule {
