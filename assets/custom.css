@@ -542,7 +542,7 @@ media-gallery {
 
 @media only screen and (max-width: 600px) {
   .sticky-button {
-      display: block;
+      display: none;
       /*   position: fixed; */
       bottom: 0;
       left: 0;
@@ -553,7 +553,7 @@ media-gallery {
 
 @media only screen and (min-width: 601px) {
   .sticky-button {
-      display: none;
+     display: block;
       /*   position: fixed; */
       bottom: 0;
       left: 0;
