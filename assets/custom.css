@@ -214,7 +214,7 @@ ul.additional-details-list,ul.food-pairings-list,ul.wine-methods-list {
 
 .collection-hero__text-wrapper {
     flex-basis: 100%;
-    padding: 100px!important;
+    padding-bottom: 100px!important;
 }
 
 .product-page-rule {
