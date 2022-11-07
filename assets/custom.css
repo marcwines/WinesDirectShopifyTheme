@@ -598,7 +598,7 @@ pickup-availability {
       color: red!important;
   }
 .additional-details a:visited {
-      color: var(--brand-red)!important;
+      color: red!important;
   }
 .style-link {
         color: var(--brand-red)!important;
