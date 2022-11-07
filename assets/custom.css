@@ -583,3 +583,6 @@ media-gallery {
 .button-add-remove-wishlist {
   text-align: left!important;
 }
+.bi-heart-fill {
+  color: var(--brand-red);
+}
