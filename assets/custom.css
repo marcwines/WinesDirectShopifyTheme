@@ -126,7 +126,8 @@ p {
     --color-button-text: var(--color-foreground);
     width: 90%;
     position: absolute;
-    bottom: 0;
+    bottom:5%;
+  
 }
 
 /* Quick View Modal */
