@@ -451,7 +451,7 @@
                                     {{  product.metafields.custom.abv.value }}%
                                </li>
                                 <li><b>Style:</b>
-                               <a href="/collections/buy-{{ style }}-online ">{% for style in product.metafields.custom.style.value %} {{ style }}</a>
+                               <a href="/collections/buy-{{ product.metafields.custom.style.value }}-online ">{% for style in product.metafields.custom.style.value %} {{ style }}</a>
                                 {% endfor %}
                                </li>
                           </ul>         
