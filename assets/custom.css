@@ -541,30 +541,10 @@ media-gallery {
 }
 
 .announcement-bar {
-  background: var(--brand-red);
+  background: var(--brand-red)!important;
 }
 
-@media only screen and (min-width: 768px) {
-  
-  .responsive-tabs {
-    }
-    .responsive-tabs dt {
-      float: left;
-      border-top: 0;
-      }
-    .responsive-tabs .active + dd {
-      display: none;
-      }
- 
-  .responsive-tabs-placeholder {
-    
-    clear: both;
-    display: block;
-    padding: 1em;
-    border-top: 1px solid #ccc;
-    }
 
-}
 
 @media only screen and (max-width: 768px) {
     .winemaker-info-tab {
@@ -589,11 +569,6 @@ media-gallery {
     }
 
 }
-  
-:root {
-    --brand-red: #FFFFFF;
-}
-
 
 .product__info-wrapper .price-item--regular { font-size: 24px;}
 .button-add-remove-wishlist {
@@ -633,4 +608,25 @@ pickup-availability {
 .price__regular > .price-item--regular {
   font-weight: 700!important;
   font-size: 24px!important;
+}
+
+@media only screen and (min-width: 768px) {
+  
+  .responsive-tabs {
+    }
+    .responsive-tabs dt {
+      float: left;
+      border-top: 0;
+      }
+    .responsive-tabs .active + dd {
+      display: none;
+      }
+ 
+  .responsive-tabs-placeholder {
+    clear: both;
+    display: block;
+    padding: 1em;
+    border-top: 1px solid #ccc;
+    }
+
 }
