@@ -337,11 +337,11 @@ ul.additional-details-list,ul.food-pairings-list,ul.wine-methods-list {
 }
 
 .natural-badge {
-    background-color: var(--brand-purple);
+    background-color: var(--brand-teal);
 }
 
 .biodynamic-badge {
-    background-color: var(--brand-teal);
+    background-color: var(--brand-purple);
 }
 
 .wine-basics-list a {
