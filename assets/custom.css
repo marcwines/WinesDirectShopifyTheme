@@ -322,6 +322,21 @@ ul.additional-details-list,ul.food-pairings-list,ul.wine-methods-list {
   line-height: 20px;
 }
 
+
+
+.global-media-settings {
+    background-color: rgba(0,0,0,0)!important;
+}
+
+.color-background-1,
+.color-background-2,
+.color-inverse,
+.color-accent-1,
+.color-accent-2 {
+    background-color: rgba(0,0,0,0)!important;
+}
+
+
 .custom-badge-wd {
   width: fit-content;
 }
@@ -617,16 +632,4 @@ pickup-availability {
 .price__regular > .price-item--regular {
   font-weight: 700!important;
   font-size: 24px!important;
-}
-
-.global-media-settings {
-    background-color: rgba(0,0,0,0)!important;
-}
-
-.color-background-1,
-.color-background-2,
-.color-inverse,
-.color-accent-1,
-.color-accent-2 {
-    background-color: rgba(0,0,0,0)!important;
 }
