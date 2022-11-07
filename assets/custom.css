@@ -132,6 +132,12 @@ width: 100%; }
   
 } */
 
+/* Wishlist */
+.button-add-remove-wishlist button button--full-width button--tertiary {
+background: red;
+}
+
+
 /* Quick View Modal */
 
 .img-fluid {
