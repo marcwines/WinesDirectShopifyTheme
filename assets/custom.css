@@ -83,9 +83,7 @@ p {
     border: 1px #cdcdcd; !important;
 }
 
-.button-add-remove-wishlist {
-  padding-left: 0!important;
-}
+
 /* Navigation links */
 
 .mega-menu__link--level-2:not(:only-child) {
@@ -183,6 +181,14 @@ width: 100%; }
 .char-ratings > li {
   margin-bottom: 1em;
   
+}
+
+li.product__media-item>.product__media {
+  background: red!important;
+}
+
+.article-card-wrapper .card-information {
+  padding: 2em;
 }
 
 .bar-cont {
