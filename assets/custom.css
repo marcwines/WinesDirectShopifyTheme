@@ -594,10 +594,10 @@ pickup-availability {
 .product__pickup-availabilities {
   display: none!important;
 }
-.additional-details a {
+.additional-details > a {
       color: var(--brand-red);
   }
 
-.additional-details a:visited {
+.additional-details > a:visited {
       color: var(--brand-red);
   }
