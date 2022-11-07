@@ -135,7 +135,7 @@ width: 100%; }
 /* Wishlist */
 .button-add-remove-wishlist button button--full-width button--tertiary {
 left: 20px;
-background: red;
+background: red!important;
 }
 
 
