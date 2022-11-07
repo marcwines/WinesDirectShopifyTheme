@@ -597,18 +597,12 @@ pickup-availability {
 .style-link:visited {
         color: var(--brand-red)!important;
 }
-.price__regular {
-  font-weight: 700!important;
-  font-size: 24px!important;
+
+#shopify-section-announcement-bar {
+  background: var(--brand-red)!important;
 }
-.price-item.price-item--regular {
-  font-weight: 700!important;
-  font-size: 24px!important;
-}
-.price__regular > .price-item--regular {
-  font-weight: 700!important;
-  font-size: 24px!important;
-}
+
+
 
 @media only screen and (min-width: 768px) {
   
