@@ -601,6 +601,10 @@ pickup-availability {
         color: var(--brand-red)!important;
 }
 
+.product-header {
+  font-weight: 700;
+}
+
 #shopify-section-announcement-bar {
   background: var(--brand-red)!important;
   font-weight: 700!important;
