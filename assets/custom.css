@@ -21,7 +21,7 @@ sticky-header {
 }
 
 .card.article-card .card-information {
-  padding: 2em;
+  padding: 2em!important;
 }
 
 
