@@ -129,6 +129,18 @@ p {
     bottom: 0;
 }
 
+/* Quick View Modal */
+
+.img-fluid {
+    max-width: 80%;
+    height: auto;
+}
+
+h1, .h1 {
+    font-size: calc(var(--font-heading-scale) * 4rem);
+}
+
+
 /* Product List Label (e.g. 'Vegan', 'Organic') */
 
 .custom-badge-wd {
