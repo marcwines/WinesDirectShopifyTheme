@@ -29,7 +29,7 @@ sticky-header {
 }
 
 .article-card__excerpt {
-  text-align: left;
+  text-align: left!important;
 }
 
 
