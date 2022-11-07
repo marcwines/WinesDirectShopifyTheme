@@ -117,7 +117,7 @@ p {
     font-style: normal;
     font-size: 18px;
     text-transform: capitalize;
-    width: 100%;
+
 }
 
 .product-form__submit button button--full-width button--primary {
@@ -126,7 +126,8 @@ p {
 
 /* Quick View Button */
 
-
+.color-background-2 .button--secondary, .color-accent-1 .button--secondary, .color-accent-2 .button--secondary, .color-inverse .button--secondary {
+width: 100%; }  
 
 /* Quick View Modal */
 
