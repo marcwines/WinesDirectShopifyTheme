@@ -222,7 +222,7 @@
           "cart_goal_value": 45,
           "cart_goal_description_before": "<p><strong>[amount]<\/strong> away from FREE Nationwide Delivery!<\/p>",
           "cart_goal_color_before": "#fd7e14",
-          "cart_goal_description_after": "<p>Congrats! You're eligible for <strong>FREE Nationwide Delivery.<\/strong><\/p>",
+          "cart_goal_description_after": "<p>Congratulations! You're eligible for <strong>FREE Nationwide Delivery.<\/strong><\/p>",
           "cart_goal_color_after": "#158754",
           "cart_upsells_enable": true,
           "cart_upsells_title": "Recommended to you",
