@@ -540,6 +540,10 @@ media-gallery {
   
 }
 
+.announcement-bar {
+  background: var(--brand-red);
+}
+
 @media only screen and (min-width: 768px) {
   
   .responsive-tabs {
@@ -588,11 +592,6 @@ media-gallery {
   
 :root {
     --brand-red: #FFFFFF;
-}
-
-
-.winemaker-tab-image {
-  margin-right: 1em;
 }
 
 
