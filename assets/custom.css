@@ -626,3 +626,12 @@ pickup-availability {
 .image-with-text__media-item.image-with-text__media-item--medium.image-with-text__media-item--middle.grid__item > div > img {
   background: red!important;
 }
+  
+.image-with-text__media-item.image-with-text__media-item--medium.image-with-text__media-item--middle.grid__item > img {
+  background: red!important;
+}
+
+
+.image-with-text__media-item.image-with-text__media-item--medium.image-with-text__media-item--middle.grid__item img {
+  background: red!important;
+}
