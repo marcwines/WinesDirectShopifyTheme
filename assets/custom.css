@@ -375,7 +375,7 @@ ul.additional-details-list,ul.food-pairings-list,ul.wine-methods-list {
 /* Product Cards */
 
 .card.card--media {
-  background: #f0eee7;
+  background-color: var(--brand-bg)!important;
 }
 
 .card__heading {
