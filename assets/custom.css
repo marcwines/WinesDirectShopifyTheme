@@ -590,3 +590,7 @@ media-gallery {
 pickup-availability {
   display: none!important;
 }
+
+.product__pickup-availabilities {
+  display: none!important;
+}
