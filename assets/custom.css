@@ -133,6 +133,7 @@ p {
 
 .img-fluid {
     max-width: 100%;
+    width: 85%;
     height: auto;
     background: #f0eee7;
 }
