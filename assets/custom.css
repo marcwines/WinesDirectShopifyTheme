@@ -131,6 +131,10 @@ p {
 
 /* Quick View Modal */
 
+body { overflow: auto; }
+
+
+
 @media (min-width: 990px)
 #eg-quick-view-modal .modal-body > div {
     overflow: hidden!important;
