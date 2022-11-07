@@ -622,3 +622,12 @@ pickup-availability {
 .global-media-settings {
     background-color: rgba(0,0,0,0)!important;
 }
+
+body,
+.color-background-1,
+.color-background-2,
+.color-inverse,
+.color-accent-1,
+.color-accent-2 {
+    background-color: rgba(0,0,0,0)!important;
+}
