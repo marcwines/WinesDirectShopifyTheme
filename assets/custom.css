@@ -129,7 +129,7 @@ p {
 @media only screen and (max-width: 768px) { 
 
     .organic-badge {
-    margin-bottom: 30px;
+    margin-bottom: 0px;
     }
   
     .vegan-badge {
