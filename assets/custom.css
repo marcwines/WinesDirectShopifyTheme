@@ -1,5 +1,8 @@
 /* Colour Declarations */
 
+body {
+  color:  #444945;
+}
 
 :root {
     --brand-primary: {{ settings.color_primary }};
