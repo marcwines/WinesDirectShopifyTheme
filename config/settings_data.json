@@ -259,7 +259,7 @@
           "product_title_size": "h2",
           "product_show_description": true,
           "product_description_max_length": "400",
-          "product_show_form": true,
+          "product_show_form": false,
           "product_show_learn_more_btn": true,
           "product_learn_more_btn_text": "Full details →",
           "carousel_show_controls": true,
