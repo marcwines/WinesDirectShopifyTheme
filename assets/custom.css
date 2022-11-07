@@ -131,23 +131,6 @@ p {
 
 /* Quick View Modal */
 
-body { overflow: auto; }
-
-
-
-@media (min-width: 990px)
-#eg-quick-view-modal .modal-body > div {
-    overflow: hidden!important;
-}
-
-.eg-quick-view-content-wrapper {
-    overflow: hidden!important;
-}
-
-.eg-quick-view-modal {
-    overflow: hidden!important;
-}
-
 .img-fluid {
     max-width: 100%;
     width: 96%;
