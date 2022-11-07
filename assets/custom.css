@@ -399,7 +399,7 @@ ul.additional-details-list,ul.food-pairings-list,ul.wine-methods-list {
   font-size: 13px;
 }
 
-.article-card-wrapper > .card-information {
+.card-article > .card-information {
   padding: 2em;
 }
 
