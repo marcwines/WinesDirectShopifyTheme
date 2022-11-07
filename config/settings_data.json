@@ -255,7 +255,7 @@
           "modal_position": "modal-dialog-centered",
           "modal_size": "modal-xl",
           "show_prev_next_buttons": true,
-          "product_img_orientation": "square",
+          "product_img_orientation": "landscape",
           "product_title_size": "h2",
           "product_show_description": true,
           "product_description_max_length": "240",
