@@ -121,6 +121,7 @@ p {
 
 
 /* Product List Label (e.g. 'Vegan', 'Organic') */
+
 .custom-badge-wd {
     margin-left: 10px;
 }
@@ -132,7 +133,12 @@ p {
 
     .vegan-badge {
     margin-bottom: 0px;
-}
+    }
+
+    
+    .sustainable-badge {
+    margin-bottom: 0px;
+    }
 }
 
 /* Wine Characteristic Scales  */
