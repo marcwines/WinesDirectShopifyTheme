@@ -132,21 +132,8 @@ p {
 /* Quick View Modal */
 
 .img-fluid {
-    max-width: 100%;
-    width: 85%;
-    height: auto;
     background: #f0eee7;
 }
-
-@media (min-width: 990px)
-#eg-quick-view-content-wrapper {
-    left: 46%!important;
-}
-
-h1, .h1 {
-    font-size: calc(var(--font-heading-scale) * 4rem);
-}
-
 
 /* Product List Label (e.g. 'Vegan', 'Organic') */
 
