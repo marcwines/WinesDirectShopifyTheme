@@ -184,7 +184,7 @@ width: 100%; }
 }
 
 li.product__media-item > .product__media {
-  background: red;
+  background: red!important;
 }
 
 .bar-cont {
