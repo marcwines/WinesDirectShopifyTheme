@@ -123,30 +123,6 @@ p {
 
 .color-background-2 .button--secondary, .color-accent-1 .button--secondary, .color-accent-2 .button--secondary, .color-inverse .button--secondary {
 width: 100%; }  
-/* IN PROGRESS 
---color-button: var(--color-background);
-    --color-button-text: var(--color-foreground);
-    width: 90%;
-    position: absolute;
-    bottom: -25px;
-  
-} */
-
-/* Wishlist */
-/* .product-form-template--16593101095126__main {
-width: 440px;
-} */
-
-
-
-.product__info-wrapper .button-add-remove-wishlist {
-width: 80%;
-}
-
-@media only screen and (max-width: 768px) {
-.product__info-wrapper .button-add-remove-wishlist {
-left: 30%;
-}
 
 /* Quick View Modal */
 
