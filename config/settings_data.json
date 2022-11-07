@@ -256,7 +256,7 @@
           "modal_size": "modal-xl",
           "show_prev_next_buttons": true,
           "product_img_orientation": "square",
-          "product_title_size": "h2",
+          "product_title_size": "h1",
           "product_show_description": true,
           "product_description_max_length": "400",
           "product_show_form": true,
