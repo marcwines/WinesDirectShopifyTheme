@@ -140,8 +140,7 @@ p {
 
 @media (min-width: 990px)
 #eg-quick-view-content-wrapper {
-    overflow: scroll;
-    left: 47%!important;
+    left: 46%;
 }
 
 h1, .h1 {
