@@ -124,7 +124,7 @@ p {
 .color-background-2 .button--secondary, .color-accent-1 .button--secondary, .color-accent-2 .button--secondary, .color-inverse .button--secondary {
     --color-button: var(--color-background);
     --color-button-text: var(--color-foreground);
-    width: 100%;
+    width: 90%;
     position: absolute;
     bottom: 0;
     left: 0;
