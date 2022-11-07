@@ -607,11 +607,15 @@ pickup-availability {
         color: var(--brand-red)!important;
 }
 .price__regular {
-    font-weight: 700!important;
+  font-weight: 700!important;
   font-size: 24px!important;
 }
-  
 .price-item.price-item--regular {
   font-weight: 700!important;
+  font-size: 24px!important;
+}
+
+.price__regular > .price-item--regular {
+    font-weight: 700!important;
   font-size: 24px!important;
 }
