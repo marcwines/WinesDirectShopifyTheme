@@ -1,12 +1,1390 @@
+
+{% liquid
+    case section.settings.product_img_orientation
+        when 'square'
+            assign product_img_width  = 900
+            assign product_img_height = 900
+        when 'landscape'
+            assign product_img_width  = 900
+            assign product_img_height = 600
+        when 'potrait'
+            assign product_img_width  = 600
+            assign product_img_height = 900
+    endcase
+
+    assign product_img_size = product_img_width | append: 'x' | append: product_img_height
+%}
+
+{% comment %}theme-check-disable{% endcomment %}
+<link 
+    rel="stylesheet" 
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap-utilities.min.css" 
+    integrity="sha256-SYZ4TAMHw3/Lv45coEH6k+nJj3Z/cDrNxDLT/srSQ/g=" 
+    crossorigin="anonymous">
+{% comment %}theme-check-enable{% endcomment %}
+
+<style>
+/*
+    General styles
+*/
+[type=button]:not(:disabled), 
+[type=reset]:not(:disabled), 
+[type=submit]:not(:disabled), 
+button:not(:disabled) {
+    cursor: pointer;
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+.small {
+    font-size: .875em;
+}
+
+.text-ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* 
+    Bootstrap Modal 
+    https://github.com/twbs/bootstrap/blob/main/dist/css/bootstrap.css
+*/
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1055;
+    display: none;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    outline: 0;
+}
+
+.modal-dialog {
+    position: relative;
+    width: auto;
+    margin: 0.5rem;
+    pointer-events: none;
+}
+
+.modal.fade .modal-dialog {
+    transition: transform 0.3s ease-out;
+    transform: translate(0, -50px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .modal.fade .modal-dialog {
+      transition: none;
+    }
+}
+
+.modal.show .modal-dialog {
+    transform: none;
+}
+
+.modal.modal-static .modal-dialog {
+    transform: scale(1.02);
+}
+
+.modal-dialog-scrollable {
+    height: calc(100% - 1rem);
+}
+
+.modal-dialog-scrollable .modal-content {
+    max-height: 100%;
+    overflow: hidden;
+}
+
+.modal-dialog-scrollable .modal-body {
+    overflow-y: auto;
+}
+
+.modal-dialog-centered {
+    display: flex;
+    align-items: center;
+    min-height: calc(100% - 1rem);
+}
+
+.modal-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    pointer-events: auto;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 0.3rem;
+    outline: 0;
+}
+
+.modal-backdrop {
+    display: block !important;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1050;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000;
+}
+
+.modal-backdrop.fade {
+    opacity: 0;
+}
+
+.modal-backdrop.show {
+    opacity: 0.5;
+}
+
+.modal-header {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1rem;
+    border-bottom: 1px solid #dee2e6;
+    border-top-left-radius: calc(0.3rem - 1px);
+    border-top-right-radius: calc(0.3rem - 1px);
+}
+
+.modal-header .btn-close {
+    padding: 0.5rem 0.5rem;
+    margin: -0.5rem -0.5rem -0.5rem auto;
+}
+
+.modal-title {
+    margin-bottom: 0;
+    line-height: 1.5;
+}
+
+.modal-body {
+    position: relative;
+    flex: 1 1 auto;
+    padding: 1rem;
+}
+
+.modal-footer {
+    display: flex;
+    flex-wrap: wrap;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0.75rem;
+    border-top: 1px solid #dee2e6;
+    border-bottom-right-radius: calc(0.3rem - 1px);
+    border-bottom-left-radius: calc(0.3rem - 1px);
+}
+
+.modal-footer > * {
+    margin: 0.25rem;
+}
+
+@media (min-width: 576px) {
+    .modal-dialog {
+        max-width: 500px;
+        margin: 1.75rem auto;
+    }
+    .modal-dialog-scrollable {
+        height: calc(100% - 3.5rem);
+    }
+    .modal-dialog-centered {
+        min-height: calc(100% - 3.5rem);
+    }
+    .modal-sm {
+        max-width: 300px;
+    }
+}
+
+@media (min-width: 992px) {
+    .modal-lg,
+    .modal-xl {
+        max-width: 800px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .modal-xl {
+        max-width: 1140px;
+    }
+}
+
+.modal-fullscreen {
+    width: 100vw;
+    max-width: none;
+    height: 100%;
+    margin: 0;
+}
+
+.modal-fullscreen .modal-content {
+    height: 100%;
+    border: 0;
+    border-radius: 0;
+}
+
+.modal-fullscreen .modal-header {
+    border-radius: 0;
+}
+
+.modal-fullscreen .modal-body {
+    overflow-y: auto;
+}
+
+.modal-fullscreen .modal-footer {
+    border-radius: 0;
+} 
+
+@media (max-width: 575.98px) {
+    .modal-fullscreen-sm-down {
+        width: 100vw;
+        max-width: none;
+        height: 100%;
+        margin: 0;
+    }
+    .modal-fullscreen-sm-down .modal-content {
+        height: 100%;
+        border: 0;
+        border-radius: 0;
+    }
+    .modal-fullscreen-sm-down .modal-header {
+        border-radius: 0;
+    }
+    .modal-fullscreen-sm-down .modal-body {
+        overflow-y: auto;
+    }
+    .modal-fullscreen-sm-down .modal-footer {
+        border-radius: 0;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .modal-fullscreen-md-down {
+        width: 100vw;
+        max-width: none;
+        height: 100%;
+        margin: 0;
+    }
+    .modal-fullscreen-md-down .modal-content {
+        height: 100%;
+        border: 0;
+        border-radius: 0;
+    }
+    .modal-fullscreen-md-down .modal-header {
+        border-radius: 0;
+    }
+    .modal-fullscreen-md-down .modal-body {
+        overflow-y: auto;
+    }
+    .modal-fullscreen-md-down .modal-footer {
+        border-radius: 0;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .modal-fullscreen-lg-down {
+        width: 100vw;
+        max-width: none;
+        height: 100%;
+        margin: 0;
+    }
+    .modal-fullscreen-lg-down .modal-content {
+        height: 100%;
+        border: 0;
+        border-radius: 0;
+    }
+    .modal-fullscreen-lg-down .modal-header {
+        border-radius: 0;
+    }
+    .modal-fullscreen-lg-down .modal-body {
+        overflow-y: auto;
+    }
+    .modal-fullscreen-lg-down .modal-footer {
+        border-radius: 0;
+    }
+}
+
+@media (max-width: 1199.98px) {
+    .modal-fullscreen-xl-down {
+        width: 100vw;
+        max-width: none;
+        height: 100%;
+        margin: 0;
+    }
+    .modal-fullscreen-xl-down .modal-content {
+        height: 100%;
+        border: 0;
+        border-radius: 0;
+    }
+    .modal-fullscreen-xl-down .modal-header {
+        border-radius: 0;
+    }
+    .modal-fullscreen-xl-down .modal-body {
+        overflow-y: auto;
+    }
+    .modal-fullscreen-xl-down .modal-footer {
+        border-radius: 0;
+    }
+}
+
+@media (max-width: 1399.98px) {
+    .modal-fullscreen-xxl-down {
+        width: 100vw;
+        max-width: none;
+        height: 100%;
+        margin: 0;
+    }
+    .modal-fullscreen-xxl-down .modal-content {
+        height: 100%;
+        border: 0;
+        border-radius: 0;
+    }
+    .modal-fullscreen-xxl-down .modal-header {
+        border-radius: 0;
+    }
+    .modal-fullscreen-xxl-down .modal-body {
+        overflow-y: auto;
+    }
+    .modal-fullscreen-xxl-down .modal-footer {
+        border-radius: 0;
+    }
+}
+
+/*
+    Carousel
+    https://github.com/twbs/bootstrap/blob/main/dist/css/bootstrap.css
+*/
+.carousel {
+    position: relative;
+}
+
+.carousel.pointer-event {
+    touch-action: pan-y;
+}
+
+.carousel-inner {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel-inner::after {
+    display: block;
+    clear: both;
+    content: "";
+}
+
+.carousel-item {
+    position: relative;
+    display: none;
+    float: left;
+    width: 100%;
+    margin-right: -100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transition: transform 0.6s ease-in-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .carousel-item {
+      transition: none;
+    }
+}
+
+.carousel-item.active,
+.carousel-item-next,
+.carousel-item-prev {
+    display: block;
+}
+
+/* rtl:begin:ignore */
+.carousel-item-next:not(.carousel-item-start),
+.active.carousel-item-end {
+    transform: translateX(100%);
+}
+
+.carousel-item-prev:not(.carousel-item-end),
+.active.carousel-item-start {
+    transform: translateX(-100%);
+}
+
+/* rtl:end:ignore */
+.carousel-fade .carousel-item {
+    opacity: 0;
+    transition-property: opacity;
+    transform: none;
+}
+.carousel-fade .carousel-item.active,
+.carousel-fade .carousel-item-next.carousel-item-start,
+.carousel-fade .carousel-item-prev.carousel-item-end {
+    z-index: 1;
+    opacity: 1;
+}
+
+.carousel-fade .active.carousel-item-start,
+.carousel-fade .active.carousel-item-end {
+    z-index: 0;
+    opacity: 0;
+    transition: opacity 0s 0.6s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .carousel-fade .active.carousel-item-start,
+    .carousel-fade .active.carousel-item-end {
+        transition: none;
+    }
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 15%;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+    background: none;
+    border: 0;
+    opacity: 0.5;
+    transition: opacity 0.15s ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .carousel-control-prev,
+    .carousel-control-next {
+        transition: none;
+    }
+}
+
+.carousel-control-prev:hover, .carousel-control-prev:focus,
+.carousel-control-next:hover,
+.carousel-control-next:focus {
+    color: #fff;
+    text-decoration: none;
+    outline: 0;
+    opacity: 0.9;
+}
+
+.carousel-control-prev {
+    left: 0;
+}
+
+.carousel-control-next {
+    right: 0;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: 100% 100%;
+}
+
+.carousel-control-prev-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3e%3c/svg%3e");
+}
+
+.carousel-control-next-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+
+.carousel-indicators {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin-right: 15%;
+    margin-bottom: 1rem;
+    margin-left: 15%;
+    list-style: none;
+}
+
+.carousel-indicators [data-bs-target] {
+    box-sizing: content-box;
+    flex: 0 1 auto;
+    width: 30px;
+    height: 3px;
+    padding: 0;
+    margin-right: 3px;
+    margin-left: 3px;
+    text-indent: -999px;
+    cursor: pointer;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    opacity: 0.5;
+    transition: opacity 0.6s ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .carousel-indicators [data-bs-target] {
+        transition: none;
+    }
+}
+
+.carousel-indicators .active {
+    opacity: 1;
+}
+
+.carousel-caption {
+    position: absolute;
+    right: 15%;
+    bottom: 1.25rem;
+    left: 15%;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+    color: #fff;
+    text-align: center;
+}
+
+.carousel-dark .carousel-control-prev-icon,
+.carousel-dark .carousel-control-next-icon {
+    filter: invert(1) grayscale(100);
+}
+
+.carousel-dark .carousel-indicators [data-bs-target] {
+    background-color: #000;
+}
+
+.carousel-dark .carousel-caption {
+    color: #000;
+}
+
+
+/*
+    Btn close
+    https://github.com/twbs/bootstrap/blob/main/dist/css/bootstrap.css
+*/
+.btn-close {
+    box-sizing: content-box;
+    width: 1em;
+    height: 1em;
+    padding: 0.25em 0.25em;
+    color: #000;
+    background: transparent url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23000'%3e%3cpath d='M.293.293a1 1 0 011.414 0L8 6.586 14.293.293a1 1 0 111.414 1.414L9.414 8l6.293 6.293a1 1 0 01-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 01-1.414-1.414L6.586 8 .293 1.707a1 1 0 010-1.414z'/%3e%3c/svg%3e") center/1em auto no-repeat;
+    border: 0;
+    border-radius: 0.25rem;
+    opacity: 0.5;
+}
+.btn-close:hover {
+    color: #000;
+    text-decoration: none;
+    opacity: 0.75;
+}
+.btn-close:focus {
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+    opacity: 1;
+}
+.btn-close:disabled, .btn-close.disabled {
+    pointer-events: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    opacity: 0.25;
+}
+
+.btn-close-white {
+    filter: invert(1) grayscale(100%) brightness(200%);
+}
+
+/*
+    Fade transition
+*/
+.fade {
+    transition: opacity 0.15s linear;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .fade {
+        transition: none;
+    }
+}
+
+.fade:not(.show) {
+    opacity: 0;
+}
+
+/*
+    Overrides Bootstrap styles
+*/
+
+
+/*
+    'Quick view' buttons inside product cards
+*/
+.button--eg-quick-view {
+    min-height: auto; 
+    padding: 0;
+    height: 32px;
+    line-height: 32px; 
+    margin: 1.25rem 0; 
+    font-size: .8em;
+    position: relative;
+    overflow: hidden;
+  	z-index:2;
+}
+
+.button--eg-quick-view--text {
+    transition: all .2s ease-out;
+}
+
+.button--eg-quick-view:hover .button--eg-quick-view--text  {
+    transform: translateY(-50%);
+    opacity: 0
+}
+
+.button--eg-quick-view--eye {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+    transform: translate(-50%, 0);
+    transition: all .2s ease-out;
+}
+
+.button--eg-quick-view:hover .button--eg-quick-view--eye {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+}
+
+.button--eg-quick-view .loading-overlay__spinner {
+    display: none;
+}
+
+.button--eg-quick-view.btn-loading .button--eg-quick-view--text,
+.button--eg-quick-view.btn-loading .button--eg-quick-view--eye {
+    display: none;
+}
+
+.button--eg-quick-view.btn-loading .loading-overlay__spinner {
+    display: flex;
+}
+
+/*
+    Modal stylings
+*/
+#eg-quick-view-modal .modal-content {
+    overflow: visible;
+}
+
+#eg-quick-view-modal .btn-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 1.125rem;
+    z-index: 2;
+}
+
+.eg-quick-view-modal-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, .75);
+    border: 1px solid currentColor;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .2s ease-out;
+}
+
+.eg-quick-view-modal-control:disabled {
+    opacity: .5;
+    border-color: transparent;
+}
+
+.eg-quick-view-modal-control-icon {
+    pointer-events: none;
+}
+
+.eg-quick-view-modal-control-loading {
+    display: none;
+}
+
+.eg-quick-view-modal-control.btn-loading .eg-quick-view-modal-control-icon {
+    display: none;
+}
+
+.eg-quick-view-modal-control.btn-loading .eg-quick-view-modal-control-loading {
+    display: block;
+}
+
+#eg-quick-view-modal-prev {
+    left: -55px;
+}
+
+#eg-quick-view-modal-prev:not(:disabled):hover {
+    background-color: white;
+    left: -57px;
+}
+
+#eg-quick-view-modal-next {
+    right: -55px;
+}
+
+#eg-quick-view-modal-next:not(:disabled):hover {
+    background-color: white;
+    right: -57px;
+}
+
+@media (max-width: 700px) {
+    #eg-quick-view-modal-prev,
+    #eg-quick-view-modal-prev:not(:disabled):hover  {
+        left: 15px !important;
+    }
+    #eg-quick-view-modal-next,
+    #eg-quick-view-modal-next:not(:disabled):hover  {
+        right: 15px;
+    }
+}
+
+@media (max-width: 989px) {
+    #eg-quick-view-modal .modal-body {
+        padding: 0;
+    }
+    #eg-quick-view-content-wrapper {
+        padding: 1.75rem;
+    }
+}
+
+@media (min-width: 990px) {
+    #eg-quick-view-modal .modal-body {
+        display: flex;
+        align-items: center;
+        padding: 0;
+    }
+    #eg-quick-view-modal .modal-body > div {
+        width: 50%;
+        flex-shrink: 0;   
+    }
+    #eg-quick-view-carousel-wrapper {
+    }
+    #eg-quick-view-content-wrapper {
+        overflow: scroll;
+        position: absolute;
+        width: 50%;
+        height: 100%;
+        left: 50%;
+        padding: 2.5rem;
+    }
+}
+
+#eg-quick-view-modal .product__title {
+    margin-top: 0;
+}
+
+
+</style>
+
+<script>
+window.addEventListener('DOMContentLoaded', (event) => {
+    const modalElem = document.querySelector('#eg-quick-view-modal')
+
+    // Init Bootstrap script if 
+    const initBootstrapScript = () => {
+        if (!document.querySelector('#bootstrap-js')) {
+            const script = document.createElement('script')
+            script.setAttribute('id', 'bootstrap-js')
+            script.setAttribute('src', 'https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js')
+            script.setAttribute('integrity', 'sha256-cMPWkL3FzjuaFSfEYESYmjF25hCIL6mfRSPnW8OVvM4=')
+            script.setAttribute('crossorigin', 'anonymous')
+            document.head.appendChild(script)
+        }
+    }
+    initBootstrapScript()
+
+    // Shopify resize image (helper function)
+    // https://gist.github.com/DanWebb/cce6ab34dd521fcac6ba
+    const egResizeImageHelper = (src, size, crop = '') => src.replace(/_(pico|icon|thumb|small|compact|medium|large|grande|original|1024x1024|2048x2048|master)+\./g, '.')
+    .replace(/\.jpg|\.png|\.gif|\.jpeg/g, (match) => {
+        if (crop.length) {
+            // eslint-disable-next-line no-param-reassign
+            crop = `_crop_${crop}`;
+        }
+        return `_${size}${crop}${match}`;
+    });
+
+    // Shopify format money (helper function)
+    // https://gist.github.com/stewartknapman/8d8733ea58d2314c373e94114472d44c
+    const egFormatMoneyHelper = (cents, format) => {
+        if (typeof cents === 'string') {
+            // eslint-disable-next-line no-param-reassign
+            cents = cents.replace('.', '');
+        }
+        let value = '';
+        const placeholderRegex = /\{\{\s*(\w+)\s*\}\}/;
+        const formatString = (format || document.querySelector('#eg-quick-view-modal').dataset.moneyFormat);
+
+        function defaultOption(opt, def) {
+            return (typeof opt === 'undefined' ? def : opt);
+        }
+
+        function formatWithDelimiters(number, precision, thousands, decimal) {
+            precision = defaultOption(precision, 2);
+            thousands = defaultOption(thousands, ',');
+            decimal = defaultOption(decimal, '.');
+
+            if (Number.isNaN(number) || number == null) { return 0; }
+
+            number = (number / 100.0).toFixed(precision);
+
+            const parts = number.split('.');
+            const dollars = parts[0].replace(/(\d)(?=(\d\d\d)+(?!\d))/g, '$1' + thousands);
+            cents = parts[1] ? (decimal + parts[1]) : '';
+
+            return dollars + cents;
+        }
+
+        switch (formatString.match(placeholderRegex)[1]) {
+        case 'amount': value = formatWithDelimiters(cents, 2); break;
+        case 'amount_no_decimals': value = formatWithDelimiters(cents, 0); break;
+        case 'amount_with_comma_separator': value = formatWithDelimiters(cents, 2, '.', ','); break;
+        case 'amount_no_decimals_with_comma_separator': value = formatWithDelimiters(cents, 0, '.', ','); break;
+        }
+
+        return formatString.replace(placeholderRegex, value);
+    };
+
+    // Dynamically inject the 'quick view' buttons to product list items
+    const injectQuickViewButtons = () => {
+        if (document.querySelector('.card__content > .card__information .button--eg-quick-view')) {
+            return;
+        }
+       if (document.querySelector('.card-information > .card-information__wrapper.button--eg-quick-view')) {
+            return;
+       }
+        const htmlToInsert = `
+            <button 
+                type="button" 
+                class="button--eg-quick-view button button--secondary"
+                data-text="${modalElem.dataset.textBtnQuickView}"
+                onclick="openEgQuickViewModal(this)">
+                <span class="button--eg-quick-view--text">
+                    ${modalElem.dataset.textBtnQuickView}
+                </span>
+                <span class="button--eg-quick-view--eye">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-eye" viewBox="0 0 16 16">
+                        <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z"/>
+                        <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z"/>
+                    </svg>
+                </span>
+                <div class="loading-overlay__spinner">
+                    <svg aria-hidden="true" focusable="false" role="presentation" class="spinner" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+                        <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
+                    </svg>
+                </div>
+            </button>
+        `
+        document.querySelectorAll('.product-grid .card__content > .card__information').forEach((cardInformation) => {
+            cardInformation.insertAdjacentHTML('beforeend', htmlToInsert)
+        })
+        document.querySelectorAll('.product-grid .card-information > .card-information__wrapper').forEach((cardInformation) => {
+            cardInformation.insertAdjacentHTML('beforeend', htmlToInsert)
+        })
+
+    }
+    injectQuickViewButtons()
+
+    // Inject the buttons again if the url changes (handle Shopify's ajax for filters)
+    const lastUrl = location.href; 
+    new MutationObserver(() => {
+        if (location.href !== lastUrl) {
+            injectQuickViewButtons()
+        }
+    }).observe(document, {subtree: true, childList: true});
+
+    // Open 'Quick View' modal
+    window.openEgQuickViewModal = async (btn) => {
+        document.querySelectorAll('.product-grid').forEach((productList) => {
+            productList.removeAttribute('data-has-eg-quick-view-modal-open')
+        })
+        btn.closest('.product-grid').setAttribute('data-has-eg-quick-view-modal-open', 'true')
+
+        const productHandle = btn.closest('[data-product-handle]')?.dataset.productHandle
+
+        if (!productHandle?.length) {
+            console.log('%c You have not correctly implemented the "EG Quick View" changes. Please contact us at EcomGradautes.com', 'color: red')
+            return
+        }
+
+        btn.classList.add('btn-loading')
+        await buildEgQuickViewModal(productHandle)
+        btn.classList.remove('btn-loading')
+    }
+
+    // Build 'Quick View' Modal 
+    const buildEgQuickViewModal = async (productHandle) => {
+        // Fetch product data
+        const response = await fetch(`/products/${productHandle}.js`)
+        const product = await response.json()
+        console.log(product)
+
+        modalElem.setAttribute('data-product-handle', productHandle)
+
+        // Clean before the modal
+        document.querySelector('#eg-quick-view-carousel-wrapper').innerHTML = ''
+        document.querySelector('#eg-quick-view-content-wrapper').innerHTML = ''
+
+        // Build modal carousel
+        const productImagesArray = product.media.filter((image) => image.media_type === 'image')
+
+        let carouselItemsHtml = ''
+        let carouselIndicatorsHtml = ''
+        let formVariantsHtml = ''
+
+        productImagesArray.forEach((image, index) => {
+            carouselItemsHtml += `
+                <div class="carousel-item ${index === 0 ? 'active' : ''}">
+                    <img
+                        src="${egResizeImageHelper(image.src || 'no-image.gif', `${modalElem.dataset.productImgSize}`, 'center')}"
+                        alt="${image.alt ?? ''}"
+                        width="${modalElem.dataset.productImgSize}"
+                        height="${modalElem.dataset.productImgHeight}"
+                        class="img-fluid d-block"
+                        loading="lazy">
+                </div>
+            `
+            carouselIndicatorsHtml += `
+                <li>
+                    <button 
+                        type="button"
+                        data-bs-target="#eg-quick-view-carousel"
+                        data-bs-slide-to="${index}"
+                        class="${index === 0 ? 'active' : ''}"
+                        aria-current="${index === 0 ? 'true' : 'false'}"
+                        aria-label="Slide ${index}">
+                    </button>
+                </li>
+            `
+        })
+
+        product.variants.forEach((variant, index) => {
+            const featuredMediaPosition = variant.featured_media ? variant.featured_media.position : ''
+
+            formVariantsHtml += `
+                <option value="${variant.id}" data-featured-media-position="${featuredMediaPosition}" ${index === 0 ? 'selected' : ''}>
+                    ${variant.title} - ${egFormatMoneyHelper(variant.price)}
+                </option>
+            `
+        })
+
+        modalElem.querySelector('#eg-quick-view-carousel-wrapper').insertAdjacentHTML('afterbegin', `
+            <div id="eg-quick-view-carousel" class="carousel slide ${modalElem.dataset.carouselStyle}" data-bs-ride="carousel" data-bs-interval="false">
+                <div class="carousel-inner">
+                    ${carouselItemsHtml}
+                </div>
+                <ul class="carousel-indicators ${modalElem.dataset.carouselShowIndicators === 'false' || productImagesArray.length < 2 ? 'd-none' : ''}" aria-hidden="true">
+                    ${carouselIndicatorsHtml}
+                </ul>
+                <div class="carousel-controls ${modalElem.dataset.carouselShowControls === 'false' || productImagesArray.length < 2 ? 'd-none' : ''}">
+                    <button
+                        class="carousel-control carousel-control-prev"
+                        type="button"
+                        data-bs-target="#eg-quick-view-carousel"
+                        data-bs-slide="prev"
+                        aria-label="Previous">
+                        <span class="carousel-control-icon carousel-control-prev-icon"></span>
+                    </button>
+                    <button 
+                        class="carousel-control carousel-control-next"
+                        type="button" 
+                        data-bs-target="#eg-quick-view-carousel" 
+                        data-bs-slide="next"
+                        aria-label="Next">
+                        <span class="carousel-control-icon carousel-control-next-icon"></span>
+                    </button>
+                </div>
+            </div>
+        `)
+
+        // Build Modal Content
+        modalElem.querySelector('#eg-quick-view-content-wrapper').insertAdjacentHTML('afterbegin', `
+            <h2 id="eg-quick-view-modal-product-title" class="product__title ${modalElem.dataset.productTitleSize}">
+                ${product.title}
+            </h2>
+            <p class="product-price price--large">
+                <s class="product-price-compare me-2" style="${product.compare_at_price > product.price ? '' : 'display: none;'}">
+                    <span class="visually-hidden">
+                        ${modalElem.dataset.textPriceRegular}
+                    </span>
+                    ${egFormatMoneyHelper(product.price)}
+                </s>
+                <span class="product-price-final">
+                    <span class="product-price-from ${!product.price_varies ? 'd-none' : ''}">
+                        ${modalElem.dataset.textPriceFrom}
+                    </span>
+                    ${egFormatMoneyHelper(product.price)}
+                </span>
+            </p>
+            <product-form class="product-form">
+                <div class="product-form__error-message-wrapper" role="alert" hidden="">
+                    <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-error" viewBox="0 0 13 13">
+                        <circle cx="6.5" cy="6.50049" r="5.5" stroke="white" stroke-width="2"></circle>
+                        <circle cx="6.5" cy="6.5" r="5.5" fill="#EB001B" stroke="#EB001B" stroke-width="0.7"></circle>
+                        <path d="M5.87413 3.52832L5.97439 7.57216H7.02713L7.12739 3.52832H5.87413ZM6.50076 9.66091C6.88091 9.66091 7.18169 9.37267 7.18169 9.00504C7.18169 8.63742 6.88091 8.34917 6.50076 8.34917C6.12061 8.34917 5.81982 8.63742 5.81982 9.00504C5.81982 9.37267 6.12061 9.66091 6.50076 9.66091Z" fill="white"></path>
+                        <path d="M5.87413 3.17832H5.51535L5.52424 3.537L5.6245 7.58083L5.63296 7.92216H5.97439H7.02713H7.36856L7.37702 7.58083L7.47728 3.537L7.48617 3.17832H7.12739H5.87413ZM6.50076 10.0109C7.06121 10.0109 7.5317 9.57872 7.5317 9.00504C7.5317 8.43137 7.06121 7.99918 6.50076 7.99918C5.94031 7.99918 5.46982 8.43137 5.46982 9.00504C5.46982 9.57872 5.94031 10.0109 6.50076 10.0109Z" fill="white" stroke="#EB001B" stroke-width="0.7"></path>
+                    </svg>
+                    <span class="product-form__error-message"></span>
+                </div>
+                <form method="post" action="/cart/add" class="mb-5 ${modalElem.dataset.productShowForm === 'false' ? 'd-none' : ''}">
+                    <input type="hidden" name="form_type" value="product">
+                    <input type="hidden" name="utf8" value="✓">
+                    <div class="select mb-4 ${product.variants.length === 1 ? 'd-none' : ''}">
+                        <select class="select__select" name="id" aria-label="Select variant">
+                            ${formVariantsHtml}
+                        </select>
+                        <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-caret" viewBox="0 0 10 6">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M9.354.646a.5.5 0 00-.708 0L5 4.293 1.354.646a.5.5 0 00-.708.708l4 4a.5.5 0 00.708 0l4-4a.5.5 0 000-.708z" fill="currentColor">
+                        </path></svg>
+                    </div>
+                    <button type="submit" name="add" class="product-form__submit button button--full-width button--primary">
+                        <span>${modalElem.dataset.textAddToCart}</span>
+                        <div class="loading-overlay__spinner" style="display: none;">
+                            <svg aria-hidden="true" focusable="false" role="presentation" class="spinner" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+                                <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30" style="stroke: white"></circle>
+                            </svg>
+                        </div>
+                    </button>
+                </form>
+            </product-form>
+            <div class="product__description rte ${modalElem.dataset.productShowDescription ? '' : 'd-none'}">
+                ${modalElem.dataset.productDescriptionMaxLength === '0' 
+                    ? product.description 
+                    : product.description.slice(0, Number(modalElem.dataset.productDescriptionMaxLength)) + '...'}
+            </div>
+            <p class="${modalElem.dataset.productShowLearnMoreBtn ? '' : 'd-none'}"">
+                <a href="${product.url}">
+                    ${modalElem.dataset.productLearnMoreBtnText}
+                </a>
+            </p>
+        `)
+
+        // Handle Variant change
+        document.querySelector('#eg-quick-view-modal form select[name="id"]').addEventListener('change', async (e) => {
+            const select = e.target
+            const featuredMediaPosition = select.options[select.selectedIndex].dataset.featuredMediaPosition
+
+            if (featuredMediaPosition.length) {
+                bootstrap.Carousel.getInstance('#eg-quick-view-carousel')
+                    .to(featuredMediaPosition - 1)
+            }
+        })
+
+        // Handle "Add to cart" (atc)
+        document.querySelector('#eg-quick-view-modal form').addEventListener('submit', async (e) => {
+            e.preventDefault()
+
+            const form = e.target
+            const btn = document.querySelector('#eg-quick-view-modal form button[name="add"]')
+
+            btn.classList.add('loading')
+            btn.querySelector('.loading-overlay__spinner').style.display = 'flex'
+
+            const response = await fetch('/cart/add.js', { method: 'POST', body: new FormData(form) })
+            const data = await response.json()
+
+            btn.classList.remove('loading')
+            btn.querySelector('.loading-overlay__spinner').style.display = 'none'
+
+            const bsModal = bootstrap.Modal.getOrCreateInstance(modalElem)
+            bsModal.hide()
+
+            console.log(window.loadEgCartDrawer)
+
+            if (document.querySelector('#cart-drawer')) {
+                window.loadEgCartDrawer()
+            } else {
+                window.location.href = modalElem.dataset.cartRoute
+            }
+        })
+
+        // Check if Prev/Next buttons are active or not
+        if (document.querySelector('#eg-quick-view-modal-prev')) {
+            if (!document.querySelector(`.product-grid[data-has-eg-quick-view-modal-open] [data-product-handle="${productHandle}"]`).closest('.grid__item').previousElementSibling) {
+                document.querySelector('#eg-quick-view-modal-prev').disabled = true
+            } else {
+                document.querySelector('#eg-quick-view-modal-prev').disabled = false
+            }
+        }
+
+        if (document.querySelector('#eg-quick-view-modal-next')) {
+            if (!document.querySelector(`.product-grid[data-has-eg-quick-view-modal-open] [data-product-handle="${productHandle}"]`).closest('.grid__item').nextElementSibling) {
+                document.querySelector('#eg-quick-view-modal-next').disabled = true
+            } else {
+                document.querySelector('#eg-quick-view-modal-next').disabled = false
+            }
+        }
+
+        // Show modal
+        const bsModal = bootstrap.Modal.getOrCreateInstance(modalElem)
+        bsModal.show()
+    }
+
+    // Handle Previous/Next buttons (go to prev/next product inline)
+    document.querySelector('#eg-quick-view-modal-prev')?.addEventListener('click', async (e) => {
+        const btn = e.target
+        const currentProductHandle = btn.closest('[data-product-handle]').dataset.productHandle
+
+        const productHandle = document.querySelector('.product-grid[data-has-eg-quick-view-modal-open]')
+            .querySelector(`[data-product-handle="${currentProductHandle}"]`).closest('.grid__item')
+            ?.previousElementSibling?.querySelector('[data-product-handle]')?.dataset.productHandle
+
+        btn.classList.add('btn-loading')
+        await buildEgQuickViewModal(productHandle)
+        btn.classList.remove('btn-loading')
+    })
+
+    document.querySelector('#eg-quick-view-modal-next')?.addEventListener('click', async (e) => {
+        const btn = e.target
+        const currentProductHandle = btn.closest('[data-product-handle]').dataset.productHandle
+
+        const productHandle = document.querySelector('.product-grid[data-has-eg-quick-view-modal-open]')
+            .querySelector(`[data-product-handle="${currentProductHandle}"]`).closest('.grid__item')
+            ?.nextElementSibling?.querySelector('[data-product-handle]')?.dataset.productHandle
+
+        btn.classList.add('btn-loading')
+        await buildEgQuickViewModal(productHandle)
+        btn.classList.remove('btn-loading')
+    })
+
+})
+</script>
+
+<div 
+    id="eg-quick-view-modal" 
+    class="modal fade" 
+    tabindex="-1" 
+    aria-labelledby="eg-quick-view-modal-product-title"
+    data-product-img-width="{{ product_img_width }}"
+    data-product-img-height="{{ product_img_height }}"
+    data-product-img-size="{{ product_img_size }}"
+    data-product-title-size="{{ section.settings.product_title_size }}"
+    data-product-show-description="{{ section.settings.product_show_description }}"
+    data-product-description-max-length="{{ section.settings.product_description_max_length }}"
+    data-product-show-form="{{ section.settings.product_show_form }}"
+    data-product-show-learn-more-btn="{{ section.settings.product_show_learn_more_btn }}"
+    data-product-learn-more-btn-text="{{ section.settings.product_learn_more_btn_text }}"
+    data-carousel-show-controls="{{ section.settings.carousel_show_controls }}"
+    data-carousel-show-indicators="{{ section.settings.carousel_show_indicators }}"
+    data-carousel-style="{{ section.settings.carousel_style }}"
+    data-text-btn-quick-view="{{ section.settings.text_btn_quick_view }}"
+    data-text-price-regular="{{ section.settings.text_price_regular }}"
+    data-text-price-from="{{ section.settings.text_price_from }}"
+    data-text-add-to-cart="{{ 'products.product.add_to_cart' | t }}"
+    data-money-format="{{ shop.money_format }}"
+    data-cart-route="{{ routes.cart_url }}"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable {{ section.settings.modal_position }} {{ section.settings.modal_size }}">
+        <div class="modal-content">
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <div class="modal-body">
+                <div id="eg-quick-view-carousel-wrapper">
+                    {% comment %} 
+                        Injected via JavaScript 
+                    {% endcomment %}
+                </div>
+                <div id="eg-quick-view-content-wrapper">
+                    {% comment %} 
+                        Injected via JavaScript 
+                    {% endcomment %}
+                </div>
+            </div>
+            {% if section.settings.show_prev_next_buttons %}
+                <button id="eg-quick-view-modal-prev" class="eg-quick-view-modal-control" aria-label="Prev">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="eg-quick-view-modal-control-icon bi bi-arrow-left" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
+                    </svg>
+                    <span class="eg-quick-view-modal-control-loading">
+                        <span class="spinner-border" role="status" style="border-width: .15em;">
+                            <span class="visually-hidden">Loading...</span>
+                        </span>
+                    </span>
+                </button>
+                <button id="eg-quick-view-modal-next" class="eg-quick-view-modal-control" aria-label="Next">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="eg-quick-view-modal-control-icon bi bi-arrow-right" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                    </svg>
+                    <span class="eg-quick-view-modal-control-loading">
+                        <span class="spinner-border" role="status" style="border-width: .15em;">
+                            <span class="visually-hidden">Loading...</span>
+                        </span>
+                    </span>
+                </button>
+            {% endif %}
+        </div>
+    </div>
+</div>
+
 {% schema %}
-  {
-    "name": "Section name",
-    "settings": []
-  }
+{
+    "name": "EG QuickView Modal",
+    "settings": [
+        {
+            "type": "header",
+            "content": "General"
+        },
+        {
+            "type": "select",
+            "id": "modal_position",
+            "label": "Modal Position",
+            "default": "modal-dialog-centered",
+            "options": [
+                { "value": "", "label": "Top" },
+                { "value": "modal-dialog-centered", "label": "Center" }
+            ]
+        },
+        {
+            "type": "select",
+            "id": "modal_size",
+            "label": "Modal size",
+            "default": "modal-xl",
+            "options": [
+                { "value": "modal-lg", "label": "LG" },
+                { "value": "modal-xl", "label": "XL" }
+            ]
+        },
+        {
+            "type": "checkbox",
+            "id": "show_prev_next_buttons",
+            "label": "Prev/Next buttons",
+            "info": "Move between products on the same product list",
+            "default": true
+        },
+        {
+            "type": "header",
+            "content": "Product"
+        },
+        {
+            "type": "select",
+            "id": "product_img_orientation",
+            "label": "Product image orientation",
+            "default": "square",
+            "options": [
+                { "value": "square", "label": "Square" },
+                { "value": "landscape", "label": "Landscape" },
+                { "value": "potrait", "label": "Potrait" }
+            ]
+        },
+        {
+            "type": "select",
+            "id": "product_title_size",
+            "label": "Title size",
+            "default": "h2",
+            "options": [
+                { "value": "h1", "label": "H1" },
+                { "value": "h2", "label": "H2" },
+                { "value": "h3", "label": "H3" },
+                { "value": "h4", "label": "H4" },
+                { "value": "h5", "label": "H5" },
+                { "value": "h6", "label": "H6" }
+            ]
+        },
+        {
+            "type": "checkbox",
+            "id": "product_show_description",
+            "label": "Show product description",
+            "default": true
+        },
+        {
+            "type": "text",
+            "id": "product_description_max_length",
+            "label": "Description max characters",
+            "info": "Shorten product description length. Leave empty to show it all.",
+            "default": "240"
+        },
+        {
+            "type": "checkbox",
+            "id": "product_show_form",
+            "label": "Show product form",
+            "default": true
+        },
+        {
+            "type": "checkbox",
+            "id": "product_show_learn_more_btn",
+            "label": "Show 'Learn more' button",
+            "default": true
+        },
+        {
+            "type": "text",
+            "id": "product_learn_more_btn_text",
+            "label": "'Learn more' button text",
+            "default": "Full details →"
+        },
+        {
+            "type": "header",
+            "content": "Carousel"
+        },
+        {
+            "type": "checkbox",
+            "id": "carousel_show_controls",
+            "label": "Show controls",
+            "info": "Prev/Next buttons",
+            "default": true
+        },
+        {
+            "type": "checkbox",
+            "id": "carousel_show_indicators",
+            "label": "Show indicators",
+            "info": "Small dots at the end",
+            "default": true
+        },
+        {
+            "type": "select",
+            "id": "carousel_style",
+            "label": "Carousel Style",
+            "info": "Change this option if can not see correctly the controls/idicators on your store.",
+            "default": "",
+            "options": [
+                { "value": "", "label": "Light" },
+                { "value": "carousel-dark", "label": "Dark" }
+            ]
+        },
+        {
+            "type": "header",
+            "content": "Translatable Text"
+        },
+        {
+            "type": "text",
+            "id": "text_btn_quick_view",
+            "label": "Button - Quick View",
+            "default": "Quick view"
+        },
+        {
+            "type": "text",
+            "id": "text_price_regular",
+            "label": "Price - Regular",
+            "default": "Regular price"
+        },
+        {
+            "type": "text",
+            "id": "text_price_from",
+            "label": "Price - From",
+            "default": "From"
+        }
+    ]
+}
 {% endschema %}
-
-{% stylesheet %}
-{% endstylesheet %}
-
-{% javascript %}
-{% endjavascript %}
