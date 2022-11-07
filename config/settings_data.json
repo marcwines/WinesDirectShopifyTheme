@@ -122,6 +122,20 @@
     "sections": {
       "announcement-bar": {
         "type": "announcement-bar",
+        "blocks": {
+          "198b0984-fbaf-4a29-b63e-66b95e912987": {
+            "type": "announcement",
+            "settings": {
+              "text": "FREE Nationwide Delivery for purchases over €45",
+              "text_alignment": "center",
+              "color_scheme": "accent-1",
+              "link": ""
+            }
+          }
+        },
+        "block_order": [
+          "198b0984-fbaf-4a29-b63e-66b95e912987"
+        ],
         "settings": {
         }
       },
@@ -217,6 +231,22 @@
           "text_btn_view_cart": "View cart",
           "text_btn_save_note": "Save note",
           "text_payment_icons": "100% secure and protected payments"
+        }
+      },
+      "eg-sticky-atc": {
+        "type": "eg-sticky-atc",
+        "settings": {
+          "enable_section": true,
+          "color_scheme": "background-1",
+          "title_size": "h4",
+          "show_img": true,
+          "img_width": "80",
+          "img_height": "80",
+          "show_quantity_input": true,
+          "btn_style": "primary",
+          "offset": 0,
+          "pt": 0.5,
+          "pb": 0.5
         }
       }
     },
