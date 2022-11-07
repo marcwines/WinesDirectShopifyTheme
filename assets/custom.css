@@ -163,7 +163,9 @@ width: 100%; }
     margin-left: 10px;
 }
 
-.product-card-wrapper > .card__content h3 {text-align: center;}
+.product-card-wrapper .card__content h3 {
+    text-align: center!important;
+}
 
 @media only screen and (max-width: 768px) { 
 
