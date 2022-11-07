@@ -600,6 +600,7 @@ pickup-availability {
 
 #shopify-section-announcement-bar {
   background: var(--brand-red)!important;
+  font-weight:500;
 }
 
 
