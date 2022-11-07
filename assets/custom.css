@@ -133,7 +133,7 @@ p {
 
 @media (min-width: 990px)
 #eg-quick-view-modal .modal-body > div {
-    overflow: hidden;
+    overflow: hidden!important;
 }
 
 .img-fluid {
