@@ -364,19 +364,17 @@
 {% for i in (0..d) %}
   {% assign denonized = denonized | replace: countries[i],denonyms[i] %}
 {% endfor %}
-
-
   
                 <b>Country Of Origin:</b> 
                     {% for origin in product.metafields.custom.country_of_origin.value %} 
-                        <a href="/collections/{{ denonized | handleize }}">{{ product.metafields.custom.country_of_origin.value }}</a>
+                        <a href="/collections/buy-{{ denonized | handleize }}-wine-online"> {{ product.metafields.custom.country_of_origin.value }} </a>
                         {% unless forloop.last %},{% endunless %}
                     {% endfor %}         
             </li>
 
 
   
-  <a href="/collections/buy-{{ denonized | handleize }}-wine-online"> {{ product.metafields.custom.country_of_origin.value }} </a>
+  
   
 <!--  Test Complete -->
             <li>
