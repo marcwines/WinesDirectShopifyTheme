@@ -219,7 +219,7 @@
           "show_taxes_shipping_text": true,
           "show_view_cart_btn": true,
           "show_payment_icons": true,
-          "cart_goal_value": 0,
+          "cart_goal_value": 45,
           "cart_goal_description_before": "<p><strong>[amount]<\/strong> away from FREE Shipping!<\/p>",
           "cart_goal_color_before": "#fd7e14",
           "cart_goal_description_after": "<p>Congrats! You're eligible for <strong>FREE Shipping.<\/strong><\/p>",
@@ -247,6 +247,27 @@
           "offset": 0,
           "pt": 0.5,
           "pb": 0.5
+        }
+      },
+      "eg-quick-view-modal": {
+        "type": "eg-quick-view-modal",
+        "settings": {
+          "modal_position": "modal-dialog-centered",
+          "modal_size": "modal-xl",
+          "show_prev_next_buttons": true,
+          "product_img_orientation": "square",
+          "product_title_size": "h2",
+          "product_show_description": true,
+          "product_description_max_length": "240",
+          "product_show_form": true,
+          "product_show_learn_more_btn": true,
+          "product_learn_more_btn_text": "Full details →",
+          "carousel_show_controls": true,
+          "carousel_show_indicators": true,
+          "carousel_style": "",
+          "text_btn_quick_view": "Quick view",
+          "text_price_regular": "Regular price",
+          "text_price_from": "From"
         }
       }
     },
