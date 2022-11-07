@@ -603,3 +603,6 @@ pickup-availability {
 .style-link {
         color: var(--brand-red)!important;
 }
+.style-link:visited {
+        color: var(--brand-red)!important;
+}
