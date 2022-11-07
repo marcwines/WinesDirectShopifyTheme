@@ -586,3 +586,7 @@ media-gallery {
 .bi-heart-fill {
   color: var(--brand-red);
 }
+
+pickup-availability {
+  display: none!important;
+}
