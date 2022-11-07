@@ -125,6 +125,12 @@ p {
     margin-left: 10px;
 }
 
+@media only screen and (max-width: 768px) { 
+    .custom-badge-wd {
+    margin-left: 100px;
+    }
+}
+
 /* Wine Characteristic Scales  */
 
 .char-ratings {
