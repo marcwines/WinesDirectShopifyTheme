@@ -258,7 +258,7 @@
           "product_img_orientation": "square",
           "product_title_size": "h2",
           "product_show_description": true,
-          "product_description_max_length": "500",
+          "product_description_max_length": "400",
           "product_show_form": true,
           "product_show_learn_more_btn": true,
           "product_learn_more_btn_text": "Full details →",
