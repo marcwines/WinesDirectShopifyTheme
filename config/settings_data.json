@@ -215,7 +215,7 @@
       "eg-super-cart-drawer": {
         "type": "eg-super-cart-drawer",
         "settings": {
-          "drawer_width": "600",
+          "drawer_width": "400",
           "show_taxes_shipping_text": true,
           "show_view_cart_btn": true,
           "show_payment_icons": true,
