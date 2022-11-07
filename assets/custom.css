@@ -183,6 +183,10 @@ width: 100%; }
   
 }
 
+.product__media {
+  background: red;
+}
+
 .bar-cont {
     position: relative;
     width: 50%;
