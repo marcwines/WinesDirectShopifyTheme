@@ -131,9 +131,8 @@ p {
 
 /* Quick View Modal */
 
-#eg-quick-view-modal .modal-body > div
-    width: 50%;
-    flex-shrink: 0;
+@media (min-width: 990px)
+#eg-quick-view-modal .modal-body > div {
     overflow: hidden;
 }
 
