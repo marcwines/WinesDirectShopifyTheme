@@ -125,13 +125,6 @@ p {
     --color-button: var(--color-background);
     --color-button-text: var(--color-foreground);
     width: 100%;
-
- font-family: roc-grotesk-condensed, sans-serif!important;
-    font-weight: 700;
-    font-style: normal;
-    font-size: 18px;
-    text-transform: capitalize;
-}
 }
 
 
