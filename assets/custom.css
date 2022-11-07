@@ -165,7 +165,8 @@ width: 100%; }
 
 .product-card-wrapper .card__content h3 {
     text-align: center!important;
-    font-size: 700;
+    font-size: 700!important;
+  
 }
 
 @media only screen and (max-width: 768px) { 
