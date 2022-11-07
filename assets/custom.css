@@ -327,21 +327,21 @@ ul.additional-details-list,ul.food-pairings-list,ul.wine-methods-list {
 }
 
 .vegan-badge {
-    background-color: #2AB474;
+    background-color: var(--brand-green);
 }
 .organic-badge {
-    background-color: #F2685B;
+    background-color: var(--brand-red)
 }
 .sustainable-badge {
-    background-color: #2AB474;
+    background-color: var(--brand-blue);
 }
 
 .natural-badge {
-    background-color: #2AB474;
+    background-color: var(--brand-purple);
 }
 
 .biodynamic-badge {
-    background-color: #2AB474;
+    background-color: var(--brand-teal);
 }
 
 .wine-basics-list a {
