@@ -121,8 +121,10 @@ p {
 
 /* Quick View Button */
 
-/* IN PROGRESS .color-background-2 .button--secondary, .color-accent-1 .button--secondary, .color-accent-2 .button--secondary, .color-inverse .button--secondary {
-    --color-button: var(--color-background);
+.color-background-2 .button--secondary, .color-accent-1 .button--secondary, .color-accent-2 .button--secondary, .color-inverse .button--secondary {
+width: 90%; }  
+/* IN PROGRESS 
+--color-button: var(--color-background);
     --color-button-text: var(--color-foreground);
     width: 90%;
     position: absolute;
