@@ -622,3 +622,7 @@ pickup-availability {
 .image-with-text__media {
   background: rgba(0,0,0,0)!important;
 }
+
+.image-with-text__media.image-with-text__media--adapt.gradient.color-accent-1.global-media-settings.media {
+    background: rgba(0,0,0,0)!important;
+}
