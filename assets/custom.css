@@ -28,6 +28,10 @@ sticky-header {
   text-align: left;
 }
 
+.article-card__excerpt {
+  text-align: left;
+}
+
 
 /* Typography  */
 body {
