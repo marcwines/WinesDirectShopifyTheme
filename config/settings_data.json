@@ -220,7 +220,7 @@
           "show_view_cart_btn": true,
           "show_payment_icons": true,
           "cart_goal_value": 45,
-          "cart_goal_description_before": "<p><strong>[amount]<\/strong> away from FREE Shipping!<\/p>",
+          "cart_goal_description_before": "<p><strong>[amount]<\/strong> away from FREE Nationwide Delivery!<\/p>",
           "cart_goal_color_before": "#fd7e14",
           "cart_goal_description_after": "<p>Congrats! You're eligible for <strong>FREE Shipping.<\/strong><\/p>",
           "cart_goal_color_after": "#158754",
