@@ -3,7 +3,7 @@
 
 :root {
     --brand-primary: {{ settings.color_primary }};
-    --brand-body-text: {{ settings.color_body_text }};
+    --brand-body-text: #444945;
     --brand-red: #E1625E;
     --brand-green: #23B382;
     --brand-blue: #88C8EE;
