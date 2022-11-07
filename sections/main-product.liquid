@@ -1073,7 +1073,7 @@
   <dd>
 <!-- Winemaker Output Content Block  -->
 <div class="winemaker-info-tab">
-{% assign winemaker-dyn = product.metafields.custom.winemaker | metafield_text | append: '-page' | handleize %}              
+{% assign shipping_page = section.settings.product_tabs_shipping_page %}         
       
       <div class="winemaker-tab-text">
             <h2>{{ pages[ winemaker-dyn ].title }}</h2>
