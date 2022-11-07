@@ -134,6 +134,7 @@ p {
 .img-fluid {
     max-width: 80%;
     height: auto;
+    background: #f0eee7;
 }
 
 h1, .h1 {
