@@ -138,6 +138,12 @@ p {
     background: #f0eee7;
 }
 
+@media (min-width: 990px)
+#eg-quick-view-content-wrapper {
+    overflow: scroll;
+    width: 50%;
+}
+
 h1, .h1 {
     font-size: calc(var(--font-heading-scale) * 4rem);
 }
