@@ -126,7 +126,7 @@ p {
     --color-button-text: var(--color-foreground);
     width: 90%;
     position: absolute;
-    bottom: 5%;
+    bottom: -10px;
   
 }
 
