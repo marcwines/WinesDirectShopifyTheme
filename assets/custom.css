@@ -134,7 +134,7 @@ width: 100%; }
 
 /* Wishlist */
 .product__info-wrapper .button-add-remove-wishlist {
-left: -40px;
+width: 100%;
 }
 
 
