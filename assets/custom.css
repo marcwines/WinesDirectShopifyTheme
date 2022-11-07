@@ -119,6 +119,12 @@ p {
     text-transform: capitalize;
 }
 
+
+/* Product List Label (e.g. 'Vegan', 'Organic') */
+.custom-badge-wd {
+    margin-left: 10px;
+}
+
 /* Wine Characteristic Scales  */
 
 .char-ratings {
