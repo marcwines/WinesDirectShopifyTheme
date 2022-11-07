@@ -589,10 +589,10 @@ pickup-availability {
   display: none!important;
 }
 .additional-details a {
-      color: red!important;
+      color: var(--brand-red)!important;
   }
 .additional-details a:visited {
-      color: red!important;
+      color: var(--brand-red)!important;
   }
 .style-link {
         color: var(--brand-red)!important;
