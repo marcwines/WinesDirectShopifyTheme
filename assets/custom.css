@@ -630,5 +630,5 @@ body,
 .color-inverse,
 .color-accent-1,
 .color-accent-2 {
-  background-color: red;
+  background-color: red!important;
 }
