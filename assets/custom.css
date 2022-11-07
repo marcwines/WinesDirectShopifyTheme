@@ -136,6 +136,10 @@ p {
     overflow: hidden!important;
 }
 
+.eg-quick-view-content-wrapper {
+    overflow: hidden!important;
+}
+
 .img-fluid {
     max-width: 100%;
     width: 96%;
