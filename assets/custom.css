@@ -623,7 +623,7 @@ pickup-availability {
   background-color: rgba(0,0,0,0)!important;
 }
 
-body, .color-background-1, .color-background-2, .color-inverse, .color-accent-1, .color-accent-2 {
+.image-with-text__media, .image-with-text__media--adapt, .gradient, .color-accent-1, .global-media-settings, .media {
     color: rgba(var(--color-foreground),.75);
     background-color: rgb(var(--color-background));
 }
