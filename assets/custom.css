@@ -141,7 +141,7 @@ p {
 @media (min-width: 990px)
 #eg-quick-view-content-wrapper {
     overflow: scroll;
-    width: 50%;
+    width: 50%!important;
 }
 
 h1, .h1 {
