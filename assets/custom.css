@@ -20,7 +20,7 @@ sticky-header {
   background: white!important;
 }
 
-.article-card .card-information {
+.card.article-card .card-information {
   padding: 2em;
 }
 
