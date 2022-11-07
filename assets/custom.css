@@ -621,6 +621,6 @@ pickup-availability {
 }
 
 .trust-container {
-  background: red;
-  padding: 1em 1em;
+  background: red!important;
+  padding: 1em 1em!important;
 }
