@@ -184,7 +184,6 @@ width: 100%; }
   list-style-type: none;
   display: flex;
   flex-direction: column;
-/*  justify-content: flex-start; */
   margin-left: 10px;
   width: 100%;
   display: block;
