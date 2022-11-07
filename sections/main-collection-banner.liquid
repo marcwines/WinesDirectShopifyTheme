@@ -25,9 +25,9 @@
 
     {%- if section.settings.show_collection_image and collection.image -%}
 
+<div style="max-width: 200px">
     <img src="{{ collection.image | image_url }}">
-
-    {{ collection.image }}
+</div>
     
       <div class="collection-hero__image-container media gradient">
         <img
