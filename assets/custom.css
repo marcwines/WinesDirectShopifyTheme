@@ -570,6 +570,10 @@ media-gallery {
 
 }
 
+.header-wrapper {
+  background: white!important;
+}
+
 .product__info-wrapper .price-item--regular { font-size: 24px;}
 .button-add-remove-wishlist {
   text-align: left!important;
