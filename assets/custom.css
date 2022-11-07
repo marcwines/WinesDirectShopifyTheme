@@ -131,6 +131,12 @@ p {
 
 /* Quick View Modal */
 
+#eg-quick-view-modal .modal-body > div
+    width: 50%;
+    flex-shrink: 0;
+    overflow: hidden;
+}
+
 .img-fluid {
     max-width: 100%;
     width: 96%;
