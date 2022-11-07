@@ -620,6 +620,6 @@ pickup-availability {
   font-size: 24px!important;
 }
 
-.tp-widget-wrapper {
+#tp-widget-wrapper {
   padding: 1em 1em;
 }
