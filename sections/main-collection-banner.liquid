@@ -14,7 +14,7 @@
     <div class="collection-hero__text-wrapper">
       <h1 class="collection-hero__title">
         <span class="visually-hidden">{{ 'sections.collection_template.title' | t }}: </span>
-        TEST
+        
         {{- collection.title | escape -}}
       </h1>
 
@@ -24,6 +24,9 @@
     </div>
 
     {%- if section.settings.show_collection_image and collection.image -%}
+
+    <img src="{{ collection.image }}">
+    
       <div class="collection-hero__image-container media gradient">
         <img
           srcset="{%- if collection.image.width >= 165 -%}{{ collection.image | image_url: width: 165 }} 165w,{%- endif -%}
