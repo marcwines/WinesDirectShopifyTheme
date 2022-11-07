@@ -163,6 +163,8 @@ width: 100%; }
     margin-left: 10px;
 }
 
+.product-card-wrapper > .card__content h3 {text-align: center;}
+
 @media only screen and (max-width: 768px) { 
 
     .organic-badge {
