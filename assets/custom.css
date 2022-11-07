@@ -132,7 +132,8 @@ p {
 /* Quick View Modal */
 
 .img-fluid {
-    max-width: 80%;
+    max-width: 100%;
+    width: 80%;
     height: auto;
     background: #f0eee7;
 }
