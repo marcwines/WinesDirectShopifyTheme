@@ -183,7 +183,7 @@ width: 100%; }
   
 }
 
-li.product__media-item > .product__media {
+li.product__media-item>.product__media {
   background: red!important;
 }
 
