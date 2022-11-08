@@ -245,7 +245,7 @@ width: 100%; }
 
 /* General Info Fields */
 #eg-sticky-atc {
-  background: white;
+  background: white!important;
 }
 
 .wine-basics-list {
