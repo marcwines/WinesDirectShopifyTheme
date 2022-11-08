@@ -165,10 +165,18 @@
               "heading": "Quick links",
               "menu": "footer"
             }
+          },
+          "ba2058ac-72de-4f92-8226-3ef71e84b1d6": {
+            "type": "link_list",
+            "settings": {
+              "heading": "Quick links",
+              "menu": "footer"
+            }
           }
         },
         "block_order": [
-          "f245fa2b-8610-469c-aaf6-988cbf87830e"
+          "f245fa2b-8610-469c-aaf6-988cbf87830e",
+          "ba2058ac-72de-4f92-8226-3ef71e84b1d6"
         ],
         "settings": {
           "color_scheme": "background-1",
