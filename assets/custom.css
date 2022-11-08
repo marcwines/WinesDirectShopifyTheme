@@ -244,6 +244,9 @@ width: 100%; }
 }
 
 /* General Info Fields */
+.eg-sticky-atc {
+  background: white;
+}
 
 .wine-basics-list {
   list-style-type: none;
