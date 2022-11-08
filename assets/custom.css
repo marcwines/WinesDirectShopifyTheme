@@ -666,7 +666,7 @@ pickup-availability {
 
 .footer { background-color: #f0eee7!important; }
 
-.link link--text list-menu__item list-menu__item--link__link--level-2:not(:only-child) {
+.link link--text list-menu__item {
     text-decoration: none!important;
     color: #121212BF!important;
     cursor: default;
