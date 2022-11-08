@@ -1062,6 +1062,8 @@
     {%- endif -%}
   </div>
 
+{% if product.metafields.custom.product_type.value contains 'Bottle' %} 
+
 <!-- Product Info Tabs -->
 
 <dl class="responsive-tabs">
@@ -1098,6 +1100,8 @@ Note: Returns cost €15 per order.</p>
 </dl>
     
 <!-- End Of Tabs -->
+
+{%- endif -%}
 
 {% if product.metafields.custom.product_type.value contains 'Bundle' %}
       <h2>Bundle Contains</h2>
