@@ -389,6 +389,10 @@ ul.additional-details-list,ul.food-pairings-list,ul.wine-methods-list {
   text-decoration: none;
 }
 
+li.product__media-item grid__item slider__slide is-active  {
+    background: var(--brand-bg)!important;
+}
+
 .wine-basics-list {
   font-family: roc-grotesk, sans-serif!important; font-weight: 500;
 }
