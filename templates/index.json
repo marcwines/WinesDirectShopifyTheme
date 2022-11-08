@@ -172,9 +172,9 @@
     "featured_collection": {
       "type": "featured-collection",
       "settings": {
-        "title": "Featured products",
-        "heading_size": "h2",
-        "description": "",
+        "title": "Christmas Cases",
+        "heading_size": "h1",
+        "description": "<p>We've put together some delactable, delightful mixed cases for the christmas season - great value, great wine!<\/p>",
         "show_description": false,
         "description_style": "body",
         "collection": "featured",
@@ -189,7 +189,7 @@
         "show_secondary_image": true,
         "show_vendor": false,
         "show_rating": false,
-        "enable_quick_add": false,
+        "enable_quick_add": true,
         "columns_mobile": "2",
         "swipe_on_mobile": false,
         "padding_top": 28,
