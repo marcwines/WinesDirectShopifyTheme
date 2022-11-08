@@ -169,8 +169,8 @@
           "ba2058ac-72de-4f92-8226-3ef71e84b1d6": {
             "type": "link_list",
             "settings": {
-              "heading": "Quick links",
-              "menu": "footer"
+              "heading": "Customer Service",
+              "menu": "footer-menu-middle"
             }
           }
         },
