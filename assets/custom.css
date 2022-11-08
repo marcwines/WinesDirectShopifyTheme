@@ -439,7 +439,7 @@ ul.additional-details-list,ul.food-pairings-list,ul.wine-methods-list {
 
 
 .collection-hero  {
-  background: var(--brand-bg);
+  background: var(--brand-bg)!important;
   color: var(--brand-body-text);
 }
 
