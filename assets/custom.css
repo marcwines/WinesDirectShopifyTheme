@@ -390,7 +390,7 @@ ul.additional-details-list,ul.food-pairings-list,ul.wine-methods-list {
 
 .collection-image__container {
   max-width: 450px;
-  width: 70%;
+  width: 100%;
 }
 
 .collection-winemaker__image {
