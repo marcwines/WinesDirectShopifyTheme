@@ -13,7 +13,7 @@
         "16641958185fd8e3ba-1": {
           "type": "text",
           "settings": {
-            "text": "",
+            "text": "<p>Wines Direct from passionate winemakers around the world. Shop our Christmas selection now.<\/p>",
             "text_style": "body"
           }
         },
@@ -31,7 +31,7 @@
         "16641958185fd8e3ba-2"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/hamper_01.png",
+        "image": "shopify:\/\/shop_images\/christmas-wines.png",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "text_first",
