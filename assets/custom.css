@@ -388,6 +388,15 @@ ul.additional-details-list,ul.food-pairings-list,ul.wine-methods-list {
     background-color: var(--brand-purple);
 }
 
+.collection-image__container {
+  max-width: 450px;
+  width: 70%;
+}
+
+.collection-winemaker__image {
+  width: 100%;
+}
+
 .product__media-list.contains-media.grid.grid--peek.list-unstyled.slider.slider--mobile {
       background-color: var(--brand-bg)
 }
