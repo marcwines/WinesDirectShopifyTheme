@@ -829,3 +829,7 @@ pickup-availability {
   }
 }
 
+.bi-heart-fill {
+	-webkit-animation: bounce-bottom 0.5s both;
+	        animation: bounce-bottom 0.5s both;
+}
