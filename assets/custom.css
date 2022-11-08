@@ -380,6 +380,10 @@ ul.additional-details-list,ul.food-pairings-list,ul.wine-methods-list {
     background-color: var(--brand-teal);
 }
 
+.bundle-item-title {
+  color: var(--brand-red)
+}
+
 .biodynamic-badge {
     background-color: var(--brand-purple);
 }
