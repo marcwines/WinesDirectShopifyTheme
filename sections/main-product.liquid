@@ -1093,6 +1093,9 @@
 
 <!-- Product Info Tabs -->
 
+{% unless product.metafields.custom.winemaker.value contains 'Wines Direct' %} 
+
+  
 <dl class="responsive-tabs">
   <dt>Winemaker</dt>
   <dd>
@@ -1127,7 +1130,8 @@ Note: Returns cost €15 per order.</p>
 </dl>
     
 <!-- End Of Tabs -->
-
+{%- endunless -%}
+  
 {%- endif -%}
 
 
