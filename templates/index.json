@@ -260,8 +260,8 @@
         "template--16522173120726__79c1004b-ed2a-4c9c-a853-a7732ee48e37-166794769648f0c279-2": {
           "type": "button",
           "settings": {
-            "button_label": "Button label",
-            "button_link": ""
+            "button_label": "Learn More",
+            "button_link": "shopify:\/\/pages\/about-us"
           }
         }
       },
