@@ -202,6 +202,7 @@
       "blocks": {
         "template--16522173120726__0595bd0e-3546-4083-81f5-5e110014623a-166679915390af51ad-0": {
           "type": "video",
+          "disabled": true,
           "settings": {
             "cover_image": "shopify:\/\/shop_images\/wine-and-cheese-party-hosts.jpg",
             "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
@@ -238,6 +239,50 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "79c1004b-ed2a-4c9c-a853-a7732ee48e37": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--16522173120726__79c1004b-ed2a-4c9c-a853-a7732ee48e37-166794769648f0c279-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Nice To Meet You!",
+            "heading_size": "h1"
+          }
+        },
+        "template--16522173120726__79c1004b-ed2a-4c9c-a853-a7732ee48e37-166794769648f0c279-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We're Wines Direct, a passionate wine company that have been operating in Ireland for over 25 years.<\/p>",
+            "text_style": "body"
+          }
+        },
+        "template--16522173120726__79c1004b-ed2a-4c9c-a853-a7732ee48e37-166794769648f0c279-2": {
+          "type": "button",
+          "settings": {
+            "button_label": "Button label",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--16522173120726__79c1004b-ed2a-4c9c-a853-a7732ee48e37-166794769648f0c279-0",
+        "template--16522173120726__79c1004b-ed2a-4c9c-a853-a7732ee48e37-166794769648f0c279-1",
+        "template--16522173120726__79c1004b-ed2a-4c9c-a853-a7732ee48e37-166794769648f0c279-2"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/thelads.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
@@ -246,6 +291,7 @@
     "image_banner",
     "rich_text",
     "featured_collection",
-    "0595bd0e-3546-4083-81f5-5e110014623a"
+    "0595bd0e-3546-4083-81f5-5e110014623a",
+    "79c1004b-ed2a-4c9c-a853-a7732ee48e37"
   ]
 }
