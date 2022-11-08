@@ -665,3 +665,10 @@ pickup-availability {
 /* Footer */
 
 .footer { background-color: #f0eee7!important; }
+
+.link link--text list-menu__item list-menu__item--link {
+    text-decoration: none!important;
+    color: #121212BF!important;
+    cursor: default;
+    font-weight: bold;
+}
