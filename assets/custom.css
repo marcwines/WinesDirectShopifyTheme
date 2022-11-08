@@ -388,6 +388,10 @@ ul.additional-details-list,ul.food-pairings-list,ul.wine-methods-list {
     background-color: var(--brand-purple);
 }
 
+.product__media-list.contains-media.grid.grid--peek.list-unstyled.slider.slider--mobile {
+      background-color: var(--brand-bg)
+}
+
 .wine-basics-list a {
   color: #e17162;
   text-decoration: none;
