@@ -359,25 +359,25 @@
     </li>
 {% endif %}    
 
-
-            <li>
+<li>
 
 <!-- Country Of Origin Replacement Test -->
 
-{% assign countries = "Argentina, Australia, Austria, Chile, France, Italy, New Zealand, Portugal, Spain, Germany, Greece, Romania, Slovenia" | split: ", "%}
-{% assign denonyms = "Argentinian, Australian, Austrian, Chilean, French, Italian, New Zealand, Portuguese, Spanish, German, Greek, Romanian, Slovenian" | split: ", "%}
-{% assign d = countries.size | minus:1 %}
-{% assign denonized = product.metafields.custom.country_of_origin.value %}
-{% for i in (0..d) %}
-  {% assign denonized = denonized | replace: countries[i],denonyms[i] %}
-{% endfor %}
-        <b>Country Of Origin:</b> 
-            {% for origin in product.metafields.custom.country_of_origin.value %} 
-                 <a href="/collections/buy-{{ denonized | handleize }}-wine-online"> {{ product.metafields.custom.country_of_origin.value }} </a>
-                 {% unless forloop.last %},{% endunless %}
-            {% endfor %}         
-        </li>
+    {% assign countries = "Argentina, Australia, Austria, Chile, France, Italy, New Zealand, Portugal, Spain, Germany, Greece, Romania, Slovenia" | split: ", "%}
+    {% assign denonyms = "Argentinian, Australian, Austrian, Chilean, French, Italian, New Zealand, Portuguese, Spanish, German, Greek, Romanian, Slovenian" | split: ", "%}
+    {% assign d = countries.size | minus:1 %}
+    {% assign denonized = product.metafields.custom.country_of_origin.value %}
+    {% for i in (0..d) %}
+      {% assign denonized = denonized | replace: countries[i],denonyms[i] %}
+    {% endfor %}
+            <b>Country Of Origin:</b> 
+                {% for origin in product.metafields.custom.country_of_origin.value %} 
+                     <a href="/collections/buy-{{ denonized | handleize }}-wine-online"> {{ product.metafields.custom.country_of_origin.value }} </a>
+                     {% unless forloop.last %},{% endunless %}
+                {% endfor %}         
+            </li>
 <!--  Test Complete -->
+  
             <li>
                 <b>Grapes:</b> 
                     {% for grape in product.metafields.custom.grapes.value %} 
