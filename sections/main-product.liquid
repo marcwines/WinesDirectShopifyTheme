@@ -348,15 +348,23 @@
             <ul class="wine-basics-list">
 
 <!-- hidemaker -->
-{% unless product.metafields.custom.winemaker.value == 'Wines Direct' %}
-      <li>
+{% if product.metafields.custom.winemaker.value == 'Wines Direct' %}
+
+<h3> nope</h3>
+  
+  {% else %}
+
+  <li>
          <b>Winemaker:</b> 
             {% for maker in product.metafields.custom.winemaker.value %} 
                 <a href="/collections/{{product.metafields.custom.winemaker.value | handleize }}">{{ product.metafields.custom.winemaker.value }}</a>
                 {% unless forloop.last %},{% endunless %}
             {% endfor %}         
     </li>
-{% endunless %}
+  
+{% endif %}    
+
+
             <li>
 
 <!-- Country Of Origin Replacement Test -->
