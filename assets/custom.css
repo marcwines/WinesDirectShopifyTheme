@@ -420,7 +420,7 @@ li.product__media-item.grid__item.slider__slide   {
 
 /* Product Cards */
 
-#eg-super-cart-drawer-goal > .progress {height: 24px;}
+#eg-super-cart-drawer-goal > .progress {height: 24px!important;}
 
 .card.card--media {
   background-color: var(--brand-bg)!important;
