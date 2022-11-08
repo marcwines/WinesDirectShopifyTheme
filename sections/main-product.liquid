@@ -346,6 +346,9 @@
               
 {% if product.metafields.custom.product_type.value contains 'Bottle' %}          
             <ul class="wine-basics-list">
+
+<!-- hidemaker -->
+  {% unless product.metafields.custom.winemaker.value == "Winesdirect" %}
              <li>
                 <b>Winemaker:</b> 
                     {% for maker in product.metafields.custom.winemaker.value %} 
@@ -353,6 +356,8 @@
                         {% unless forloop.last %},{% endunless %}
                     {% endfor %}         
             </li>
+
+{% endunless %}
             <li>
 
 <!-- Country Of Origin Replacement Test -->
