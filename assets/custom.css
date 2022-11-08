@@ -661,3 +661,7 @@ pickup-availability {
     }
 
 }
+
+/* Footer */
+.footer color-background-1 gradient section-footer-padding { background: #f0eee7; }
+
