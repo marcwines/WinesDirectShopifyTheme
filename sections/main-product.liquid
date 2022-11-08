@@ -432,8 +432,8 @@
                   {{ product.featured_image | image_url: width: 150 | image_tag: loading: 'lazy' }}
               </span>
               <span class="bundle-item__img">
-                  <a href="{{ product.url }}">{{product.title}}</a>
-                  <p>{{product.description  | truncate: 120 }}</p>
+                  <a class=bundle-item-title href="{{ product.url }}">{{product.title}}</a>
+                  <p>{{product.description  | truncate: 240 }}</p>
                 
               </span>
           </li>
