@@ -389,8 +389,8 @@ ul.additional-details-list,ul.food-pairings-list,ul.wine-methods-list {
   text-decoration: none;
 }
 
-li.product__media-item grid__item slider__slide is-active  {
-    background: var(--brand-bg)!important;
+li.product__media-item.grid__item.slider__slide   {
+    background: var(--brand-bg)!importantz;
 }
 
 .wine-basics-list {
