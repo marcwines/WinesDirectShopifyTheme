@@ -569,6 +569,9 @@ p {
   }
 
   @media only screen and (max-width: 768px) {
+    .characteristics-text__small {
+      font-size: 9px;
+    }
 
     #shopify-section-template--16522173120726__16641958187a4b1df5 {
       background-size: 40%, 25%;
