@@ -108,6 +108,11 @@ p {
     font-weight: bold;
 }
 
+.price__badge-sale {
+    background: var(--brand-green)!important;
+    border: 3px solid var(--brand-green)!important;
+}
+
 .mega-menu__link { font-weight: 500;}
 
 .mega-menu__link:hover, .mega-menu__link--active {
