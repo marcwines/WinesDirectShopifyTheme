@@ -91,6 +91,12 @@ p {
     font-size: 1em !important;
   }
 
+
+
+.product__modal-opener.product__modal-opener--image.no-js-hidden {
+    background: var(--brand-bg)!important;
+}
+
   .quantity__button:not(:focus-visible):not(.focused),
   .quantity__input:not(:focus-visible):not(.focused) {
     box-shadow: inherit;
