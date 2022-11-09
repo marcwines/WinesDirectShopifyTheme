@@ -1,27 +1,33 @@
 /* Colour Declarations */
 
 body {
-  color:  #444945;
+  color: #444945;
 }
 
 :root {
-    --brand-primary: {{ settings.color_primary }};
-    --brand-body-text: #444945;
-    --brand-red: #E1625E;
-    --brand-green: #23B382;
-    --brand-blue: #88C8EE;
-    --brand-bg: #f0eee7;
-    --brand-purple: #8523B3;
-    --brand-teal: #23AAB3;
+  --brand-primary: {
+      {
+      settings.color_primary
+    }
+  }
+
+  ;
+  --brand-body-text: #444945;
+  --brand-red: #E1625E;
+  --brand-green: #23B382;
+  --brand-blue: #88C8EE;
+  --brand-bg: #f0eee7;
+  --brand-purple: #8523B3;
+  --brand-teal: #23AAB3;
 }
 
 
 sticky-header {
-  background: white!important;
+  background: white !important;
 }
 
-.card.article-card > .card__content {
-  padding: 2em!important;
+.card.article-card>.card__content {
+  padding: 2em !important;
 }
 
 .card__content h3 {
@@ -29,32 +35,42 @@ sticky-header {
 }
 
 .article-card__excerpt {
-  text-align: left!important;
+  text-align: left !important;
 }
 
 
 /* Typography  */
 body {
-      font-family: roc-grotesk, sans-serif!important; font-weight: 500;
+  font-family: roc-grotesk, sans-serif !important;
+  font-weight: 500;
 }
 
 h1 {
-    font-family: roc-grotesk-condensed, sans-serif!important;
-    font-weight: 700;
-    font-style: normal;
+  font-family: roc-grotesk-condensed, sans-serif !important;
+  font-weight: 700;
+  font-style: normal;
 }
 
-h1,h2,h3,h4,h5,h6 {
-      font-family: roc-grotesk-condensed, sans-serif!important;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: roc-grotesk-condensed, sans-serif !important;
 }
 
 
 p {
-      font-family: roc-grotesk, sans-serif!important; font-weight: 500;
+  font-family: roc-grotesk, sans-serif !important;
+  font-weight: 500;
 }
 
 
 @media screen and (min-width: 750px) {
+
+}
+
   .product--thumbnail .product__media-gallery,
   .product--thumbnail_slider .product__media-gallery,
   .product--stacked .product__info-container--sticky {
@@ -64,160 +80,177 @@ p {
     z-index: 2;
   }
 
-.product_title>h1 {
-    font-family: roc-grotesk-condensed, sans-serif!important;
+  .product_title>h1 {
+    font-family: roc-grotesk-condensed, sans-serif !important;
     font-weight: 700;
     font-style: normal;
-}
+  }
 
-.product-form__input .form__label {
+  .product-form__input .form__label {
     margin-bottom: 1em !important;
     font-size: 1em !important;
-}
+  }
 
-.quantity__button:not(:focus-visible):not(.focused), .quantity__input:not(:focus-visible):not(.focused) {
+  .quantity__button:not(:focus-visible):not(.focused),
+  .quantity__input:not(:focus-visible):not(.focused) {
     box-shadow: inherit;
     background-color: #efefef;
-}
+  }
 
-.quantity__button:active {
-  border: solid 1px black!important;
-}
-.quantity__button:hover {
-  border: solid 1px black!important;
-}
-.quantity__button:visited {
-  border: solid 1px black!important;
-}
-.quantity__button:focus {
-  border: solid 1px black!important;
-}
+  .quantity__button:active {
+    border: solid 1px black !important;
+  }
+
+  .quantity__button:hover {
+    border: solid 1px black !important;
+  }
+
+  .quantity__button:visited {
+    border: solid 1px black !important;
+  }
+
+  .quantity__button:focus {
+    border: solid 1px black !important;
+  }
 
 
-.quantity {
+  .quantity {
     width: 90% !important;
-}
+  }
 
-.quantity__input {
+  .quantity__input {
     background-color: #fff !important;
-}
+  }
 
-.thumbnail {
+  .thumbnail {
     background-color: #efefef !important;
-    border: 1px #cdcdcd; !important;
-}
+    border: 1px #cdcdcd;
+    !important;
+  }
 
-.button-add-remove-wishlist {
-  padding-left: 0!important;
-}
-/* Navigation links */
+  .button-add-remove-wishlist {
+    padding-left: 0 !important;
+  }
 
-.mega-menu__link--level-2:not(:only-child) {
-    text-decoration: none!important;
-    color: #121212BF!important;
+  /* Navigation links */
+
+  .mega-menu__link--level-2:not(:only-child) {
+    text-decoration: none !important;
+    color: #121212BF !important;
     cursor: default;
     font-weight: bold;
-}
+  }
 
-.price__badge-sale {
-    background-color: var(--brand-green)!important;
-    border: 3px solid var(--brand-green)!important;
-}
+  .price__badge-sale {
+    background-color: var(--brand-green) !important;
+    border: 3px solid var(--brand-green) !important;
+  }
 
-.mega-menu__link { font-weight: 500;}
+  .mega-menu__link {
+    font-weight: 500;
+  }
 
-.mega-menu__link:hover, .mega-menu__link--active {
-   color:#cc6666!important;
-}
+  .mega-menu__link:hover,
+  .mega-menu__link--active {
+    color: #cc6666 !important;
+  }
 
-/* Product Page Typography */
+  /* Product Page Typography */
 
-.product__description {
-      font-family: roc-grotesk, sans-serif!important; font-weight: 500;
-}
-.product-form__quantity {
-      font-family: roc-grotesk, sans-serif!important; font-weight: 500;
-}
+  .product__description {
+    font-family: roc-grotesk, sans-serif !important;
+    font-weight: 500;
+  }
 
-/* Product Page Image Background */
-.global-media-settings {
-    background-color: #f0eee8!important;
-}
+  .product-form__quantity {
+    font-family: roc-grotesk, sans-serif !important;
+    font-weight: 500;
+  }
+
+  /* Product Page Image Background */
+  .global-media-settings {
+    background-color: #f0eee8 !important;
+  }
 
 
-/* Buttons */
+  /* Buttons */
 
-.button--primary {
-  font-family: roc-grotesk-condensed, sans-serif!important;
+  .button--primary {
+    font-family: roc-grotesk-condensed, sans-serif !important;
     font-weight: 700;
     font-style: normal;
     font-size: 18px;
     text-transform: capitalize;
 
-}
+  }
 
-.product-form__submit button button--full-width button--primary {
-      width: 100%;
-}
+  .product-form__submit button button--full-width button--primary {
+    width: 100%;
+  }
 
-/* Quick View Button */
+  /* Quick View Button */
 
-.color-background-2 .button--secondary, .color-accent-1 .button--secondary, .color-accent-2 .button--secondary, .color-inverse .button--secondary {
-width: 100%; }  
+  .color-background-2 .button--secondary,
+  .color-accent-1 .button--secondary,
+  .color-accent-2 .button--secondary,
+  .color-inverse .button--secondary {
+    width: 100%;
+  }
 
-/* Quick View Modal */
+  /* Quick View Modal */
 
-.img-fluid {
+  .img-fluid {
     max-width: 100%;
     width: 97%;
     background: #f0eee7;
-}
+  }
 
-/* Product List Label (e.g. 'Vegan', 'Organic') */
+  /* Product List Label (e.g. 'Vegan', 'Organic') */
 
-.custom-badge-wd {
+  .custom-badge-wd {
     margin-left: 10px;
-}
+  }
 
-.product-card-wrapper .card__content h3 {
-    text-align: center!important;
-}
+  .product-card-wrapper .card__content h3 {
+    text-align: center !important;
+  }
 
-@media only screen and (max-width: 768px) { 
+  @media only screen and (max-width: 768px) {
 
     .organic-badge {
-    margin-bottom: 0px;
+      margin-bottom: 0px;
     }
-  
+
     .vegan-badge {
-    margin-bottom: 0px;
+      margin-bottom: 0px;
     }
 
     .sustainable-badge {
-    margin-bottom: 30px;
+      margin-bottom: 30px;
     }
-}
+  }
 
-/* Wine Characteristic Scales  */
+  /* Wine Characteristic Scales  */
 
-.char-ratings {
-  list-style-type: none;
-  display: flex;
-  flex-direction: column;
-  margin-left: 10px;
-  width: 100%;
-  display: block;
-  padding-left: 0px;
-  margin-top: 16px!important;
-  font-family: roc-grotesk, sans-serif!important; font-weight: 500;
-}
+  .char-ratings {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    width: 100%;
+    display: block;
+    padding-left: 0px;
+    margin-top: 16px !important;
+    font-family: roc-grotesk, sans-serif !important;
+    font-weight: 500;
+  }
 
-.char-ratings > li {
-  margin-bottom: 1em;
-  
-}
+  .char-ratings>li {
+    margin-bottom: 1em;
 
-.bar-cont {
+  }
+
+  .bar-cont {
     position: relative;
     width: 50%;
     height: 6px;
@@ -227,24 +260,29 @@ width: 100%; }
     margin-left: 10px;
     margin-right: 10px;
     display: inline-block;
-}
+  }
 
-.bar-cont.progress-1:before {
+  .bar-cont.progress-1:before {
     width: 20%;
-}
-.bar-cont.progress-2:before {
+  }
+
+  .bar-cont.progress-2:before {
     width: 40%;
-}
-.bar-cont.progress-3:before {
+  }
+
+  .bar-cont.progress-3:before {
     width: 60%;
-}
-.bar-cont.progress-4:before {
+  }
+
+  .bar-cont.progress-4:before {
     width: 80%;
-}
-.bar-cont.progress-5:before {
+  }
+
+  .bar-cont.progress-5:before {
     width: 100%;
-}
-.bar-cont.rating-bar:before {
+  }
+
+  .bar-cont.rating-bar:before {
     content: "";
     position: absolute;
     left: 0;
@@ -252,307 +290,336 @@ width: 100%; }
     background: #E17061;
     height: 6px;
     border-radius: 6px;
-}
-.behave {
-  width: 15%!important;
-  display: inline-block;
-  vertical-align: middle;
-}
+  }
 
-/* General Info Fields */
-#eg-sticky-atc {
-  background: white!important;
-}
+  .behave {
+    width: 15% !important;
+    display: inline-block;
+    vertical-align: middle;
+  }
 
-.wine-basics-list {
-  list-style-type: none;
-  padding-left: 0px;
-  font-family: roc-grotesk, sans-serif!important; font-weight: 500;
-}
+  /* General Info Fields */
+  #eg-sticky-atc {
+    background: white !important;
+  }
 
-ul.additional-details-list {
-  columns: 2;
-  -webkit-columns: 2;
-  -moz-columns: 2;
-  font-family: roc-grotesk, sans-serif!important; font-weight: 500;
-}
+  .wine-basics-list {
+    list-style-type: none;
+    padding-left: 0px;
+    font-family: roc-grotesk, sans-serif !important;
+    font-weight: 500;
+  }
 
-ul.additional-details-list,ul.food-pairings-list,ul.wine-methods-list {
-  list-style-type: none;
-  padding-left: 0px;
-}
+  ul.additional-details-list {
+    columns: 2;
+    -webkit-columns: 2;
+    -moz-columns: 2;
+    font-family: roc-grotesk, sans-serif !important;
+    font-weight: 500;
+  }
 
-.food-pairings-list  {
-      font-family: roc-grotesk, sans-serif!important; font-weight: 500;
-}
+  ul.additional-details-list,
+  ul.food-pairings-list,
+  ul.wine-methods-list {
+    list-style-type: none;
+    padding-left: 0px;
+  }
+
+  .food-pairings-list {
+    font-family: roc-grotesk, sans-serif !important;
+    font-weight: 500;
+  }
 
 
-.wine-methods-list {
-      font-family: roc-grotesk, sans-serif!important; font-weight: 500;
-}
+  .wine-methods-list {
+    font-family: roc-grotesk, sans-serif !important;
+    font-weight: 500;
+  }
 
-/* Collection page text block */
+  /* Collection page text block */
 
-@media screen and (max-width: 2000px)
-.collection-hero__title+.collection-hero__description {
+  @media screen and (max-width: 2000px) .collection-hero__title+.collection-hero__description {
     font-size: 1.8rem;
     margin-top: 2rem;
     margin-bottom: 2rem;
     width: 100%;
-}
+  }
 
-.category-description { width: 100%!important; }
+  .category-description {
+    width: 100% !important;
+  }
 
 
-.collection-hero__text-wrapper {
+  .collection-hero__text-wrapper {
     flex-basis: 100%;
-    padding-bottom: 30px!important;
-}
+    padding-bottom: 30px !important;
+  }
 
-.product-page-rule {
-  padding-top: 0px;
-  padding-bottom: 0px;
-  margin-top: 1px;
-  margin-bottom: 1px;
-  height: 1px!important;
-}
+  .product-page-rule {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin-top: 1px;
+    margin-bottom: 1px;
+    height: 1px !important;
+  }
 
-.price-item- {
-     font-family: roc-grotesk, sans-serif!important; font-weight: 500;  font-weight: 500;
-    
-}
+  .price-item- {
+    font-family: roc-grotesk, sans-serif !important;
+    font-weight: 500;
+    font-weight: 500;
 
-.price-item {
-       font-family: roc-grotesk, sans-serif!important; font-weight: 500;  font-weight: 500;
-}
+  }
 
-.collection-hero__inner {
-  display: flex;
-  justify-content: space-between;
-}
+  .price-item {
+    font-family: roc-grotesk, sans-serif !important;
+    font-weight: 500;
+    font-weight: 500;
+  }
+
+  .collection-hero__inner {
+    display: flex;
+    justify-content: space-between;
+  }
 
 
-.custom-badge-wd {
-  font-size: 10px;
-  font-weight: 900;
-  color: white;
-  max-height: 24px;
-  text-align: left;
-  vertical-align: middle;
-  padding: 2px 6px;
-  border-radius: 3px;
-  
-}
-.product-badge-row {
+  .custom-badge-wd {
+    font-size: 10px;
+    font-weight: 900;
+    color: white;
+    max-height: 24px;
+    text-align: left;
+    vertical-align: middle;
+    padding: 2px 6px;
+    border-radius: 3px;
+
+  }
+
+  .product-badge-row {
     display: flex;
     flex-direction: column;
     gap: 8px;
-}
+  }
 
-.product-page-row__badges {
-    display: flex!important;
-    align-items: baseline!important;
-    justify-content: end!important;
-    margin-bottom: 5em!important;
-    padding: 1em!important;
-}
+  .product-page-row__badges {
+    display: flex !important;
+    align-items: baseline !important;
+    justify-content: end !important;
+    margin-bottom: 5em !important;
+    padding: 1em !important;
+  }
 
-.custom-badge-wd p {
-  font-weight: 800;
-  vertical-align: middle;
-  padding: 0px;
-  margin: 0 auto;
-  line-height: 20px;
-}
+  .custom-badge-wd p {
+    font-weight: 800;
+    vertical-align: middle;
+    padding: 0px;
+    margin: 0 auto;
+    line-height: 20px;
+  }
 
-.global-media-settings {
-    background-color: rgba(0,0,0,0)!important;
-}
+  .global-media-settings {
+    background-color: rgba(0, 0, 0, 0) !important;
+  }
 
-.color-background-1,
-.color-background-2,
-.color-inverse,
-.color-accent-1,
-.color-accent-2 {
-    background-color: rgba(0,0,0,0)!important;
-}
+  .color-background-1,
+  .color-background-2,
+  .color-inverse,
+  .color-accent-1,
+  .color-accent-2 {
+    background-color: rgba(0, 0, 0, 0) !important;
+  }
 
 
-.custom-badge-wd {
-  width: fit-content;
-}
+  .custom-badge-wd {
+    width: fit-content;
+  }
 
-.vegan-badge {
+  .vegan-badge {
     background-color: var(--brand-green);
-}
-.organic-badge {
+  }
+
+  .organic-badge {
     background-color: var(--brand-red)
-}
-.sustainable-badge {
+  }
+
+  .sustainable-badge {
     background-color: var(--brand-blue);
-}
+  }
 
-.natural-badge {
+  .natural-badge {
     background-color: var(--brand-teal);
-}
+  }
 
-.bundle-item-title {
-  color: var(--brand-red)
-}
+  .bundle-item-title {
+    color: var(--brand-red)
+  }
 
-.biodynamic-badge {
+  .biodynamic-badge {
     background-color: var(--brand-purple);
-}
+  }
 
-.collection-image__container {
-  max-width: 450px;
-  width: 100%;
-}
+  .collection-image__container {
+    max-width: 450px;
+    width: 100%;
+  }
 
-.collection-winemaker__image {
-  width: 100%;
-}
+  .collection-winemaker__image {
+    width: 100%;
+  }
 
-.product__media-list.contains-media.grid.grid--peek.list-unstyled.slider.slider--mobile {
-      background-color: var(--brand-bg)
-}
+  .product__media-list.contains-media.grid.grid--peek.list-unstyled.slider.slider--mobile {
+    background-color: var(--brand-bg)
+  }
 
-.wine-basics-list a {
-  color: #e17162;
-  text-decoration: none;
-}
+  .wine-basics-list a {
+    color: #e17162;
+    text-decoration: none;
+  }
 
-li.product__media-item.grid__item.slider__slide   {
-    background: var(--brand-bg)!importantz;
-}
+  li.product__media-item.grid__item.slider__slide {
+    background: var(--brand-bg) !importantz;
+  }
 
-.wine-basics-list {
-  font-family: roc-grotesk, sans-serif!important; font-weight: 500;
-}
+  .wine-basics-list {
+    font-family: roc-grotesk, sans-serif !important;
+    font-weight: 500;
+  }
 
-.price-item price-item- {
-  font-family: roc-grotesk, sans-serif!important; font-weight: 500;
-}
+  .price-item price-item- {
+    font-family: roc-grotesk, sans-serif !important;
+    font-weight: 500;
+  }
 
-/* Product Cards */
+  /* Product Cards */
 
-#eg-super-cart-drawer-goal > .progress {height: 24px!important;}
+  #eg-super-cart-drawer-goal>.progress {
+    height: 24px !important;
+  }
 
-.card.card--media {
-  background-color: var(--brand-bg)!important;
-}
+  .card.card--media {
+    background-color: var(--brand-bg) !important;
+  }
 
-.card__heading {
-  font-family: roc-grotesk, sans-serif!important; font-weight: 500;
-  text-align: center;
-}
-.summary-tasting-notes {
-   font-family: roc-grotesk-italic, sans-serif!important;
-   text-align: center;
-  font-size: 10px;
-  color: rgba(0,0,0,0.6)!important;
-}
-.card-information > .price {
-  font-family: roc-grotesk, sans-serif!important; font-weight: 500;
-  text-align: center;
-  font-size: 13px;
-}
+  .card__heading {
+    font-family: roc-grotesk, sans-serif !important;
+    font-weight: 500;
+    text-align: center;
+  }
 
-.card-article > .card-information {
-  padding: 2em;
-}
+  .summary-tasting-notes {
+    font-family: roc-grotesk-italic, sans-serif !important;
+    text-align: center;
+    font-size: 10px;
+    color: rgba(0, 0, 0, 0.6) !important;
+  }
 
-/* Collection Pages */
+  .card-information>.price {
+    font-family: roc-grotesk, sans-serif !important;
+    font-weight: 500;
+    text-align: center;
+    font-size: 13px;
+  }
 
-.bundle-container {
-  list-style-type: none;
-  padding: 0;
-}
-.bundle-item {
-  display: flex;
-  background: var(--brand-bg);
-  padding: 1em;
-  margin-bottom: 1em;
-  align-items: center;
-}
+  .card-article>.card-information {
+    padding: 2em;
+  }
 
+  /* Collection Pages */
 
-.collection-hero  {
-  background: var(--brand-bg)!important;
-  color: var(--brand-body-text);
-}
+  .bundle-container {
+    list-style-type: none;
+    padding: 0;
+  }
 
-.collection-hero h1 {
-  color: var(--brand-green)!important;
-}
-/* Homepage */
+  .bundle-item {
+    display: flex;
+    background: var(--brand-bg);
+    padding: 1em;
+    margin-bottom: 1em;
+    align-items: center;
+  }
 
 
-#ImageWithText--template--16522173120726__16641958187a4b1df5 > h2 {
-  color: var(--brand-green);
-   font-family: roc-grotesk-condensed, sans-serif!important;
+  .collection-hero {
+    background: var(--brand-bg) !important;
+    color: var(--brand-body-text);
+  }
+
+  .collection-hero h1 {
+    color: var(--brand-green) !important;
+  }
+
+  /* Homepage */
+
+
+  #ImageWithText--template--16522173120726__16641958187a4b1df5>h2 {
+    color: var(--brand-green);
+    font-family: roc-grotesk-condensed, sans-serif !important;
     font-weight: 700;
     font-style: normal;
-}
-
-#shopify-section-template--16522173120726__16641958187a4b1df5 {
-  background-color: var(--brand-bg);
-  background-image: url("https://cdn.shopify.com/s/files/1/0657/2471/1126/files/wine-hand_2x_20950efe-475d-4b16-800c-2172618c9263.png?v=1667858068"),url("https://cdn.shopify.com/s/files/1/0657/2471/1126/files/nosey-fella_2x_cee1ae5b-e0d0-4430-a222-871ad09bd3f8.png?v=1667858360");  
-  background-repeat: no-repeat, no-repeat;
-  background-position: top right, center left;
-  background-size: 20%, 15%;
-}
-@media only screen and (max-width: 768px) {
+  }
 
   #shopify-section-template--16522173120726__16641958187a4b1df5 {
-    background-size: 40%, 25%;
+    background-color: var(--brand-bg);
+    background-image: url("https://cdn.shopify.com/s/files/1/0657/2471/1126/files/wine-hand_2x_20950efe-475d-4b16-800c-2172618c9263.png?v=1667858068"), url("https://cdn.shopify.com/s/files/1/0657/2471/1126/files/nosey-fella_2x_cee1ae5b-e0d0-4430-a222-871ad09bd3f8.png?v=1667858360");
+    background-repeat: no-repeat, no-repeat;
+    background-position: top right, center left;
+    background-size: 20%, 15%;
   }
-}
 
-#shopify-section-template--16522173120726__16641958187a4b1df5 > .button--primary {
-  background-color: var(--brand-red);
-}
+  @media only screen and (max-width: 768px) {
 
-.image-with-text__media {
-  border: none!important;
-}
+    #shopify-section-template--16522173120726__16641958187a4b1df5 {
+      background-size: 40%, 25%;
+    }
+  }
+
+  #shopify-section-template--16522173120726__16641958187a4b1df5>.button--primary {
+    background-color: var(--brand-red);
+  }
+
+  .image-with-text__media {
+    border: none !important;
+  }
 
 
-.list-menu.list-menu--inline {
-    font-family: roc-grotesk, sans-serif!important; font-weight: 500;
+  .list-menu.list-menu--inline {
+    font-family: roc-grotesk, sans-serif !important;
+    font-weight: 500;
     font-weight: 600;
     font-style: normal;
-}
+  }
 
-#ImageWithText--template--16522173120726__16641958187a4b1df5 {
-  background: rgba(0,0,0,0);
-}
+  #ImageWithText--template--16522173120726__16641958187a4b1df5 {
+    background: rgba(0, 0, 0, 0);
+  }
 
-.usb-band {
-  background: red;
-  background: var(--brand-red);
-  border: solid 3px black;
-}
+  .usb-band {
+    background: red;
+    background: var(--brand-red);
+    border: solid 3px black;
+  }
 
-hr.product-divider {margin: 18px 0px!important;}
-
-
-media-gallery {
-  position: sticky!important;
-  top: 25px;
-}
-
-.range-ratings {
- justify-content: space-between; 
- display: inherit;
-}
-
-.mega-menu__link--level-2:hover {
-  color: rgba(18,18,18, 0.75)!important;
-}
+  hr.product-divider {
+    margin: 18px 0px !important;
+  }
 
 
-/*Tabs Style*/
+  media-gallery {
+    position: sticky !important;
+    top: 25px;
+  }
+
+  .range-ratings {
+    justify-content: space-between;
+    display: inherit;
+  }
+
+  .mega-menu__link--level-2:hover {
+    color: rgba(18, 18, 18, 0.75) !important;
+  }
+
+
+  /*Tabs Style*/
 
   .responsive-tabs dt {
     padding: 0.5em;
@@ -560,170 +627,184 @@ media-gallery {
     cursor: pointer;
     text-align: center;
     padding: 1em 2em;
-    }
+  }
+
   .responsive-tabs dt:first-child {
     /* border-top: 0; */
-    }
-.responsive-tabs-placeholder {
-    padding: 1em; 
-}
+  }
 
-.winemaker-links {
-  text-align: right;
-  color: var(--brand-red);
-}
+  .responsive-tabs-placeholder {
+    padding: 1em;
+  }
+
+  .winemaker-links {
+    text-align: right;
+    color: var(--brand-red);
+  }
 
   .responsive-tabs .active {
-        color: var(--brand-red);
-        border-bottom: 3px solid var(--brand-red);
-    }
-  .responsive-tabs .active + dd {
+    color: var(--brand-red);
+    border-bottom: 3px solid var(--brand-red);
+  }
+
+  .responsive-tabs .active+dd {
     display: block;
-    }
+  }
+
   .responsive-tabs dd {
     display: none;
     padding: 0.5em;
-    }
+  }
 
-.responsive-tabs-placeholder {
-  display: none;
+  .responsive-tabs-placeholder {
+    display: none;
   }
 
 
 
-@media only screen and (max-width: 768px) {
-      .winemaker-info-tab {
-          display: flex;
-          justify-content: space-evenly;
-          align-items: flex-start;
-          flex-direction: column;
-          max-width: 1000%;
-      }
-      
-      .winemaker-tab-image {
-        max-width: 100%;
-      }
-      
-      .winemaker-tab-image > img {
-        max-width: 100%;
-      }
-      .responsive-tabs dd {
-          margin-inline-start: 0;
-          margin-inline-end: 0;
-      }
-  
-}
-
-.announcement-bar {
-  background: var(--brand-red)!important;
-}
-
-.char-ratings {
-  padding: 0;
-  margin: 0 auto;
-}
-
-@media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 768px) {
     .winemaker-info-tab {
-   overflow: hidden;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: flex-start;
+      flex-direction: column;
+      max-width: 1000%;
+    }
+
+    .winemaker-tab-image {
+      max-width: 100%;
+    }
+
+    .winemaker-tab-image>img {
+      max-width: 100%;
+    }
+
+    .responsive-tabs dd {
+      margin-inline-start: 0;
+      margin-inline-end: 0;
+    }
+
+  }
+
+  .announcement-bar {
+    background: var(--brand-red) !important;
+  }
+
+  .char-ratings {
+    padding: 0;
+    margin: 0 auto;
+  }
+
+  @media only screen and (max-width: 768px) {
+    .winemaker-info-tab {
+      overflow: hidden;
       transition: height 200ms;
       display: none;
     }
 
     .winemaker-info-tab .active {
-    display: block;
-    justify-content: space-evenly;
-    align-items: flex-start;
+      display: block;
+      justify-content: space-evenly;
+      align-items: flex-start;
     }
 
     .responsive-tabs .active {
-    color: #121212BF;
-    max-height: 0;
-	max-width: 0;
-	opacity: 0;
-	overflow: hidden;
-	white-space:nowrap;
+      color: #121212BF;
+      max-height: 0;
+      max-width: 0;
+      opacity: 0;
+      overflow: hidden;
+      white-space: nowrap;
     }
-}
-
-.header-wrapper {
-  background: white!important;
-}
-
-.product__info-wrapper .price-item--regular { font-size: 24px;}
-.button-add-remove-wishlist {
-  text-align: left!important;
-}
-.bi-heart-fill {
-  color: var(--brand-red);
-  
-}
-
-pickup-availability {
-  display: none!important;
-}
-
-.product__pickup-availabilities {
-  display: none!important;
-}
-.additional-details a {
-      color: var(--brand-red)!important;
   }
-.additional-details a:visited {
-      color: var(--brand-red)!important;
+
+  .header-wrapper {
+    background: white !important;
   }
-.style-link {
-        color: var(--brand-red)!important;
-}
-.style-link:visited {
-        color: var(--brand-red)!important;
-}
 
-.product-header {
-  font-weight: 700;
-}
+  .product__info-wrapper .price-item--regular {
+    font-size: 24px;
+  }
 
-#shopify-section-announcement-bar {
-  background: var(--brand-red)!important;
-  font-weight: 700!important;
-}
+  .button-add-remove-wishlist {
+    text-align: left !important;
+  }
+
+  .bi-heart-fill {
+    color: var(--brand-red);
+
+  }
+
+  pickup-availability {
+    display: none !important;
+  }
+
+  .product__pickup-availabilities {
+    display: none !important;
+  }
+
+  .additional-details a {
+    color: var(--brand-red) !important;
+  }
+
+  .additional-details a:visited {
+    color: var(--brand-red) !important;
+  }
+
+  .style-link {
+    color: var(--brand-red) !important;
+  }
+
+  .style-link:visited {
+    color: var(--brand-red) !important;
+  }
+
+  .product-header {
+    font-weight: 700;
+  }
+
+  #shopify-section-announcement-bar {
+    background: var(--brand-red) !important;
+    font-weight: 700 !important;
+  }
 
 
 
-@media only screen and (min-width: 768px) {
-  
-  .responsive-tabs {
-    }
+  @media only screen and (min-width: 768px) {
+
+    .responsive-tabs {}
+
     .responsive-tabs dt {
       float: left;
       border-top: 0;
-      }
-    .responsive-tabs .active + dd {
-      display: none;
-      }
- 
-  .responsive-tabs-placeholder {
-    clear: both;
-    display: block;
-    padding: 1em;
-    border-top: 1px solid #ccc;
     }
 
-}
+    .responsive-tabs .active+dd {
+      display: none;
+    }
 
-/* Footer */
+    .responsive-tabs-placeholder {
+      clear: both;
+      display: block;
+      padding: 1em;
+      border-top: 1px solid #ccc;
+    }
 
-.footer { background-color: #f0eee7!important; }
+  }
 
-.link link--text list-menu__item {
-    text-decoration: none!important;
-    color: #121212BF!important;
+  /* Footer */
+
+  .footer {
+    background-color: #f0eee7 !important;
+  }
+
+  .link link--text list-menu__item {
+    text-decoration: none !important;
+    color: #121212BF !important;
     cursor: default;
     font-weight: bold;
-}
+  }
 
-
-
-#eg-wishlist-drawer a {
-  color: var(--brand-text);
-}
+  #eg-wishlist-drawer a {
+    color: var(--brand-text);
+  }
