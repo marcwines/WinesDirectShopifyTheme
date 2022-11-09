@@ -109,7 +109,7 @@ p {
 }
 
 .price__badge-sale {
-    background: var(--brand-green)!important;
+    background-color: var(--brand-green)!important;
     border: 3px solid var(--brand-green)!important;
 }
 
