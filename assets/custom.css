@@ -54,6 +54,16 @@ p {
 }
 
 
+@media screen and (min-width: 750px) {
+  .product--thumbnail .product__media-gallery,
+  .product--thumbnail_slider .product__media-gallery,
+  .product--stacked .product__info-container--sticky {
+    display: block;
+    position: sticky;
+    top: 3rem;
+    z-index: 2;
+  }
+
 .product_title>h1 {
     font-family: roc-grotesk-condensed, sans-serif!important;
     font-weight: 700;
