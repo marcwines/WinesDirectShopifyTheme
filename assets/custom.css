@@ -816,7 +816,5 @@ p {
 
 /* Trust Pilot Frame */
 
-.trust-container {padding-bottom: 5px;
-  background-image: linear-gradient(to bottom, rgba(240, 255, 40, 1) 0%;
-  background-clip: content-box, padding-box;
+.trust-container {bottom-border: 5px solid red;
 }
