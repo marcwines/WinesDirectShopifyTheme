@@ -179,11 +179,19 @@
               "heading": "Customer Service",
               "menu": "footer-menu-middle"
             }
+          },
+          "8febd84e-f8d7-4680-884c-5cc26a8b30ce": {
+            "type": "link_list",
+            "settings": {
+              "heading": "Services",
+              "menu": "footer-menu-right"
+            }
           }
         },
         "block_order": [
           "f245fa2b-8610-469c-aaf6-988cbf87830e",
-          "ba2058ac-72de-4f92-8226-3ef71e84b1d6"
+          "ba2058ac-72de-4f92-8226-3ef71e84b1d6",
+          "8febd84e-f8d7-4680-884c-5cc26a8b30ce"
         ],
         "settings": {
           "color_scheme": "background-1",
