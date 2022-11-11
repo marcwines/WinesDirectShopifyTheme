@@ -6,9 +6,53 @@
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "8a5c0ecd-93ee-4f96-bb0a-892ad45ef67d": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--16522173317334__8a5c0ecd-93ee-4f96-bb0a-892ad45ef67d-16681823267796ed4c-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Wine Explorers Club",
+            "heading_size": "h1"
+          }
+        },
+        "template--16522173317334__8a5c0ecd-93ee-4f96-bb0a-892ad45ef67d-16681823267796ed4c-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Wines Directs Wine Explorers Club can now be found at WINEEXPLORERS.ie<\/p>",
+            "text_style": "body"
+          }
+        },
+        "template--16522173317334__8a5c0ecd-93ee-4f96-bb0a-892ad45ef67d-16681823267796ed4c-2": {
+          "type": "button",
+          "settings": {
+            "button_label": "Check It Out",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--16522173317334__8a5c0ecd-93ee-4f96-bb0a-892ad45ef67d-16681823267796ed4c-0",
+        "template--16522173317334__8a5c0ecd-93ee-4f96-bb0a-892ad45ef67d-16681823267796ed4c-1",
+        "template--16522173317334__8a5c0ecd-93ee-4f96-bb0a-892ad45ef67d-16681823267796ed4c-2"
+      ],
+      "settings": {
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "8a5c0ecd-93ee-4f96-bb0a-892ad45ef67d"
   ]
 }
