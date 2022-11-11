@@ -13,7 +13,7 @@
         "16641958185fd8e3ba-1": {
           "type": "text",
           "settings": {
-            "text": "<p>Wines Direct from passionate winemakers around the world. Shop our Christmas selection now.<\/p>",
+            "text": "<p>Wines, direct from passionate winemakers around the world. Shop our Christmas selection now.<\/p>",
             "text_style": "body"
           }
         },
@@ -174,7 +174,7 @@
       "settings": {
         "title": "Christmas Cases",
         "heading_size": "h1",
-        "description": "<p>We've put together some delightful mixed cases for the christmas season - great value, great wine!<\/p>",
+        "description": "<p>We've put together some delicious and delightful mixed cases for the christmas season - great value, great wine!<\/p>",
         "show_description": false,
         "description_style": "body",
         "collection": "featured",
