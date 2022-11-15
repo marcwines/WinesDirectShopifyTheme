@@ -833,8 +833,5 @@ p {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  gap: 15px;
 }
-#eg-sticky-atc .product-form .quantity-input-wrapper .product-form__submit button button--primary {
-  margin-bottom: 0px !important;
-}
+
