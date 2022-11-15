@@ -839,6 +839,9 @@ p {
 #eg-sticky-atc .product-form .select {
 /*   margin-bottom: 15px; */
 }
+html.js body.gradient div#shopify-section-eg-sticky-atc.shopify-section div#eg-sticky-atc.color-background-1.show div.page-width div.page-width-inner product-form.product-form form#product-form-eg-sticky-atc.form div.quantity-input-wrapper button.product-form__submit.button.button--primary {
+  margin-bottom: 0px;
+}
 #eg-sticky-atc .product-form .quantity {
  width: 30% !important;
 }
