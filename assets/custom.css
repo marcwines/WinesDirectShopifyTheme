@@ -840,7 +840,7 @@ p {
 /*   margin-bottom: 15px; */
 }
 #eg-sticky-atc .product-form .quantity {
- width: 1.5rem; !important;
+ width: 10% !important;
 }
 /*  } */
 @media screen and (min-width: 750px) {
