@@ -828,6 +828,7 @@ p {
 }
 
 /* Task: Sticky Add To Cart Responsiveness */
+ @media only screen and (max-width: 768px) {
 #eg-sticky-atc .product-form .quantity-input-wrapper {
 
   display: flex;
@@ -837,3 +838,4 @@ p {
 #eg-sticky-atc .product-form .select {
   margin-bottom: 15px;
 }
+ }
