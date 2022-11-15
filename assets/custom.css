@@ -818,3 +818,11 @@ p {
 
 .trust-container {border-bottom: 5px solid #fff;
 }
+
+/* seo solutions - connor updates */
+/* Task: Product Card Content Alignment */
+.card__information {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
