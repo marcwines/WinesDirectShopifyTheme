@@ -834,4 +834,6 @@ p {
   align-items: center;
   flex-wrap: wrap;
 }
-
+#eg-sticky-atc .product-form .select {
+  margin-bottom: 15px;
+}
