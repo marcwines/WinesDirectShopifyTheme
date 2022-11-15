@@ -826,3 +826,11 @@ p {
   flex-direction: column;
   justify-content: space-around;
 }
+
+/* Task: Sticky Add To Cart Responsiveness */
+#eg-sticky-atc .product-form .quantity-input-wrapper {
+
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
