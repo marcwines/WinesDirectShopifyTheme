@@ -836,5 +836,5 @@ p {
   gap: 15px;
 }
 #eg-sticky-atc .product-form .quantity-input-wrapper .product-form__submit button button--primary {
-  margin-bottom: 0px;
+  margin-bottom: 0px !important;
 }
