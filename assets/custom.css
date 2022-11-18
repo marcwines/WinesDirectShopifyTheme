@@ -852,5 +852,5 @@ html.js body.gradient div#shopify-section-eg-sticky-atc.shopify-section div#eg-s
 
 /* Mixed Cases Dropdown */
 #MegaMenu-Content-2 ul li a:hover {
-  color: var(--brand-red);
+  color: var(--brand-red) !important;
 }
