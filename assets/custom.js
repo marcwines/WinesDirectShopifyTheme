@@ -23,5 +23,5 @@ $.fn.responsiveTabs = function() {
 
 $('.responsive-tabs').responsiveTabs();
 
-let giftMsg = document.querySelector("#Details-CartDrawer");
+var giftMsg = document.querySelector("#Details-CartDrawer");
 giftMsg.innerHTML += '<p>Please add any special instructions here. Additionally, if this is a gift, please enter a message for the recipient.</p>';
