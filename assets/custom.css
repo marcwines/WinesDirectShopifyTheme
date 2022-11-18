@@ -828,7 +828,7 @@ p {
 }
 
 /* Task: Sticky Add To Cart Responsiveness */
-/*  @media only screen and (max-width: 768px) { */
+
 #eg-sticky-atc .product-form .quantity-input-wrapper {
 
   display: flex;
@@ -845,7 +845,7 @@ html.js body.gradient div#shopify-section-eg-sticky-atc.shopify-section div#eg-s
 #eg-sticky-atc .product-form .quantity {
  width: 30% !important;
 }
-/*  } */
+
 @media screen and (min-width: 750px) {
 
 }
@@ -857,3 +857,10 @@ html.js body.gradient div#shopify-section-eg-sticky-atc.shopify-section div#eg-s
 #MegaMenu-Content-2 {
   padding-left: 25%;
 }
+
+/* Product Badges */
+ @media only screen and (max-width: 768px) {
+.product-page-row__badges {
+  padding: 0;
+}
+    }
