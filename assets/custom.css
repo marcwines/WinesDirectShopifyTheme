@@ -861,6 +861,6 @@ html.js body.gradient div#shopify-section-eg-sticky-atc.shopify-section div#eg-s
 /* Product Badges */
  @media only screen and (max-width: 768px) {
 .product-page-row__badges {
-  padding: 0;
+  padding: 0 !important;
 }
     }
