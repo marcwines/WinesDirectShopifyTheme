@@ -864,3 +864,8 @@ html.js body.gradient div#shopify-section-eg-sticky-atc.shopify-section div#eg-s
   padding: 0 !important;
 }
     }
+
+/* Quick View Search Page */
+.article-card-wrapper button {
+  display: none;
+}
