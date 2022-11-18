@@ -715,10 +715,10 @@ p {
 
     .responsive-tabs .active {
       color: #121212BF;
-      max-height: 0;
+/*       max-height: 0;
       max-width: 0;
       opacity: 0;
-      overflow: hidden;
+      overflow: hidden; */
       white-space: nowrap;
     }
   }
