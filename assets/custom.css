@@ -849,3 +849,8 @@ html.js body.gradient div#shopify-section-eg-sticky-atc.shopify-section div#eg-s
 @media screen and (min-width: 750px) {
 
 }
+
+/* Mixed Cases Dropdown */
+#MegaMenu-Content-2 ul li a:hover {
+  color: var(--brand-red);
+}
