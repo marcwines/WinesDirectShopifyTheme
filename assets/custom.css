@@ -875,3 +875,8 @@ html.js body.gradient div#shopify-section-eg-sticky-atc.shopify-section div#eg-s
   background-color: #fff;
   border-radius: 100%;
 }
+
+/* Gift Card Placeholder */
+#Details-CartDrawer textarea::placeholder {
+color: black;
+}
