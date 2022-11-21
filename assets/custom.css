@@ -865,7 +865,13 @@ html.js body.gradient div#shopify-section-eg-sticky-atc.shopify-section div#eg-s
 }
     }
 
-/* Quick View Search Page */
+/* Quick View Button Search Page */
 .article-card-wrapper button {
   display: none;
+}
+
+/* Quick View Close Button */
+#eg-quick-view-modal .btn-close {
+  background-color: #fff;
+  border-radius: 100%;
 }
