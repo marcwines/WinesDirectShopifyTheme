@@ -180,6 +180,13 @@
               "menu": "footer-menu-middle"
             }
           },
+          "ce5cb264-c799-4995-9379-046f66076081": {
+            "type": "link_list",
+            "settings": {
+              "heading": "Quick links",
+              "menu": "contact-us"
+            }
+          },
           "8febd84e-f8d7-4680-884c-5cc26a8b30ce": {
             "type": "link_list",
             "settings": {
@@ -191,6 +198,7 @@
         "block_order": [
           "f245fa2b-8610-469c-aaf6-988cbf87830e",
           "ba2058ac-72de-4f92-8226-3ef71e84b1d6",
+          "ce5cb264-c799-4995-9379-046f66076081",
           "8febd84e-f8d7-4680-884c-5cc26a8b30ce"
         ],
         "settings": {
