@@ -1,49 +1,5 @@
 {
   "sections": {
-    "8a5c0ecd-93ee-4f96-bb0a-892ad45ef67d": {
-      "type": "image-with-text",
-      "blocks": {
-        "template--16522173317334__8a5c0ecd-93ee-4f96-bb0a-892ad45ef67d-16681823267796ed4c-0": {
-          "type": "heading",
-          "settings": {
-            "heading": "Wine Explorers Club",
-            "heading_size": "h1"
-          }
-        },
-        "template--16522173317334__8a5c0ecd-93ee-4f96-bb0a-892ad45ef67d-16681823267796ed4c-1": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Wines Directs Wine Explorers Club can now be found at WINEEXPLORERS.ie<\/p>",
-            "text_style": "body"
-          }
-        },
-        "template--16522173317334__8a5c0ecd-93ee-4f96-bb0a-892ad45ef67d-16681823267796ed4c-2": {
-          "type": "button",
-          "settings": {
-            "button_label": "Explore Now",
-            "button_link": "https:\/\/wineexplorers.ie"
-          }
-        }
-      },
-      "block_order": [
-        "template--16522173317334__8a5c0ecd-93ee-4f96-bb0a-892ad45ef67d-16681823267796ed4c-0",
-        "template--16522173317334__8a5c0ecd-93ee-4f96-bb0a-892ad45ef67d-16681823267796ed4c-1",
-        "template--16522173317334__8a5c0ecd-93ee-4f96-bb0a-892ad45ef67d-16681823267796ed4c-2"
-      ],
-      "settings": {
-        "image": "shopify:\/\/shop_images\/wine-explorers-wine-subscription.webp",
-        "height": "adapt",
-        "desktop_image_width": "medium",
-        "layout": "image_first",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "left",
-        "content_layout": "no-overlap",
-        "color_scheme": "background-1",
-        "mobile_content_alignment": "left",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "main": {
       "type": "main-page",
       "settings": {
@@ -53,7 +9,6 @@
     }
   },
   "order": [
-    "8a5c0ecd-93ee-4f96-bb0a-892ad45ef67d",
     "main"
   ]
 }
