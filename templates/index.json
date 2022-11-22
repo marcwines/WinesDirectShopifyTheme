@@ -6,14 +6,14 @@
         "16641958185fd8e3ba-0": {
           "type": "heading",
           "settings": {
-            "heading": "WORLD CLASS WINES. DIRECT FROM WORLD CLASS WINEMAKERS.",
+            "heading": "BLOCK FRIDAY WINES",
             "heading_size": "h1"
           }
         },
         "16641958185fd8e3ba-1": {
           "type": "text",
           "settings": {
-            "text": "<p>Wines, direct from passionate winemakers around the world. Shop our Christmas selection now.<\/p>",
+            "text": "<p>We've put together the perfect selection for your holidays. For gifting or for enjoying yourself over the festive season, check out our <strong>Block Friday <\/strong>range!<\/p>",
             "text_style": "body"
           }
         },
@@ -21,7 +21,7 @@
           "type": "button",
           "settings": {
             "button_label": "Shop Christmas Selections",
-            "button_link": "shopify:\/\/collections\/christmas-wines"
+            "button_link": "shopify:\/\/collections\/green-friday-sale"
           }
         }
       },
@@ -31,8 +31,8 @@
         "16641958185fd8e3ba-2"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/better-square.png",
-        "height": "adapt",
+        "image": "shopify:\/\/shop_images\/blok-friday-wines.png",
+        "height": "small",
         "desktop_image_width": "medium",
         "layout": "text_first",
         "desktop_content_position": "middle",
