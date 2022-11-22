@@ -8,9 +8,8 @@
     <div class="cart__footer">
       {%- if settings.show_cart_note -%}
         <cart-note class="cart__note field">
-
-<textarea class="text-area field__input" style="color: #bcbcbc;" name="note" form="cart" id="Cart-note" placeholder="Add any special instructions here. Additionally, if this is a gift, please enter a message for the recipient."> </textarea>
-          
+          <label for="Cart-note">{{ 'sections.cart.note' | t }}</label>
+          <textarea class="text-area field__input" style="color: #bcbcbc;" name="note" form="cart" id="Cart-note"{% if cart.note == blank -%}  name="properties[Your name]" placeholder="Add any special instructions here. Additionally, if this is a gift, please enter a message for the recipient." {%- else -%}  placeholder="{{ 'sections.cart.note' | t }}" {{cart.note}}{%- endif %}></textarea>       
         </cart-note>
       {%- endif -%}
 
