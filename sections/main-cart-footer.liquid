@@ -9,7 +9,7 @@
       {%- if settings.show_cart_note -%}
         <cart-note class="cart__note field">
           <label for="Cart-note">{{ 'sections.cart.note' | t }}</label>
-          <textarea class="text-area field__input" value="Your Value" style="color: #bcbcbc;" name="note" form="cart" id="Cart-note" placeholder="{{ 'sections.cart.note' | t }}">{% if cart.note == blank -%}Add any special instructions here. Additionally, if this is a gift, please enter a message for the recipient.{%- else -%}{{cart.note}}{%- endif %}</textarea>
+          <textarea class="text-area field__input" style="color: #bcbcbc;" name="note" form="cart" id="Cart-note" placeholder="{{ 'sections.cart.note' | t }}">{% if cart.note == blank -%}Add any special instructions here. Additionally, if this is a gift, please enter a message for the recipient.{%- else -%}{{cart.note}}{%- endif %}</textarea>
         </cart-note>
       {%- endif -%}
 
