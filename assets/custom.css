@@ -880,3 +880,8 @@ html.js body.gradient div#shopify-section-eg-sticky-atc.shopify-section div#eg-s
 #Details-CartDrawer textarea::placeholder {
 color: black;
 }
+
+/* Textarea focus fix */
+textarea#CommentForm-body:focus {
+    padding-top: 15px !important;
+}
