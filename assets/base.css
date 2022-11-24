@@ -2971,8 +2971,3 @@ details-disclosure > details {
     outline: transparent solid 1px;
   }
 }
-
-/* Textarea focus fix */
-textarea#Cart-note::placeholder {
-  opacity: 1 !important;
-}
