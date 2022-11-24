@@ -2974,5 +2974,5 @@ details-disclosure > details {
 
 /* Textarea focus fix */
 textarea#Cart-note::placeholder {
-  opacity: 1 !important;
+  opacity: 1!important;
 }
