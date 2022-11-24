@@ -882,6 +882,6 @@ color: black;
 }
 
 /* Textarea focus fix */
-textarea#Cart-note:placeholder {
+textarea#Cart-note::placeholder {
   opacity: 1 !important;
 }
