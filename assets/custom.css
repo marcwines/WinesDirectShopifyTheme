@@ -882,6 +882,6 @@ color: black;
 }
 
 /* Textarea focus fix */
-textarea#CommentForm-body:focus {
-    padding-top: 15px !important;
+textarea#Cart-note::placeholder {
+  opacity: 1 !important;
 }
