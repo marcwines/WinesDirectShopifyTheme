@@ -889,3 +889,11 @@ textarea#Cart-note::placeholder {
 textarea#Cart-note:focus::placeholder {
 color: transparent;
  }    
+
+textarea#CartDrawer-Note::placeholder {
+  opacity: 1 !important;
+}
+
+textarea#CartDrawer-Note:focus::placeholder {
+color: transparent;
+ }    
