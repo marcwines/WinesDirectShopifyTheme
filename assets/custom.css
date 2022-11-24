@@ -885,3 +885,7 @@ color: black;
 textarea#Cart-note::placeholder {
   opacity: 1 !important;
 }
+
+textarea#Cart-note:focus::placeholder {
+color: transparent;
+ }    
