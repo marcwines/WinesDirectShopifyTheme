@@ -902,3 +902,8 @@ color: transparent;
 .parent-display.facets__display {
   z-index:3!important;
 }
+
+
+.badge.price__badge-sale.color-accent-2 {
+  background: var(--brand-green);
+}
