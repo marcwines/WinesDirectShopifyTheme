@@ -897,3 +897,8 @@ textarea#CartDrawer-Note::placeholder {
 textarea#CartDrawer-Note:focus::placeholder {
 color: transparent;
  }    
+
+
+.parent-display.facets__display {
+  z-index:9999;
+}
