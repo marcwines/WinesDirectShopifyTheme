@@ -6,22 +6,22 @@
         "16641958185fd8e3ba-0": {
           "type": "heading",
           "settings": {
-            "heading": "BLOCK FRIDAY WINES",
+            "heading": "CYBER MONDAY CASE",
             "heading_size": "h1"
           }
         },
         "16641958185fd8e3ba-1": {
           "type": "text",
           "settings": {
-            "text": "<p>We've put together the perfect selection for your holidays. For gifting or for enjoying yourself over the festive season, check out our <strong>Block Friday <\/strong>range!<\/p>",
+            "text": "<p>Do you hate Mondays but love wine? Then you’re in need of a splash of sunshine to start your week and we’ve got you covered! Save 25% on our Cyber Monday Case.<br\/><\/p>",
             "text_style": "body"
           }
         },
         "16641958185fd8e3ba-2": {
           "type": "button",
           "settings": {
-            "button_label": "View Our Deals",
-            "button_link": "shopify:\/\/collections\/green-friday-sale"
+            "button_label": "Shop Now",
+            "button_link": "shopify:\/\/products\/cyber-monday-case"
           }
         }
       },
@@ -31,7 +31,7 @@
         "16641958185fd8e3ba-2"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/blok-friday-wines.png",
+        "image": "shopify:\/\/shop_images\/cyber6-w.png",
         "height": "small",
         "desktop_image_width": "medium",
         "layout": "text_first",
