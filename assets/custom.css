@@ -904,6 +904,6 @@ color: transparent;
 }
 
 
-.badge.price__badge-sale.color-accent-2 {
-  background: var(--brand-green);
+.price__badge-sale.color-accent-2 {
+  color: var(--brand-green);
 }
