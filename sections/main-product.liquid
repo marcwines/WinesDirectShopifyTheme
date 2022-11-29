@@ -341,10 +341,6 @@
    
               
 {% if product.metafields.custom.product_type.value contains 'Bottle' %}          
-            <ul class="wine-basics-list">
-          <p> {{ product.variant.sku }} </p>
-  <p>{{ product.sku }} </p>
-  <p>{{ current_variant.sku }}</p>
 <!-- hidemaker -->
 {% if product.metafields.custom.winemaker.value contains 'Wines Direct' %}  
   {% else %}
@@ -385,6 +381,11 @@
             </li>
             </ul>
 {% endif %}
+
+                        <ul class="wine-basics-list">
+          <p> {{ product.variant.sku }} </p>
+  <p>{{ product.sku }} </p>
+  <p>{{ current_variant.sku }}</p>
 
 
   
