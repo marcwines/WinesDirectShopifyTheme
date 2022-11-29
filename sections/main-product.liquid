@@ -342,7 +342,9 @@
               
 {% if product.metafields.custom.product_type.value contains 'Bottle' %}          
             <ul class="wine-basics-list">
-<small> {{ variant.sku }} | {{ product.sku }} | {{ current_variant.sku }}</small>
+          <p> {{ variant.sku }} </p>
+  <p>{{ product.sku }} </p>
+  <p>{{ current_variant.sku }}</p>
 <!-- hidemaker -->
 {% if product.metafields.custom.winemaker.value contains 'Wines Direct' %}  
   {% else %}
