@@ -329,6 +329,7 @@
                   <h2 class="h1">
                     {{ product.title | escape }}
                   </h2>
+            <small> {{ variant.sku }} | {{ product.sku }}</small>
                 </a>
               </div>
 
@@ -453,7 +454,6 @@
                                     {% for region in product.metafields.custom.region_of_origin.value %}
                                     {{ region }}
                                 {% endfor %}
-               {{ variant.sku }}
                               </li>
                               <li>
                          <b>Vintage: </b>
