@@ -386,11 +386,6 @@
                         {% unless forloop.last %},{% endunless %}
                     {% endfor %}         
             </li>
-
-{% if product.selected_or_first_available_variant.sku != blank %}
-	<p>SKU: {{ product.selected_or_first_available_variant.sku }}</p>
-{% endif %}
-
   
             </ul>
 {% endif %}
@@ -501,9 +496,10 @@
               </div>
               {%- if shop.taxes_included or shop.shipping_policy.body != blank -%}
                 <div class="product__tax caption rte">
-                  {%- if shop.taxes_included -%}
-                    {{ 'products.product.include_taxes' | t }}
-                  {%- endif -%}
+{% if product.selected_or_first_available_variant.sku != blank %}
+	<p>SKU: {{ product.selected_or_first_available_variant.sku }}</p>
+{% endif %}
+
                   {%- if shop.shipping_policy.body != blank -%}
                     {{ 'products.product.shipping_policy_html' | t: link: shop.shipping_policy.url }}
                   {%- endif -%}
