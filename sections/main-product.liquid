@@ -372,7 +372,10 @@
                 {% endfor %}         
             </li>
 <!--  Test Complete -->
-  
+              <li>
+                <b>AOC:</b> 
+{{ product.metafields.custom.aoc.value }} 
+            </li>
             <li>
                 <b>Grapes:</b> 
                     {% for grape in product.metafields.custom.grapes.value %} 
@@ -380,6 +383,10 @@
                         {% unless forloop.last %},{% endunless %}
                     {% endfor %}         
             </li>
+
+
+
+  
             </ul>
 {% endif %}
 
