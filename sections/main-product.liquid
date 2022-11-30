@@ -375,11 +375,9 @@
               <li>
                 <b>AOC:</b> 
 
-{% if product.metafields.custom.aoc.value != null %}  
-  
-    {{ product.metafields.custom.aoc.value }} 
-
-{% endif %}
+    {% if product.metafields.custom.aoc.value != null %}  
+        {{ product.metafields.custom.aoc.value }} 
+    {% endif %}
             </li>
             <li>
                 <b>Grapes:</b> 
