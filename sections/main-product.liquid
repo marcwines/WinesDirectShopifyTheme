@@ -374,7 +374,12 @@
 <!--  Test Complete -->
               <li>
                 <b>AOC:</b> 
-{{ product.metafields.custom.aoc.value }} 
+
+{% if product.metafields.custom.aoc.value != blank %}  
+  
+    {{ product.metafields.custom.aoc.value }} 
+
+{% endif %}
             </li>
             <li>
                 <b>Grapes:</b> 
