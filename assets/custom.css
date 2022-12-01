@@ -907,3 +907,6 @@ color: transparent;
 .price__badge-sale.color-accent-2 {
   color: var(--brand-green);
 }
+
+.characteristics-text__small {
+text-size: large;}
