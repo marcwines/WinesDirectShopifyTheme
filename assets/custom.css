@@ -154,6 +154,7 @@ p {
 
   .mega-menu__link {
     font-weight: 500;
+    left: 100px;
   }
 
   .mega-menu__link:hover,
