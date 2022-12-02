@@ -6,14 +6,14 @@
         "16641958185fd8e3ba-0": {
           "type": "heading",
           "settings": {
-            "heading": "CYBER MONDAY CASE",
+            "heading": "CHRISTMAS GIFT SELECTIONS",
             "heading_size": "h1"
           }
         },
         "16641958185fd8e3ba-1": {
           "type": "text",
           "settings": {
-            "text": "<p>Do you hate Mondays but love wine? Then you’re in need of a splash of sunshine to start your week and we’ve got you covered! Save 25% on our Cyber Monday Case.<br\/><\/p>",
+            "text": "<p>Give your loved ones the gift of great wine with our christmas win selections!<br\/><\/p>",
             "text_style": "body"
           }
         },
@@ -21,7 +21,7 @@
           "type": "button",
           "settings": {
             "button_label": "Shop Now",
-            "button_link": "shopify:\/\/products\/cyber-monday-case"
+            "button_link": "shopify:\/\/collections\/christmas-wines"
           }
         }
       },
