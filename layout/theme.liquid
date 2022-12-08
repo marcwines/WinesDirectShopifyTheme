@@ -1,6 +1,7 @@
 <!doctype html>
 <html class="no-js" lang="{{ request.locale.iso_code }}">
   <head>
+{% include 'taginstall-head' %}
     <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -367,5 +368,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!--Gem_Page_Footer_Script-->
 {% render 'gem-app-footer-scripts', GEM_FOOTER_SCRIPT: GEM_FOOTER_SCRIPT %}
 <!--End_Gem_Page_Footer_Script-->
+{% include 'taginstall-body' %}
 </body>
 </html>
