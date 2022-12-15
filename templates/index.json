@@ -6,14 +6,14 @@
         "16641958185fd8e3ba-0": {
           "type": "heading",
           "settings": {
-            "heading": "LUXURY CHRISTMAS GIFT SELECTIONS",
+            "heading": "CHRISTMAS CASE SALE",
             "heading_size": "h1"
           }
         },
         "16641958185fd8e3ba-1": {
           "type": "text",
           "settings": {
-            "text": "<p>Give your loved ones the gift of great wine with our christmas wine selections!<br\/><\/p>",
+            "text": "<p>There’s 10 days to the big day, and we’re keen to ensure that our customers get to Share the Joy! <\/p>",
             "text_style": "body"
           }
         },
@@ -21,7 +21,7 @@
           "type": "button",
           "settings": {
             "button_label": "Shop Now",
-            "button_link": "shopify:\/\/collections\/christmas-luxury-cases"
+            "button_link": "shopify:\/\/collections\/15-off-sale"
           }
         }
       },
@@ -31,7 +31,7 @@
         "16641958185fd8e3ba-2"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/12-ChristmasTable.webp",
+        "image": "shopify:\/\/shop_images\/20-FestiveFavourites.webp",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "text_first",
