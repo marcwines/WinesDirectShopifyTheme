@@ -1,0 +1,38 @@
+<style>
+  .plus-field__message-error,
+  .field__message {
+    font-size: 0.85714em;
+    line-height: 1.0em;
+    margin: 0.3em 0 0.28571em;
+  }
+</style>
+
+<script>
+  (function($) {
+    $(document).on('page:load page:change', function() {
+      if (Shopify.Checkout.step === 'contact_information') { // -----------------Make postal codes requires-----------------//
+        var postcodeField = $('[name="checkout[shipping_address][zip]"]:not([tabindex="-1"])');
+        var postcodeError = $('[data-address-field="zip"]');
+        var errorMessage = '<p class="field__message field__message--error" id="error-message"> {{ 'plus.checkout.postal_code_error' | t }}</p>';
+        function postCodeValidation() {
+          var postcodeFieldVal = $('[name="checkout[shipping_address][zip]"]:not(.visually-hidden)').val();
+          if (postcodeFieldVal.length < 1) {
+            postcodeError.addClass('field--error');
+            if (postcodeError.find('#error-message').length === 0) {
+              postcodeError.append(errorMessage);
+            } else {
+              postcodeError.find('#error-message').css('display', 'block');
+            }
+            return false;
+          }
+          return true;
+        }
+        postcodeField.on('blur', postCodeValidation);
+        $('[data-step] form').on('submit', postCodeValidation);
+        postcodeField.on('keyup', function() {
+          postcodeError.find('#error-message').remove();
+        });
+      }
+    });
+  })(Checkout.$);
+</script>
