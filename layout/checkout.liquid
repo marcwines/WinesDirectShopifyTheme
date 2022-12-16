@@ -48,6 +48,9 @@
         </aside>
       </div>
     </div>
+{% if settings.plus_enable_zip_validation %}
+      {% render "plus-zip-required" %}
+    {% endif %}
 
     {{ tracking_code }}
   </body>
