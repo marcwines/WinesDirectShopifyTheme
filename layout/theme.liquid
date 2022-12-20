@@ -362,4 +362,22 @@ src="https://www.facebook.com/tr?id=132526254101185&ev=PageView&noscript=1"
 <!--End_Gem_Page_Footer_Script-->
 {% include 'taginstall-body' %}
 </body>
+
+
+ {% if customer.accepts_marketing != true %}
+
+    <script>
+      console.log("does not accept marketing")
+      let cookieStatus = Cookies.get('popUpVisited');
+      if (!cookieStatus) {
+      const popUpForm = document.getElementById('customNewsletter');
+      console.log("passed condition");
+      popUpForm.style.display = "flex";
+      Cookies.set('popUpVisited', 'true', { expires: 7 })
+    }
+      
+    </script>
+    
+  {% endif %}
+  
 </html>
