@@ -224,7 +224,7 @@
             </td>
             <td headers="RowSubtotal" role="cell" data-label="{{ 'customer.order.subtotal' | t }}">{{ order.line_items_subtotal_price | money }}</td>
           </tr>
-          <h3>ORDER AGAIN</h3>
+
           {%- if order.cart_level_discount_applications != blank -%}
             <tr role="row">
               {%- for discount_application in order.cart_level_discount_applications -%}
