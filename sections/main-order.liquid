@@ -131,9 +131,8 @@
               >
                 {{ line_item.sku }}
               </td>
-
+<!-- ORDER AGAIN BUTTON -->
 <button onclick="addToCart({{ order.line_items | json }})">Order Again</button>
-            
               <td
                 headers="Row{{ line_item.key }} ColumnPrice"
                 role="cell"
@@ -332,3 +331,19 @@
   ]
 }
 {% endschema %}
+
+
+                          <script>
+
+                            function addToCart(lineItems) {
+  var items = [];
+  for (var i = 0; i < lineItems.length; i++) {
+    var item = {
+      variantId: lineItems[i].variant_id,
+      quantity: lineItems[i].quantity
+    }
+    items.push(item);
+  }
+  cart.addVariants({ items: items });
+}
+                          </script>
