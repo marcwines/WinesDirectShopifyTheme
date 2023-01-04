@@ -131,7 +131,9 @@
               >
                 {{ line_item.sku }}
               </td>
-             <a href="/orders/{{ order.id }}/reorder">Re-order</a>
+
+<button onclick="addToCart({{ order.line_items | json }})">Order Again</button>
+            
               <td
                 headers="Row{{ line_item.key }} ColumnPrice"
                 role="cell"
