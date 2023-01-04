@@ -132,7 +132,7 @@
                 {{ line_item.sku }}
               </td>
 <!-- ORDER AGAIN BUTTON -->
-<button onclick="addToCart({order.line_items|json|escape_javascript})">Order Again</button>
+<button onclick="addToCart({{ order.line_items|json|escape_javascript}} )">Order Again</button>
 
 <script> 
 
