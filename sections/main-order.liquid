@@ -136,8 +136,7 @@
 
 <!-- ORDER AGAIN BUTTON -->
 <button onclick='addToCart({{ order.line_items | json }} )'>Order Again</button>
-
-
+            
 <script>    
   function addToCart(lineItems) {
   var items = [];
@@ -165,12 +164,9 @@
 }
 </script>
 
-
-  <script>
-
-            console.log({{ order.line_items | json }});
-</script>
-            
+            <script>
+            jQuery.post(window.Shopify.routes.root + 'cart/add.js', $('form[action$="/cart/add"]').serialize());
+            </script>
 
               <td
                 headers="Row{{ line_item.key }} ColumnPrice"
