@@ -135,7 +135,7 @@
 
 
 <!-- ORDER AGAIN BUTTON -->
-<button onclick="addToCart({{ order.line_items | jsonify }} )">Order Again</button>
+<button onclick="addToCart({{ order.line_items | json }} )">Order Again</button>
 
 
 <script>    
@@ -167,8 +167,6 @@
 
 
   <script>
-
-            console.log('triggered');
 
             console.log({{ order.line_items | json }});
 </script>
