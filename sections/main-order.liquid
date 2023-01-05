@@ -137,7 +137,9 @@
 <!-- ORDER AGAIN BUTTON -->
 <button onclick='addToCart({{ order.line_items | json }} )'>Order Again</button>
 <script>
-    jQuery.post(window.Shopify.routes.root + 'cart/add.js', $('form[action$="/cart/add"]').serialize());
+            function addToCart() {
+              jQuery.post(window.Shopify.routes.root + 'cart/add.js', $('form[action$="/cart/add"]').serialize());
+            }
 </script>
 
               <td
