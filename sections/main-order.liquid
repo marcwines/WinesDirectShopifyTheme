@@ -139,7 +139,30 @@
 
 
 <script>    
-jQuery.post(window.Shopify.routes.root + &#039;cart/add.js&#039;, $(&#039;form[action$=&quot;/cart/add&quot;]&#039;).serialize())
+  function addToCart(lineItems) {
+  var items = [];
+  for (var i = 0; i < lineItems.length; i++) {
+    var item = {
+      variant_id: lineItems[i].variant_id,
+      quantity: lineItems[i].quantity
+    }
+    items.push(item);
+  }
+  $.ajax({
+    type: 'POST',
+    url: '/cart/add.js',
+    dataType: 'json',
+    data: {
+      items: items
+    },
+    success: function(response) {
+      console.log('Items added to cart!');
+    },
+    error: function(XMLHttpRequest, textStatus) {
+      console.error('Error adding items to cart: ' + textStatus);
+    }
+  });
+}
 </script>
 
 
