@@ -133,7 +133,7 @@
           "198b0984-fbaf-4a29-b63e-66b95e912987": {
             "type": "announcement",
             "settings": {
-              "text": "Free shipping on orders over €75",
+              "text": "Free shipping on orders over €45",
               "text_alignment": "center",
               "color_scheme": "accent-1",
               "link": ""
