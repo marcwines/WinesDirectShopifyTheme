@@ -71,33 +71,6 @@
         "padding_bottom": 36
       }
     },
-    "81935848-bf8e-48a8-a72e-e7752bdbc614": {
-      "type": "featured-collection",
-      "settings": {
-        "title": "Featured Reds",
-        "heading_size": "h1",
-        "description": "<p>Our top picks for red wine this month.<\/p>",
-        "show_description": false,
-        "description_style": "body",
-        "collection": "featured-reds",
-        "products_to_show": 4,
-        "columns_desktop": 4,
-        "full_width": false,
-        "show_view_all": true,
-        "view_all_style": "solid",
-        "enable_desktop_slider": false,
-        "color_scheme": "background-1",
-        "image_ratio": "adapt",
-        "show_secondary_image": false,
-        "show_vendor": false,
-        "show_rating": false,
-        "enable_quick_add": false,
-        "columns_mobile": "2",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "79c1004b-ed2a-4c9c-a853-a7732ee48e37": {
       "type": "image-with-text",
       "blocks": {
@@ -146,7 +119,6 @@
   "order": [
     "16641958187a4b1df5",
     "featured_collection",
-    "81935848-bf8e-48a8-a72e-e7752bdbc614",
     "79c1004b-ed2a-4c9c-a853-a7732ee48e37"
   ]
 }
