@@ -47,12 +47,12 @@
     "featured_collection": {
       "type": "featured-collection",
       "settings": {
-        "title": "Christmas Cases",
+        "title": "Top Picks for Red Wine",
         "heading_size": "h1",
-        "description": "<p>We've put together some delicious and delightful mixed cases for the christmas season - great value, great wine!<\/p>",
+        "description": "<p>We've compiled our list of favourite reds to kick off the new year right.<\/p>",
         "show_description": false,
         "description_style": "body",
-        "collection": "featured",
+        "collection": "featured-reds",
         "products_to_show": 6,
         "columns_desktop": 3,
         "full_width": false,
