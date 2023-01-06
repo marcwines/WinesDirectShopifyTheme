@@ -13,7 +13,7 @@
         "16641958185fd8e3ba-1": {
           "type": "text",
           "settings": {
-            "text": "<p>Shop Susana Balbo wines, Argentinas foremost female winemaker<\/p>",
+            "text": "<p>Kick off the New Year right with our January wine offers!<\/p>",
             "text_style": "body"
           }
         },
@@ -21,7 +21,7 @@
           "type": "button",
           "settings": {
             "button_label": "Shop Now",
-            "button_link": "shopify:\/\/collections\/buy-susana-balbo-wine-online"
+            "button_link": "shopify:\/\/collections\/january-offers"
           }
         }
       },
