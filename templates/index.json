@@ -59,6 +59,33 @@
         "show_view_all": false,
         "view_all_style": "solid",
         "enable_desktop_slider": true,
+        "color_scheme": "background-2",
+        "image_ratio": "adapt",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 28,
+        "padding_bottom": 36
+      }
+    },
+    "14c73f81-4e7a-4301-855a-40fa2ac09792": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Top Picks for White Wine",
+        "heading_size": "h1",
+        "description": "<p>We've compiled our list of favourite whites to kick off the new year right.<\/p>",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "featured-reds",
+        "products_to_show": 6,
+        "columns_desktop": 3,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "enable_desktop_slider": true,
         "color_scheme": "background-1",
         "image_ratio": "adapt",
         "show_secondary_image": true,
@@ -119,6 +146,7 @@
   "order": [
     "16641958187a4b1df5",
     "featured_collection",
+    "14c73f81-4e7a-4301-855a-40fa2ac09792",
     "79c1004b-ed2a-4c9c-a853-a7732ee48e37"
   ]
 }
