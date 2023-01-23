@@ -119,7 +119,7 @@
     "predictive_search_show_price": true,
     "favicon": "shopify:\/\/shop_images\/favicon.png",
     "currency_code_enabled": true,
-    "cart_type": "drawer",
+    "cart_type": "page",
     "show_cart_note": true,
     "checkout_logo_image": "shopify:\/\/shop_images\/logo_2x_376978d5-2709-44b4-bee6-f208019befe8.png",
     "checkout_sidebar_background_color": "#f0eee7",
