@@ -6,22 +6,22 @@
         "16641958185fd8e3ba-0": {
           "type": "heading",
           "settings": {
-            "heading": "AMAZING WINES, DIRECT FROM PASSIONATE WINEMAKERS",
+            "heading": "WORLD CLASS WINES. DIRECT FROM WORLD CLASS WINEMAKERS.",
             "heading_size": "h1"
           }
         },
         "16641958185fd8e3ba-1": {
           "type": "text",
           "settings": {
-            "text": "<p>Kick off the New Year right with our January wine offers!<\/p>",
+            "text": "<p>Wines, direct from passionate winemakers around the world. Shop our Christmas selection now.<\/p>",
             "text_style": "body"
           }
         },
         "16641958185fd8e3ba-2": {
           "type": "button",
           "settings": {
-            "button_label": "Shop Now",
-            "button_link": "shopify:\/\/collections\/january-offers"
+            "button_label": "Shop Christmas Selections",
+            "button_link": "shopify:\/\/collections\/christmas-wines"
           }
         }
       },
@@ -31,7 +31,7 @@
         "16641958185fd8e3ba-2"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/crios-malbec.webp",
+        "image": "shopify:\/\/shop_images\/better-square.png",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "text_first",
@@ -44,22 +44,147 @@
         "padding_bottom": 36
       }
     },
+    "f7e8800b-417d-45ed-913b-e4a90ac28848": {
+      "type": "image-with-text",
+      "disabled": true,
+      "blocks": {
+        "template--16522173120726__f7e8800b-417d-45ed-913b-e4a90ac28848-166550065498002164-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Image with text",
+            "heading_size": "h1"
+          }
+        },
+        "template--16522173120726__f7e8800b-417d-45ed-913b-e4a90ac28848-166550065498002164-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "text_style": "body"
+          }
+        },
+        "template--16522173120726__f7e8800b-417d-45ed-913b-e4a90ac28848-166550065498002164-2": {
+          "type": "button",
+          "settings": {
+            "button_label": "Button label",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--16522173120726__f7e8800b-417d-45ed-913b-e4a90ac28848-166550065498002164-0",
+        "template--16522173120726__f7e8800b-417d-45ed-913b-e4a90ac28848-166550065498002164-1",
+        "template--16522173120726__f7e8800b-417d-45ed-913b-e4a90ac28848-166550065498002164-2"
+      ],
+      "settings": {
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_banner": {
+      "type": "image-banner",
+      "disabled": true,
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "SHARE DELICIOUS WINES DIRECT FROM PASSIONATE WINEMAKERS",
+            "heading_size": "h0"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "Give customers details about the banner image(s) or content on the template.",
+            "text_style": "body"
+          }
+        },
+        "button": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Shop all",
+            "button_link_1": "shopify:\/\/collections\/all",
+            "button_style_secondary_1": true,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "text",
+        "button"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Screenshot_2022-09-22_at_15.56.38.png",
+        "image_2": "shopify:\/\/shop_images\/11494_w.png",
+        "image_overlay_opacity": 0,
+        "image_height": "large",
+        "adapt_height_first_image": false,
+        "desktop_content_position": "middle-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": false,
+        "show_text_below": false
+      }
+    },
+    "rich_text": {
+      "type": "rich-text",
+      "disabled": true,
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Talk about your brand<\/p>",
+            "heading_size": "h1"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "text"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 0
+      }
+    },
     "featured_collection": {
       "type": "featured-collection",
       "settings": {
-        "title": "Top Picks for Red Wine",
+        "title": "Christmas Cases",
         "heading_size": "h1",
-        "description": "<p>We've compiled our list of favourite reds to kick off the new year right.<\/p>",
+        "description": "<p>We've put together some delicious and delightful mixed cases for the christmas season - great value, great wine!<\/p>",
         "show_description": false,
         "description_style": "body",
-        "collection": "featured-reds",
+        "collection": "featured",
         "products_to_show": 6,
         "columns_desktop": 3,
         "full_width": false,
         "show_view_all": false,
         "view_all_style": "solid",
-        "enable_desktop_slider": true,
-        "color_scheme": "background-2",
+        "enable_desktop_slider": false,
+        "color_scheme": "background-1",
         "image_ratio": "adapt",
         "show_secondary_image": true,
         "show_vendor": false,
@@ -71,30 +196,47 @@
         "padding_bottom": 36
       }
     },
-    "14c73f81-4e7a-4301-855a-40fa2ac09792": {
-      "type": "featured-collection",
+    "0595bd0e-3546-4083-81f5-5e110014623a": {
+      "type": "collage",
+      "disabled": true,
+      "blocks": {
+        "template--16522173120726__0595bd0e-3546-4083-81f5-5e110014623a-166679915390af51ad-0": {
+          "type": "video",
+          "disabled": true,
+          "settings": {
+            "cover_image": "shopify:\/\/shop_images\/wine-and-cheese-party-hosts.jpg",
+            "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+            "description": "Describe the video",
+            "image_padding": false
+          }
+        },
+        "template--16522173120726__0595bd0e-3546-4083-81f5-5e110014623a-166679915390af51ad-1": {
+          "type": "product",
+          "settings": {
+            "product": "adios-melissinos-case-of-6",
+            "second_image": false
+          }
+        },
+        "template--16522173120726__0595bd0e-3546-4083-81f5-5e110014623a-166679915390af51ad-2": {
+          "type": "collection",
+          "settings": {
+            "collection": "buy-australian-wine-online"
+          }
+        }
+      },
+      "block_order": [
+        "template--16522173120726__0595bd0e-3546-4083-81f5-5e110014623a-166679915390af51ad-0",
+        "template--16522173120726__0595bd0e-3546-4083-81f5-5e110014623a-166679915390af51ad-1",
+        "template--16522173120726__0595bd0e-3546-4083-81f5-5e110014623a-166679915390af51ad-2"
+      ],
       "settings": {
-        "title": "Top Picks for White Wine",
+        "heading": "Multimedia collage",
         "heading_size": "h1",
-        "description": "<p>We've compiled our list of favourite whites to kick off the new year right.<\/p>",
-        "show_description": false,
-        "description_style": "body",
-        "collection": "featured-reds",
-        "products_to_show": 6,
-        "columns_desktop": 3,
-        "full_width": false,
-        "show_view_all": false,
-        "view_all_style": "solid",
-        "enable_desktop_slider": true,
+        "desktop_layout": "left",
+        "mobile_layout": "collage",
+        "card_styles": "product-card-wrapper",
         "color_scheme": "background-1",
-        "image_ratio": "adapt",
-        "show_secondary_image": true,
-        "show_vendor": false,
-        "show_rating": false,
-        "enable_quick_add": false,
-        "columns_mobile": "2",
-        "swipe_on_mobile": true,
-        "padding_top": 28,
+        "padding_top": 36,
         "padding_bottom": 36
       }
     },
@@ -145,8 +287,11 @@
   },
   "order": [
     "16641958187a4b1df5",
+    "f7e8800b-417d-45ed-913b-e4a90ac28848",
+    "image_banner",
+    "rich_text",
     "featured_collection",
-    "14c73f81-4e7a-4301-855a-40fa2ac09792",
+    "0595bd0e-3546-4083-81f5-5e110014623a",
     "79c1004b-ed2a-4c9c-a853-a7732ee48e37"
   ]
 }
