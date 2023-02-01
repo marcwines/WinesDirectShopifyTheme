@@ -1,47 +1,12 @@
 {
   "sections": {
-    "16641958187a4b1df5": {
-      "type": "image-with-text",
-      "blocks": {
-        "16641958185fd8e3ba-0": {
-          "type": "heading",
-          "settings": {
-            "heading": "WORLD CLASS WINES. DIRECT FROM WORLD CLASS WINEMAKERS.",
-            "heading_size": "h1"
-          }
-        },
-        "16641958185fd8e3ba-1": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Wines, direct from passionate winemakers around the world. Shop our Christmas selection now.<\/p>",
-            "text_style": "body"
-          }
-        },
-        "16641958185fd8e3ba-2": {
-          "type": "button",
-          "settings": {
-            "button_label": "Shop Christmas Selections",
-            "button_link": "shopify:\/\/collections\/christmas-wines"
-          }
-        }
-      },
-      "block_order": [
-        "16641958185fd8e3ba-0",
-        "16641958185fd8e3ba-1",
-        "16641958185fd8e3ba-2"
-      ],
+    "5a50bac9-82c2-4f02-bf9f-fc75f0853e64": {
+      "type": "custom-liquid",
       "settings": {
-        "image": "shopify:\/\/shop_images\/better-square.png",
-        "height": "adapt",
-        "desktop_image_width": "medium",
-        "layout": "text_first",
-        "desktop_content_position": "middle",
-        "desktop_content_alignment": "left",
-        "content_layout": "no-overlap",
+        "custom_liquid": "<div class=\"shopify-section section\">\n\n\n<div class=\"page-width\">\n<a href=\"https:\/\/winesdirect.ie\/collections\/january-offers\">\n<img style=\"max-width: 100%;\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0657\/2471\/1126\/files\/valentines2.png?v=1675244155\"\/>\n\n<\/a>\n<\/div>\n<\/div>",
         "color_scheme": "background-1",
-        "mobile_content_alignment": "center",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "padding_top": 40,
+        "padding_bottom": 52
       }
     },
     "f7e8800b-417d-45ed-913b-e4a90ac28848": {
@@ -286,7 +251,7 @@
     }
   },
   "order": [
-    "16641958187a4b1df5",
+    "5a50bac9-82c2-4f02-bf9f-fc75f0853e64",
     "f7e8800b-417d-45ed-913b-e4a90ac28848",
     "image_banner",
     "rich_text",
