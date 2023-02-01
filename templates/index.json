@@ -164,12 +164,12 @@
     "44c95dd4-9200-49dd-8946-a5b20b32b6f9": {
       "type": "featured-collection",
       "settings": {
-        "title": "White Wine",
+        "title": "Red Wine",
         "heading_size": "h1",
-        "description": "<p>Some of our favourite white wines!<\/p>",
+        "description": "<p>Some of our favourite red wines!<\/p>",
         "show_description": false,
         "description_style": "body",
-        "collection": "featured-whites",
+        "collection": "featured-reds",
         "products_to_show": 3,
         "columns_desktop": 3,
         "full_width": false,
