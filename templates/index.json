@@ -143,7 +143,34 @@
         "show_description": false,
         "description_style": "body",
         "collection": "featured-whites",
-        "products_to_show": 6,
+        "products_to_show": 3,
+        "columns_desktop": 3,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "background-1",
+        "image_ratio": "adapt",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 28,
+        "padding_bottom": 36
+      }
+    },
+    "44c95dd4-9200-49dd-8946-a5b20b32b6f9": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "White Wine",
+        "heading_size": "h1",
+        "description": "<p>Some of our favourite white wines!<\/p>",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "featured-whites",
+        "products_to_show": 3,
         "columns_desktop": 3,
         "full_width": false,
         "show_view_all": false,
@@ -256,6 +283,7 @@
     "image_banner",
     "rich_text",
     "featured_collection",
+    "44c95dd4-9200-49dd-8946-a5b20b32b6f9",
     "0595bd0e-3546-4083-81f5-5e110014623a",
     "79c1004b-ed2a-4c9c-a853-a7732ee48e37"
   ]
