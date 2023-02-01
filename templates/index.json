@@ -3,7 +3,7 @@
     "5a50bac9-82c2-4f02-bf9f-fc75f0853e64": {
       "type": "custom-liquid",
       "settings": {
-        "custom_liquid": "<div class=\"shopify-section section\">\n\n\n<div class=\"page-width\">\n<a href=\"https:\/\/winesdirect.ie\/collections\/january-offers\">\n<img style=\"max-width: 100%;\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0657\/2471\/1126\/files\/valentines2.png?v=1675244155\"\/>\n\n<\/a>\n<\/div>\n<\/div>",
+        "custom_liquid": "<div class=\"shopify-section section\">\n\n\n<div class=\"page-width\">\n<a href=\"https:\/\/winesdirect.ie\/collections\/valentines-day-gifts\">\n<img style=\"max-width: 100%;\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0657\/2471\/1126\/files\/valentines2.png?v=1675244155\"\/>\n\n<\/a>\n<\/div>\n<\/div>",
         "color_scheme": "background-1",
         "padding_top": 40,
         "padding_bottom": 52
