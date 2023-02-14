@@ -430,37 +430,6 @@
 
 {% endif %}
 
-
-{% if product.metafields.custom.product_type.value contains 'Bundle' %}
-
-<p>
-If you spend much time around HQ this month, you’re sure to hear “’tis the season!” as the answer to all qualms! Well, it’s true! Everything ramps up at this time of year, and stock can become a bit of an issue. 
-What this means for you, our customer:  <p>
-
-  <ul>
-    <li>You might receive a different bottle to what is listed online – this only applies to mixed cases. If you’ve ordered a 3 pack of the same wine you’ll be getting that wine.
-    <li>The standard, quality and price point will not impacted – if we have to swap put, it will be for a similar wine. </li>
-    <li>You’ll still get to share delicious wines over the silly season! </li>
-  </ul>
-
-  
-      <h2>Bundle Contains</h2>
-      <ul class="bundle-container">
-        {% assign bundle-contains =  product.metafields.custom.bundle_bottles.value %}
-        {% for product in bundle-contains  %}     
-          <li class="bundle-item">
-              <span class="bundle-item__img">
-                  {{ product.featured_image | image_url: width: 150 | image_tag: loading: 'lazy' }}
-              </span>
-              <span class="bundle-item__img">
-                  <a class=bundle-item-title href="{{ product.url }}">{{product.title}}</a>
-                  <p>{{product.description  | truncate: 240 }}</p>
-                
-              </span>
-          </li>
-        {% endfor %}
-      </ul>
-{% endif %}
             
 {%- when 'Wine_additional' -%}
             {% if product.metafields.custom.product_type.value contains 'Bottle' %} 
