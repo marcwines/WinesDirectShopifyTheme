@@ -1,12 +1,47 @@
 {
   "sections": {
-    "5a50bac9-82c2-4f02-bf9f-fc75f0853e64": {
-      "type": "custom-liquid",
+    "16641958187a4b1df5": {
+      "type": "image-with-text",
+      "blocks": {
+        "16641958185fd8e3ba-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "WORLD CLASS WINES. DIRECT FROM WORLD CLASS WINEMAKERS.",
+            "heading_size": "h1"
+          }
+        },
+        "16641958185fd8e3ba-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Wines, direct from passionate winemakers around the world. Shop our Christmas selection now.<\/p>",
+            "text_style": "body"
+          }
+        },
+        "16641958185fd8e3ba-2": {
+          "type": "button",
+          "settings": {
+            "button_label": "Shop Christmas Selections",
+            "button_link": "shopify:\/\/collections\/christmas-wines"
+          }
+        }
+      },
+      "block_order": [
+        "16641958185fd8e3ba-0",
+        "16641958185fd8e3ba-1",
+        "16641958185fd8e3ba-2"
+      ],
       "settings": {
-        "custom_liquid": "<div class=\"shopify-section section\">\n\n\n<div class=\"page-width\">\n<a href=\"https:\/\/winesdirect.ie\/collections\/valentines-day-gifts\">\n<img style=\"max-width: 100%;\" src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0657\/2471\/1126\/files\/valentines2.png?v=1675244155\"\/>\n\n<\/a>\n<\/div>\n<\/div>",
+        "image": "shopify:\/\/shop_images\/better-square.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
         "color_scheme": "background-1",
-        "padding_top": 40,
-        "padding_bottom": 52
+        "mobile_content_alignment": "center",
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "f7e8800b-417d-45ed-913b-e4a90ac28848": {
@@ -137,40 +172,13 @@
     "featured_collection": {
       "type": "featured-collection",
       "settings": {
-        "title": "White Wine",
+        "title": "Christmas Cases",
         "heading_size": "h1",
-        "description": "<p>Some of our favourite white wines!<\/p>",
+        "description": "<p>We've put together some delicious and delightful mixed cases for the christmas season - great value, great wine!<\/p>",
         "show_description": false,
         "description_style": "body",
-        "collection": "featured-whites",
-        "products_to_show": 3,
-        "columns_desktop": 3,
-        "full_width": false,
-        "show_view_all": false,
-        "view_all_style": "solid",
-        "enable_desktop_slider": false,
-        "color_scheme": "background-1",
-        "image_ratio": "adapt",
-        "show_secondary_image": true,
-        "show_vendor": false,
-        "show_rating": false,
-        "enable_quick_add": false,
-        "columns_mobile": "2",
-        "swipe_on_mobile": true,
-        "padding_top": 28,
-        "padding_bottom": 36
-      }
-    },
-    "44c95dd4-9200-49dd-8946-a5b20b32b6f9": {
-      "type": "featured-collection",
-      "settings": {
-        "title": "Red Wine",
-        "heading_size": "h1",
-        "description": "<p>Some of our favourite red wines!<\/p>",
-        "show_description": false,
-        "description_style": "body",
-        "collection": "featured-reds",
-        "products_to_show": 3,
+        "collection": "featured",
+        "products_to_show": 6,
         "columns_desktop": 3,
         "full_width": false,
         "show_view_all": false,
@@ -278,12 +286,11 @@
     }
   },
   "order": [
-    "5a50bac9-82c2-4f02-bf9f-fc75f0853e64",
+    "16641958187a4b1df5",
     "f7e8800b-417d-45ed-913b-e4a90ac28848",
     "image_banner",
     "rich_text",
     "featured_collection",
-    "44c95dd4-9200-49dd-8946-a5b20b32b6f9",
     "0595bd0e-3546-4083-81f5-5e110014623a",
     "79c1004b-ed2a-4c9c-a853-a7732ee48e37"
   ]
